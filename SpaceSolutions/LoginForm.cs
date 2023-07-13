@@ -97,18 +97,21 @@ namespace SpaceSolutions
                 }
                 else if (returnValue == 2)
                 {
+                    string idUser = getIdUser();
+                    string namaUser = getNamaUser();
                     MessageBox.Show("Selamat Datang Admin!", "Login Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    DashBoardAdmin formAdmin = new DashBoardAdmin();
+                    DashBoardAdmin formAdmin = new DashBoardAdmin(idUser, namaUser);
                     this.Hide();
                     formAdmin.Show();
                 }
                 else if (returnValue == 3)
                 {
                     string idUser = getIdUser();
+                    string namaUser = getNamaUser();
                     MessageBox.Show("Selamat Datang User!", "Login Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    PeminjamanRuanganUser usr = new PeminjamanRuanganUser(idUser);
+                    DashBoardUser user = new DashBoardUser(namaUser, idUser);
                     this.Hide();
-                    usr.Show();
+                    user.Show();
                 }
 
             }
@@ -142,6 +145,29 @@ namespace SpaceSolutions
             idUser = (string)result;
 
             return idUser;
+        }
+
+        private string getNamaUser()
+        {
+            string nama = "";
+            SqlConnection connection = new SqlConnection();
+            connection.ConnectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
+
+            SqlCommand sqlcmd = new SqlCommand("sp_getNamaUser", connection);
+            sqlcmd.CommandType = CommandType.StoredProcedure;
+
+            sqlcmd.Parameters.AddWithValue("@username", txtUsername.Text);
+
+            connection.Open();
+            object result = sqlcmd.ExecuteScalar();
+            nama = (string)result;
+
+            return nama;
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

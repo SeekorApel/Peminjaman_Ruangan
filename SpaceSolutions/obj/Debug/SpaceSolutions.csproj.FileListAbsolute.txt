@@ -85,3 +85,6 @@ D:\Project Semester 2\PRG2\SpaceSolutions\obj\Debug\SpaceSolutions.CRUDRuangan.r
 D:\Project Semester 2\PRG2\SpaceSolutions\obj\Debug\SpaceSolutions.InputRuangan.resources
 D:\Project Semester 2\PRG2\SpaceSolutions\obj\Debug\SpaceSolutions.UpdateRuangan.resources
 D:\Project Semester 2\PRG2\SpaceSolutions\obj\Debug\SpaceSolutions.PeminjamanRuanganUser.resources
+D:\Project Semester 2\PRG2\SpaceSolutions\obj\Debug\SpaceSolutions.PeminjamanRuanganAdmin.resources
+D:\Project Semester 2\PRG2\SpaceSolutions\obj\Debug\SpaceSolutions.AccPeminjamanRuangan.resources
+D:\Project Semester 2\PRG2\SpaceSolutions\obj\Debug\SpaceSolutions.DashBoardUser.resources

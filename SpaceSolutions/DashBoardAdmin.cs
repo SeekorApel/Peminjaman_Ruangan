@@ -14,15 +14,18 @@ namespace SpaceSolutions
     public partial class DashBoardAdmin : Form
     {
         private Form activeForm;
-        public DashBoardAdmin()
+        private string idUsr, nama;
+        public DashBoardAdmin(string idUser, string namaUser)
         {
             InitializeComponent();
             customedesign();
+            idUsr = idUser;
+            nama = namaUser;
         }
 
         private void DashBoardAdmin_Load(object sender, EventArgs e)
         {
-
+            labelNama.Text = nama;
 
         }
 
