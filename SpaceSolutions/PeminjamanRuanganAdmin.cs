@@ -33,7 +33,7 @@ namespace SpaceSolutions
             connection.Open();
             try
             {
-                string query = "SELECT idPeminjamanRuangan, idUser, idRuangan, jenisKegiatan, kapasitasOrang, tanggalPeminjaman, lamaPeminjaman, statusPeminjaman FROM PeminjamanRuangan WHERE statusPeminjaman = 0";
+                string query = "SELECT * FROM GetPeminjamanRuangan() WHERE statusPeminjaman = 'Pending'";
                 SqlCommand cmd = new SqlCommand(query, connection);
                 SqlDataAdapter adp = new SqlDataAdapter(cmd);
 
@@ -53,12 +53,12 @@ namespace SpaceSolutions
             {
                 idPeminjaman = Convert.ToString(dgvTabelPeminjaman.Rows[e.RowIndex].Cells["Kolom1"].Value);
                 idUser = Convert.ToString(dgvTabelPeminjaman.Rows[e.RowIndex].Cells["Kolom2"].Value);
-                idRuangan = Convert.ToString(dgvTabelPeminjaman.Rows[e.RowIndex].Cells["Kolom3"].Value);
-                jenisKegiatan = Convert.ToString(dgvTabelPeminjaman.Rows[e.RowIndex].Cells["Kolom4"].Value);
-                kapasitasOrang = Convert.ToString(dgvTabelPeminjaman.Rows[e.RowIndex].Cells["Kolom5"].Value);
-                tanggalPeminjamanTemp = Convert.ToString(dgvTabelPeminjaman.Rows[e.RowIndex].Cells["Kolom6"].Value);
-                lamaPeminjaman = Convert.ToString(dgvTabelPeminjaman.Rows[e.RowIndex].Cells["Kolom7"].Value);
-                statusPeminjaman = Convert.ToString(dgvTabelPeminjaman.Rows[e.RowIndex].Cells["Kolom8"].Value);
+                idRuangan = Convert.ToString(dgvTabelPeminjaman.Rows[e.RowIndex].Cells["Kolom4"].Value);
+                jenisKegiatan = Convert.ToString(dgvTabelPeminjaman.Rows[e.RowIndex].Cells["Kolom6"].Value);
+                kapasitasOrang = Convert.ToString(dgvTabelPeminjaman.Rows[e.RowIndex].Cells["Kolom7"].Value);
+                tanggalPeminjamanTemp = Convert.ToString(dgvTabelPeminjaman.Rows[e.RowIndex].Cells["Kolom8"].Value);
+                lamaPeminjaman = Convert.ToString(dgvTabelPeminjaman.Rows[e.RowIndex].Cells["Kolom9"].Value);
+                statusPeminjaman = Convert.ToString(dgvTabelPeminjaman.Rows[e.RowIndex].Cells["Kolom10"].Value);
                 AccPeminjamanRuangan accPeminjaman = new AccPeminjamanRuangan(idPeminjaman, idUser, idRuangan, jenisKegiatan, kapasitasOrang, tanggalPeminjamanTemp, lamaPeminjaman, statusPeminjaman);
                 accPeminjaman.ShowDialog();
             }

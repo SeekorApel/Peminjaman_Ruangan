@@ -123,7 +123,7 @@ namespace SpaceSolutions
 
         private void btnPengembalianRuangan_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new PengembalianRuanganAdmin(), sender);
         }
 
         private void btnPengembalianBarang_Click(object sender, EventArgs e)
