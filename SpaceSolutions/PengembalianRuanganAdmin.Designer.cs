@@ -109,7 +109,7 @@
             this.txtTotalDenda.FocusedState.Parent = this.txtTotalDenda;
             this.txtTotalDenda.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTotalDenda.HoverState.Parent = this.txtTotalDenda;
-            this.txtTotalDenda.Location = new System.Drawing.Point(86, 473);
+            this.txtTotalDenda.Location = new System.Drawing.Point(544, 594);
             this.txtTotalDenda.Name = "txtTotalDenda";
             this.txtTotalDenda.PasswordChar = '\0';
             this.txtTotalDenda.PlaceholderText = "";
@@ -139,6 +139,7 @@
             this.rbRusak.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.rbRusak.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             this.rbRusak.UseVisualStyleBackColor = true;
+            this.rbRusak.CheckedChanged += new System.EventHandler(this.rbRusak_CheckedChanged);
             // 
             // rbTidakKerusakan
             // 
@@ -165,11 +166,11 @@
             // 
             this.Denda.AutoSize = true;
             this.Denda.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Denda.Location = new System.Drawing.Point(85, 446);
+            this.Denda.Location = new System.Drawing.Point(543, 567);
             this.Denda.Name = "Denda";
-            this.Denda.Size = new System.Drawing.Size(62, 26);
+            this.Denda.Size = new System.Drawing.Size(103, 26);
             this.Denda.TabIndex = 25;
-            this.Denda.Text = "Denda";
+            this.Denda.Text = "Total Denda";
             // 
             // btnKembalikan
             // 
@@ -180,7 +181,7 @@
             this.btnKembalikan.Font = new System.Drawing.Font("Gilmer Bold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKembalikan.ForeColor = System.Drawing.Color.White;
             this.btnKembalikan.HoverState.Parent = this.btnKembalikan;
-            this.btnKembalikan.Location = new System.Drawing.Point(141, 530);
+            this.btnKembalikan.Location = new System.Drawing.Point(791, 594);
             this.btnKembalikan.Name = "btnKembalikan";
             this.btnKembalikan.ShadowDecoration.Parent = this.btnKembalikan;
             this.btnKembalikan.Size = new System.Drawing.Size(140, 36);
@@ -271,7 +272,7 @@
             this.dgvTabelPeminjaman.Name = "dgvTabelPeminjaman";
             this.dgvTabelPeminjaman.ReadOnly = true;
             this.dgvTabelPeminjaman.RowHeadersVisible = false;
-            this.dgvTabelPeminjaman.Size = new System.Drawing.Size(582, 366);
+            this.dgvTabelPeminjaman.Size = new System.Drawing.Size(582, 163);
             this.dgvTabelPeminjaman.TabIndex = 10;
             this.dgvTabelPeminjaman.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTabelPeminjaman_CellClick);
             // 
@@ -378,7 +379,7 @@
             // 
             // btnDenda
             // 
-            this.btnDenda.Location = new System.Drawing.Point(312, 446);
+            this.btnDenda.Location = new System.Drawing.Point(267, 373);
             this.btnDenda.Name = "btnDenda";
             this.btnDenda.Size = new System.Drawing.Size(64, 23);
             this.btnDenda.TabIndex = 41;
