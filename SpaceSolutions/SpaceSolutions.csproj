@@ -207,6 +207,12 @@
     <Compile Include="PeminjamanRuanganUser.Designer.cs">
       <DependentUpon>PeminjamanRuanganUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="PengembalianRuanganAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PengembalianRuanganAdmin.Designer.cs">
+      <DependentUpon>PengembalianRuanganAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SignUp.cs">
@@ -319,6 +325,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PeminjamanRuanganUser.resx">
       <DependentUpon>PeminjamanRuanganUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PengembalianRuanganAdmin.resx">
+      <DependentUpon>PengembalianRuanganAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

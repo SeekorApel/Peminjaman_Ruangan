@@ -16,7 +16,7 @@ namespace SpaceSolutions
     {
         string idUser;
         public PeminjamanRuanganUser(string idUserTemp)
-        {
+        { 
             InitializeComponent();
             idUser = idUserTemp;
         }
@@ -24,7 +24,9 @@ namespace SpaceSolutions
         private void PeminjamanRuanganUser_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'dSSpaceSolutions.Ruangan' table. You can move, or remove it, as needed.
-            this.ruanganTableAdapter.Fill(this.dSSpaceSolutions.Ruangan);
+            this.ruanganTableAdapter.Query1(this.dSSpaceSolutions.Ruangan);
+            getData();
+            query1ToolStrip.Visible = false;
             label6.Text = idUser;
 
         }
@@ -154,11 +156,6 @@ namespace SpaceSolutions
                 MessageBox.Show("Maaf Ruangan tidak Tersedia", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
 
-            }else if (tanggalForm.Date == tanggalDB.Date)
-            {
-                MessageBox.Show("Maaf Jadwal Peminjaman pada tanggal ini tidak Tersedia", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-
             }
             else
             {
@@ -167,7 +164,7 @@ namespace SpaceSolutions
                     int status = 0;
                     SqlConnection connection = new SqlConnection();
                     connection.ConnectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
-                    SqlCommand sqlcmd = new SqlCommand("sp_peminjamanRuangan", connection);
+                    SqlCommand sqlcmd = new SqlCommand("sp_inputPeminjamanRuangan", connection);
                     sqlcmd.CommandType = CommandType.StoredProcedure;
 
                     string query = "SELECT TOP 1 idPeminjamanRuangan FROM PeminjamanRuangan ORDER BY idPeminjamanRuangan DESC";
@@ -204,5 +201,48 @@ namespace SpaceSolutions
 
         }
 
+        private void getData()
+        {
+            SqlConnection connection = new SqlConnection();
+            connection.ConnectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
+            connection.Open();
+            try
+            {
+                string query = "SELECT * FROM GetDataRuangan() WHERE ketersediaanRuangan = 'Tersedia' AND  [status] = 'Aktif'";
+                SqlCommand cmd = new SqlCommand(query, connection);
+                SqlDataAdapter adp = new SqlDataAdapter(cmd);
+
+                DataTable dt = new DataTable();
+                adp.Fill(dt);
+                dgvTabelRuangan.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void query1ToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.ruanganTableAdapter.Query1(this.dSSpaceSolutions.Ruangan);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void dtTanggalPeminjaman_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -282,7 +282,27 @@ SELECT idRuangan, idFasilitas, idJenisRuangan, namaRuangan, ketersediaanRuangan,
               <Mapping SourceColumn="lokasiRuangan" DataSetColumn="lokasiRuangan" />
               <Mapping SourceColumn="status" DataSetColumn="status" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="SpaceSolutionConnectionString (Settings)" DbObjectName="SpaceSolution.dbo.Ruangan" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Coba1" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="Coba1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="Coba1">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT idRuangan, idFasilitas, idJenisRuangan, namaRuangan, ketersediaanRuangan, lokasiRuangan, status FROM dbo.Ruangan
+WHERE status  = 0</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SpaceSolutionConnectionString (Settings)" DbObjectName="SpaceSolution.dbo.Ruangan" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Query1" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="Query1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="Query1">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT idRuangan, idFasilitas, idJenisRuangan, namaRuangan, ketersediaanRuangan, lokasiRuangan, status 
+FROM dbo.Ruangan
+WHERE ketersediaanRuangan = 1</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="viewPeminjamanRuanganTableAdapter" GeneratorDataComponentClassName="viewPeminjamanRuanganTableAdapter" Name="viewPeminjamanRuangan" UserDataComponentName="viewPeminjamanRuanganTableAdapter">
             <MainSource>
@@ -426,55 +446,55 @@ SELECT idRuangan, idFasilitas, idJenisRuangan, namaRuangan, ketersediaanRuangan,
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="viewPeminjamanRuangan" msprop:Generator_RowEvHandlerName="viewPeminjamanRuanganRowChangeEventHandler" msprop:Generator_RowDeletedName="viewPeminjamanRuanganRowDeleted" msprop:Generator_RowDeletingName="viewPeminjamanRuanganRowDeleting" msprop:Generator_RowEvArgName="viewPeminjamanRuanganRowChangeEvent" msprop:Generator_TablePropName="viewPeminjamanRuangan" msprop:Generator_RowChangedName="viewPeminjamanRuanganRowChanged" msprop:Generator_RowChangingName="viewPeminjamanRuanganRowChanging" msprop:Generator_TableClassName="viewPeminjamanRuanganDataTable" msprop:Generator_RowClassName="viewPeminjamanRuanganRow" msprop:Generator_TableVarName="tableviewPeminjamanRuangan" msprop:Generator_UserTableName="viewPeminjamanRuangan">
+        <xs:element name="viewPeminjamanRuangan" msprop:Generator_RowEvHandlerName="viewPeminjamanRuanganRowChangeEventHandler" msprop:Generator_RowDeletedName="viewPeminjamanRuanganRowDeleted" msprop:Generator_RowDeletingName="viewPeminjamanRuanganRowDeleting" msprop:Generator_RowEvArgName="viewPeminjamanRuanganRowChangeEvent" msprop:Generator_TablePropName="viewPeminjamanRuangan" msprop:Generator_RowChangedName="viewPeminjamanRuanganRowChanged" msprop:Generator_UserTableName="viewPeminjamanRuangan" msprop:Generator_RowChangingName="viewPeminjamanRuanganRowChanging" msprop:Generator_RowClassName="viewPeminjamanRuanganRow" msprop:Generator_TableClassName="viewPeminjamanRuanganDataTable" msprop:Generator_TableVarName="tableviewPeminjamanRuangan">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="idPeminjamanRuangan" msprop:Generator_ColumnPropNameInRow="idPeminjamanRuangan" msprop:Generator_ColumnPropNameInTable="idPeminjamanRuanganColumn" msprop:Generator_ColumnVarNameInTable="columnidPeminjamanRuangan" msprop:Generator_UserColumnName="idPeminjamanRuangan">
+              <xs:element name="idPeminjamanRuangan" msprop:Generator_ColumnPropNameInTable="idPeminjamanRuanganColumn" msprop:Generator_ColumnPropNameInRow="idPeminjamanRuangan" msprop:Generator_UserColumnName="idPeminjamanRuangan" msprop:Generator_ColumnVarNameInTable="columnidPeminjamanRuangan">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="idUser" msprop:Generator_ColumnPropNameInRow="idUser" msprop:Generator_ColumnPropNameInTable="idUserColumn" msprop:Generator_ColumnVarNameInTable="columnidUser" msprop:Generator_UserColumnName="idUser">
+              <xs:element name="idUser" msprop:Generator_ColumnPropNameInTable="idUserColumn" msprop:Generator_ColumnPropNameInRow="idUser" msprop:Generator_UserColumnName="idUser" msprop:Generator_ColumnVarNameInTable="columnidUser">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="namaUser" msprop:Generator_ColumnPropNameInRow="namaUser" msprop:Generator_ColumnPropNameInTable="namaUserColumn" msprop:Generator_ColumnVarNameInTable="columnnamaUser" msprop:Generator_UserColumnName="namaUser" minOccurs="0">
+              <xs:element name="namaUser" msprop:Generator_ColumnPropNameInTable="namaUserColumn" msprop:Generator_ColumnPropNameInRow="namaUser" msprop:Generator_UserColumnName="namaUser" msprop:Generator_ColumnVarNameInTable="columnnamaUser" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="idRuangan" msprop:Generator_ColumnPropNameInRow="idRuangan" msprop:Generator_ColumnPropNameInTable="idRuanganColumn" msprop:Generator_ColumnVarNameInTable="columnidRuangan" msprop:Generator_UserColumnName="idRuangan">
+              <xs:element name="idRuangan" msprop:Generator_ColumnPropNameInTable="idRuanganColumn" msprop:Generator_ColumnPropNameInRow="idRuangan" msprop:Generator_UserColumnName="idRuangan" msprop:Generator_ColumnVarNameInTable="columnidRuangan">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="namaRuangan" msprop:Generator_ColumnPropNameInRow="namaRuangan" msprop:Generator_ColumnPropNameInTable="namaRuanganColumn" msprop:Generator_ColumnVarNameInTable="columnnamaRuangan" msprop:Generator_UserColumnName="namaRuangan" minOccurs="0">
+              <xs:element name="namaRuangan" msprop:Generator_ColumnPropNameInTable="namaRuanganColumn" msprop:Generator_ColumnPropNameInRow="namaRuangan" msprop:Generator_UserColumnName="namaRuangan" msprop:Generator_ColumnVarNameInTable="columnnamaRuangan" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="jenisKegiatan" msprop:Generator_ColumnPropNameInRow="jenisKegiatan" msprop:Generator_ColumnPropNameInTable="jenisKegiatanColumn" msprop:Generator_ColumnVarNameInTable="columnjenisKegiatan" msprop:Generator_UserColumnName="jenisKegiatan">
+              <xs:element name="jenisKegiatan" msprop:Generator_ColumnPropNameInTable="jenisKegiatanColumn" msprop:Generator_ColumnPropNameInRow="jenisKegiatan" msprop:Generator_UserColumnName="jenisKegiatan" msprop:Generator_ColumnVarNameInTable="columnjenisKegiatan">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="kapasitasOrang" msprop:Generator_ColumnPropNameInRow="kapasitasOrang" msprop:Generator_ColumnPropNameInTable="kapasitasOrangColumn" msprop:Generator_ColumnVarNameInTable="columnkapasitasOrang" msprop:Generator_UserColumnName="kapasitasOrang" type="xs:int" />
-              <xs:element name="tanggalPeminjaman" msprop:Generator_ColumnPropNameInRow="tanggalPeminjaman" msprop:Generator_ColumnPropNameInTable="tanggalPeminjamanColumn" msprop:Generator_ColumnVarNameInTable="columntanggalPeminjaman" msprop:Generator_UserColumnName="tanggalPeminjaman" type="xs:dateTime" />
-              <xs:element name="lamaPeminjaman" msprop:Generator_ColumnPropNameInRow="lamaPeminjaman" msprop:Generator_ColumnPropNameInTable="lamaPeminjamanColumn" msprop:Generator_ColumnVarNameInTable="columnlamaPeminjaman" msprop:Generator_UserColumnName="lamaPeminjaman" type="xs:int" />
-              <xs:element name="statusPeminjaman" msprop:Generator_ColumnPropNameInRow="statusPeminjaman" msprop:Generator_ColumnPropNameInTable="statusPeminjamanColumn" msprop:Generator_ColumnVarNameInTable="columnstatusPeminjaman" msprop:Generator_UserColumnName="statusPeminjaman" type="xs:int" />
+              <xs:element name="kapasitasOrang" msprop:Generator_ColumnPropNameInTable="kapasitasOrangColumn" msprop:Generator_ColumnPropNameInRow="kapasitasOrang" msprop:Generator_UserColumnName="kapasitasOrang" msprop:Generator_ColumnVarNameInTable="columnkapasitasOrang" type="xs:int" />
+              <xs:element name="tanggalPeminjaman" msprop:Generator_ColumnPropNameInTable="tanggalPeminjamanColumn" msprop:Generator_ColumnPropNameInRow="tanggalPeminjaman" msprop:Generator_UserColumnName="tanggalPeminjaman" msprop:Generator_ColumnVarNameInTable="columntanggalPeminjaman" type="xs:dateTime" />
+              <xs:element name="lamaPeminjaman" msprop:Generator_ColumnPropNameInTable="lamaPeminjamanColumn" msprop:Generator_ColumnPropNameInRow="lamaPeminjaman" msprop:Generator_UserColumnName="lamaPeminjaman" msprop:Generator_ColumnVarNameInTable="columnlamaPeminjaman" type="xs:int" />
+              <xs:element name="statusPeminjaman" msprop:Generator_ColumnPropNameInTable="statusPeminjamanColumn" msprop:Generator_ColumnPropNameInRow="statusPeminjaman" msprop:Generator_UserColumnName="statusPeminjaman" msprop:Generator_ColumnVarNameInTable="columnstatusPeminjaman" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

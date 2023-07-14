@@ -64,28 +64,6 @@ namespace SpaceSolutions
 
             connection.Open();
 
-            /*returnValue = (int)sqlcmd.ExecuteScalar();
-
-            if (returnValue == 1)
-            {
-                MessageBox.Show("Selamat Datang Manager!", "Login Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            }
-            else if(returnValue == 2)
-            {
-                MessageBox.Show("Selamat Datang Admin!", "Login Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (returnValue == 3)
-            {
-                MessageBox.Show("Selamat Datang User!", "Login Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("Password/Username Salah!", "Login Gagal", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtUsername.Text = "";
-                txtPassword.Text = "";
-            }*/
-
             object result = sqlcmd.ExecuteScalar();
             if (result != DBNull.Value && result != null)
             {
