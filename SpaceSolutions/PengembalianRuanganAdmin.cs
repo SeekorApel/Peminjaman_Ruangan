@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Resources.ResXFileRef;
 
 namespace SpaceSolutions
 {
@@ -20,6 +21,8 @@ namespace SpaceSolutions
         string selisihHari = "";
         string tampungTotalDendaHari = "";
         string idPeminjaman,idDenda, hargaDenda, descDenda;
+        int value1 = 0;
+        int value2 = 0;
         int statusKerusakan = 0;
 
         public PengembalianRuanganAdmin()
@@ -91,29 +94,10 @@ namespace SpaceSolutions
 
         private void txtTotalDenda_TextChanged(object sender, EventArgs e)
         {
-            getDenda();
-        }
-
-        private void btnCoba_Click(object sender, EventArgs e)
-        {
             
-            string coba = tglPeminjaman.ToString("dd/MM/yyyy");
-            MessageBox.Show(coba);
         }
 
-        private void btnCobaSelilih_Click(object sender, EventArgs e)
-        {
-            tglPengembalian = dtTanggalPengembalian.Value;
-
-            TimeSpan selisihTanggal = tglPengembalian.Date - tglPeminjaman.Date;
-            int hari = selisihTanggal.Days;
-            string convertHari = hari.ToString("F0");
-            selisihHari = convertHari;
-
-            MessageBox.Show(convertHari);
-        }
-
-        private void getDenda()
+        private void getDendaTelatPengembalianRuangan()
         {
             int jumlahHariPengembalian = 0;
             if (!string.IsNullOrEmpty(selisihHari))
@@ -123,25 +107,17 @@ namespace SpaceSolutions
 
             if (jumlahHariPengembalian == 0)
             {
-                /*MessageBox.Show("0");*/
-                txtTotalDenda.Text = "0";
-                tampungTotalDendaHari = txtTotalDenda.Text;
+                txtTotalDendaTelatPengembalian.Text = "0";
+                tampungTotalDendaHari = txtTotalDendaTelatPengembalian.Text;
             }
             else if (jumlahHariPengembalian >= 1)
             {
                 int dendaTelat = 10000;
                 int totalDendaTelatHari = jumlahHariPengembalian * dendaTelat;
                 string hasil = totalDendaTelatHari.ToString();
-                /*MessageBox.Show(hasil);*/
-                txtTotalDenda.Text = hasil;
-                tampungTotalDendaHari = txtTotalDenda.Text;
+                txtTotalDendaTelatPengembalian.Text = hasil;
+                tampungTotalDendaHari = txtTotalDendaTelatPengembalian.Text;
             }
-        }
-
-
-        private void btnDenda_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private DateTime tglPengembalianSebelumnya;
@@ -151,7 +127,7 @@ namespace SpaceSolutions
             if (tglPengembalianSekarang.Month != tglPengembalianSebelumnya.Month || tglPengembalianSekarang.Month == tglPengembalianSebelumnya.Month)
             {
                 hitungSelisihHari();
-                getDenda();
+                getDendaTelatPengembalianRuangan();
             }
             tglPengembalianSebelumnya = tglPengembalianSekarang;
         }
@@ -164,7 +140,7 @@ namespace SpaceSolutions
             int hari = (int)selisihTanggal.TotalDays;
             string convertHari = hari.ToString("F0");
             selisihHari = convertHari;
-            /*MessageBox.Show(convertHari);*/
+           
         }
 
         private void query1ToolStripButton_Click(object sender, EventArgs e)
@@ -190,16 +166,47 @@ namespace SpaceSolutions
                     {
 
                         KeranjangKerusakan.Items[i].Remove();
-                        HitungTotalDendaKerusakan();
+                        int totalDenda = 0;
 
+                        foreach (ListViewItem item in KeranjangKerusakan.Items)
+                        {
+                            int biayaDenda = int.Parse(item.SubItems[3].Text);
+                            totalDenda += biayaDenda;
+                        }
+
+                        txtTotalDendaKerusakanRuangan.Text = totalDenda.ToString();
                     }
                 }
             }
         }
 
+        private void txtTotalDendaTelatPengembalian_TextChanged(object sender, EventArgs e)
+        {
+            if (int.TryParse(txtTotalDendaTelatPengembalian.Text, out int newValue))
+            {
+                value1 = newValue;
+                updateTotal();
+            }
+        }
+
+        private void txtTotalDendaKerusakanRuangan_TextChanged(object sender, EventArgs e)
+        {
+            if (int.TryParse(txtTotalDendaKerusakanRuangan.Text, out int newValue))
+            {
+                value2 = newValue;
+                updateTotal();
+            }
+        }
+
+        private void updateTotal()
+        {
+            int hasil = value1 + value2;
+            txtTotalDenda.Text = hasil.ToString("C0");
+        }
+
         private void btnTambahDenda_Click(object sender, EventArgs e)
         {
-            getDataDenda();
+            getDataDendaKerusakan();
             idPeminjaman = txtIdPeminjaman.Text;
 
             string[] barang = new string[5];
@@ -217,12 +224,6 @@ namespace SpaceSolutions
             ListViewItem listBarang = new ListViewItem(barang);
             KeranjangKerusakan.Items.Add(listBarang);
 
-            HitungTotalDendaKerusakan();
-            
-        }
-
-        private void HitungTotalDendaKerusakan()
-        {
             int totalDenda = 0;
 
             foreach (ListViewItem item in KeranjangKerusakan.Items)
@@ -231,8 +232,11 @@ namespace SpaceSolutions
                 totalDenda += biayaDenda;
             }
 
-            txtTotalDendaKerusakan.Text = totalDenda.ToString();
+            txtTotalDendaKerusakanRuangan.Text = totalDenda.ToString();
+
         }
+
+       
 
 
         private void rbRusak_CheckedChanged(object sender, EventArgs e)
@@ -244,7 +248,7 @@ namespace SpaceSolutions
             }
         }
 
-        private void getDataDenda()
+        private void getDataDendaKerusakan()
         {
             try
             {

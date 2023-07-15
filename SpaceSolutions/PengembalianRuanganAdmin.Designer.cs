@@ -53,9 +53,6 @@
             this.Kolom9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Kolom10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnCoba = new System.Windows.Forms.Button();
-            this.btnCobaSelilih = new System.Windows.Forms.Button();
-            this.btnDenda = new System.Windows.Forms.Button();
             this.cbKerusakanRuangan = new Guna.UI2.WinForms.Guna2ComboBox();
             this.dendaKerusakanRuanganBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dSSpaceSolutions = new SpaceSolutions.DSSpaceSolutions();
@@ -69,8 +66,10 @@
             this.btnHapusKerusakan = new Guna.UI2.WinForms.Guna2Button();
             this.query1ToolStrip = new System.Windows.Forms.ToolStrip();
             this.query1ToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.txtTotalDendaKerusakan = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtCobaTampungVariable = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtTotalDendaKerusakanRuangan = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtTotalDendaTelatPengembalian = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabelPeminjaman)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dendaKerusakanRuanganBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSSpaceSolutions)).BeginInit();
@@ -376,36 +375,6 @@
             this.label3.TabIndex = 38;
             this.label3.Text = "label3";
             // 
-            // btnCoba
-            // 
-            this.btnCoba.Location = new System.Drawing.Point(234, 121);
-            this.btnCoba.Name = "btnCoba";
-            this.btnCoba.Size = new System.Drawing.Size(50, 23);
-            this.btnCoba.TabIndex = 39;
-            this.btnCoba.Text = "Coba";
-            this.btnCoba.UseVisualStyleBackColor = true;
-            this.btnCoba.Click += new System.EventHandler(this.btnCoba_Click);
-            // 
-            // btnCobaSelilih
-            // 
-            this.btnCobaSelilih.Location = new System.Drawing.Point(172, 121);
-            this.btnCobaSelilih.Name = "btnCobaSelilih";
-            this.btnCobaSelilih.Size = new System.Drawing.Size(50, 23);
-            this.btnCobaSelilih.TabIndex = 40;
-            this.btnCobaSelilih.Text = "Selisih";
-            this.btnCobaSelilih.UseVisualStyleBackColor = true;
-            this.btnCobaSelilih.Click += new System.EventHandler(this.btnCobaSelilih_Click);
-            // 
-            // btnDenda
-            // 
-            this.btnDenda.Location = new System.Drawing.Point(87, 121);
-            this.btnDenda.Name = "btnDenda";
-            this.btnDenda.Size = new System.Drawing.Size(64, 23);
-            this.btnDenda.TabIndex = 41;
-            this.btnDenda.Text = "Denda";
-            this.btnDenda.UseVisualStyleBackColor = true;
-            this.btnDenda.Click += new System.EventHandler(this.btnDenda_Click);
-            // 
             // cbKerusakanRuangan
             // 
             this.cbKerusakanRuangan.BackColor = System.Drawing.Color.Transparent;
@@ -530,51 +499,73 @@
             this.query1ToolStripButton.Text = "Query1";
             this.query1ToolStripButton.Click += new System.EventHandler(this.query1ToolStripButton_Click);
             // 
-            // txtTotalDendaKerusakan
+            // txtTotalDendaKerusakanRuangan
             // 
-            this.txtTotalDendaKerusakan.BorderRadius = 4;
-            this.txtTotalDendaKerusakan.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTotalDendaKerusakan.DefaultText = "";
-            this.txtTotalDendaKerusakan.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTotalDendaKerusakan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTotalDendaKerusakan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTotalDendaKerusakan.DisabledState.Parent = this.txtTotalDendaKerusakan;
-            this.txtTotalDendaKerusakan.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTotalDendaKerusakan.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTotalDendaKerusakan.FocusedState.Parent = this.txtTotalDendaKerusakan;
-            this.txtTotalDendaKerusakan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTotalDendaKerusakan.HoverState.Parent = this.txtTotalDendaKerusakan;
-            this.txtTotalDendaKerusakan.Location = new System.Drawing.Point(526, 558);
-            this.txtTotalDendaKerusakan.Name = "txtTotalDendaKerusakan";
-            this.txtTotalDendaKerusakan.PasswordChar = '\0';
-            this.txtTotalDendaKerusakan.PlaceholderText = "";
-            this.txtTotalDendaKerusakan.SelectedText = "";
-            this.txtTotalDendaKerusakan.ShadowDecoration.Parent = this.txtTotalDendaKerusakan;
-            this.txtTotalDendaKerusakan.Size = new System.Drawing.Size(220, 36);
-            this.txtTotalDendaKerusakan.TabIndex = 47;
+            this.txtTotalDendaKerusakanRuangan.BorderRadius = 4;
+            this.txtTotalDendaKerusakanRuangan.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTotalDendaKerusakanRuangan.DefaultText = "";
+            this.txtTotalDendaKerusakanRuangan.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTotalDendaKerusakanRuangan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTotalDendaKerusakanRuangan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTotalDendaKerusakanRuangan.DisabledState.Parent = this.txtTotalDendaKerusakanRuangan;
+            this.txtTotalDendaKerusakanRuangan.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTotalDendaKerusakanRuangan.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTotalDendaKerusakanRuangan.FocusedState.Parent = this.txtTotalDendaKerusakanRuangan;
+            this.txtTotalDendaKerusakanRuangan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTotalDendaKerusakanRuangan.HoverState.Parent = this.txtTotalDendaKerusakanRuangan;
+            this.txtTotalDendaKerusakanRuangan.Location = new System.Drawing.Point(526, 558);
+            this.txtTotalDendaKerusakanRuangan.Name = "txtTotalDendaKerusakanRuangan";
+            this.txtTotalDendaKerusakanRuangan.PasswordChar = '\0';
+            this.txtTotalDendaKerusakanRuangan.PlaceholderText = "";
+            this.txtTotalDendaKerusakanRuangan.SelectedText = "";
+            this.txtTotalDendaKerusakanRuangan.ShadowDecoration.Parent = this.txtTotalDendaKerusakanRuangan;
+            this.txtTotalDendaKerusakanRuangan.Size = new System.Drawing.Size(220, 36);
+            this.txtTotalDendaKerusakanRuangan.TabIndex = 47;
+            this.txtTotalDendaKerusakanRuangan.TextChanged += new System.EventHandler(this.txtTotalDendaKerusakanRuangan_TextChanged);
             // 
-            // txtCobaTampungVariable
+            // txtTotalDendaTelatPengembalian
             // 
-            this.txtCobaTampungVariable.BorderRadius = 4;
-            this.txtCobaTampungVariable.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCobaTampungVariable.DefaultText = "";
-            this.txtCobaTampungVariable.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtCobaTampungVariable.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtCobaTampungVariable.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCobaTampungVariable.DisabledState.Parent = this.txtCobaTampungVariable;
-            this.txtCobaTampungVariable.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCobaTampungVariable.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCobaTampungVariable.FocusedState.Parent = this.txtCobaTampungVariable;
-            this.txtCobaTampungVariable.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCobaTampungVariable.HoverState.Parent = this.txtCobaTampungVariable;
-            this.txtCobaTampungVariable.Location = new System.Drawing.Point(526, 466);
-            this.txtCobaTampungVariable.Name = "txtCobaTampungVariable";
-            this.txtCobaTampungVariable.PasswordChar = '\0';
-            this.txtCobaTampungVariable.PlaceholderText = "";
-            this.txtCobaTampungVariable.SelectedText = "";
-            this.txtCobaTampungVariable.ShadowDecoration.Parent = this.txtCobaTampungVariable;
-            this.txtCobaTampungVariable.Size = new System.Drawing.Size(220, 36);
-            this.txtCobaTampungVariable.TabIndex = 48;
+            this.txtTotalDendaTelatPengembalian.BorderRadius = 4;
+            this.txtTotalDendaTelatPengembalian.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTotalDendaTelatPengembalian.DefaultText = "";
+            this.txtTotalDendaTelatPengembalian.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTotalDendaTelatPengembalian.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTotalDendaTelatPengembalian.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTotalDendaTelatPengembalian.DisabledState.Parent = this.txtTotalDendaTelatPengembalian;
+            this.txtTotalDendaTelatPengembalian.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTotalDendaTelatPengembalian.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTotalDendaTelatPengembalian.FocusedState.Parent = this.txtTotalDendaTelatPengembalian;
+            this.txtTotalDendaTelatPengembalian.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTotalDendaTelatPengembalian.HoverState.Parent = this.txtTotalDendaTelatPengembalian;
+            this.txtTotalDendaTelatPengembalian.Location = new System.Drawing.Point(526, 466);
+            this.txtTotalDendaTelatPengembalian.Name = "txtTotalDendaTelatPengembalian";
+            this.txtTotalDendaTelatPengembalian.PasswordChar = '\0';
+            this.txtTotalDendaTelatPengembalian.PlaceholderText = "";
+            this.txtTotalDendaTelatPengembalian.SelectedText = "";
+            this.txtTotalDendaTelatPengembalian.ShadowDecoration.Parent = this.txtTotalDendaTelatPengembalian;
+            this.txtTotalDendaTelatPengembalian.Size = new System.Drawing.Size(220, 36);
+            this.txtTotalDendaTelatPengembalian.TabIndex = 48;
+            this.txtTotalDendaTelatPengembalian.TextChanged += new System.EventHandler(this.txtTotalDendaTelatPengembalian_TextChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(521, 427);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(101, 26);
+            this.label6.TabIndex = 49;
+            this.label6.Text = "Telat Balikin";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(521, 520);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(205, 26);
+            this.label7.TabIndex = 50;
+            this.label7.Text = "Denda Kerusakan Barang";
             // 
             // PengembalianRuanganAdmin
             // 
@@ -582,16 +573,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1004, 720);
-            this.Controls.Add(this.txtCobaTampungVariable);
-            this.Controls.Add(this.txtTotalDendaKerusakan);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtTotalDendaTelatPengembalian);
+            this.Controls.Add(this.txtTotalDendaKerusakanRuangan);
             this.Controls.Add(this.query1ToolStrip);
             this.Controls.Add(this.btnHapusKerusakan);
             this.Controls.Add(this.btnTambahDenda);
             this.Controls.Add(this.KeranjangKerusakan);
             this.Controls.Add(this.cbKerusakanRuangan);
-            this.Controls.Add(this.btnDenda);
-            this.Controls.Add(this.btnCobaSelilih);
-            this.Controls.Add(this.btnCoba);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -647,9 +637,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Kolom9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Kolom10;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnCoba;
-        private System.Windows.Forms.Button btnCobaSelilih;
-        private System.Windows.Forms.Button btnDenda;
         private Guna.UI2.WinForms.Guna2ComboBox cbKerusakanRuangan;
         private System.Windows.Forms.ListView KeranjangKerusakan;
         private System.Windows.Forms.ColumnHeader columnHeader1;
@@ -663,7 +650,9 @@
         private Guna.UI2.WinForms.Guna2Button btnHapusKerusakan;
         private System.Windows.Forms.ToolStrip query1ToolStrip;
         private System.Windows.Forms.ToolStripButton query1ToolStripButton;
-        private Guna.UI2.WinForms.Guna2TextBox txtTotalDendaKerusakan;
-        private Guna.UI2.WinForms.Guna2TextBox txtCobaTampungVariable;
+        private Guna.UI2.WinForms.Guna2TextBox txtTotalDendaKerusakanRuangan;
+        private Guna.UI2.WinForms.Guna2TextBox txtTotalDendaTelatPengembalian;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }
