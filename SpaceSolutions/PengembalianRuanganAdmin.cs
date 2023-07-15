@@ -19,6 +19,7 @@ namespace SpaceSolutions
         DateTime tglPengembalian;
         string selisihHari = "";
         string tampungTotalDendaHari = "";
+        string idPeminjaman,idDenda, hargaDenda, descDenda;
         int statusKerusakan = 0;
 
         public PengembalianRuanganAdmin()
@@ -29,9 +30,12 @@ namespace SpaceSolutions
 
         private void PengembalianRuanganAdmin_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dSSpaceSolutions.DendaKerusakanRuangan' table. You can move, or remove it, as needed.
+            this.dendaKerusakanRuanganTableAdapter.Fill(this.dSSpaceSolutions.DendaKerusakanRuangan);
             getData();
             txtIdPeminjaman.Enabled = false;
             dtTanggalPeminjaman.Enabled = false;
+            query1ToolStrip.Visible = false;
 
         }
 
@@ -163,12 +167,114 @@ namespace SpaceSolutions
             /*MessageBox.Show(convertHari);*/
         }
 
+        private void query1ToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.dendaKerusakanRuanganTableAdapter.Query1(this.dSSpaceSolutions.DendaKerusakanRuangan);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void btnHapusKerusakan_Click(object sender, EventArgs e)
+        {
+            if (KeranjangKerusakan.SelectedItems.Count > 0)
+            {
+                for (int i = 0; i < KeranjangKerusakan.Items.Count; i++)
+                {
+                    if (KeranjangKerusakan.Items[i].Selected)
+                    {
+
+                        KeranjangKerusakan.Items[i].Remove();
+                        HitungTotalDendaKerusakan();
+
+                    }
+                }
+            }
+        }
+
+        private void btnTambahDenda_Click(object sender, EventArgs e)
+        {
+            getDataDenda();
+            idPeminjaman = txtIdPeminjaman.Text;
+
+            string[] barang = new string[5];
+            barang[0] = idPeminjaman;
+            barang[1] = idDenda;
+            barang[2] = descDenda;
+            barang[3] = hargaDenda;
+
+
+            idPeminjaman = null;
+            idDenda = null;
+            descDenda = null;
+            hargaDenda = null;
+
+            ListViewItem listBarang = new ListViewItem(barang);
+            KeranjangKerusakan.Items.Add(listBarang);
+
+            HitungTotalDendaKerusakan();
+            
+        }
+
+        private void HitungTotalDendaKerusakan()
+        {
+            int totalDenda = 0;
+
+            foreach (ListViewItem item in KeranjangKerusakan.Items)
+            {
+                int biayaDenda = int.Parse(item.SubItems[3].Text);
+                totalDenda += biayaDenda;
+            }
+
+            txtTotalDendaKerusakan.Text = totalDenda.ToString();
+        }
+
+
         private void rbRusak_CheckedChanged(object sender, EventArgs e)
         {
             RadioButton selectedRadioButton = sender as RadioButton;
             if (selectedRadioButton != null && selectedRadioButton.Checked && selectedRadioButton.Name == "rbRusak")
             {
                 MessageBox.Show("Baa");
+            }
+        }
+
+        private void getDataDenda()
+        {
+            try
+            {
+
+                SqlConnection connection = new SqlConnection();
+                connection.ConnectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
+                connection.Open();
+                DataTable dt = new DataTable();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM DendaKerusakanRuangan WHERE idDendaKerusakanRuangan = @idDenda AND [status] = 1", connection);
+                cmd.Parameters.AddWithValue("@idDenda", cbKerusakanRuangan.SelectedValue.ToString());
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+
+                if (dt.Rows.Count > 0)
+                {
+                    idDenda = dt.Rows[0]["idDendaKerusakanRuangan"].ToString();
+                    descDenda = dt.Rows[0]["deskripsiKerusakan"].ToString();
+                    hargaDenda = dt.Rows[0]["biayaDenda"].ToString();
+                }
+                else
+                {
+                    MessageBox.Show("ID Denda tidak ditemukan", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+                connection.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Terjadi error pada saat koneksi dengan database :" + ex.Message);
             }
         }
     }
