@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Resources.ResXFileRef;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace SpaceSolutions
 {
@@ -35,38 +36,18 @@ namespace SpaceSolutions
         {
             // TODO: This line of code loads data into the 'dSSpaceSolutions.DendaKerusakanRuangan' table. You can move, or remove it, as needed.
             this.dendaKerusakanRuanganTableAdapter.Fill(this.dSSpaceSolutions.DendaKerusakanRuangan);
-            getData();
+            getDataPeminjamanRuangan();
             txtIdPeminjaman.Enabled = false;
             dtTanggalPeminjaman.Enabled = false;
             query1ToolStrip.Visible = false;
+            cbKerusakanRuangan.Visible = false;
+            btnTambahDenda.Visible = false;
+            btnHapusKerusakan.Visible = false;
+            KeranjangKerusakan.Visible = false;
 
         }
 
-        private void txtIdPeminjaman_Leave(object sender, EventArgs e)
-        {
-
-        }
-
-        private void getData()
-        {
-            SqlConnection connection = new SqlConnection();
-            connection.ConnectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
-            connection.Open();
-            try
-            {
-                string query = "SELECT * FROM GetPeminjamanRuangan() WHERE statusPeminjaman = 'Disetujui'";
-                SqlCommand cmd = new SqlCommand(query, connection);
-                SqlDataAdapter adp = new SqlDataAdapter(cmd);
-
-                DataTable dt = new DataTable();
-                adp.Fill(dt);
-                dgvTabelPeminjaman.DataSource = dt;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
+        
 
         private void dgvTabelPeminjaman_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -185,7 +166,7 @@ namespace SpaceSolutions
             if (int.TryParse(txtTotalDendaTelatPengembalian.Text, out int newValue))
             {
                 value1 = newValue;
-                updateTotal();
+                updateTotalDenda();
             }
         }
 
@@ -194,15 +175,17 @@ namespace SpaceSolutions
             if (int.TryParse(txtTotalDendaKerusakanRuangan.Text, out int newValue))
             {
                 value2 = newValue;
-                updateTotal();
+                updateTotalDenda();
             }
         }
 
-        private void updateTotal()
+        private void updateTotalDenda()
         {
             int hasil = value1 + value2;
             txtTotalDenda.Text = hasil.ToString("C0");
         }
+
+
 
         private void btnTambahDenda_Click(object sender, EventArgs e)
         {
@@ -244,7 +227,143 @@ namespace SpaceSolutions
             RadioButton selectedRadioButton = sender as RadioButton;
             if (selectedRadioButton != null && selectedRadioButton.Checked && selectedRadioButton.Name == "rbRusak")
             {
-                MessageBox.Show("Baa");
+                cbKerusakanRuangan.Visible = true;
+                btnTambahDenda.Visible = true;
+                btnHapusKerusakan.Visible = true;
+                KeranjangKerusakan.Visible = true;
+            }
+        }
+
+        private void rbTidakKerusakan_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton selectedRadioButton = sender as RadioButton;
+            if (selectedRadioButton != null && selectedRadioButton.Checked && selectedRadioButton.Name == "rbTidakKerusakan")
+            {
+                cbKerusakanRuangan.Visible = false;
+                btnTambahDenda.Visible = false;
+                btnHapusKerusakan.Visible = false;
+                KeranjangKerusakan.Visible = false;
+                KeranjangKerusakan.Items.Clear();
+                txtTotalDendaKerusakanRuangan.Text = "0";
+            }
+        }
+
+        private void btnKembalikan_Click(object sender, EventArgs e)
+        {
+            if(rbRusak.Checked == true)
+            {
+                statusKerusakan = 1;
+
+            }else if(rbTidakKerusakan.Checked == true)
+            {
+                statusKerusakan = 0;
+            }
+
+            if(statusKerusakan == 0)
+            {
+                inputPeminjamanRuangan();
+            }else if (statusKerusakan == 1)
+            {
+                inputPeminjamanRuangan();
+                inputDetailKerusakanBarang();
+            }
+        }
+
+        private void inputPeminjamanRuangan()
+        {
+            string hasilText = txtTotalDenda.Text;
+
+            // Menghapus simbol mata uang dan pemisah ribuan
+            string angkaString = hasilText.Replace("Rp", "").Replace(",", "");
+
+            // Mengonversi string menjadi angka desimal
+            decimal angka = decimal.Parse(angkaString);
+
+            // Tampung hasil konversi ke string
+            string totalDenda = "";
+            totalDenda = angka.ToString();
+
+            try
+            {
+                SqlConnection connection = new SqlConnection();
+                connection.ConnectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
+                SqlCommand sqlcmd = new SqlCommand("sp_PengembalianRuangan", connection);
+                sqlcmd.CommandType = CommandType.StoredProcedure;
+
+                sqlcmd.Parameters.AddWithValue("@idPeminjamanRuangan", txtIdPeminjaman.Text);
+                sqlcmd.Parameters.AddWithValue("@tanggalPengembalian", dtTanggalPengembalian.Value);
+                sqlcmd.Parameters.AddWithValue("@kondisiRuangan", statusKerusakan);
+                sqlcmd.Parameters.AddWithValue("@totalBiayaDenda", totalDenda);
+
+                connection.Open();
+                int result = Convert.ToInt32(sqlcmd.ExecuteNonQuery());
+                connection.Close();
+
+                if (result != 0)
+                {
+                    MessageBox.Show("Pengembalian Ruangan Berhasil", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+                else
+                {
+                    MessageBox.Show("Pengembalian Ruangan Gagal", "Peringantan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error : " + ex.Message);
+            }
+        }
+
+        private void inputDetailKerusakanBarang()
+        {
+            try
+            {
+                SqlConnection connection = new SqlConnection();
+                connection.ConnectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
+                SqlCommand sqlcmd = new SqlCommand("sp_InputDetailKerusakanRuangan", connection);
+                sqlcmd.CommandType = CommandType.StoredProcedure;
+                connection.Open();
+                foreach (ListViewItem ListItem in KeranjangKerusakan.Items)
+                {
+
+                    sqlcmd.Parameters.AddWithValue("@idPeminjamanRuangan", ListItem.SubItems[0].Text);
+                    sqlcmd.Parameters.AddWithValue("@idDendaKerusakanRuangan", ListItem.SubItems[1].Text);
+                    sqlcmd.ExecuteNonQuery();
+                    sqlcmd.Parameters.Clear();
+
+                }
+
+                connection.Close();
+
+                MessageBox.Show("Pengembalian Ruangan Berhasil", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error : " + ex.Message);
+            }
+        }
+
+        private void getDataPeminjamanRuangan()
+        {
+            SqlConnection connection = new SqlConnection();
+            connection.ConnectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
+            connection.Open();
+            try
+            {
+                string query = "SELECT * FROM GetPeminjamanRuangan() WHERE statusPeminjaman = 'Disetujui'";
+                SqlCommand cmd = new SqlCommand(query, connection);
+                SqlDataAdapter adp = new SqlDataAdapter(cmd);
+
+                DataTable dt = new DataTable();
+                adp.Fill(dt);
+                dgvTabelPeminjaman.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -280,6 +399,11 @@ namespace SpaceSolutions
             {
                 MessageBox.Show("Terjadi error pada saat koneksi dengan database :" + ex.Message);
             }
+        }
+
+        private void txtIdPeminjaman_Leave(object sender, EventArgs e)
+        {
+
         }
     }
 }

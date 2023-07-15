@@ -52,7 +52,6 @@
             this.Kolom8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Kolom9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Kolom10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label3 = new System.Windows.Forms.Label();
             this.cbKerusakanRuangan = new Guna.UI2.WinForms.Guna2ComboBox();
             this.dendaKerusakanRuanganBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dSSpaceSolutions = new SpaceSolutions.DSSpaceSolutions();
@@ -179,6 +178,7 @@
             this.rbTidakKerusakan.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.rbTidakKerusakan.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             this.rbTidakKerusakan.UseVisualStyleBackColor = true;
+            this.rbTidakKerusakan.CheckedChanged += new System.EventHandler(this.rbTidakKerusakan_CheckedChanged);
             // 
             // Denda
             // 
@@ -205,6 +205,7 @@
             this.btnKembalikan.Size = new System.Drawing.Size(140, 36);
             this.btnKembalikan.TabIndex = 31;
             this.btnKembalikan.Text = "Kembalikan";
+            this.btnKembalikan.Click += new System.EventHandler(this.btnKembalikan_Click);
             // 
             // txtIdPeminjaman
             // 
@@ -286,7 +287,7 @@
             this.Kolom8,
             this.Kolom9,
             this.Kolom10});
-            this.dgvTabelPeminjaman.Location = new System.Drawing.Point(382, 143);
+            this.dgvTabelPeminjaman.Location = new System.Drawing.Point(382, 151);
             this.dgvTabelPeminjaman.Name = "dgvTabelPeminjaman";
             this.dgvTabelPeminjaman.ReadOnly = true;
             this.dgvTabelPeminjaman.RowHeadersVisible = false;
@@ -365,15 +366,6 @@
             this.Kolom10.HeaderText = "Status Peminjaman";
             this.Kolom10.Name = "Kolom10";
             this.Kolom10.ReadOnly = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(379, 111);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 38;
-            this.label3.Text = "label3";
             // 
             // cbKerusakanRuangan
             // 
@@ -582,7 +574,6 @@
             this.Controls.Add(this.btnTambahDenda);
             this.Controls.Add(this.KeranjangKerusakan);
             this.Controls.Add(this.cbKerusakanRuangan);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
@@ -636,7 +627,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Kolom8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Kolom9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Kolom10;
-        private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2ComboBox cbKerusakanRuangan;
         private System.Windows.Forms.ListView KeranjangKerusakan;
         private System.Windows.Forms.ColumnHeader columnHeader1;
