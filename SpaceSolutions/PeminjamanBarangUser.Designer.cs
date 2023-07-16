@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -58,10 +57,6 @@
             this.btnUbah = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabelBarang)).BeginInit();
             this.SuspendLayout();
-            // 
-            // guna2DragControl1
-            // 
-            this.guna2DragControl1.TargetControl = this;
             // 
             // guna2Elipse1
             // 
@@ -250,6 +245,7 @@
             this.btnPinjam.Size = new System.Drawing.Size(180, 36);
             this.btnPinjam.TabIndex = 34;
             this.btnPinjam.Text = "Pinjam";
+            this.btnPinjam.Click += new System.EventHandler(this.btnPinjam_Click);
             // 
             // label3
             // 
@@ -433,8 +429,6 @@
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;

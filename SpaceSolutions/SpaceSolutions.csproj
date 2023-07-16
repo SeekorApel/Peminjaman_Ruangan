@@ -195,12 +195,6 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PeminjamanBarangAdmin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PeminjamanBarangAdmin.Designer.cs">
-      <DependentUpon>PeminjamanBarangAdmin.cs</DependentUpon>
-    </Compile>
     <Compile Include="PeminjamanBarangUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -218,6 +212,12 @@
     </Compile>
     <Compile Include="PeminjamanRuanganUser.Designer.cs">
       <DependentUpon>PeminjamanRuanganUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PengembalianBarangAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PengembalianBarangAdmin.Designer.cs">
+      <DependentUpon>PengembalianBarangAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="PengembalianRuanganAdmin.cs">
       <SubType>Form</SubType>
@@ -340,6 +340,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PeminjamanRuanganUser.resx">
       <DependentUpon>PeminjamanRuanganUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PengembalianBarangAdmin.resx">
+      <DependentUpon>PengembalianBarangAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PengembalianRuanganAdmin.resx">
       <DependentUpon>PengembalianRuanganAdmin.cs</DependentUpon>

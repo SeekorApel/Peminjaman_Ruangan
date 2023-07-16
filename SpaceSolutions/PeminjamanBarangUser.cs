@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms.Suite;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -23,7 +24,7 @@ namespace SpaceSolutions
 
         private void PeminjamanBarangUser_Load(object sender, EventArgs e)
         {
-           
+            dtTanggalPeminjaman.Value = DateTime.Now;
             getDataTabelBarang();
 
         }
@@ -122,6 +123,86 @@ namespace SpaceSolutions
             txtCariBarang.Text = "";
         }
 
+        private void btnPinjam_Click(object sender, EventArgs e)
+        {
+            inputTabelPeminjamanBarang();
+            inputDetailPeminjamanBarang();
+            getDataTabelBarang();
+            clear();
+        }
+
+        private void inputTabelPeminjamanBarang()
+        {
+            int status = 1;
+            try
+            {
+                SqlConnection connection = new SqlConnection();
+                connection.ConnectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
+                SqlCommand sqlcmd = new SqlCommand("sp_InputPeminjamanBarang", connection);
+                sqlcmd.CommandType = CommandType.StoredProcedure;
+
+                //Buat AUTO INCREMENT Tabel PeminjamanBarang
+                string query = "SELECT TOP 1 idPeminjamanBarang FROM PeminjamanBarang ORDER BY idPeminjamanBarang DESC";
+                string idPeminjaman = (string)autogenerateID("PB", query);
+
+                sqlcmd.Parameters.AddWithValue("@idPeminjamanBarang", idPeminjaman);
+                sqlcmd.Parameters.AddWithValue("@idUser", idUser);
+                sqlcmd.Parameters.AddWithValue("@tanggalPeminjaman", dtTanggalPeminjaman.Value);
+                sqlcmd.Parameters.AddWithValue("@lamaPeminjaman", txtLamaPeminjaman.Text);
+                sqlcmd.Parameters.AddWithValue("@statusPeminjaman", status);
+
+
+                connection.Open();
+                int result = Convert.ToInt32(sqlcmd.ExecuteNonQuery());
+                connection.Close();
+
+                if (result != 0)
+                {
+                    MessageBox.Show("Peminjaman Barang Berhasil", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+                else
+                {
+                    MessageBox.Show("Peminjaman Barang Gagal", "Peringantan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error : " + ex.Message);
+            }
+        }
+
+        private void inputDetailPeminjamanBarang()
+        {
+            try
+            {
+                SqlConnection connection = new SqlConnection();
+                connection.ConnectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
+                SqlCommand sqlcmd = new SqlCommand("sp_InputDetailPeminjamanBarang", connection);
+                sqlcmd.CommandType = CommandType.StoredProcedure;
+                connection.Open();
+                foreach (ListViewItem ListItem in keranjangBarang.Items)
+                {
+
+                    sqlcmd.Parameters.AddWithValue("@idPeminjamanBarang", ListItem.SubItems[0].Text);
+                    sqlcmd.Parameters.AddWithValue("@IdBarang", ListItem.SubItems[1].Text);
+                    sqlcmd.Parameters.AddWithValue("@qty", ListItem.SubItems[3].Text);
+                    sqlcmd.ExecuteNonQuery();
+                    sqlcmd.Parameters.Clear();
+
+                }
+                connection.Close();
+
+                MessageBox.Show("Peminjaman Barang Berhasil", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error : " + ex.Message);
+            }
+        }
+
         private void dgvTabelBarang_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -164,7 +245,7 @@ namespace SpaceSolutions
                 return;
             }
 
-            //Buat AUTO INCREMENT Tabel Fasilitas
+            //Buat AUTO INCREMENT Tabel PeminjamanBarang
             string query = "SELECT TOP 1 idPeminjamanBarang FROM PeminjamanBarang ORDER BY idPeminjamanBarang DESC";
             idPeminjamanBarang = (string)autogenerateID("PB", query);
 
@@ -278,6 +359,16 @@ namespace SpaceSolutions
             nama = (string)result;
 
             return nama;
+        }
+
+        private void clear()
+        {
+            keranjangBarang.Items.Clear();
+            txtIdBarang.Text = "";
+            txtJumlahBarang.Text = "";
+            txtCariBarang.Text = "";
+            dtTanggalPeminjaman.Value = DateTime.Now;
+            txtLamaPeminjaman.Text = "";
         }
     }
 }
