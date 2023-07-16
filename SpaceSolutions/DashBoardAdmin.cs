@@ -128,7 +128,7 @@ namespace SpaceSolutions
 
         private void btnPengembalianBarang_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new PengembalianBarangAdmin(), sender);
         }
 
         private void btnPengembalian_Click(object sender, EventArgs e)

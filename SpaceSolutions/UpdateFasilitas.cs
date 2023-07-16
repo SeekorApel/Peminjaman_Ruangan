@@ -31,7 +31,7 @@ namespace SpaceSolutions
             // TODO: This line of code loads data into the 'dSSpaceSolutions.Barang' table. You can move, or remove it, as needed.
             this.barangTableAdapter.Fill(this.dSSpaceSolutions.Barang);
             txtNamaFasilitas.Text = namaFasilitasTemp;
-            getDataDetail();
+            getDataDetailFasilitas();
 
         }
 
@@ -120,7 +120,7 @@ namespace SpaceSolutions
             txtJumlahBarang.Text = "";
         }
 
-        private void getDataDetail()
+        private void getDataDetailFasilitas()
         {
             SqlConnection connection = new SqlConnection();
             connection.ConnectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
