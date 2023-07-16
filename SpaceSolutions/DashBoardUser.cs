@@ -85,6 +85,11 @@ namespace SpaceSolutions
             openChildForm(new PeminjamanRuanganUser(idUser), sender);
         }
 
+        private void btnPeminjamanBarang_Click(object sender, EventArgs e)
+        {
+            openChildForm(new PeminjamanBarangUser(idUser), sender);
+        }
+
         private void btnLogOut_Click(object sender, EventArgs e)
         {
             this.Hide();

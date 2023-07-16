@@ -31,32 +31,32 @@
             this.components = new System.ComponentModel.Container();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.panelBar = new System.Windows.Forms.Panel();
+            this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.labelNama = new System.Windows.Forms.Label();
             this.panelDesktopUser = new System.Windows.Forms.Panel();
-            this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnKelolaUser = new System.Windows.Forms.Button();
             this.btnPeminjaman = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.panelSubMenuPeminjaman = new System.Windows.Forms.Panel();
-            this.btnPeminjamanRuangan = new Guna.UI2.WinForms.Guna2Button();
-            this.btnPeminjamanBarang = new Guna.UI2.WinForms.Guna2Button();
-            this.btnPengembalian = new System.Windows.Forms.Button();
             this.panelSubMenuPengembalian = new System.Windows.Forms.Panel();
-            this.btnPengembalianRuangan = new Guna.UI2.WinForms.Guna2Button();
             this.btnPengembalianBarang = new Guna.UI2.WinForms.Guna2Button();
+            this.btnPengembalianRuangan = new Guna.UI2.WinForms.Guna2Button();
+            this.btnPengembalian = new System.Windows.Forms.Button();
+            this.panelSubMenuPeminjaman = new System.Windows.Forms.Panel();
+            this.btnPeminjamanBarang = new Guna.UI2.WinForms.Guna2Button();
+            this.btnPeminjamanRuangan = new Guna.UI2.WinForms.Guna2Button();
             this.panelBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.guna2Panel1.SuspendLayout();
-            this.panelSubMenuPeminjaman.SuspendLayout();
             this.panelSubMenuPengembalian.SuspendLayout();
+            this.panelSubMenuPeminjaman.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2DragControl1
@@ -76,6 +76,18 @@
             this.panelBar.Name = "panelBar";
             this.panelBar.Size = new System.Drawing.Size(990, 130);
             this.panelBar.TabIndex = 7;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.FillColor = System.Drawing.Color.White;
+            this.btnClose.HoverState.Parent = this.btnClose;
+            this.btnClose.IconColor = System.Drawing.Color.Black;
+            this.btnClose.Location = new System.Drawing.Point(933, 12);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.ShadowDecoration.Parent = this.btnClose;
+            this.btnClose.Size = new System.Drawing.Size(45, 29);
+            this.btnClose.TabIndex = 13;
             // 
             // guna2ControlBox1
             // 
@@ -128,18 +140,6 @@
             this.panelDesktopUser.Name = "panelDesktopUser";
             this.panelDesktopUser.Size = new System.Drawing.Size(990, 590);
             this.panelDesktopUser.TabIndex = 8;
-            // 
-            // btnClose
-            // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.FillColor = System.Drawing.Color.White;
-            this.btnClose.HoverState.Parent = this.btnClose;
-            this.btnClose.IconColor = System.Drawing.Color.Black;
-            this.btnClose.Location = new System.Drawing.Point(933, 12);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.ShadowDecoration.Parent = this.btnClose;
-            this.btnClose.Size = new System.Drawing.Size(45, 29);
-            this.btnClose.TabIndex = 13;
             // 
             // panel1
             // 
@@ -234,49 +234,48 @@
             this.guna2Panel1.Size = new System.Drawing.Size(290, 720);
             this.guna2Panel1.TabIndex = 0;
             // 
-            // panelSubMenuPeminjaman
+            // panelSubMenuPengembalian
             // 
-            this.panelSubMenuPeminjaman.BackColor = System.Drawing.Color.White;
-            this.panelSubMenuPeminjaman.Controls.Add(this.btnPeminjamanBarang);
-            this.panelSubMenuPeminjaman.Controls.Add(this.btnPeminjamanRuangan);
-            this.panelSubMenuPeminjaman.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubMenuPeminjaman.Location = new System.Drawing.Point(0, 230);
-            this.panelSubMenuPeminjaman.Name = "panelSubMenuPeminjaman";
-            this.panelSubMenuPeminjaman.Size = new System.Drawing.Size(290, 152);
-            this.panelSubMenuPeminjaman.TabIndex = 12;
+            this.panelSubMenuPengembalian.BackColor = System.Drawing.Color.White;
+            this.panelSubMenuPengembalian.Controls.Add(this.btnPengembalianBarang);
+            this.panelSubMenuPengembalian.Controls.Add(this.btnPengembalianRuangan);
+            this.panelSubMenuPengembalian.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSubMenuPengembalian.Location = new System.Drawing.Point(0, 432);
+            this.panelSubMenuPengembalian.Name = "panelSubMenuPengembalian";
+            this.panelSubMenuPengembalian.Size = new System.Drawing.Size(290, 140);
+            this.panelSubMenuPengembalian.TabIndex = 14;
             // 
-            // btnPeminjamanRuangan
+            // btnPengembalianBarang
             // 
-            this.btnPeminjamanRuangan.CheckedState.Parent = this.btnPeminjamanRuangan;
-            this.btnPeminjamanRuangan.CustomImages.Parent = this.btnPeminjamanRuangan;
-            this.btnPeminjamanRuangan.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPeminjamanRuangan.FillColor = System.Drawing.Color.White;
-            this.btnPeminjamanRuangan.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPeminjamanRuangan.ForeColor = System.Drawing.Color.Black;
-            this.btnPeminjamanRuangan.HoverState.Parent = this.btnPeminjamanRuangan;
-            this.btnPeminjamanRuangan.Location = new System.Drawing.Point(0, 0);
-            this.btnPeminjamanRuangan.Name = "btnPeminjamanRuangan";
-            this.btnPeminjamanRuangan.ShadowDecoration.Parent = this.btnPeminjamanRuangan;
-            this.btnPeminjamanRuangan.Size = new System.Drawing.Size(290, 50);
-            this.btnPeminjamanRuangan.TabIndex = 1;
-            this.btnPeminjamanRuangan.Text = "Peminjaman Ruangan";
-            this.btnPeminjamanRuangan.Click += new System.EventHandler(this.btnPeminjamanRuangan_Click);
+            this.btnPengembalianBarang.CheckedState.Parent = this.btnPengembalianBarang;
+            this.btnPengembalianBarang.CustomImages.Parent = this.btnPengembalianBarang;
+            this.btnPengembalianBarang.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPengembalianBarang.FillColor = System.Drawing.Color.White;
+            this.btnPengembalianBarang.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPengembalianBarang.ForeColor = System.Drawing.Color.Black;
+            this.btnPengembalianBarang.HoverState.Parent = this.btnPengembalianBarang;
+            this.btnPengembalianBarang.Location = new System.Drawing.Point(0, 50);
+            this.btnPengembalianBarang.Name = "btnPengembalianBarang";
+            this.btnPengembalianBarang.ShadowDecoration.Parent = this.btnPengembalianBarang;
+            this.btnPengembalianBarang.Size = new System.Drawing.Size(290, 50);
+            this.btnPengembalianBarang.TabIndex = 5;
+            this.btnPengembalianBarang.Text = "Pengembalian Barang";
             // 
-            // btnPeminjamanBarang
+            // btnPengembalianRuangan
             // 
-            this.btnPeminjamanBarang.CheckedState.Parent = this.btnPeminjamanBarang;
-            this.btnPeminjamanBarang.CustomImages.Parent = this.btnPeminjamanBarang;
-            this.btnPeminjamanBarang.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPeminjamanBarang.FillColor = System.Drawing.Color.White;
-            this.btnPeminjamanBarang.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPeminjamanBarang.ForeColor = System.Drawing.Color.Black;
-            this.btnPeminjamanBarang.HoverState.Parent = this.btnPeminjamanBarang;
-            this.btnPeminjamanBarang.Location = new System.Drawing.Point(0, 50);
-            this.btnPeminjamanBarang.Name = "btnPeminjamanBarang";
-            this.btnPeminjamanBarang.ShadowDecoration.Parent = this.btnPeminjamanBarang;
-            this.btnPeminjamanBarang.Size = new System.Drawing.Size(290, 50);
-            this.btnPeminjamanBarang.TabIndex = 2;
-            this.btnPeminjamanBarang.Text = "Peminjaman Barang";
+            this.btnPengembalianRuangan.CheckedState.Parent = this.btnPengembalianRuangan;
+            this.btnPengembalianRuangan.CustomImages.Parent = this.btnPengembalianRuangan;
+            this.btnPengembalianRuangan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPengembalianRuangan.FillColor = System.Drawing.Color.White;
+            this.btnPengembalianRuangan.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPengembalianRuangan.ForeColor = System.Drawing.Color.Black;
+            this.btnPengembalianRuangan.HoverState.Parent = this.btnPengembalianRuangan;
+            this.btnPengembalianRuangan.Location = new System.Drawing.Point(0, 0);
+            this.btnPengembalianRuangan.Name = "btnPengembalianRuangan";
+            this.btnPengembalianRuangan.ShadowDecoration.Parent = this.btnPengembalianRuangan;
+            this.btnPengembalianRuangan.Size = new System.Drawing.Size(290, 50);
+            this.btnPengembalianRuangan.TabIndex = 4;
+            this.btnPengembalianRuangan.Text = "Pengembalian Ruangan";
             // 
             // btnPengembalian
             // 
@@ -297,48 +296,50 @@
             this.btnPengembalian.UseVisualStyleBackColor = true;
             this.btnPengembalian.Click += new System.EventHandler(this.btnPengembalian_Click);
             // 
-            // panelSubMenuPengembalian
+            // panelSubMenuPeminjaman
             // 
-            this.panelSubMenuPengembalian.BackColor = System.Drawing.Color.White;
-            this.panelSubMenuPengembalian.Controls.Add(this.btnPengembalianBarang);
-            this.panelSubMenuPengembalian.Controls.Add(this.btnPengembalianRuangan);
-            this.panelSubMenuPengembalian.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubMenuPengembalian.Location = new System.Drawing.Point(0, 432);
-            this.panelSubMenuPengembalian.Name = "panelSubMenuPengembalian";
-            this.panelSubMenuPengembalian.Size = new System.Drawing.Size(290, 140);
-            this.panelSubMenuPengembalian.TabIndex = 14;
+            this.panelSubMenuPeminjaman.BackColor = System.Drawing.Color.White;
+            this.panelSubMenuPeminjaman.Controls.Add(this.btnPeminjamanBarang);
+            this.panelSubMenuPeminjaman.Controls.Add(this.btnPeminjamanRuangan);
+            this.panelSubMenuPeminjaman.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSubMenuPeminjaman.Location = new System.Drawing.Point(0, 230);
+            this.panelSubMenuPeminjaman.Name = "panelSubMenuPeminjaman";
+            this.panelSubMenuPeminjaman.Size = new System.Drawing.Size(290, 152);
+            this.panelSubMenuPeminjaman.TabIndex = 12;
             // 
-            // btnPengembalianRuangan
+            // btnPeminjamanBarang
             // 
-            this.btnPengembalianRuangan.CheckedState.Parent = this.btnPengembalianRuangan;
-            this.btnPengembalianRuangan.CustomImages.Parent = this.btnPengembalianRuangan;
-            this.btnPengembalianRuangan.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPengembalianRuangan.FillColor = System.Drawing.Color.White;
-            this.btnPengembalianRuangan.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPengembalianRuangan.ForeColor = System.Drawing.Color.Black;
-            this.btnPengembalianRuangan.HoverState.Parent = this.btnPengembalianRuangan;
-            this.btnPengembalianRuangan.Location = new System.Drawing.Point(0, 0);
-            this.btnPengembalianRuangan.Name = "btnPengembalianRuangan";
-            this.btnPengembalianRuangan.ShadowDecoration.Parent = this.btnPengembalianRuangan;
-            this.btnPengembalianRuangan.Size = new System.Drawing.Size(290, 50);
-            this.btnPengembalianRuangan.TabIndex = 4;
-            this.btnPengembalianRuangan.Text = "Pengembalian Ruangan";
+            this.btnPeminjamanBarang.CheckedState.Parent = this.btnPeminjamanBarang;
+            this.btnPeminjamanBarang.CustomImages.Parent = this.btnPeminjamanBarang;
+            this.btnPeminjamanBarang.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPeminjamanBarang.FillColor = System.Drawing.Color.White;
+            this.btnPeminjamanBarang.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPeminjamanBarang.ForeColor = System.Drawing.Color.Black;
+            this.btnPeminjamanBarang.HoverState.Parent = this.btnPeminjamanBarang;
+            this.btnPeminjamanBarang.Location = new System.Drawing.Point(0, 50);
+            this.btnPeminjamanBarang.Name = "btnPeminjamanBarang";
+            this.btnPeminjamanBarang.ShadowDecoration.Parent = this.btnPeminjamanBarang;
+            this.btnPeminjamanBarang.Size = new System.Drawing.Size(290, 50);
+            this.btnPeminjamanBarang.TabIndex = 2;
+            this.btnPeminjamanBarang.Text = "Peminjaman Barang";
+            this.btnPeminjamanBarang.Click += new System.EventHandler(this.btnPeminjamanBarang_Click);
             // 
-            // btnPengembalianBarang
+            // btnPeminjamanRuangan
             // 
-            this.btnPengembalianBarang.CheckedState.Parent = this.btnPengembalianBarang;
-            this.btnPengembalianBarang.CustomImages.Parent = this.btnPengembalianBarang;
-            this.btnPengembalianBarang.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPengembalianBarang.FillColor = System.Drawing.Color.White;
-            this.btnPengembalianBarang.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPengembalianBarang.ForeColor = System.Drawing.Color.Black;
-            this.btnPengembalianBarang.HoverState.Parent = this.btnPengembalianBarang;
-            this.btnPengembalianBarang.Location = new System.Drawing.Point(0, 50);
-            this.btnPengembalianBarang.Name = "btnPengembalianBarang";
-            this.btnPengembalianBarang.ShadowDecoration.Parent = this.btnPengembalianBarang;
-            this.btnPengembalianBarang.Size = new System.Drawing.Size(290, 50);
-            this.btnPengembalianBarang.TabIndex = 5;
-            this.btnPengembalianBarang.Text = "Pengembalian Barang";
+            this.btnPeminjamanRuangan.CheckedState.Parent = this.btnPeminjamanRuangan;
+            this.btnPeminjamanRuangan.CustomImages.Parent = this.btnPeminjamanRuangan;
+            this.btnPeminjamanRuangan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPeminjamanRuangan.FillColor = System.Drawing.Color.White;
+            this.btnPeminjamanRuangan.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPeminjamanRuangan.ForeColor = System.Drawing.Color.Black;
+            this.btnPeminjamanRuangan.HoverState.Parent = this.btnPeminjamanRuangan;
+            this.btnPeminjamanRuangan.Location = new System.Drawing.Point(0, 0);
+            this.btnPeminjamanRuangan.Name = "btnPeminjamanRuangan";
+            this.btnPeminjamanRuangan.ShadowDecoration.Parent = this.btnPeminjamanRuangan;
+            this.btnPeminjamanRuangan.Size = new System.Drawing.Size(290, 50);
+            this.btnPeminjamanRuangan.TabIndex = 1;
+            this.btnPeminjamanRuangan.Text = "Peminjaman Ruangan";
+            this.btnPeminjamanRuangan.Click += new System.EventHandler(this.btnPeminjamanRuangan_Click);
             // 
             // DashBoardUser
             // 
@@ -360,8 +361,8 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
-            this.panelSubMenuPeminjaman.ResumeLayout(false);
             this.panelSubMenuPengembalian.ResumeLayout(false);
+            this.panelSubMenuPeminjaman.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

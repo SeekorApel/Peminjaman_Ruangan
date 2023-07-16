@@ -30,34 +30,9 @@ namespace SpaceSolutions
             //Buat AUTO INCREMENT Tabel Fasilitas
             string query = "SELECT TOP 1 IdFasilitas FROM Fasilitas ORDER BY IdFasilitas DESC";
             idFasilitas = (string)autogenerateID("FS", query);
-            
-
+           
 
         }
-
-        /*private void btnCari_Click(object sender, EventArgs e)
-        {
-            try
-            {
-
-                SqlConnection connection = new SqlConnection();
-                connection.ConnectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
-                connection.Open();
-                DataTable dt = new DataTable();
-                SqlCommand cmd = new SqlCommand("select * from Barang where namaBarang LIKE '%' + @CariBarang + '%' AND [status] = 1", connection);
-                cmd.Parameters.AddWithValue("@CariBarang", txtTambahIDBarang.Text);
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                da.Fill(dt);
-                txtIDBarang.Text = dt.Rows[0]["IdBarang"].ToString();
-                txtNamaBarang.Text = dt.Rows[0]["namaBarang"].ToString();
-                connection.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Terjadi error pada saat koneksi dengan database :" + ex.Message);
-            }
-
-        }*/
 
         private void btnCariNamaBarang_Click(object sender, EventArgs e)
         {
@@ -195,6 +170,7 @@ namespace SpaceSolutions
             keranjangDetail.Items.Add(listBarang);
             txtCariBarang.Text = "";
             txtJumlahBarang.Text = "";
+            txtTambahIDBarang.Text = "";
         }
 
         private void btnRemoveKeranjang_Click(object sender, EventArgs e)

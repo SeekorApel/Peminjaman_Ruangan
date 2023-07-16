@@ -22,11 +22,11 @@ namespace SpaceSolutions
 
         private void PeminjamanRuanganAdmin_Load(object sender, EventArgs e)
         {
-            getData();
+            getDataTabelPeminjamanRuangan();
 
         }
 
-        private void getData()
+        private void getDataTabelPeminjamanRuangan()
         {
             SqlConnection connection = new SqlConnection();
             connection.ConnectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;

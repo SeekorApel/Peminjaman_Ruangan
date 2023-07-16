@@ -253,7 +253,6 @@ namespace SpaceSolutions
         }
 
         
-
         private void getDataTabelBarang()
         {
             SqlConnection connection = new SqlConnection();

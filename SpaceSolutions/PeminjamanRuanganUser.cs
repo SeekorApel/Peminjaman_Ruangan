@@ -25,7 +25,7 @@ namespace SpaceSolutions
         {
             // TODO: This line of code loads data into the 'dSSpaceSolutions.Ruangan' table. You can move, or remove it, as needed.
             this.ruanganTableAdapter.Query1(this.dSSpaceSolutions.Ruangan);
-            getData();
+            getDataRuangan();
             query1ToolStrip.Visible = false;
             label6.Text = idUser;
 
@@ -201,7 +201,7 @@ namespace SpaceSolutions
 
         }
 
-        private void getData()
+        private void getDataRuangan()
         {
             SqlConnection connection = new SqlConnection();
             connection.ConnectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
