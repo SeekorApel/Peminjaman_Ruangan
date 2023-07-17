@@ -69,6 +69,9 @@
             this.txtTotalDendaTelatPengembalian = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.btnCari = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabelPeminjaman)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dendaKerusakanRuanganBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSSpaceSolutions)).BeginInit();
@@ -126,7 +129,7 @@
             this.txtTotalDenda.FocusedState.Parent = this.txtTotalDenda;
             this.txtTotalDenda.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTotalDenda.HoverState.Parent = this.txtTotalDenda;
-            this.txtTotalDenda.Location = new System.Drawing.Point(577, 362);
+            this.txtTotalDenda.Location = new System.Drawing.Point(524, 441);
             this.txtTotalDenda.Name = "txtTotalDenda";
             this.txtTotalDenda.PasswordChar = '\0';
             this.txtTotalDenda.PlaceholderText = "";
@@ -184,7 +187,7 @@
             // 
             this.Denda.AutoSize = true;
             this.Denda.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Denda.Location = new System.Drawing.Point(576, 335);
+            this.Denda.Location = new System.Drawing.Point(523, 414);
             this.Denda.Name = "Denda";
             this.Denda.Size = new System.Drawing.Size(103, 26);
             this.Denda.TabIndex = 25;
@@ -199,10 +202,10 @@
             this.btnKembalikan.Font = new System.Drawing.Font("Gilmer Bold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKembalikan.ForeColor = System.Drawing.Color.White;
             this.btnKembalikan.HoverState.Parent = this.btnKembalikan;
-            this.btnKembalikan.Location = new System.Drawing.Point(824, 362);
+            this.btnKembalikan.Location = new System.Drawing.Point(771, 441);
             this.btnKembalikan.Name = "btnKembalikan";
             this.btnKembalikan.ShadowDecoration.Parent = this.btnKembalikan;
-            this.btnKembalikan.Size = new System.Drawing.Size(140, 36);
+            this.btnKembalikan.Size = new System.Drawing.Size(118, 36);
             this.btnKembalikan.TabIndex = 31;
             this.btnKembalikan.Text = "Kembalikan";
             this.btnKembalikan.Click += new System.EventHandler(this.btnKembalikan_Click);
@@ -505,7 +508,7 @@
             this.txtTotalDendaKerusakanRuangan.FocusedState.Parent = this.txtTotalDendaKerusakanRuangan;
             this.txtTotalDendaKerusakanRuangan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTotalDendaKerusakanRuangan.HoverState.Parent = this.txtTotalDendaKerusakanRuangan;
-            this.txtTotalDendaKerusakanRuangan.Location = new System.Drawing.Point(526, 558);
+            this.txtTotalDendaKerusakanRuangan.Location = new System.Drawing.Point(524, 617);
             this.txtTotalDendaKerusakanRuangan.Name = "txtTotalDendaKerusakanRuangan";
             this.txtTotalDendaKerusakanRuangan.PasswordChar = '\0';
             this.txtTotalDendaKerusakanRuangan.PlaceholderText = "";
@@ -529,7 +532,7 @@
             this.txtTotalDendaTelatPengembalian.FocusedState.Parent = this.txtTotalDendaTelatPengembalian;
             this.txtTotalDendaTelatPengembalian.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTotalDendaTelatPengembalian.HoverState.Parent = this.txtTotalDendaTelatPengembalian;
-            this.txtTotalDendaTelatPengembalian.Location = new System.Drawing.Point(526, 466);
+            this.txtTotalDendaTelatPengembalian.Location = new System.Drawing.Point(524, 525);
             this.txtTotalDendaTelatPengembalian.Name = "txtTotalDendaTelatPengembalian";
             this.txtTotalDendaTelatPengembalian.PasswordChar = '\0';
             this.txtTotalDendaTelatPengembalian.PlaceholderText = "";
@@ -543,7 +546,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(521, 427);
+            this.label6.Location = new System.Drawing.Point(519, 486);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(101, 26);
             this.label6.TabIndex = 49;
@@ -553,11 +556,60 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(521, 520);
+            this.label7.Location = new System.Drawing.Point(519, 579);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(205, 26);
             this.label7.TabIndex = 50;
             this.label7.Text = "Denda Kerusakan Barang";
+            // 
+            // btnCari
+            // 
+            this.btnCari.BorderRadius = 5;
+            this.btnCari.CheckedState.Parent = this.btnCari;
+            this.btnCari.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCari.CustomImages.Parent = this.btnCari;
+            this.btnCari.Font = new System.Drawing.Font("Gilmer Bold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCari.ForeColor = System.Drawing.Color.White;
+            this.btnCari.HoverState.Parent = this.btnCari;
+            this.btnCari.Location = new System.Drawing.Point(629, 332);
+            this.btnCari.Name = "btnCari";
+            this.btnCari.ShadowDecoration.Parent = this.btnCari;
+            this.btnCari.Size = new System.Drawing.Size(69, 36);
+            this.btnCari.TabIndex = 53;
+            this.btnCari.Text = "Cari";
+            // 
+            // guna2TextBox1
+            // 
+            this.guna2TextBox1.BorderRadius = 4;
+            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox1.DefaultText = "";
+            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.Location = new System.Drawing.Point(382, 332);
+            this.guna2TextBox1.Name = "guna2TextBox1";
+            this.guna2TextBox1.PasswordChar = '\0';
+            this.guna2TextBox1.PlaceholderText = "Cari Nama Peminjam";
+            this.guna2TextBox1.SelectedText = "";
+            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.Size = new System.Drawing.Size(220, 36);
+            this.guna2TextBox1.TabIndex = 51;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(381, 115);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(221, 26);
+            this.label8.TabIndex = 54;
+            this.label8.Text = "Data Peminjaman Ruangan";
             // 
             // PengembalianRuanganAdmin
             // 
@@ -565,6 +617,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1004, 720);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.btnCari);
+            this.Controls.Add(this.guna2TextBox1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtTotalDendaTelatPengembalian);
@@ -644,5 +699,8 @@
         private Guna.UI2.WinForms.Guna2TextBox txtTotalDendaTelatPengembalian;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private Guna.UI2.WinForms.Guna2Button btnCari;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private System.Windows.Forms.Label label8;
     }
 }

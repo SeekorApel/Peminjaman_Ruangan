@@ -219,8 +219,6 @@ namespace SpaceSolutions
 
         }
 
-       
-
 
         private void rbRusak_CheckedChanged(object sender, EventArgs e)
         {
@@ -265,7 +263,7 @@ namespace SpaceSolutions
             }else if (statusKerusakan == 1)
             {
                 inputPeminjamanRuangan();
-                inputDetailKerusakanBarang();
+                inputDetailKerusakanRuangan();
             }
         }
 
@@ -315,7 +313,7 @@ namespace SpaceSolutions
             }
         }
 
-        private void inputDetailKerusakanBarang()
+        private void inputDetailKerusakanRuangan()
         {
             try
             {

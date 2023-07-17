@@ -17,8 +17,13 @@ namespace SpaceSolutions
         DateTime tglPeminjaman;
         DateTime tglPengembalian;
         DateTime tglPengembalianSebelumnya;
-        string idPeminjamanBarang, selisihHari, totalPengembalianBarang;
+        string idPeminjamanBarang, selisihHari, totalPengembalianBarang, idDenda, descDenda, hargaDenda;
         int kondisiBarang = 0;
+        int value1 = 0;
+        int value2 = 0;
+
+        List<string[]> listItems = new List<string[]>();
+        int totalDendaKerusakan = 0;
         public PengembalianBarangAdmin()
         {
             InitializeComponent();
@@ -26,6 +31,8 @@ namespace SpaceSolutions
 
         private void PengembalianBarangAdmin_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dSSpaceSolutions.DendaKerusakanBarang' table. You can move, or remove it, as needed.
+            this.dendaKerusakanBarangTableAdapter.QueryDendaBarang(this.dSSpaceSolutions.DendaKerusakanBarang);
             getDataPeminjamanBarang();
         }
 
@@ -110,6 +117,330 @@ namespace SpaceSolutions
             tglPengembalianSebelumnya = tglPengembalianSekarang;
         }
 
+        private void queryDendaBarangToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.dendaKerusakanBarangTableAdapter.QueryDendaBarang(this.dSSpaceSolutions.DendaKerusakanBarang);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void btnHapusKerusakan_Click(object sender, EventArgs e)
+        {
+            if (KeranjangKerusakan.SelectedItems.Count > 0)
+            {
+                // Ambil item yang dipilih
+                ListViewItem selectedItem = KeranjangKerusakan.SelectedItems[0];
+
+                // Ambil harga denda dan jumlah barang rusak dari item yang dipilih
+                int hargaDendaInt = int.Parse(selectedItem.SubItems[3].Text);
+                int jumlahBarangRusakInt = int.Parse(selectedItem.SubItems[4].Text);
+
+                // Hitung total denda yang akan dikurangi
+                int totalDendaItem = hargaDendaInt * jumlahBarangRusakInt;
+
+                // Hapus item dari KeranjangKerusakan dan listItems
+                KeranjangKerusakan.Items.Remove(selectedItem);
+                listItems.RemoveAll(item => item[0] == selectedItem.SubItems[0].Text);
+
+                // Perbarui total keseluruhan denda setelah penghapusan item
+                totalDendaKerusakan -= totalDendaItem;
+                txtTotalDendaKerusakan.Text = totalDendaKerusakan.ToString();
+            }
+        }
+
+        private int totalHargaSebelumnya = 0;
+
+        private void KeranjangKerusakan_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Cek apakah ada item yang dipilih
+            if (KeranjangKerusakan.SelectedItems.Count > 0)
+            {
+                // Ambil harga denda dari item yang dipilih
+                int hargaDendaInt = int.Parse(KeranjangKerusakan.SelectedItems[0].SubItems[3].Text);
+                int jumlahBarangRusakInt = int.Parse(KeranjangKerusakan.SelectedItems[0].SubItems[4].Text);
+
+                // Simpan total harga sebelumnya sebelum menghapus item
+                totalHargaSebelumnya = hargaDendaInt * jumlahBarangRusakInt;
+            }
+        }
+
+        private void btnTambahDenda_Click(object sender, EventArgs e)
+        {
+            getDataDendaKerusakanBarang();
+            idPeminjamanBarang = txtIdPeminjaman.Text;
+            string jumlahBarangRusak = txtJumlahKerusakanBarang.Text;
+
+            string[] barang = new string[7];
+            barang[0] = idPeminjamanBarang;
+            barang[1] = idDenda;
+            barang[2] = descDenda;
+            barang[3] = hargaDenda;
+            barang[4] = jumlahBarangRusak;
+
+            // Lakukan perhitungan untuk mengalikan hargaDenda dengan jumlahBarangRusak
+            int hargaDendaInt = 0;
+            int jumlahBarangRusakInt = 0;
+            int totalDenda = 0;
+
+            if (int.TryParse(hargaDenda, out hargaDendaInt) && int.TryParse(jumlahBarangRusak, out jumlahBarangRusakInt))
+            {
+                totalDenda = hargaDendaInt * jumlahBarangRusakInt;
+            }
+
+            // Tampilkan hasil perhitungan pada txtTotalDendaKerusakan
+            txtTotalDendaKerusakan.Text = totalDenda.ToString();
+
+            // Tambahkan item ke dalam daftar
+            listItems.Add(barang);
+
+            // Hitung dan perbarui total keseluruhan denda
+            UpdateTotalDendaKerusakan();
+
+            idPeminjamanBarang = null;
+            idDenda = null;
+            descDenda = null;
+            hargaDenda = null;
+            jumlahBarangRusak = null;
+
+            ListViewItem listBarang = new ListViewItem(barang);
+            KeranjangKerusakan.Items.Add(listBarang);
+        }
+
+        private void txtTotalTelatPengembalian_TextChanged(object sender, EventArgs e)
+        {
+            if (int.TryParse(txtTotalTelatPengembalian.Text, out int newValue))
+            {
+                value1 = newValue;
+                updateTotalDenda();
+            }
+        }
+
+        private void txtTotalDendaKerusakan_TextChanged(object sender, EventArgs e)
+        {
+            if (int.TryParse(txtTotalDendaKerusakan.Text, out int newValue))
+            {
+                value2 = newValue;
+                updateTotalDenda();
+            }
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCari_Click(object sender, EventArgs e)
+        {
+            string idCari = txtCariNamaPeminjam.Text.Trim();
+
+            // Jika ID yang dicari kosong, reset tampilan DataGridView
+            if (string.IsNullOrEmpty(idCari))
+            {
+                getDataPeminjamanBarang();
+                return;
+            }
+
+            SqlConnection connection = new SqlConnection();
+            connection.ConnectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
+            connection.Open();
+            try
+            {
+                string query = "SELECT * FROM GetPeminjamanBarang() where namaUser LIKE '%' + @namaUser + '%' AND statusPeminjaman = 'Dipinjam'";
+                SqlCommand cmd = new SqlCommand(query, connection);
+                cmd.Parameters.AddWithValue("@namaUser", idCari);
+                SqlDataAdapter adp = new SqlDataAdapter(cmd);
+
+                DataTable dt = new DataTable();
+                adp.Fill(dt);
+
+
+                if (dt.Rows.Count > 0)
+                {
+                    dgvTabelPeminjamanBarang.DataSource = dt;
+                }
+                else
+                {
+                    MessageBox.Show("Data tidak ditemukan", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtCariNamaPeminjam.Text = "";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        private void rbRusak_CheckedChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void rbTidakRusak_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnKembalikan_Click(object sender, EventArgs e)
+        {
+            if(rbRusak.Checked == true)
+            {
+                kondisiBarang = 1;
+
+            }else if(rbTidakRusak.Checked == true)
+            {
+                kondisiBarang = 0;
+            }
+
+            if(kondisiBarang == 0)
+            {
+
+                InputPengembalianBarang();
+                pengembalianStockBarang();
+
+            }
+            else if(kondisiBarang == 1)
+            {
+                InputPengembalianBarang();
+                InputdetailDendaKerusakanBarang();
+                pengembalianStockBarang();
+            }
+        }
+
+        private void InputPengembalianBarang()
+        {
+            string hasilText = txtTotalDenda.Text;
+
+            // Menghapus simbol mata uang dan pemisah ribuan
+            string angkaString = hasilText.Replace("Rp", "").Replace(",", "");
+
+            // Mengonversi string menjadi angka desimal
+            decimal angka = decimal.Parse(angkaString);
+
+            // Tampung hasil konversi ke string
+            string totalDenda = "";
+            totalDenda = angka.ToString();
+
+            try
+            {
+                SqlConnection connection = new SqlConnection();
+                connection.ConnectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
+                SqlCommand sqlcmd = new SqlCommand("sp_PengembalianBarang", connection);
+                sqlcmd.CommandType = CommandType.StoredProcedure;
+
+                sqlcmd.Parameters.AddWithValue("@idPeminjamanBarang", txtIdPeminjaman.Text);
+                sqlcmd.Parameters.AddWithValue("@tanggalPengembalian", dtTanggalPengembalian.Value);
+                sqlcmd.Parameters.AddWithValue("@kondisiBarang", kondisiBarang);
+                sqlcmd.Parameters.AddWithValue("@totalBiayaDenda", totalDenda);
+
+                connection.Open();
+                int result = Convert.ToInt32(sqlcmd.ExecuteNonQuery());
+                connection.Close();
+
+                if (result != 0)
+                {
+                    MessageBox.Show("Pengembalian Barang Berhasil", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+                else
+                {
+                    MessageBox.Show("Pengembalian Barang Gagal", "Peringantan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error : " + ex.Message);
+            }
+        }
+
+        private void InputdetailDendaKerusakanBarang()
+        {
+            try
+            {
+                SqlConnection connection = new SqlConnection();
+                connection.ConnectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
+                SqlCommand sqlcmd = new SqlCommand("sp_InputDetailKerusakanBarang", connection);
+                sqlcmd.CommandType = CommandType.StoredProcedure;
+                connection.Open();
+                foreach (ListViewItem ListItem in KeranjangKerusakan.Items)
+                {
+
+                    sqlcmd.Parameters.AddWithValue("@idPeminjamanBarang", ListItem.SubItems[0].Text);
+                    sqlcmd.Parameters.AddWithValue("@idDendaKerusakanBarang", ListItem.SubItems[1].Text);
+                    sqlcmd.Parameters.AddWithValue("@jumlahBarangRusak", ListItem.SubItems[4].Text);
+                    sqlcmd.ExecuteNonQuery();
+                    sqlcmd.Parameters.Clear();
+
+                }
+
+                connection.Close();
+
+                MessageBox.Show("Pengembalian Barang Berhasil", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error : " + ex.Message);
+            }
+        }
+
+        private void pengembalianStockBarang()
+        {
+            try
+            {
+                SqlConnection connection = new SqlConnection();
+                connection.ConnectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
+                SqlCommand sqlcmd = new SqlCommand("sp_PengembalianBarangStok", connection);
+                sqlcmd.CommandType = CommandType.StoredProcedure;
+                connection.Open();
+                foreach (ListViewItem ListItem in keranjangBarang.Items)
+                {
+
+                    sqlcmd.Parameters.AddWithValue("@idPeminjamanBarang", ListItem.SubItems[0].Text);
+                    sqlcmd.Parameters.AddWithValue("@idBarang", ListItem.SubItems[1].Text);
+                    sqlcmd.Parameters.AddWithValue("@qty", ListItem.SubItems[3].Text);
+                    sqlcmd.ExecuteNonQuery();
+                    sqlcmd.Parameters.Clear();
+
+                }
+
+                connection.Close();
+
+                MessageBox.Show("Pengembalian Barang Berhasil", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error : " + ex.Message);
+            }
+        }
+
+        private void UpdateTotalDendaKerusakan()
+        {
+            // Hitung total keseluruhan denda dari semua item di daftar
+            totalDendaKerusakan = 0;
+            foreach (string[] barang in listItems)
+            {
+                int hargaDendaInt = int.Parse(barang[3]);
+                int jumlahBarangRusakInt = int.Parse(barang[4]);
+                totalDendaKerusakan += hargaDendaInt * jumlahBarangRusakInt;
+            }
+
+            // Tampilkan total keseluruhan denda pada txtTotalDendaKerusakan
+            txtTotalDendaKerusakan.Text = totalDendaKerusakan.ToString();
+        }
+
         private void hitungSelisihHari()
         {
             tglPengembalian = dtTanggalPengembalian.Value;
@@ -142,5 +473,47 @@ namespace SpaceSolutions
                 totalPengembalianBarang = txtTotalTelatPengembalian.Text;
             }
         }
+
+        private void getDataDendaKerusakanBarang()
+        {
+            try
+            {
+
+                SqlConnection connection = new SqlConnection();
+                connection.ConnectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
+                connection.Open();
+                DataTable dt = new DataTable();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM DendaKerusakanBarang WHERE idDendaKerusakanBarang = @idDenda AND [status] = 1", connection);
+                cmd.Parameters.AddWithValue("@idDenda", cbKerusakanBarang.SelectedValue.ToString());
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+
+                if (dt.Rows.Count > 0)
+                {
+                    idDenda = dt.Rows[0]["idDendaKerusakanBarang"].ToString();
+                    descDenda = dt.Rows[0]["deskripsiKerusakan"].ToString();
+                    hargaDenda = dt.Rows[0]["biayaDenda"].ToString();
+                }
+                else
+                {
+                    MessageBox.Show("ID Denda tidak ditemukan", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+                connection.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Terjadi error pada saat koneksi dengan database :" + ex.Message);
+            }
+        }
+
+        private void updateTotalDenda()
+        {
+            int hasil = value1 + value2;
+            txtTotalDenda.Text = hasil.ToString("C0");
+        }
+
+
     }
 }
