@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.btnExit = new Guna.UI2.WinForms.Guna2ControlBox();
             this.btnUpdate = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtKapasitasRuangan = new Guna.UI2.WinForms.Guna2TextBox();
@@ -37,19 +36,9 @@
             this.txtNamaJenisRuangan = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.label9 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // btnExit
-            // 
-            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExit.FillColor = System.Drawing.Color.Transparent;
-            this.btnExit.HoverState.Parent = this.btnExit;
-            this.btnExit.IconColor = System.Drawing.Color.Black;
-            this.btnExit.Location = new System.Drawing.Point(333, 17);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.ShadowDecoration.Parent = this.btnExit;
-            this.btnExit.Size = new System.Drawing.Size(45, 29);
-            this.btnExit.TabIndex = 46;
             // 
             // btnUpdate
             // 
@@ -60,19 +49,19 @@
             this.btnUpdate.Font = new System.Drawing.Font("Gilmer Bold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
             this.btnUpdate.HoverState.Parent = this.btnUpdate;
-            this.btnUpdate.Location = new System.Drawing.Point(124, 266);
+            this.btnUpdate.Location = new System.Drawing.Point(124, 246);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.ShadowDecoration.Parent = this.btnUpdate;
             this.btnUpdate.Size = new System.Drawing.Size(140, 36);
             this.btnUpdate.TabIndex = 45;
-            this.btnUpdate.Text = "Update";
+            this.btnUpdate.Text = "Ubah";
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(63, 168);
+            this.label2.Location = new System.Drawing.Point(63, 148);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(159, 26);
             this.label2.TabIndex = 44;
@@ -93,7 +82,7 @@
             this.txtKapasitasRuangan.FocusedState.Parent = this.txtKapasitasRuangan;
             this.txtKapasitasRuangan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtKapasitasRuangan.HoverState.Parent = this.txtKapasitasRuangan;
-            this.txtKapasitasRuangan.Location = new System.Drawing.Point(67, 194);
+            this.txtKapasitasRuangan.Location = new System.Drawing.Point(67, 174);
             this.txtKapasitasRuangan.Name = "txtKapasitasRuangan";
             this.txtKapasitasRuangan.PasswordChar = '\0';
             this.txtKapasitasRuangan.PlaceholderText = "";
@@ -107,7 +96,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(63, 93);
+            this.label1.Location = new System.Drawing.Point(63, 73);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(174, 26);
             this.label1.TabIndex = 42;
@@ -128,7 +117,7 @@
             this.txtNamaJenisRuangan.FocusedState.Parent = this.txtNamaJenisRuangan;
             this.txtNamaJenisRuangan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNamaJenisRuangan.HoverState.Parent = this.txtNamaJenisRuangan;
-            this.txtNamaJenisRuangan.Location = new System.Drawing.Point(67, 119);
+            this.txtNamaJenisRuangan.Location = new System.Drawing.Point(67, 99);
             this.txtNamaJenisRuangan.Name = "txtNamaJenisRuangan";
             this.txtNamaJenisRuangan.PasswordChar = '\0';
             this.txtNamaJenisRuangan.PlaceholderText = "";
@@ -142,23 +131,44 @@
             // 
             this.guna2DragControl1.TargetControl = this;
             // 
-            // guna2Elipse1
+            // label9
             // 
-            this.guna2Elipse1.TargetControl = this;
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.Location = new System.Drawing.Point(232, 77);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(16, 23);
+            this.label9.TabIndex = 46;
+            this.label9.Text = "*";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(216, 152);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(16, 23);
+            this.label3.TabIndex = 47;
+            this.label3.Text = "*";
             // 
             // UpdateJenisRuangan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(400, 420);
-            this.Controls.Add(this.btnExit);
+            this.ClientSize = new System.Drawing.Size(395, 358);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtKapasitasRuangan);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNamaJenisRuangan);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "UpdateJenisRuangan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UpdateJenisRuangan";
@@ -169,8 +179,6 @@
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2ControlBox btnExit;
         private Guna.UI2.WinForms.Guna2Button btnUpdate;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2TextBox txtKapasitasRuangan;
@@ -178,5 +186,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtNamaJenisRuangan;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label9;
     }
 }

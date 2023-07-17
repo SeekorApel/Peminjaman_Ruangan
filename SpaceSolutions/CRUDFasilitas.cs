@@ -20,26 +20,52 @@ namespace SpaceSolutions
             InitializeComponent();
         }
 
-        private void btnAddFasilitas_Click(object sender, EventArgs e)
+        private void CRUDFasilitas_Load(object sender, EventArgs e)
+        {
+            getDataTabelFasilitas();
+        }
+
+        private void getDataTabelFasilitas()
+        {
+            SqlConnection connection = new SqlConnection();
+            connection.ConnectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
+            connection.Open();
+            try
+            {
+                string query = "SELECT * FROM Fasilitas WHERE status = 1";
+                SqlCommand cmd = new SqlCommand(query, connection);
+                SqlDataAdapter adp = new SqlDataAdapter(cmd);
+
+                DataTable dt = new DataTable();
+                adp.Fill(dt);
+                dgvTabelFasilitas.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnTambah_Click(object sender, EventArgs e)
         {
             InputFasilitas inputFasil = new InputFasilitas();
             inputFasil.Show();
         }
 
-        private void btnRefresh_Click(object sender, EventArgs e)
+        private void btnRefesh_Click(object sender, EventArgs e)
         {
-            getData();
+            getDataTabelFasilitas();
             txtCariidFasilitas.Text = "";
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
+        private void btnCari_Click(object sender, EventArgs e)
         {
             string idCari = txtCariidFasilitas.Text.Trim();
 
             // Jika ID yang dicari kosong, reset tampilan DataGridView
             if (string.IsNullOrEmpty(idCari))
             {
-                getData();
+                getDataTabelFasilitas();
                 return;
             }
 
@@ -77,32 +103,6 @@ namespace SpaceSolutions
             }
         }
 
-        private void CRUDFasilitas_Load(object sender, EventArgs e)
-        {
-            getData();
-        }
-
-        private void getData()
-        {
-            SqlConnection connection = new SqlConnection();
-            connection.ConnectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
-            connection.Open();
-            try
-            {
-                string query = "SELECT * FROM Fasilitas WHERE status = 1";
-                SqlCommand cmd = new SqlCommand(query, connection);
-                SqlDataAdapter adp = new SqlDataAdapter(cmd);
-
-                DataTable dt = new DataTable();
-                adp.Fill(dt);
-                dgvTabelFasilitas.DataSource = dt;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
         private void dgvTabelFasilitas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 0)
@@ -135,7 +135,7 @@ namespace SpaceSolutions
                         if (hasil != 0)
                         {
                             MessageBox.Show("Hapus Data Berhasil", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            getData();
+                            getDataTabelFasilitas();
                         }
                         else
                         {

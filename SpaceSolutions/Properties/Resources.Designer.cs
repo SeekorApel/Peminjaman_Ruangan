@@ -163,6 +163,16 @@ namespace SpaceSolutions.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Hapus_2 {
+            get {
+                object obj = ResourceManager.GetObject("Hapus 2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Hapus1 {
             get {
                 object obj = ResourceManager.GetObject("Hapus1", resourceCulture);
@@ -316,6 +326,16 @@ namespace SpaceSolutions.Properties {
         internal static System.Drawing.Bitmap Ruangan_btn {
             get {
                 object obj = ResourceManager.GetObject("Ruangan btn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Save_2 {
+            get {
+                object obj = ResourceManager.GetObject("Save 2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

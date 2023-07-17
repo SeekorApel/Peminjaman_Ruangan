@@ -35,21 +35,6 @@ namespace SpaceSolutions
 
         }
 
-
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            updateTabelFasilitas();
-            if (keranjangDetail.SelectedItems.Count > 0) // Pastikan ada item yang dipilih
-            {
-                ListViewItem selectedRow = keranjangDetail.SelectedItems[0]; // Ambil item yang dipilih
-                // Update nilai kolom keempat (Jumlah Barang) dengan nilai dari txtJumlahBarang
-                selectedRow.SubItems[1].Text = txtIDBarang.Text;
-                selectedRow.SubItems[3].Text = txtJumlahBarang.Text;
-            }
-            updateTabelDetailFasilitas();
-            this.Close();
-        }
-
         private void btnCariNamaBarang_Click(object sender, EventArgs e)
         {
             string idCari = txtCariBarang.Text.Trim();
@@ -95,13 +80,6 @@ namespace SpaceSolutions
             }
         }
 
-        private void btnRefresh_Click(object sender, EventArgs e)
-        {
-            getDataTabelBarang();
-            txtCariBarang.Text = "";
-            
-        }
-
         private void btnRemove_Click(object sender, EventArgs e)
         {
             if (keranjangDetail.SelectedItems.Count > 0)
@@ -144,6 +122,99 @@ namespace SpaceSolutions
         private void keranjangDetail_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             
+        }
+
+        private void btnCari_Click(object sender, EventArgs e)
+        {
+            string idCari = txtCariBarang.Text.Trim();
+
+            // Jika ID yang dicari kosong, reset tampilan DataGridView
+            if (string.IsNullOrEmpty(idCari))
+            {
+                getDataTabelBarang();
+                return;
+            }
+
+            SqlConnection connection = new SqlConnection();
+            connection.ConnectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
+            connection.Open();
+            try
+            {
+                string query = "SELECT idBarang, namaBarang, stokBarang FROM Barang where namaBarang LIKE '%' + @CariBarang + '%' AND [status] = 1";
+                SqlCommand cmd = new SqlCommand(query, connection);
+                cmd.Parameters.AddWithValue("@CariBarang", idCari);
+                SqlDataAdapter adp = new SqlDataAdapter(cmd);
+
+                DataTable dt = new DataTable();
+                adp.Fill(dt);
+
+
+                if (dt.Rows.Count > 0)
+                {
+                    dgvTabelBarang.DataSource = dt;
+                }
+                else
+                {
+                    MessageBox.Show("Data tidak ditemukan", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtCariBarang.Text = "";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        private void btnRefesh_Click(object sender, EventArgs e)
+        {
+            getDataTabelBarang();
+            txtCariBarang.Text = "";
+        }
+
+        private void btnSimpan_Click(object sender, EventArgs e)
+        {
+            updateTabelFasilitas();
+            if (keranjangDetail.SelectedItems.Count > 0) // Pastikan ada item yang dipilih
+            {
+                ListViewItem selectedRow = keranjangDetail.SelectedItems[0]; // Ambil item yang dipilih
+                // Update nilai kolom keempat (Jumlah Barang) dengan nilai dari txtJumlahBarang
+                selectedRow.SubItems[1].Text = txtIDBarang.Text;
+                selectedRow.SubItems[3].Text = txtJumlahBarang.Text;
+            }
+            updateTabelDetailFasilitas();
+            this.Close();
+        }
+
+        private void txtNamaFasilitas_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Cek apakah karakter yang dimasukkan adalah huruf, spasi, atau tombol kontrol
+            if (!char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                // Jika bukan, maka batalkan input dengan menandai event sebagai sudah ditangani (Handled)
+                e.Handled = true;
+            }
+        }
+
+        private void txtIDBarang_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetterOrDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                // Jika bukan, maka batalkan input dengan menandai event sebagai sudah ditangani (Handled)
+                e.Handled = true;
+            }
+        }
+
+        private void txtJumlahBarang_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                // Jika bukan, maka batalkan input dengan menandai event sebagai sudah ditangani (Handled)
+                e.Handled = true;
+            }
         }
 
         private void keranjangDetail_SelectedIndexChanged(object sender, EventArgs e)

@@ -487,5 +487,11 @@
   <ItemGroup>
     <None Include="Assets\Icon\Peminjaman Ruangan btn.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Icon\Hapus 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Icon\Save 2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

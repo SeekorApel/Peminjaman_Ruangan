@@ -1,21 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace SpaceSolutions
 {
     public partial class InputFasilitas : Form
     {
-        string idBarang, namaBarang, idFasilitas, jumlahBarang;
+        string idBarang, namaBarang, idFasilitas, jumlahBarang, stokBarangDB;
 
         public InputFasilitas()
         {
@@ -34,14 +27,123 @@ namespace SpaceSolutions
 
         }
 
-        private void btnCariNamaBarang_Click(object sender, EventArgs e)
+
+        private void getDataNamaRuanganIdRuangan()
+        {
+            SqlConnection connection = new SqlConnection();
+            connection.ConnectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
+            connection.Open();
+            try
+            {
+                string query = "SELECT idBarang, namaBarang , stokBarang FROM Barang WHERE status = 1";
+                SqlCommand cmd = new SqlCommand(query, connection);
+                SqlDataAdapter adp = new SqlDataAdapter(cmd);
+
+                DataTable dt = new DataTable();
+                adp.Fill(dt);
+                dgvTabelBarang.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void getDataBarang()
+        {
+            try {
+
+                SqlConnection connection = new SqlConnection();
+                connection.ConnectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
+                connection.Open();
+                DataTable dt = new DataTable();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM Barang WHERE idBarang = @idBarang AND [status] = 1", connection);
+                cmd.Parameters.AddWithValue("@idBarang", txtIDBarang.Text);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+
+                if (dt.Rows.Count > 0)
+                {
+                    idBarang = dt.Rows[0]["IdBarang"].ToString();
+                    namaBarang = dt.Rows[0]["namaBarang"].ToString();
+                    stokBarangDB = dt.Rows[0]["stokBarang"].ToString();
+                }
+                else
+                {
+                    MessageBox.Show("ID Barang tidak ditemukan", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtIDBarang.Text = "";
+                }
+
+                connection.Close();
+
+            }
+            catch (Exception ex){
+                MessageBox.Show("Terjadi error pada saat koneksi dengan database :" + ex.Message);
+            }
+        }
+
+
+        private void txtTambahIDBarang_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSimpan_Click(object sender, EventArgs e)
+        {
+            if (keranjangDetail.Items.Count > 0)
+            {
+                if (string.IsNullOrEmpty(txtNamaFasilitas.Text))
+                {
+                    MessageBox.Show("Masukkan nama fasilitas terlebih dahulu", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                inputTableFasilitas();
+                inputDetailFasilitas();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Harus mengisi Data Barang terelebih dahulu", "Peringantan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            getDataNamaRuanganIdRuangan();
+            txtCariBarang.Text = "";
+        }
+
+        private void btnTambahKeranjang_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnHapusKeranjang_Click(object sender, EventArgs e)
+        {
+            if (keranjangDetail.SelectedItems.Count > 0)
+            {
+                for (int i = 0; i < keranjangDetail.Items.Count; i++)
+                {
+                    if (keranjangDetail.Items[i].Selected)
+                    {
+
+                        keranjangDetail.Items[i].Remove();
+
+
+                    }
+                }
+            }
+        }
+
+        private void btnCari_Click(object sender, EventArgs e)
         {
             string idCari = txtCariBarang.Text.Trim();
 
             // Jika ID yang dicari kosong, reset tampilan DataGridView
             if (string.IsNullOrEmpty(idCari))
             {
-                getData();
+                getDataNamaRuanganIdRuangan();
                 return;
             }
 
@@ -79,63 +181,10 @@ namespace SpaceSolutions
             }
         }
 
-        private void getData()
+        private void btnRefesh_Click(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection();
-            connection.ConnectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
-            connection.Open();
-            try
-            {
-                string query = "SELECT idBarang, namaBarang FROM Barang WHERE status = 1";
-                SqlCommand cmd = new SqlCommand(query, connection);
-                SqlDataAdapter adp = new SqlDataAdapter(cmd);
-
-                DataTable dt = new DataTable();
-                adp.Fill(dt);
-                dgvTabelBarang.DataSource = dt;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void getDataBarang()
-        {
-            try {
-
-                SqlConnection connection = new SqlConnection();
-                connection.ConnectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
-                connection.Open();
-                DataTable dt = new DataTable();
-                SqlCommand cmd = new SqlCommand("SELECT * FROM Barang WHERE idBarang = @idBarang AND [status] = 1", connection);
-                cmd.Parameters.AddWithValue("@idBarang", txtTambahIDBarang.Text);
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                da.Fill(dt);
-
-                if (dt.Rows.Count > 0)
-                {
-                    idBarang = dt.Rows[0]["IdBarang"].ToString();
-                    namaBarang = dt.Rows[0]["namaBarang"].ToString();
-                }
-                else
-                {
-                    MessageBox.Show("ID Barang tidak ditemukan", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtTambahIDBarang.Text = "";
-                }
-
-                connection.Close();
-
-            }
-            catch (Exception ex){
-                MessageBox.Show("Terjadi error pada saat koneksi dengan database :" + ex.Message);
-            }
-        }
-
-
-        private void txtTambahIDBarang_TextChanged(object sender, EventArgs e)
-        {
-
+            getDataNamaRuanganIdRuangan();
+            txtCariBarang.Text = "";
         }
 
         private void btnTambahKeranjang_Click(object sender, EventArgs e)
@@ -149,6 +198,20 @@ namespace SpaceSolutions
                 MessageBox.Show("Masukkan jumlah barang terlebih dahulu", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
+            string stokBarangDipijam = txtJumlahBarang.Text;
+            int stok1 = 0;
+            stok1 = int.Parse(stokBarangDipijam);
+            int stok2 = 0;
+            stok2 = int.Parse(stokBarangDB);
+
+            if (stok1 > stok2)
+            {
+                MessageBox.Show("Jumlah barang tidak Mencukupi", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtJumlahBarang.Text = "";
+                return;
+            }
+
 
             //Buat AUTO INCREMENT Tabel Fasilitas
             string query = "SELECT TOP 1 IdFasilitas FROM Fasilitas ORDER BY IdFasilitas DESC";
@@ -170,50 +233,46 @@ namespace SpaceSolutions
             keranjangDetail.Items.Add(listBarang);
             txtCariBarang.Text = "";
             txtJumlahBarang.Text = "";
-            txtTambahIDBarang.Text = "";
+            txtIDBarang.Text = ""; 
         }
 
-        private void btnRemoveKeranjang_Click(object sender, EventArgs e)
+        private void txtNamaFasilitas_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (keranjangDetail.SelectedItems.Count > 0)
+            // Cek apakah karakter yang dimasukkan adalah huruf, spasi, atau tombol kontrol
+            if (!char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
-                for (int i = 0; i < keranjangDetail.Items.Count; i++)
-                {
-                    if (keranjangDetail.Items[i].Selected)
-                    {
-
-                        keranjangDetail.Items[i].Remove();
-
-
-                    }
-                }
+                // Jika bukan, maka batalkan input dengan menandai event sebagai sudah ditangani (Handled)
+                e.Handled = true;
             }
         }
 
-        private void btnSimpan_Click(object sender, EventArgs e)
+        private void txtIDBarang_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (keranjangDetail.Items.Count > 0)
+            if (!char.IsLetterOrDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
-                if (string.IsNullOrEmpty(txtNamaFasilitas.Text))
-                {
-                    MessageBox.Show("Masukkan nama fasilitas terlebih dahulu", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                inputTableFasilitas();
-                inputDetailFasilitas();
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Harus mengisi Data Barang terelebih dahulu", "Peringantan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                // Jika bukan, maka batalkan input dengan menandai event sebagai sudah ditangani (Handled)
+                e.Handled = true;
             }
         }
 
-        private void btnRefresh_Click(object sender, EventArgs e)
+        private void txtJumlahBarang_KeyPress(object sender, KeyPressEventArgs e)
         {
-            getData();
-            txtCariBarang.Text = "";
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                // Jika bukan, maka batalkan input dengan menandai event sebagai sudah ditangani (Handled)
+                e.Handled = true;
+            }
+        }
+
+        private void dgvTabelBarang_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvTabelBarang.Rows[e.RowIndex];
+
+                txtIDBarang.Text = row.Cells["Kolom1"].Value.ToString();
+
+            }
         }
 
         public string autogenerateID(string firstText, string query)
