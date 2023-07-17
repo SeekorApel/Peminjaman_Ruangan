@@ -147,5 +147,14 @@ namespace SpaceSolutions
         {
             
         }
+
+        private void txtUsername_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != '\b')
+            {
+                // Jika bukan huruf alfabet atau backspace ('\b'), batalkan input karakter
+                e.Handled = true;
+            }
+        }
     }
 }

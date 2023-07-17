@@ -103,6 +103,16 @@ namespace SpaceSolutions.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap delete_CRUD {
+            get {
+                object obj = ResourceManager.GetObject("delete CRUD", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Denda_Kerusakan_Barang_btn {
             get {
                 object obj = ResourceManager.GetObject("Denda Kerusakan Barang btn", resourceCulture);
@@ -116,6 +126,16 @@ namespace SpaceSolutions.Properties {
         internal static System.Drawing.Bitmap Denda_Kerusakan_Ruangan_btm {
             get {
                 object obj = ResourceManager.GetObject("Denda Kerusakan Ruangan btm", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Edit_CRUD_ {
+            get {
+                object obj = ResourceManager.GetObject("Edit CRUD ", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -176,6 +196,16 @@ namespace SpaceSolutions.Properties {
         internal static System.Drawing.Bitmap Login_Page {
             get {
                 object obj = ResourceManager.GetObject("Login Page", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Login_Page_Rev2 {
+            get {
+                object obj = ResourceManager.GetObject("Login Page Rev2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -246,6 +276,16 @@ namespace SpaceSolutions.Properties {
         internal static System.Drawing.Bitmap Search {
             get {
                 object obj = ResourceManager.GetObject("Search", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap search_Use_1 {
+            get {
+                object obj = ResourceManager.GetObject("search Use 1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

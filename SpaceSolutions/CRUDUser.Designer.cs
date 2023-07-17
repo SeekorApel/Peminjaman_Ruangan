@@ -31,12 +31,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CRUDUser));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtCariidUser = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnAdduser = new Guna.UI2.WinForms.Guna2Button();
             this.dgvTabelUser = new System.Windows.Forms.DataGridView();
-            this.btnRefresh = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.idUserColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.namaColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usernameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,9 +45,17 @@
             this.jabatanColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.roleColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnCari = new System.Windows.Forms.PictureBox();
+            this.btnRefesh = new System.Windows.Forms.PictureBox();
+            this.btnTambah = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabelUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCari)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRefesh)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnTambah)).BeginInit();
             this.SuspendLayout();
             // 
             // txtCariidUser
@@ -67,27 +75,11 @@
             this.txtCariidUser.Location = new System.Drawing.Point(54, 143);
             this.txtCariidUser.Name = "txtCariidUser";
             this.txtCariidUser.PasswordChar = '\0';
-            this.txtCariidUser.PlaceholderText = "Search by ID";
+            this.txtCariidUser.PlaceholderText = "Cari Berdasarkan ID";
             this.txtCariidUser.SelectedText = "";
             this.txtCariidUser.ShadowDecoration.Parent = this.txtCariidUser;
-            this.txtCariidUser.Size = new System.Drawing.Size(371, 30);
+            this.txtCariidUser.Size = new System.Drawing.Size(371, 37);
             this.txtCariidUser.TabIndex = 0;
-            // 
-            // btnAdduser
-            // 
-            this.btnAdduser.BorderRadius = 5;
-            this.btnAdduser.CheckedState.Parent = this.btnAdduser;
-            this.btnAdduser.CustomImages.Parent = this.btnAdduser;
-            this.btnAdduser.Font = new System.Drawing.Font("Poppins SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdduser.ForeColor = System.Drawing.Color.White;
-            this.btnAdduser.HoverState.Parent = this.btnAdduser;
-            this.btnAdduser.Location = new System.Drawing.Point(840, 143);
-            this.btnAdduser.Name = "btnAdduser";
-            this.btnAdduser.ShadowDecoration.Parent = this.btnAdduser;
-            this.btnAdduser.Size = new System.Drawing.Size(80, 30);
-            this.btnAdduser.TabIndex = 2;
-            this.btnAdduser.Text = "Add";
-            this.btnAdduser.Click += new System.EventHandler(this.btnAdduser_Click);
             // 
             // dgvTabelUser
             // 
@@ -136,43 +128,12 @@
             this.dgvTabelUser.ReadOnly = true;
             this.dgvTabelUser.RowHeadersVisible = false;
             this.dgvTabelUser.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvTabelUser.RowTemplate.Height = 35;
             this.dgvTabelUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvTabelUser.ShowEditingIcon = false;
             this.dgvTabelUser.Size = new System.Drawing.Size(869, 384);
             this.dgvTabelUser.TabIndex = 0;
             this.dgvTabelUser.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTabelUser_CellClick);
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.BorderRadius = 5;
-            this.btnRefresh.CheckedState.Parent = this.btnRefresh;
-            this.btnRefresh.CustomImages.Parent = this.btnRefresh;
-            this.btnRefresh.Font = new System.Drawing.Font("Poppins SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnRefresh.HoverState.Parent = this.btnRefresh;
-            this.btnRefresh.Location = new System.Drawing.Point(738, 143);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.ShadowDecoration.Parent = this.btnRefresh;
-            this.btnRefresh.Size = new System.Drawing.Size(80, 30);
-            this.btnRefresh.TabIndex = 3;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.BorderRadius = 5;
-            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
-            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.guna2Button1.Font = new System.Drawing.Font("Poppins SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(440, 143);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(80, 30);
-            this.guna2Button1.TabIndex = 4;
-            this.guna2Button1.Text = "Search";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // idUserColumn
             // 
@@ -235,32 +196,100 @@
             // Column9
             // 
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(135)))), ((int)(((byte)(35)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(135)))), ((int)(((byte)(35)))));
+            dataGridViewCellStyle2.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle2.NullValue")));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             this.Column9.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Column9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Column9.HeaderText = "";
+            this.Column9.Image = global::SpaceSolutions.Properties.Resources.Edit_CRUD_;
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
-            this.Column9.Text = "Update";
-            this.Column9.UseColumnTextForButtonValue = true;
+            this.Column9.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // Column10
             // 
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(88)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(88)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle3.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle3.NullValue")));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             this.Column10.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Column10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Column10.HeaderText = "";
+            this.Column10.Image = global::SpaceSolutions.Properties.Resources.delete_CRUD;
             this.Column10.Name = "Column10";
             this.Column10.ReadOnly = true;
-            this.Column10.Text = "Delete";
-            this.Column10.UseColumnTextForButtonValue = true;
+            this.Column10.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // dataGridViewImageColumn1
+            // 
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(135)))), ((int)(((byte)(35)))));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle5.NullValue")));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(135)))), ((int)(((byte)(35)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridViewImageColumn1.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridViewImageColumn1.HeaderText = "";
+            this.dataGridViewImageColumn1.Image = global::SpaceSolutions.Properties.Resources.Edit_CRUD_;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.ReadOnly = true;
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImageColumn1.Width = 109;
+            // 
+            // dataGridViewImageColumn2
+            // 
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(88)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle6.NullValue")));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(88)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridViewImageColumn2.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridViewImageColumn2.HeaderText = "";
+            this.dataGridViewImageColumn2.Image = global::SpaceSolutions.Properties.Resources.delete_CRUD;
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.ReadOnly = true;
+            this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImageColumn2.Width = 108;
+            // 
+            // btnCari
+            // 
+            this.btnCari.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCari.Image = global::SpaceSolutions.Properties.Resources.search_Use_1;
+            this.btnCari.Location = new System.Drawing.Point(442, 146);
+            this.btnCari.Name = "btnCari";
+            this.btnCari.Size = new System.Drawing.Size(32, 32);
+            this.btnCari.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnCari.TabIndex = 7;
+            this.btnCari.TabStop = false;
+            this.btnCari.Click += new System.EventHandler(this.btnCari_Click);
+            // 
+            // btnRefesh
+            // 
+            this.btnRefesh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRefesh.Image = global::SpaceSolutions.Properties.Resources.Refresh;
+            this.btnRefesh.Location = new System.Drawing.Point(815, 145);
+            this.btnRefesh.Name = "btnRefesh";
+            this.btnRefesh.Size = new System.Drawing.Size(35, 35);
+            this.btnRefesh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnRefesh.TabIndex = 6;
+            this.btnRefesh.TabStop = false;
+            this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click);
+            // 
+            // btnTambah
+            // 
+            this.btnTambah.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTambah.Image = global::SpaceSolutions.Properties.Resources.Add;
+            this.btnTambah.Location = new System.Drawing.Point(873, 145);
+            this.btnTambah.Name = "btnTambah";
+            this.btnTambah.Size = new System.Drawing.Size(35, 35);
+            this.btnTambah.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnTambah.TabIndex = 5;
+            this.btnTambah.TabStop = false;
+            this.btnTambah.Click += new System.EventHandler(this.btnTambah_Click);
             // 
             // CRUDUser
             // 
@@ -268,16 +297,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(974, 681);
-            this.Controls.Add(this.guna2Button1);
-            this.Controls.Add(this.btnRefresh);
+            this.Controls.Add(this.btnCari);
+            this.Controls.Add(this.btnRefesh);
+            this.Controls.Add(this.btnTambah);
             this.Controls.Add(this.dgvTabelUser);
-            this.Controls.Add(this.btnAdduser);
             this.Controls.Add(this.txtCariidUser);
             this.Name = "CRUDUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "formCRUDUser";
             this.Load += new System.EventHandler(this.formCRUDUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabelUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCari)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRefesh)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnTambah)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -285,10 +317,12 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2TextBox txtCariidUser;
-        private Guna.UI2.WinForms.Guna2Button btnAdduser;
         private System.Windows.Forms.DataGridView dgvTabelUser;
-        private Guna.UI2.WinForms.Guna2Button btnRefresh;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private System.Windows.Forms.PictureBox btnTambah;
+        private System.Windows.Forms.PictureBox btnRefesh;
+        private System.Windows.Forms.PictureBox btnCari;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn idUserColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn namaColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn usernameColumn;
@@ -297,7 +331,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn jabatanColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn roleColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusColumn;
-        private System.Windows.Forms.DataGridViewButtonColumn Column9;
-        private System.Windows.Forms.DataGridViewButtonColumn Column10;
+        private System.Windows.Forms.DataGridViewImageColumn Column9;
+        private System.Windows.Forms.DataGridViewImageColumn Column10;
     }
 }

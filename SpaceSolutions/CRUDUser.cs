@@ -17,14 +17,14 @@ namespace SpaceSolutions.Page
     {
         string idUser, nama, username, password, notelp, jabatan, role, status;
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void btnCari_Click(object sender, EventArgs e)
         {
             string idCari = txtCariidUser.Text.Trim();
 
             // Jika ID yang dicari kosong, reset tampilan DataGridView
             if (string.IsNullOrEmpty(idCari))
             {
-                getData();
+                getDataUser();
                 return;
             }
 
@@ -40,7 +40,7 @@ namespace SpaceSolutions.Page
 
                 DataTable dt = new DataTable();
                 adp.Fill(dt);
-               
+
 
                 if (dt.Rows.Count > 0)
                 {
@@ -62,10 +62,21 @@ namespace SpaceSolutions.Page
             }
         }
 
-        private void btnRefresh_Click(object sender, EventArgs e)
+        private void btnTambah_Click(object sender, EventArgs e)
         {
-            getData();
+            InputUser inputUser = new InputUser();
+            inputUser.Show();
+        }
+
+        private void btnRefesh_Click(object sender, EventArgs e)
+        {
+            getDataUser();
             txtCariidUser.Text = "";
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            
         }
 
         public CRUDUser()
@@ -73,15 +84,10 @@ namespace SpaceSolutions.Page
             InitializeComponent();
         }
 
-        private void btnAdduser_Click(object sender, EventArgs e)
-        {
-            InputUser inputUser = new InputUser();
-            inputUser.Show();
-        }
 
         private void formCRUDUser_Load(object sender, EventArgs e)
         {
-           getData();
+           getDataUser();
         }
 
         private void dgvTabelUser_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -125,7 +131,7 @@ namespace SpaceSolutions.Page
                         if (hasil != 0)
                         {
                             MessageBox.Show("Hapus Data Berhasil", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            getData();
+                            getDataUser();
                         }
                         else
                         {
@@ -144,14 +150,14 @@ namespace SpaceSolutions.Page
             }
         }
 
-        private void getData()
+        private void getDataUser()
         {
             SqlConnection connection = new SqlConnection();
             connection.ConnectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
             connection.Open();
             try
             {
-                string query = "SELECT * FROM [User] WHERE status = 1";
+                string query = "SELECT * FROM GetDataUser() WHERE status = 'Aktif'";
                 SqlCommand cmd = new SqlCommand(query, connection);
                 SqlDataAdapter adp = new SqlDataAdapter(cmd);
 

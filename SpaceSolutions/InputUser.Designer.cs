@@ -89,9 +89,9 @@
             this.label2.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(73, 135);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 26);
+            this.label2.Size = new System.Drawing.Size(140, 26);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Username";
+            this.label2.Text = "Nama Pengguna";
             // 
             // txtUsername
             // 
@@ -124,9 +124,9 @@
             this.label3.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(74, 212);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 26);
+            this.label3.Size = new System.Drawing.Size(93, 26);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Password";
+            this.label3.Text = "Kata Sandi";
             // 
             // txtPassword
             // 
@@ -256,9 +256,9 @@
             this.label6.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(74, 429);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(44, 26);
+            this.label6.Size = new System.Drawing.Size(87, 26);
             this.label6.TabIndex = 11;
-            this.label6.Text = "Role";
+            this.label6.Text = "Hak Akses";
             // 
             // btnSave
             // 
@@ -274,7 +274,7 @@
             this.btnSave.ShadowDecoration.Parent = this.btnSave;
             this.btnSave.Size = new System.Drawing.Size(140, 36);
             this.btnSave.TabIndex = 15;
-            this.btnSave.Text = "Save";
+            this.btnSave.Text = "Simpan";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnCancel
@@ -291,7 +291,7 @@
             this.btnCancel.ShadowDecoration.Parent = this.btnCancel;
             this.btnCancel.Size = new System.Drawing.Size(140, 36);
             this.btnCancel.TabIndex = 16;
-            this.btnCancel.Text = "Cancel";
+            this.btnCancel.Text = "Batal";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // guna2DragControl1

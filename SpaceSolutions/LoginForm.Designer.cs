@@ -75,7 +75,7 @@
             this.txtUsername.FocusedState.Parent = this.txtUsername;
             this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUsername.HoverState.Parent = this.txtUsername;
-            this.txtUsername.Location = new System.Drawing.Point(429, 164);
+            this.txtUsername.Location = new System.Drawing.Point(425, 165);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
             this.txtUsername.PlaceholderText = "";
@@ -83,6 +83,7 @@
             this.txtUsername.ShadowDecoration.Parent = this.txtUsername;
             this.txtUsername.Size = new System.Drawing.Size(320, 36);
             this.txtUsername.TabIndex = 1;
+            this.txtUsername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsername_KeyPress);
             // 
             // txtPassword
             // 
@@ -98,7 +99,7 @@
             this.txtPassword.FocusedState.Parent = this.txtPassword;
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassword.HoverState.Parent = this.txtPassword;
-            this.txtPassword.Location = new System.Drawing.Point(429, 248);
+            this.txtPassword.Location = new System.Drawing.Point(427, 249);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '\0';
             this.txtPassword.PlaceholderText = "";
@@ -140,7 +141,7 @@
             this.btnLogin.ShadowDecoration.Parent = this.btnLogin;
             this.btnLogin.Size = new System.Drawing.Size(160, 36);
             this.btnLogin.TabIndex = 4;
-            this.btnLogin.Text = "Login";
+            this.btnLogin.Text = "Masuk";
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // btnSignUp
@@ -163,14 +164,14 @@
             this.btnSignUp.ShadowDecoration.Parent = this.btnSignUp;
             this.btnSignUp.Size = new System.Drawing.Size(160, 36);
             this.btnSignUp.TabIndex = 5;
-            this.btnSignUp.Text = "Sign Up ";
+            this.btnSignUp.Text = "Daftar Akun";
             this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
             // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::SpaceSolutions.Properties.Resources.Login_Page;
+            this.BackgroundImage = global::SpaceSolutions.Properties.Resources.Login_Page_Rev2;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnSignUp);
             this.Controls.Add(this.btnLogin);

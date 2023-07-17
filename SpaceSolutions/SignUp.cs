@@ -33,6 +33,22 @@ namespace SpaceSolutions
                 SqlConnection connection = new SqlConnection();
                 connection.ConnectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
 
+                // Periksa keberadaan username di dalam database
+                string checkUsernameQuery = "SELECT COUNT(*) FROM [User] WHERE username = @username";
+                SqlCommand checkUsernameCmd = new SqlCommand(checkUsernameQuery, connection);
+                checkUsernameCmd.Parameters.AddWithValue("@username", txtUsername.Text);
+                connection.Open();
+                int usernameCount = Convert.ToInt32(checkUsernameCmd.ExecuteScalar());
+                connection.Close();
+
+                // Jika username sudah ada, tampilkan pesan kesalahan
+                if (usernameCount > 0)
+                {
+                    MessageBox.Show("Username sudah digunakan. Harap masukkan username lain.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return; // Hentikan proses penyimpanan
+                }
+
+
                 SqlCommand sqlcmd = new SqlCommand("sp_inputUser", connection);
                 sqlcmd.CommandType = CommandType.StoredProcedure;
 
@@ -109,6 +125,45 @@ namespace SpaceSolutions
             txtPassword.Text = "";
             txtNoTelp.Text = "";
             cbJabatan.Text = string.Empty;
+        }
+
+        private void SignUp_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNama_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Cek apakah karakter yang dimasukkan adalah huruf alfabet atau spasi
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != ' ' && e.KeyChar != '\b')
+            {
+                // Jika bukan huruf alfabet, spasi, atau backspace ('\b'), batalkan input karakter
+                e.Handled = true;
+            }
+        }
+
+        private void txtUsername_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != '\b')
+            {
+                // Jika bukan huruf alfabet atau backspace ('\b'), batalkan input karakter
+                e.Handled = true;
+            }
+        }
+
+        private void txtNoTelp_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Memeriksa apakah karakter yang ditekan adalah angka atau kontrol (seperti backspace)
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true; // Mencegah karakter yang tidak valid dimasukkan
+            }
+
+            // Memeriksa apakah jumlah karakter telah mencapai batas maksimum
+            if (txtNoTelp.Text.Length >= 13 && e.KeyChar != '\b') // '\b' adalah karakter backspace
+            {
+                e.Handled = true; // Mencegah karakter ditambahkan jika batas maksimum telah tercapai
+            }
         }
     }
 }

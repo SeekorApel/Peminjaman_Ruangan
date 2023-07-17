@@ -16,7 +16,8 @@ namespace SpaceSolutions
 {
     public partial class UpdateUser : Form
     {
-        string idUsertemp, namatemp, usernametemp, passwordtemp, notelptemp, jabatantemp, roletemp;
+        string idUsertemp, namatemp, usernametemp, originalUsername, passwordtemp, notelptemp, jabatantemp, roletemp;
+        private bool isUsernameChanged = false;
 
         private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -39,6 +40,23 @@ namespace SpaceSolutions
             {
                 e.Handled = true; // Mencegah karakter ditambahkan jika batas maksimum telah tercapai
             }
+        }
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+            if (originalUsername == txtUsername.Text)
+            {
+                isUsernameChanged = false; // Tidak ada perubahan username
+            }
+            else
+            {
+                isUsernameChanged = true; // Terjadi perubahan username
+            }
+        }
+
+        private void UpdateUser_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            isUsernameChanged = false;
         }
 
         private void txtUsername_KeyPress(object sender, KeyPressEventArgs e)
@@ -66,9 +84,31 @@ namespace SpaceSolutions
             }
             else
             {
+                if (isUsernameChanged)
+                {
+                    // Jika berubah, lakukan validasi seperti sebelumnya
+                    string checkUsernameQuery = "SELECT COUNT(*) FROM [User] WHERE username = @username";
+                    using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString))
+                    {
+                        SqlCommand checkUsernameCmd = new SqlCommand(checkUsernameQuery, connection);
+                        checkUsernameCmd.Parameters.AddWithValue("@username", txtUsername.Text);
+                        connection.Open();
+                        int usernameCount = Convert.ToInt32(checkUsernameCmd.ExecuteScalar());
+                        connection.Close();
+
+                        // Jika username sudah ada, tampilkan pesan kesalahan
+                        if (usernameCount > 0)
+                        {
+                            MessageBox.Show("Username sudah digunakan. Harap masukkan username lain.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return; // Hentikan proses penyimpanan
+                        }
+                    }
+                }
+
                 updateDB();
+
+                isUsernameChanged = false;
             }
-            
         }
 
         public UpdateUser(string idUser, string nama, string username, string password, string notelp, string jabatan, string role)
@@ -77,10 +117,12 @@ namespace SpaceSolutions
             idUsertemp = idUser;
             namatemp = nama;
             usernametemp = username;
+            originalUsername = username;
             passwordtemp = password;
             notelptemp = notelp;
             jabatantemp = jabatan;
             roletemp = role;
+            txtUsername.TextChanged += txtUsername_TextChanged;
         }
 
         private void UpdateUser_Load(object sender, EventArgs e)
@@ -90,18 +132,7 @@ namespace SpaceSolutions
             txtPassword.Text = passwordtemp;
             txtNoTelp.Text = notelptemp;
             cbJabatan.Text = jabatantemp;
-            if (roletemp.Equals("1"))
-            {
-                cbRole.Text = "Admin";
-            }
-            else if (roletemp.Equals("2"))
-            {
-                cbRole.Text = "Manager";
-            }
-            else if (roletemp.Equals("3"))
-            {
-                cbRole.Text = "User";
-            }
+            cbRole.Text = roletemp;
         }
 
         private void updateDB()
@@ -124,21 +155,6 @@ namespace SpaceSolutions
 
                 SqlConnection connection = new SqlConnection();
                 connection.ConnectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
-
-                // Periksa keberadaan username di dalam database
-                string checkUsernameQuery = "SELECT COUNT(*) FROM [User] WHERE username = @username";
-                SqlCommand checkUsernameCmd = new SqlCommand(checkUsernameQuery, connection);
-                checkUsernameCmd.Parameters.AddWithValue("@username", txtUsername.Text);
-                connection.Open();
-                int usernameCount = Convert.ToInt32(checkUsernameCmd.ExecuteScalar());
-                connection.Close();
-
-                // Jika username sudah ada, tampilkan pesan kesalahan
-                if (usernameCount > 0)
-                {
-                    MessageBox.Show("Username sudah digunakan. Harap masukkan username lain.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return; // Hentikan proses penyimpanan
-                }
 
                 SqlCommand sqlcmd = new SqlCommand("sp_updateUser", connection);
                 sqlcmd.CommandType = CommandType.StoredProcedure;

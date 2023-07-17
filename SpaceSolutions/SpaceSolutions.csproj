@@ -460,5 +460,17 @@
   <ItemGroup>
     <None Include="Assets\Icon\AccMenu1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Background\Login Page Rev2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Icon\search Use 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Icon\Edit CRUD .png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Icon\delete CRUD.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
