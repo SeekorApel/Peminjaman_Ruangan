@@ -17,15 +17,13 @@ namespace SpaceSolutions
 {
     public partial class UpdateBarang : Form
     {
-        string idBarangtemp, namaBarangtemp,stocktemp, hargaBarangtemp;
+        string idBarangtemp, namaBarangtemp,stocktemp, kategoriBarangtemp;
         
 
         private void UpdateBarang_Load(object sender, EventArgs e)
         {
             txtNamaBarang.Text = namaBarangtemp;
-            txtHargaBarang.Text = hargaBarangtemp;
-            int uang = Int32.Parse(txtHargaBarang.Text);
-            txtHargaBarang.Text = ToRupiah(uang);
+            txtKategoriBarang.Text = kategoriBarangtemp;
             txtStokBarang.Text = stocktemp;
         }
 
@@ -35,41 +33,20 @@ namespace SpaceSolutions
             InitializeComponent();
             idBarangtemp = idBarang;
             namaBarangtemp = namaBarang;
-            hargaBarangtemp = hargaBarang;
+            kategoriBarangtemp = hargaBarang;
             stocktemp = stokBarang;
-        }
-
-        private void txtHargaBarang_Leave(object sender, EventArgs e)
-        {
-            if (Int32.TryParse(txtHargaBarang.Text, out int uang))
-            {
-                txtHargaBarang.Text = ToRupiah(uang);
-            }
-        }
-
-        private void txtHargaBarang_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
-            {
-                e.Handled = true;
-            }
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (txtNamaBarang.Text == "" || txtHargaBarang.Text == "" || txtStokBarang.Text == "")
+            if (txtNamaBarang.Text == "" || txtKategoriBarang.Text == "" || txtStokBarang.Text == "")
             {
                 MessageBox.Show("Tidak boleh ada field yang kosong", "Peringantan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                updateDB();
+                updateTabelBarang();
             }
-            
-        }
-
-        private void txtHargaBarang_TextChanged(object sender, EventArgs e)
-        {
             
         }
 
@@ -89,22 +66,26 @@ namespace SpaceSolutions
             }
         }
 
-        private String ToRupiah(int angka)
+        private void txtKategoriBarang_KeyPress(object sender, KeyPressEventArgs e)
         {
-            return String.Format(CultureInfo.CreateSpecificCulture("id-id"), "Rp. {0:N}", angka);
-        }
-
-        private int ToAngka(string rupiah)
-        {
-            if (string.IsNullOrEmpty(rupiah))
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != ' ' && e.KeyChar != (char)Keys.Back)
             {
-                return 0; // Mengembalikan nilai default (0) jika string kosong
+                e.Handled = true;
             }
-
-            return int.Parse(Regex.Replace(rupiah, @",.*|\D", ""));
         }
 
-        private void updateDB()
+        private void txtKategoriBarang_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtKategoriBarang_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void updateTabelBarang()
         {
             try
             {
@@ -114,7 +95,7 @@ namespace SpaceSolutions
                 sqlcmd.CommandType = CommandType.StoredProcedure;
   
                 sqlcmd.Parameters.AddWithValue("@namaBarang", txtNamaBarang.Text);
-                sqlcmd.Parameters.AddWithValue("@hargaBarang", ToAngka(txtHargaBarang.Text));
+                sqlcmd.Parameters.AddWithValue("@kategoriBarang", txtKategoriBarang.Text);
                 sqlcmd.Parameters.AddWithValue("@stokBarang", txtStokBarang.Text);
                 sqlcmd.Parameters.AddWithValue("@idBarang", idBarangtemp);
 

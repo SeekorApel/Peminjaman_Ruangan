@@ -20,6 +20,7 @@ namespace SpaceSolutions
             // TODO: This line of code loads data into the 'dSSpaceSolutions.Barang' table. You can move, or remove it, as needed.
             this.barangTableAdapter.Fill(this.dSSpaceSolutions.Barang);
 
+
             //Buat AUTO INCREMENT Tabel Fasilitas
             string query = "SELECT TOP 1 IdFasilitas FROM Fasilitas ORDER BY IdFasilitas DESC";
             idFasilitas = (string)autogenerateID("FS", query);

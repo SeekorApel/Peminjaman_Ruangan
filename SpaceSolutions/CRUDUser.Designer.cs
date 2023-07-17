@@ -30,13 +30,18 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CRUDUser));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtCariidUser = new Guna.UI2.WinForms.Guna2TextBox();
             this.dgvTabelUser = new System.Windows.Forms.DataGridView();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnCari = new System.Windows.Forms.PictureBox();
+            this.btnRefesh = new System.Windows.Forms.PictureBox();
+            this.btnTambah = new System.Windows.Forms.PictureBox();
             this.idUserColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.namaColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usernameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,11 +52,6 @@
             this.statusColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btnCari = new System.Windows.Forms.PictureBox();
-            this.btnRefesh = new System.Windows.Forms.PictureBox();
-            this.btnTambah = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabelUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCari)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRefesh)).BeginInit();
@@ -135,94 +135,6 @@
             this.dgvTabelUser.TabIndex = 0;
             this.dgvTabelUser.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTabelUser_CellClick);
             // 
-            // idUserColumn
-            // 
-            this.idUserColumn.DataPropertyName = "idUser";
-            this.idUserColumn.HeaderText = "ID User";
-            this.idUserColumn.Name = "idUserColumn";
-            this.idUserColumn.ReadOnly = true;
-            // 
-            // namaColumn
-            // 
-            this.namaColumn.DataPropertyName = "nama";
-            this.namaColumn.HeaderText = "Nama";
-            this.namaColumn.Name = "namaColumn";
-            this.namaColumn.ReadOnly = true;
-            // 
-            // usernameColumn
-            // 
-            this.usernameColumn.DataPropertyName = "username";
-            this.usernameColumn.HeaderText = "Username";
-            this.usernameColumn.Name = "usernameColumn";
-            this.usernameColumn.ReadOnly = true;
-            // 
-            // passwordColumn
-            // 
-            this.passwordColumn.DataPropertyName = "password";
-            this.passwordColumn.HeaderText = "Password";
-            this.passwordColumn.Name = "passwordColumn";
-            this.passwordColumn.ReadOnly = true;
-            this.passwordColumn.Visible = false;
-            // 
-            // noTelpColumn
-            // 
-            this.noTelpColumn.DataPropertyName = "noTelp";
-            this.noTelpColumn.HeaderText = "No telp";
-            this.noTelpColumn.Name = "noTelpColumn";
-            this.noTelpColumn.ReadOnly = true;
-            // 
-            // jabatanColumn
-            // 
-            this.jabatanColumn.DataPropertyName = "jabatan";
-            this.jabatanColumn.HeaderText = "Jabatan";
-            this.jabatanColumn.Name = "jabatanColumn";
-            this.jabatanColumn.ReadOnly = true;
-            // 
-            // roleColumn
-            // 
-            this.roleColumn.DataPropertyName = "role";
-            this.roleColumn.HeaderText = "Role";
-            this.roleColumn.Name = "roleColumn";
-            this.roleColumn.ReadOnly = true;
-            // 
-            // statusColumn
-            // 
-            this.statusColumn.DataPropertyName = "status";
-            this.statusColumn.HeaderText = "Status";
-            this.statusColumn.Name = "statusColumn";
-            this.statusColumn.ReadOnly = true;
-            this.statusColumn.Visible = false;
-            // 
-            // Column9
-            // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle2.NullValue")));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            this.Column9.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Column9.HeaderText = "";
-            this.Column9.Image = global::SpaceSolutions.Properties.Resources.Edit_CRUD_;
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            this.Column9.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // Column10
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle3.NullValue")));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.Column10.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Column10.HeaderText = "";
-            this.Column10.Image = global::SpaceSolutions.Properties.Resources.delete_CRUD;
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            this.Column10.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
             // dataGridViewImageColumn1
             // 
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -290,6 +202,96 @@
             this.btnTambah.TabIndex = 5;
             this.btnTambah.TabStop = false;
             this.btnTambah.Click += new System.EventHandler(this.btnTambah_Click);
+            // 
+            // idUserColumn
+            // 
+            this.idUserColumn.DataPropertyName = "idUser";
+            this.idUserColumn.HeaderText = "ID User";
+            this.idUserColumn.Name = "idUserColumn";
+            this.idUserColumn.ReadOnly = true;
+            // 
+            // namaColumn
+            // 
+            this.namaColumn.DataPropertyName = "nama";
+            this.namaColumn.HeaderText = "Nama";
+            this.namaColumn.Name = "namaColumn";
+            this.namaColumn.ReadOnly = true;
+            // 
+            // usernameColumn
+            // 
+            this.usernameColumn.DataPropertyName = "username";
+            this.usernameColumn.HeaderText = "Username";
+            this.usernameColumn.Name = "usernameColumn";
+            this.usernameColumn.ReadOnly = true;
+            // 
+            // passwordColumn
+            // 
+            this.passwordColumn.DataPropertyName = "password";
+            this.passwordColumn.HeaderText = "Password";
+            this.passwordColumn.Name = "passwordColumn";
+            this.passwordColumn.ReadOnly = true;
+            this.passwordColumn.Visible = false;
+            // 
+            // noTelpColumn
+            // 
+            this.noTelpColumn.DataPropertyName = "noTelp";
+            this.noTelpColumn.HeaderText = "No telp";
+            this.noTelpColumn.Name = "noTelpColumn";
+            this.noTelpColumn.ReadOnly = true;
+            // 
+            // jabatanColumn
+            // 
+            this.jabatanColumn.DataPropertyName = "jabatan";
+            this.jabatanColumn.HeaderText = "Jabatan";
+            this.jabatanColumn.Name = "jabatanColumn";
+            this.jabatanColumn.ReadOnly = true;
+            // 
+            // roleColumn
+            // 
+            this.roleColumn.DataPropertyName = "role";
+            this.roleColumn.HeaderText = "Role";
+            this.roleColumn.Name = "roleColumn";
+            this.roleColumn.ReadOnly = true;
+            // 
+            // statusColumn
+            // 
+            this.statusColumn.DataPropertyName = "status";
+            this.statusColumn.HeaderText = "Status";
+            this.statusColumn.Name = "statusColumn";
+            this.statusColumn.ReadOnly = true;
+            this.statusColumn.Visible = false;
+            // 
+            // Column9
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle2.NullValue")));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.Column9.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Column9.FillWeight = 60F;
+            this.Column9.HeaderText = "";
+            this.Column9.Image = global::SpaceSolutions.Properties.Resources.Edit_CRUD_;
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // Column10
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle3.NullValue")));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.Column10.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Column10.FillWeight = 60F;
+            this.Column10.HeaderText = "";
+            this.Column10.Image = global::SpaceSolutions.Properties.Resources.delete_CRUD;
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            this.Column10.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // CRUDUser
             // 

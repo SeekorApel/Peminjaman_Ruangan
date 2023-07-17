@@ -197,7 +197,7 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             this.Column9.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Column9.FillWeight = 35F;
+            this.Column9.FillWeight = 30F;
             this.Column9.HeaderText = "";
             this.Column9.Image = global::SpaceSolutions.Properties.Resources.Edit_CRUD_;
             this.Column9.Name = "Column9";
@@ -213,7 +213,7 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             this.Column10.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Column10.FillWeight = 35F;
+            this.Column10.FillWeight = 30F;
             this.Column10.HeaderText = "";
             this.Column10.Image = global::SpaceSolutions.Properties.Resources.delete_CRUD;
             this.Column10.Name = "Column10";

@@ -30,6 +30,7 @@ namespace SpaceSolutions
         {
             // TODO: This line of code loads data into the 'dSSpaceSolutions.Barang' table. You can move, or remove it, as needed.
             this.barangTableAdapter.Fill(this.dSSpaceSolutions.Barang);
+
             txtNamaFasilitas.Text = namaFasilitasTemp;
             getDataDetailFasilitas();
 

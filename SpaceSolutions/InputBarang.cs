@@ -23,18 +23,18 @@ namespace SpaceSolutions
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (txtNamaBarang.Text == "" || txtHargaBarang.Text == "" || txtStokBarang.Text == "")
+            if (txtNamaBarang.Text == "" || txtKategoriBarang.Text == "" || txtStokBarang.Text == "")
             {
                 MessageBox.Show("Tidak boleh ada field yang kosong", "Peringantan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-               inputDB();
+               inputTabelBarang();
             }
             
         }
 
-        private void inputDB()
+        private void inputTabelBarang()
         {
             int status = 1;
             try
@@ -48,7 +48,7 @@ namespace SpaceSolutions
 
                 sqlcmd.Parameters.AddWithValue("@idBarang", autogenerateID("BRG", query));
                 sqlcmd.Parameters.AddWithValue("@namaBarang", txtNamaBarang.Text);
-                sqlcmd.Parameters.AddWithValue("@hargaBarang", ToAngka(txtHargaBarang.Text));
+                sqlcmd.Parameters.AddWithValue("@kategoriBarang", (txtKategoriBarang.Text));
                 sqlcmd.Parameters.AddWithValue("@stokBarang", txtStokBarang.Text);
                 sqlcmd.Parameters.AddWithValue("@status", status);
 
@@ -106,29 +106,6 @@ namespace SpaceSolutions
             return result;
         }
 
-        private String ToRupiah(int angka)
-        {
-            return String.Format(CultureInfo.CreateSpecificCulture("id-id"), "Rp. {0:N}", angka);
-        }
-
-        private int ToAngka(string rupiah)
-        {
-            if (string.IsNullOrEmpty(rupiah))
-            {
-                return 0; // Mengembalikan nilai default (0) jika string kosong
-            }
-
-            return int.Parse(Regex.Replace(rupiah, @",.*|\D", ""));
-        }
-
-        private void txtHargaBarang_Leave(object sender, EventArgs e)
-        {
-            if (Int32.TryParse(txtHargaBarang.Text, out int uang))
-            {
-                txtHargaBarang.Text = ToRupiah(uang);
-            }
-        }
-
 
         private void txtNamaBarang_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -146,19 +123,26 @@ namespace SpaceSolutions
             }
         }
 
-        private void txtHargaBarang_KeyPress(object sender, KeyPressEventArgs e)
+        private void btnCancel_Click(object sender, EventArgs e)
         {
-            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            txtNamaBarang.Text = "";
+            txtKategoriBarang.Text = "";
+            txtStokBarang.Text = "";
+        }
+
+        private void txtKategoriBarang_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Cek apakah karakter yang dimasukkan adalah huruf atau spasi
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != ' ' && !char.IsControl(e.KeyChar))
             {
+                // Jika bukan, maka batalkan input dengan menandai event sebagai sudah ditangani (Handled)
                 e.Handled = true;
             }
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void txtKategoriBarang_Leave(object sender, EventArgs e)
         {
-            txtNamaBarang.Text = "";
-            txtHargaBarang.Text = "";
-            txtStokBarang.Text = "";
+
         }
     }
 }

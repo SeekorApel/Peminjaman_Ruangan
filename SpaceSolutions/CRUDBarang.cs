@@ -15,7 +15,7 @@ namespace SpaceSolutions
 {
     public partial class CRUDBarang : Form
     {
-        string idBarang, namaBarang,stokBarang, hargaBarang;
+        string idBarang, namaBarang,stokBarang, kategoriBarang;
        
         public CRUDBarang()
         {
@@ -24,10 +24,10 @@ namespace SpaceSolutions
 
         private void CRUDBarang_Load(object sender, EventArgs e)
         {
-            getData();
+            getDataTabelBarang();
         }
 
-        private void getData()
+        private void getDataTabelBarang()
         {
             SqlConnection connection = new SqlConnection();
             connection.ConnectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
@@ -54,10 +54,10 @@ namespace SpaceSolutions
             {
                 idBarang = Convert.ToString(dgvTabelBarang.Rows[e.RowIndex].Cells["idBarangColumn"].Value);
                 namaBarang = Convert.ToString(dgvTabelBarang.Rows[e.RowIndex].Cells["namaBarangColumn"].Value);
-                hargaBarang = Convert.ToString(dgvTabelBarang.Rows[e.RowIndex].Cells["hargaBarangColumn"].Value);
+                kategoriBarang = Convert.ToString(dgvTabelBarang.Rows[e.RowIndex].Cells["kategoriBarangColumn"].Value);
                 stokBarang = Convert.ToString(dgvTabelBarang.Rows[e.RowIndex].Cells["stokBarangColumn"].Value);
 
-                UpdateBarang updateBrg = new UpdateBarang(idBarang, namaBarang, hargaBarang, stokBarang);
+                UpdateBarang updateBrg = new UpdateBarang(idBarang, namaBarang, kategoriBarang, stokBarang);
                 updateBrg.ShowDialog();
 
                 
@@ -85,7 +85,7 @@ namespace SpaceSolutions
                         if (hasil != 0)
                         {
                             MessageBox.Show("Hapus Data Berhasil", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            getData();
+                            getDataTabelBarang();
                         }
                         else
                         {
@@ -106,26 +106,14 @@ namespace SpaceSolutions
             }
         }
 
-        private void btnAddBarang_Click(object sender, EventArgs e)
-        {
-            InputBarang barang = new InputBarang();
-            barang.Show();
-        }
-
-        private void btnRefresh_Click(object sender, EventArgs e)
-        {
-            getData();
-            txtCariidBarang.Text = "";
-        }
-
-        private void btnSearch_Click(object sender, EventArgs e)
+        private void btnCari_Click(object sender, EventArgs e)
         {
             string idCari = txtCariidBarang.Text.Trim();
 
             // Jika ID yang dicari kosong, reset tampilan DataGridView
             if (string.IsNullOrEmpty(idCari))
             {
-                getData();
+                getDataTabelBarang();
                 return;
             }
 
@@ -162,5 +150,18 @@ namespace SpaceSolutions
                 connection.Close();
             }
         }
+
+        private void btnRefesh_Click(object sender, EventArgs e)
+        {
+            getDataTabelBarang();
+            txtCariidBarang.Text = "";
+        }
+
+        private void btnTambah_Click(object sender, EventArgs e)
+        {
+            InputBarang barang = new InputBarang();
+            barang.Show();
+        }
+
     }
 }

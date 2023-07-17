@@ -30,32 +30,22 @@
         {
             this.components = new System.ComponentModel.Container();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.btnExit = new Guna.UI2.WinForms.Guna2ControlBox();
             this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtStokBarang = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtHargaBarang = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtKategoriBarang = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNamaBarang = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // guna2DragControl1
             // 
             this.guna2DragControl1.TargetControl = this;
-            // 
-            // btnExit
-            // 
-            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExit.FillColor = System.Drawing.Color.Transparent;
-            this.btnExit.HoverState.Parent = this.btnExit;
-            this.btnExit.IconColor = System.Drawing.Color.Black;
-            this.btnExit.Location = new System.Drawing.Point(343, 12);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.ShadowDecoration.Parent = this.btnExit;
-            this.btnExit.Size = new System.Drawing.Size(45, 29);
-            this.btnExit.TabIndex = 32;
             // 
             // btnCancel
             // 
@@ -71,7 +61,7 @@
             this.btnCancel.ShadowDecoration.Parent = this.btnCancel;
             this.btnCancel.Size = new System.Drawing.Size(140, 36);
             this.btnCancel.TabIndex = 31;
-            this.btnCancel.Text = "Cancel";
+            this.btnCancel.Text = "Batal";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSave
@@ -88,7 +78,7 @@
             this.btnSave.ShadowDecoration.Parent = this.btnSave;
             this.btnSave.Size = new System.Drawing.Size(140, 36);
             this.btnSave.TabIndex = 30;
-            this.btnSave.Text = "Save";
+            this.btnSave.Text = "Simpan";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label3
@@ -132,35 +122,35 @@
             this.label2.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(73, 146);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 26);
+            this.label2.Size = new System.Drawing.Size(134, 26);
             this.label2.TabIndex = 21;
-            this.label2.Text = "Harga Barang";
+            this.label2.Text = "Kategori Barang";
             // 
-            // txtHargaBarang
+            // txtKategoriBarang
             // 
-            this.txtHargaBarang.BorderRadius = 5;
-            this.txtHargaBarang.BorderThickness = 2;
-            this.txtHargaBarang.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtHargaBarang.DefaultText = "";
-            this.txtHargaBarang.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtHargaBarang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtHargaBarang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtHargaBarang.DisabledState.Parent = this.txtHargaBarang;
-            this.txtHargaBarang.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtHargaBarang.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtHargaBarang.FocusedState.Parent = this.txtHargaBarang;
-            this.txtHargaBarang.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtHargaBarang.HoverState.Parent = this.txtHargaBarang;
-            this.txtHargaBarang.Location = new System.Drawing.Point(77, 172);
-            this.txtHargaBarang.Name = "txtHargaBarang";
-            this.txtHargaBarang.PasswordChar = '\0';
-            this.txtHargaBarang.PlaceholderText = "";
-            this.txtHargaBarang.SelectedText = "";
-            this.txtHargaBarang.ShadowDecoration.Parent = this.txtHargaBarang;
-            this.txtHargaBarang.Size = new System.Drawing.Size(250, 36);
-            this.txtHargaBarang.TabIndex = 20;
-            this.txtHargaBarang.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHargaBarang_KeyPress);
-            this.txtHargaBarang.Leave += new System.EventHandler(this.txtHargaBarang_Leave);
+            this.txtKategoriBarang.BorderRadius = 5;
+            this.txtKategoriBarang.BorderThickness = 2;
+            this.txtKategoriBarang.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtKategoriBarang.DefaultText = "";
+            this.txtKategoriBarang.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtKategoriBarang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtKategoriBarang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtKategoriBarang.DisabledState.Parent = this.txtKategoriBarang;
+            this.txtKategoriBarang.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtKategoriBarang.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtKategoriBarang.FocusedState.Parent = this.txtKategoriBarang;
+            this.txtKategoriBarang.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtKategoriBarang.HoverState.Parent = this.txtKategoriBarang;
+            this.txtKategoriBarang.Location = new System.Drawing.Point(77, 172);
+            this.txtKategoriBarang.Name = "txtKategoriBarang";
+            this.txtKategoriBarang.PasswordChar = '\0';
+            this.txtKategoriBarang.PlaceholderText = "";
+            this.txtKategoriBarang.SelectedText = "";
+            this.txtKategoriBarang.ShadowDecoration.Parent = this.txtKategoriBarang;
+            this.txtKategoriBarang.Size = new System.Drawing.Size(250, 36);
+            this.txtKategoriBarang.TabIndex = 20;
+            this.txtKategoriBarang.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtKategoriBarang_KeyPress);
+            this.txtKategoriBarang.Leave += new System.EventHandler(this.txtKategoriBarang_Leave);
             // 
             // label1
             // 
@@ -197,22 +187,60 @@
             this.txtNamaBarang.TabIndex = 18;
             this.txtNamaBarang.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNamaBarang_KeyPress);
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Red;
+            this.label10.Location = new System.Drawing.Point(184, 72);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(16, 23);
+            this.label10.TabIndex = 59;
+            this.label10.Text = "*";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(201, 146);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(16, 23);
+            this.label4.TabIndex = 60;
+            this.label4.Text = "*";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(174, 223);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(16, 23);
+            this.label5.TabIndex = 61;
+            this.label5.Text = "*";
+            // 
             // InputBarang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(400, 500);
-            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtStokBarang);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtHargaBarang);
+            this.Controls.Add(this.txtKategoriBarang);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNamaBarang);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "InputBarang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InputBarang";
@@ -224,14 +252,16 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
-        private Guna.UI2.WinForms.Guna2ControlBox btnExit;
         private Guna.UI2.WinForms.Guna2Button btnCancel;
         private Guna.UI2.WinForms.Guna2Button btnSave;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2TextBox txtStokBarang;
         private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2TextBox txtHargaBarang;
+        private Guna.UI2.WinForms.Guna2TextBox txtKategoriBarang;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2TextBox txtNamaBarang;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label10;
     }
 }
