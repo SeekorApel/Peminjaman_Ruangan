@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.txtNama = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -43,7 +42,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.cbJabatan = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnSignUp = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -55,19 +53,6 @@
             // guna2DragControl1
             // 
             this.guna2DragControl1.TargetControl = this;
-            // 
-            // btnClose
-            // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.FillColor = System.Drawing.Color.Transparent;
-            this.btnClose.HoverState.Parent = this.btnClose;
-            this.btnClose.IconColor = System.Drawing.Color.Black;
-            this.btnClose.Location = new System.Drawing.Point(333, 15);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.ShadowDecoration.Parent = this.btnClose;
-            this.btnClose.Size = new System.Drawing.Size(35, 30);
-            this.btnClose.TabIndex = 1;
             // 
             // txtNama
             // 
@@ -269,10 +254,6 @@
             this.btnSignUp.Text = "Daftar Akun";
             this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
             // 
-            // guna2Elipse1
-            // 
-            this.guna2Elipse1.TargetControl = this;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -351,8 +332,7 @@
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNama);
-            this.Controls.Add(this.btnClose);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "SignUp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SignUp";
@@ -366,7 +346,6 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
-        private Guna.UI2.WinForms.Guna2ControlBox btnClose;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2TextBox txtNama;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
@@ -379,7 +358,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtNoTelp;
         private Guna.UI2.WinForms.Guna2ComboBox cbJabatan;
         private Guna.UI2.WinForms.Guna2Button btnSignUp;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;

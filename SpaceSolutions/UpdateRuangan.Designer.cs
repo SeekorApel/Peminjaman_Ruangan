@@ -38,29 +38,29 @@
             this.rbTersedia = new Guna.UI2.WinForms.Guna2RadioButton();
             this.label4 = new System.Windows.Forms.Label();
             this.cbJenisRuangan = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.jenisRuanganBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dSSpaceSolutions = new SpaceSolutions.DSSpaceSolutions();
             this.label3 = new System.Windows.Forms.Label();
             this.cbFasilitas = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.fasilitasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label2 = new System.Windows.Forms.Label();
-            this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNamaRuangan = new Guna.UI2.WinForms.Guna2TextBox();
-            this.dSSpaceSolutions = new SpaceSolutions.DSSpaceSolutions();
-            this.fasilitasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fasilitasTableAdapter = new SpaceSolutions.DSSpaceSolutionsTableAdapters.FasilitasTableAdapter();
-            this.jenisRuanganBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.jenisRuanganTableAdapter = new SpaceSolutions.DSSpaceSolutionsTableAdapters.JenisRuanganTableAdapter();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.jenisRuanganBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSSpaceSolutions)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fasilitasBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.jenisRuanganBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2DragControl1
             // 
             this.guna2DragControl1.TargetControl = this;
-            // 
-            // guna2Elipse1
-            // 
-            this.guna2Elipse1.TargetControl = this;
             // 
             // btnUpdate
             // 
@@ -71,19 +71,19 @@
             this.btnUpdate.Font = new System.Drawing.Font("Gilmer Bold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
             this.btnUpdate.HoverState.Parent = this.btnUpdate;
-            this.btnUpdate.Location = new System.Drawing.Point(131, 527);
+            this.btnUpdate.Location = new System.Drawing.Point(131, 509);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.ShadowDecoration.Parent = this.btnUpdate;
             this.btnUpdate.Size = new System.Drawing.Size(140, 36);
             this.btnUpdate.TabIndex = 42;
-            this.btnUpdate.Text = "Update";
+            this.btnUpdate.Text = "Ubah";
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(80, 407);
+            this.label5.Location = new System.Drawing.Point(80, 389);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(131, 26);
             this.label5.TabIndex = 41;
@@ -104,7 +104,7 @@
             this.txtLokasiRuangan.FocusedState.Parent = this.txtLokasiRuangan;
             this.txtLokasiRuangan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtLokasiRuangan.HoverState.Parent = this.txtLokasiRuangan;
-            this.txtLokasiRuangan.Location = new System.Drawing.Point(79, 437);
+            this.txtLokasiRuangan.Location = new System.Drawing.Point(79, 419);
             this.txtLokasiRuangan.Name = "txtLokasiRuangan";
             this.txtLokasiRuangan.PasswordChar = '\0';
             this.txtLokasiRuangan.PlaceholderText = "";
@@ -112,6 +112,7 @@
             this.txtLokasiRuangan.ShadowDecoration.Parent = this.txtLokasiRuangan;
             this.txtLokasiRuangan.Size = new System.Drawing.Size(250, 36);
             this.txtLokasiRuangan.TabIndex = 40;
+            this.txtLokasiRuangan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLokasiRuangan_KeyPress);
             // 
             // rbTidakTersedia
             // 
@@ -122,7 +123,7 @@
             this.rbTidakTersedia.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rbTidakTersedia.CheckedState.InnerOffset = -4;
             this.rbTidakTersedia.Font = new System.Drawing.Font("Poppins", 10F);
-            this.rbTidakTersedia.Location = new System.Drawing.Point(194, 360);
+            this.rbTidakTersedia.Location = new System.Drawing.Point(194, 342);
             this.rbTidakTersedia.Name = "rbTidakTersedia";
             this.rbTidakTersedia.Size = new System.Drawing.Size(129, 29);
             this.rbTidakTersedia.TabIndex = 39;
@@ -143,7 +144,7 @@
             this.rbTersedia.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rbTersedia.CheckedState.InnerOffset = -4;
             this.rbTersedia.Font = new System.Drawing.Font("Poppins", 10F);
-            this.rbTersedia.Location = new System.Drawing.Point(82, 360);
+            this.rbTersedia.Location = new System.Drawing.Point(82, 342);
             this.rbTersedia.Name = "rbTersedia";
             this.rbTersedia.Size = new System.Drawing.Size(89, 29);
             this.rbTersedia.TabIndex = 38;
@@ -159,7 +160,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(76, 320);
+            this.label4.Location = new System.Drawing.Point(76, 302);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(184, 26);
             this.label4.TabIndex = 37;
@@ -182,18 +183,28 @@
             this.cbJenisRuangan.HoverState.Parent = this.cbJenisRuangan;
             this.cbJenisRuangan.ItemHeight = 30;
             this.cbJenisRuangan.ItemsAppearance.Parent = this.cbJenisRuangan;
-            this.cbJenisRuangan.Location = new System.Drawing.Point(76, 269);
+            this.cbJenisRuangan.Location = new System.Drawing.Point(76, 169);
             this.cbJenisRuangan.Name = "cbJenisRuangan";
             this.cbJenisRuangan.ShadowDecoration.Parent = this.cbJenisRuangan;
             this.cbJenisRuangan.Size = new System.Drawing.Size(250, 36);
             this.cbJenisRuangan.TabIndex = 36;
             this.cbJenisRuangan.ValueMember = "idJenisRuangan";
             // 
+            // jenisRuanganBindingSource
+            // 
+            this.jenisRuanganBindingSource.DataMember = "JenisRuangan";
+            this.jenisRuanganBindingSource.DataSource = this.dSSpaceSolutions;
+            // 
+            // dSSpaceSolutions
+            // 
+            this.dSSpaceSolutions.DataSetName = "DSSpaceSolutions";
+            this.dSSpaceSolutions.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(76, 237);
+            this.label3.Location = new System.Drawing.Point(76, 137);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(124, 26);
             this.label3.TabIndex = 35;
@@ -216,40 +227,33 @@
             this.cbFasilitas.HoverState.Parent = this.cbFasilitas;
             this.cbFasilitas.ItemHeight = 30;
             this.cbFasilitas.ItemsAppearance.Parent = this.cbFasilitas;
-            this.cbFasilitas.Location = new System.Drawing.Point(76, 183);
+            this.cbFasilitas.Location = new System.Drawing.Point(73, 250);
             this.cbFasilitas.Name = "cbFasilitas";
             this.cbFasilitas.ShadowDecoration.Parent = this.cbFasilitas;
             this.cbFasilitas.Size = new System.Drawing.Size(250, 36);
             this.cbFasilitas.TabIndex = 34;
             this.cbFasilitas.ValueMember = "idFasilitas";
             // 
+            // fasilitasBindingSource
+            // 
+            this.fasilitasBindingSource.DataMember = "Fasilitas";
+            this.fasilitasBindingSource.DataSource = this.dSSpaceSolutions;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(73, 154);
+            this.label2.Location = new System.Drawing.Point(70, 221);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 26);
             this.label2.TabIndex = 33;
             this.label2.Text = "Fasilitas";
             // 
-            // btnClose
-            // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.FillColor = System.Drawing.Color.Transparent;
-            this.btnClose.HoverState.Parent = this.btnClose;
-            this.btnClose.IconColor = System.Drawing.Color.Black;
-            this.btnClose.Location = new System.Drawing.Point(333, 23);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.ShadowDecoration.Parent = this.btnClose;
-            this.btnClose.Size = new System.Drawing.Size(45, 29);
-            this.btnClose.TabIndex = 32;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(71, 74);
+            this.label1.Location = new System.Drawing.Point(71, 56);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(131, 26);
             this.label1.TabIndex = 31;
@@ -270,7 +274,7 @@
             this.txtNamaRuangan.FocusedState.Parent = this.txtNamaRuangan;
             this.txtNamaRuangan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNamaRuangan.HoverState.Parent = this.txtNamaRuangan;
-            this.txtNamaRuangan.Location = new System.Drawing.Point(73, 104);
+            this.txtNamaRuangan.Location = new System.Drawing.Point(73, 86);
             this.txtNamaRuangan.Name = "txtNamaRuangan";
             this.txtNamaRuangan.PasswordChar = '\0';
             this.txtNamaRuangan.PlaceholderText = "";
@@ -278,36 +282,87 @@
             this.txtNamaRuangan.ShadowDecoration.Parent = this.txtNamaRuangan;
             this.txtNamaRuangan.Size = new System.Drawing.Size(250, 36);
             this.txtNamaRuangan.TabIndex = 30;
-            // 
-            // dSSpaceSolutions
-            // 
-            this.dSSpaceSolutions.DataSetName = "DSSpaceSolutions";
-            this.dSSpaceSolutions.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // fasilitasBindingSource
-            // 
-            this.fasilitasBindingSource.DataMember = "Fasilitas";
-            this.fasilitasBindingSource.DataSource = this.dSSpaceSolutions;
+            this.txtNamaRuangan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNamaRuangan_KeyPress);
             // 
             // fasilitasTableAdapter
             // 
             this.fasilitasTableAdapter.ClearBeforeFill = true;
             // 
-            // jenisRuanganBindingSource
-            // 
-            this.jenisRuanganBindingSource.DataMember = "JenisRuangan";
-            this.jenisRuanganBindingSource.DataSource = this.dSSpaceSolutions;
-            // 
             // jenisRuanganTableAdapter
             // 
             this.jenisRuanganTableAdapter.ClearBeforeFill = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.Location = new System.Drawing.Point(195, 59);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(16, 23);
+            this.label9.TabIndex = 47;
+            this.label9.Text = "*";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Red;
+            this.label8.Location = new System.Drawing.Point(194, 137);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(16, 23);
+            this.label8.TabIndex = 46;
+            this.label8.Text = "*";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.Location = new System.Drawing.Point(139, 224);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(16, 23);
+            this.label7.TabIndex = 45;
+            this.label7.Text = "*";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Red;
+            this.label6.Location = new System.Drawing.Point(254, 307);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(16, 23);
+            this.label6.TabIndex = 44;
+            this.label6.Text = "*";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Red;
+            this.label10.Location = new System.Drawing.Point(207, 392);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(16, 23);
+            this.label10.TabIndex = 43;
+            this.label10.Text = "*";
             // 
             // UpdateRuangan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(400, 690);
+            this.ClientSize = new System.Drawing.Size(400, 629);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtLokasiRuangan);
@@ -318,17 +373,16 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cbFasilitas);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNamaRuangan);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "UpdateRuangan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UpdateRuangan";
             this.Load += new System.EventHandler(this.UpdateRuangan_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.jenisRuanganBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSSpaceSolutions)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fasilitasBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.jenisRuanganBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -348,7 +402,6 @@
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2ComboBox cbFasilitas;
         private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2ControlBox btnClose;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2TextBox txtNamaRuangan;
         private DSSpaceSolutions dSSpaceSolutions;
@@ -356,5 +409,10 @@
         private DSSpaceSolutionsTableAdapters.FasilitasTableAdapter fasilitasTableAdapter;
         private System.Windows.Forms.BindingSource jenisRuanganBindingSource;
         private DSSpaceSolutionsTableAdapters.JenisRuanganTableAdapter jenisRuanganTableAdapter;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label10;
     }
 }

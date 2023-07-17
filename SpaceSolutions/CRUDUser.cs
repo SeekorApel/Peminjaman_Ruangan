@@ -24,7 +24,7 @@ namespace SpaceSolutions.Page
             // Jika ID yang dicari kosong, reset tampilan DataGridView
             if (string.IsNullOrEmpty(idCari))
             {
-                getDataUser();
+                getDataTabelUser();
                 return;
             }
 
@@ -33,7 +33,7 @@ namespace SpaceSolutions.Page
             connection.Open();
             try
             {
-                string query = "SELECT * FROM [User] WHERE idUser = @idUser AND [status] = 1";
+                string query = "SELECT * FROM GetDataUser() WHERE idUser = @idUser AND [status] = 'Aktif'";
                 SqlCommand cmd = new SqlCommand(query, connection);
                 cmd.Parameters.AddWithValue("@idUser", idCari);
                 SqlDataAdapter adp = new SqlDataAdapter(cmd);
@@ -70,14 +70,10 @@ namespace SpaceSolutions.Page
 
         private void btnRefesh_Click(object sender, EventArgs e)
         {
-            getDataUser();
+            getDataTabelUser();
             txtCariidUser.Text = "";
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-            
-        }
 
         public CRUDUser()
         {
@@ -87,7 +83,7 @@ namespace SpaceSolutions.Page
 
         private void formCRUDUser_Load(object sender, EventArgs e)
         {
-           getDataUser();
+           getDataTabelUser();
         }
 
         private void dgvTabelUser_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -131,7 +127,7 @@ namespace SpaceSolutions.Page
                         if (hasil != 0)
                         {
                             MessageBox.Show("Hapus Data Berhasil", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            getDataUser();
+                            getDataTabelUser();
                         }
                         else
                         {
@@ -150,7 +146,7 @@ namespace SpaceSolutions.Page
             }
         }
 
-        private void getDataUser()
+        private void getDataTabelUser()
         {
             SqlConnection connection = new SqlConnection();
             connection.ConnectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;

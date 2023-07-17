@@ -45,6 +45,62 @@ namespace SpaceSolutions
             }
         }
 
+        private void btnCari_Click(object sender, EventArgs e)
+        {
+            string idCari = txtCariidRuangan.Text.Trim();
+
+            // Jika ID yang dicari kosong, reset tampilan DataGridView
+            if (string.IsNullOrEmpty(idCari))
+            {
+                getDataTabelRuangan();
+                return;
+            }
+
+            SqlConnection connection = new SqlConnection();
+            connection.ConnectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
+            connection.Open();
+            try
+            {
+                string query = "SELECT * FROM GetDataRuangan() WHERE idRuangan = @idRuangan AND [status] = 'Aktif'";
+                SqlCommand cmd = new SqlCommand(query, connection);
+                cmd.Parameters.AddWithValue("@idRuangan", idCari);
+                SqlDataAdapter adp = new SqlDataAdapter(cmd);
+
+                DataTable dt = new DataTable();
+                adp.Fill(dt);
+
+
+                if (dt.Rows.Count > 0)
+                {
+                    dgvTabelRuangan.DataSource = dt;
+                }
+                else
+                {
+                    MessageBox.Show("Data tidak ditemukan", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtCariidRuangan.Text = "";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        private void btnRefesh_Click(object sender, EventArgs e)
+        {
+            getDataTabelRuangan();
+        }
+
+        private void btnTambah_Click(object sender, EventArgs e)
+        {
+            InputRuangan inputRuangan = new InputRuangan();
+            inputRuangan.Show();
+        }
+
         public CRUDRuangan()
         {
             InitializeComponent();
@@ -52,33 +108,17 @@ namespace SpaceSolutions
 
         private void CRUDRuangan_Load(object sender, EventArgs e)
         {
-            getData();
+            getDataTabelRuangan();
         }
 
-        private void btnAddRuangan_Click(object sender, EventArgs e)
-        {
-            InputRuangan inputRuangan = new InputRuangan();
-            inputRuangan.Show();
-        }
-
-        private void btnRefresh_Click(object sender, EventArgs e)
-        {
-            getData();
-        }
-
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void getData()
+        private void getDataTabelRuangan()
         {
             SqlConnection connection = new SqlConnection();
             connection.ConnectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
             connection.Open();
             try
             {
-                string query = "SELECT * FROM viewRuangan";
+                string query = "SELECT * FROM GetDataRuangan() WHERE status = 'Aktif'";
                 SqlCommand cmd = new SqlCommand(query, connection);
                 SqlDataAdapter adp = new SqlDataAdapter(cmd);
 

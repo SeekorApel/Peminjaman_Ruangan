@@ -16,6 +16,29 @@ namespace SpaceSolutions
     public partial class UpdateRuangan : Form
     {
         string idRuanganTemp, namaRuanganTemp , idFasilitasTemp, idJenisRuanganTemp , ketersediaanRuanganTemp, lokasiRuanganTemp;
+
+        private void txtLokasiRuangan_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Mendapatkan karakter yang sedang ditekan
+            char keyPressed = e.KeyChar;
+
+            // Memeriksa apakah karakter adalah huruf, angka, atau spasi
+            if (!char.IsLetterOrDigit(keyPressed) && !char.IsWhiteSpace(keyPressed) && !char.IsControl(keyPressed))
+            {
+                // Jika karakter bukan huruf, angka, atau spasi, hentikan event KeyPress
+                e.Handled = true;
+            }
+        }
+
+        private void txtNamaRuangan_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Memeriksa apakah karakter yang ditekan adalah alfabet atau spasi
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != ' ' && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true; // Mencegah karakter yang tidak valid dimasukkan
+            }
+        }
+
         public UpdateRuangan(string idRuangan, string namaRuangan , string namaFasilitas , string namaJenisRuangan, string ketersediaanRuangan, string lokasiRuangan)
         {
             InitializeComponent();
@@ -41,12 +64,12 @@ namespace SpaceSolutions
             txtNamaRuangan.Text = namaRuanganTemp;
             cbFasilitas.Text = idFasilitasTemp;
             cbJenisRuangan.Text = idJenisRuanganTemp;
-            if (ketersediaanRuanganTemp == "1")
+            if (ketersediaanRuanganTemp == "Tersedia")
             {
                 rbTersedia.Checked = true;
 
             }
-            else if (ketersediaanRuanganTemp == "0")
+            else if (ketersediaanRuanganTemp == "Tidak Tersedia")
             {
                 rbTidakTersedia.Checked = true;
             }

@@ -31,39 +31,39 @@
             this.components = new System.ComponentModel.Container();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnLogOut = new System.Windows.Forms.Button();
             this.panelSubMenuPengembalian = new System.Windows.Forms.Panel();
             this.btnPengembalianBarang = new Guna.UI2.WinForms.Guna2Button();
             this.btnPengembalianRuangan = new Guna.UI2.WinForms.Guna2Button();
-            this.btnPengembalian = new System.Windows.Forms.Button();
             this.panelSubMenuPeminjaman = new System.Windows.Forms.Panel();
             this.btnPeminjamanRuangan = new Guna.UI2.WinForms.Guna2Button();
-            this.btnPeminjaman = new System.Windows.Forms.Button();
             this.panelSubMenuDenda = new System.Windows.Forms.Panel();
             this.btnDendaKerusakanRuangan = new Guna.UI2.WinForms.Guna2Button();
             this.btnDendaKerusakanBarang = new Guna.UI2.WinForms.Guna2Button();
-            this.btnDenda = new System.Windows.Forms.Button();
-            this.btnKelolaBarang = new System.Windows.Forms.Button();
-            this.btnFasilitas = new System.Windows.Forms.Button();
-            this.btnJenisRuangan = new System.Windows.Forms.Button();
-            this.btnKelolaRuangan = new System.Windows.Forms.Button();
-            this.btnKelolaUser = new System.Windows.Forms.Button();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.labelNama = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panelDesktopAdmin = new System.Windows.Forms.Panel();
             this.panelBar = new System.Windows.Forms.Panel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnLogOut = new System.Windows.Forms.Button();
+            this.btnPengembalian = new System.Windows.Forms.Button();
+            this.btnPeminjaman = new System.Windows.Forms.Button();
+            this.btnDenda = new System.Windows.Forms.Button();
+            this.btnKelolaBarang = new System.Windows.Forms.Button();
+            this.btnFasilitas = new System.Windows.Forms.Button();
+            this.btnJenisRuangan = new System.Windows.Forms.Button();
+            this.btnKelolaRuangan = new System.Windows.Forms.Button();
+            this.btnKelolaUser = new System.Windows.Forms.Button();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1.SuspendLayout();
             this.panelSubMenuPengembalian.SuspendLayout();
             this.panelSubMenuPeminjaman.SuspendLayout();
             this.panelSubMenuDenda.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.panelBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2DragControl1
@@ -92,24 +92,6 @@
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
             this.guna2Panel1.Size = new System.Drawing.Size(290, 720);
             this.guna2Panel1.TabIndex = 0;
-            // 
-            // btnLogOut
-            // 
-            this.btnLogOut.FlatAppearance.BorderSize = 0;
-            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogOut.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogOut.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnLogOut.Image = global::SpaceSolutions.Properties.Resources.Logout_btn;
-            this.btnLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogOut.Location = new System.Drawing.Point(0, 615);
-            this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnLogOut.Size = new System.Drawing.Size(290, 50);
-            this.btnLogOut.TabIndex = 10;
-            this.btnLogOut.Text = "      Log Out";
-            this.btnLogOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLogOut.UseVisualStyleBackColor = true;
-            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // panelSubMenuPengembalian
             // 
@@ -156,25 +138,6 @@
             this.btnPengembalianRuangan.Text = "Pengembalian Ruangan";
             this.btnPengembalianRuangan.Click += new System.EventHandler(this.btnPengembalianRuangan_Click);
             // 
-            // btnPengembalian
-            // 
-            this.btnPengembalian.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPengembalian.FlatAppearance.BorderSize = 0;
-            this.btnPengembalian.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPengembalian.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPengembalian.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnPengembalian.Image = global::SpaceSolutions.Properties.Resources.barang_btn;
-            this.btnPengembalian.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPengembalian.Location = new System.Drawing.Point(0, 618);
-            this.btnPengembalian.Name = "btnPengembalian";
-            this.btnPengembalian.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnPengembalian.Size = new System.Drawing.Size(290, 50);
-            this.btnPengembalian.TabIndex = 11;
-            this.btnPengembalian.Text = "      Pengembalian";
-            this.btnPengembalian.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPengembalian.UseVisualStyleBackColor = true;
-            this.btnPengembalian.Click += new System.EventHandler(this.btnPengembalian_Click);
-            // 
             // panelSubMenuPeminjaman
             // 
             this.panelSubMenuPeminjaman.BackColor = System.Drawing.Color.White;
@@ -201,25 +164,6 @@
             this.btnPeminjamanRuangan.TabIndex = 0;
             this.btnPeminjamanRuangan.Text = "Peminjaman Ruangan";
             this.btnPeminjamanRuangan.Click += new System.EventHandler(this.btnPeminjamanRuangan_Click);
-            // 
-            // btnPeminjaman
-            // 
-            this.btnPeminjaman.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPeminjaman.FlatAppearance.BorderSize = 0;
-            this.btnPeminjaman.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPeminjaman.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPeminjaman.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnPeminjaman.Image = global::SpaceSolutions.Properties.Resources.barang_btn;
-            this.btnPeminjaman.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPeminjaman.Location = new System.Drawing.Point(0, 516);
-            this.btnPeminjaman.Name = "btnPeminjaman";
-            this.btnPeminjaman.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnPeminjaman.Size = new System.Drawing.Size(290, 50);
-            this.btnPeminjaman.TabIndex = 8;
-            this.btnPeminjaman.Text = "      Peminjaman";
-            this.btnPeminjaman.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPeminjaman.UseVisualStyleBackColor = true;
-            this.btnPeminjaman.Click += new System.EventHandler(this.btnPeminjaman_Click);
             // 
             // panelSubMenuDenda
             // 
@@ -267,121 +211,6 @@
             this.btnDendaKerusakanBarang.Text = "Denda Kerusakan Barang";
             this.btnDendaKerusakanBarang.Click += new System.EventHandler(this.btnDendaKerusakanBarang_Click);
             // 
-            // btnDenda
-            // 
-            this.btnDenda.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDenda.FlatAppearance.BorderSize = 0;
-            this.btnDenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDenda.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDenda.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnDenda.Image = global::SpaceSolutions.Properties.Resources.Denda_Kerusakan_Ruangan_btm;
-            this.btnDenda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDenda.Location = new System.Drawing.Point(0, 364);
-            this.btnDenda.Name = "btnDenda";
-            this.btnDenda.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnDenda.Size = new System.Drawing.Size(290, 50);
-            this.btnDenda.TabIndex = 6;
-            this.btnDenda.Text = "      Denda";
-            this.btnDenda.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDenda.UseVisualStyleBackColor = true;
-            this.btnDenda.Click += new System.EventHandler(this.btnDenda_Click);
-            // 
-            // btnKelolaBarang
-            // 
-            this.btnKelolaBarang.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnKelolaBarang.FlatAppearance.BorderSize = 0;
-            this.btnKelolaBarang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKelolaBarang.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKelolaBarang.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnKelolaBarang.Image = global::SpaceSolutions.Properties.Resources.barang_btn;
-            this.btnKelolaBarang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKelolaBarang.Location = new System.Drawing.Point(0, 314);
-            this.btnKelolaBarang.Name = "btnKelolaBarang";
-            this.btnKelolaBarang.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnKelolaBarang.Size = new System.Drawing.Size(290, 50);
-            this.btnKelolaBarang.TabIndex = 5;
-            this.btnKelolaBarang.Text = "      Kelola Barang";
-            this.btnKelolaBarang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnKelolaBarang.UseVisualStyleBackColor = true;
-            this.btnKelolaBarang.Click += new System.EventHandler(this.btnKelolaBarang_Click);
-            // 
-            // btnFasilitas
-            // 
-            this.btnFasilitas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnFasilitas.FlatAppearance.BorderSize = 0;
-            this.btnFasilitas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFasilitas.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFasilitas.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnFasilitas.Image = global::SpaceSolutions.Properties.Resources.Fasilitas_btn;
-            this.btnFasilitas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFasilitas.Location = new System.Drawing.Point(0, 264);
-            this.btnFasilitas.Name = "btnFasilitas";
-            this.btnFasilitas.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnFasilitas.Size = new System.Drawing.Size(290, 50);
-            this.btnFasilitas.TabIndex = 4;
-            this.btnFasilitas.Text = "      Fasilitas";
-            this.btnFasilitas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnFasilitas.UseVisualStyleBackColor = true;
-            this.btnFasilitas.Click += new System.EventHandler(this.btnFasilitas_Click);
-            // 
-            // btnJenisRuangan
-            // 
-            this.btnJenisRuangan.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnJenisRuangan.FlatAppearance.BorderSize = 0;
-            this.btnJenisRuangan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnJenisRuangan.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnJenisRuangan.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnJenisRuangan.Image = global::SpaceSolutions.Properties.Resources.Jenis_Ruangan_btn;
-            this.btnJenisRuangan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnJenisRuangan.Location = new System.Drawing.Point(0, 214);
-            this.btnJenisRuangan.Name = "btnJenisRuangan";
-            this.btnJenisRuangan.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnJenisRuangan.Size = new System.Drawing.Size(290, 50);
-            this.btnJenisRuangan.TabIndex = 3;
-            this.btnJenisRuangan.Text = "     Jenis Ruangan";
-            this.btnJenisRuangan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnJenisRuangan.UseVisualStyleBackColor = true;
-            this.btnJenisRuangan.Click += new System.EventHandler(this.btnJenisRuangan_Click);
-            // 
-            // btnKelolaRuangan
-            // 
-            this.btnKelolaRuangan.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnKelolaRuangan.FlatAppearance.BorderSize = 0;
-            this.btnKelolaRuangan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKelolaRuangan.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKelolaRuangan.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnKelolaRuangan.Image = global::SpaceSolutions.Properties.Resources.Ruangan_btn;
-            this.btnKelolaRuangan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKelolaRuangan.Location = new System.Drawing.Point(0, 164);
-            this.btnKelolaRuangan.Name = "btnKelolaRuangan";
-            this.btnKelolaRuangan.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnKelolaRuangan.Size = new System.Drawing.Size(290, 50);
-            this.btnKelolaRuangan.TabIndex = 2;
-            this.btnKelolaRuangan.Text = "     Kelola Ruangan";
-            this.btnKelolaRuangan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnKelolaRuangan.UseVisualStyleBackColor = true;
-            this.btnKelolaRuangan.Click += new System.EventHandler(this.btnKelolaRuangan_Click);
-            // 
-            // btnKelolaUser
-            // 
-            this.btnKelolaUser.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnKelolaUser.FlatAppearance.BorderSize = 0;
-            this.btnKelolaUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKelolaUser.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKelolaUser.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnKelolaUser.Image = global::SpaceSolutions.Properties.Resources.user_btn;
-            this.btnKelolaUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKelolaUser.Location = new System.Drawing.Point(0, 114);
-            this.btnKelolaUser.Name = "btnKelolaUser";
-            this.btnKelolaUser.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnKelolaUser.Size = new System.Drawing.Size(290, 50);
-            this.btnKelolaUser.TabIndex = 1;
-            this.btnKelolaUser.Text = "     Kelola User";
-            this.btnKelolaUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKelolaUser.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnKelolaUser.UseVisualStyleBackColor = true;
-            this.btnKelolaUser.Click += new System.EventHandler(this.btnKelolaUser_Click);
-            // 
             // guna2Panel2
             // 
             this.guna2Panel2.Controls.Add(this.guna2PictureBox2);
@@ -391,17 +220,6 @@
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
             this.guna2Panel2.Size = new System.Drawing.Size(290, 114);
             this.guna2Panel2.TabIndex = 0;
-            // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.Image = global::SpaceSolutions.Properties.Resources.Logo___text;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(50, 42);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
-            this.guna2PictureBox2.Size = new System.Drawing.Size(190, 45);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox2.TabIndex = 3;
-            this.guna2PictureBox2.TabStop = false;
             // 
             // btnClose
             // 
@@ -468,6 +286,188 @@
             this.guna2PictureBox1.TabIndex = 2;
             this.guna2PictureBox1.TabStop = false;
             // 
+            // btnLogOut
+            // 
+            this.btnLogOut.FlatAppearance.BorderSize = 0;
+            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogOut.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOut.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnLogOut.Image = global::SpaceSolutions.Properties.Resources.Logout_btn;
+            this.btnLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogOut.Location = new System.Drawing.Point(0, 615);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnLogOut.Size = new System.Drawing.Size(290, 50);
+            this.btnLogOut.TabIndex = 10;
+            this.btnLogOut.Text = "      Log Out";
+            this.btnLogOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
+            // 
+            // btnPengembalian
+            // 
+            this.btnPengembalian.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPengembalian.FlatAppearance.BorderSize = 0;
+            this.btnPengembalian.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPengembalian.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPengembalian.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnPengembalian.Image = global::SpaceSolutions.Properties.Resources.barang_btn;
+            this.btnPengembalian.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPengembalian.Location = new System.Drawing.Point(0, 618);
+            this.btnPengembalian.Name = "btnPengembalian";
+            this.btnPengembalian.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnPengembalian.Size = new System.Drawing.Size(290, 50);
+            this.btnPengembalian.TabIndex = 11;
+            this.btnPengembalian.Text = "      Pengembalian";
+            this.btnPengembalian.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPengembalian.UseVisualStyleBackColor = true;
+            this.btnPengembalian.Click += new System.EventHandler(this.btnPengembalian_Click);
+            // 
+            // btnPeminjaman
+            // 
+            this.btnPeminjaman.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPeminjaman.FlatAppearance.BorderSize = 0;
+            this.btnPeminjaman.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPeminjaman.Font = new System.Drawing.Font("Poppins SemiBold", 10F, System.Drawing.FontStyle.Bold);
+            this.btnPeminjaman.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnPeminjaman.Image = global::SpaceSolutions.Properties.Resources.Peminjaman_Ruangan_btn;
+            this.btnPeminjaman.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPeminjaman.Location = new System.Drawing.Point(0, 516);
+            this.btnPeminjaman.Name = "btnPeminjaman";
+            this.btnPeminjaman.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnPeminjaman.Size = new System.Drawing.Size(290, 50);
+            this.btnPeminjaman.TabIndex = 8;
+            this.btnPeminjaman.Text = "        Peminjaman Ruangan";
+            this.btnPeminjaman.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPeminjaman.UseVisualStyleBackColor = true;
+            this.btnPeminjaman.Click += new System.EventHandler(this.btnPeminjaman_Click);
+            // 
+            // btnDenda
+            // 
+            this.btnDenda.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDenda.FlatAppearance.BorderSize = 0;
+            this.btnDenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDenda.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDenda.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnDenda.Image = global::SpaceSolutions.Properties.Resources.Denda_Kerusakan_Ruangan_btm;
+            this.btnDenda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDenda.Location = new System.Drawing.Point(0, 364);
+            this.btnDenda.Name = "btnDenda";
+            this.btnDenda.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnDenda.Size = new System.Drawing.Size(290, 50);
+            this.btnDenda.TabIndex = 6;
+            this.btnDenda.Text = "      Denda";
+            this.btnDenda.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDenda.UseVisualStyleBackColor = true;
+            this.btnDenda.Click += new System.EventHandler(this.btnDenda_Click);
+            // 
+            // btnKelolaBarang
+            // 
+            this.btnKelolaBarang.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnKelolaBarang.FlatAppearance.BorderSize = 0;
+            this.btnKelolaBarang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKelolaBarang.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKelolaBarang.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnKelolaBarang.Image = global::SpaceSolutions.Properties.Resources.barang_btn;
+            this.btnKelolaBarang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKelolaBarang.Location = new System.Drawing.Point(0, 314);
+            this.btnKelolaBarang.Name = "btnKelolaBarang";
+            this.btnKelolaBarang.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnKelolaBarang.Size = new System.Drawing.Size(290, 50);
+            this.btnKelolaBarang.TabIndex = 5;
+            this.btnKelolaBarang.Text = "      Kelola Barang";
+            this.btnKelolaBarang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnKelolaBarang.UseVisualStyleBackColor = true;
+            this.btnKelolaBarang.Click += new System.EventHandler(this.btnKelolaBarang_Click);
+            // 
+            // btnFasilitas
+            // 
+            this.btnFasilitas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFasilitas.FlatAppearance.BorderSize = 0;
+            this.btnFasilitas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFasilitas.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFasilitas.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnFasilitas.Image = global::SpaceSolutions.Properties.Resources.Fasilitas_btn;
+            this.btnFasilitas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFasilitas.Location = new System.Drawing.Point(0, 264);
+            this.btnFasilitas.Name = "btnFasilitas";
+            this.btnFasilitas.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnFasilitas.Size = new System.Drawing.Size(290, 50);
+            this.btnFasilitas.TabIndex = 4;
+            this.btnFasilitas.Text = "      Fasilitas";
+            this.btnFasilitas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnFasilitas.UseVisualStyleBackColor = true;
+            this.btnFasilitas.Click += new System.EventHandler(this.btnFasilitas_Click);
+            // 
+            // btnJenisRuangan
+            // 
+            this.btnJenisRuangan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnJenisRuangan.FlatAppearance.BorderSize = 0;
+            this.btnJenisRuangan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnJenisRuangan.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnJenisRuangan.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnJenisRuangan.Image = global::SpaceSolutions.Properties.Resources.Jenis_Ruangan_2;
+            this.btnJenisRuangan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnJenisRuangan.Location = new System.Drawing.Point(0, 214);
+            this.btnJenisRuangan.Name = "btnJenisRuangan";
+            this.btnJenisRuangan.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnJenisRuangan.Size = new System.Drawing.Size(290, 50);
+            this.btnJenisRuangan.TabIndex = 3;
+            this.btnJenisRuangan.Text = "     Jenis Ruangan";
+            this.btnJenisRuangan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnJenisRuangan.UseVisualStyleBackColor = true;
+            this.btnJenisRuangan.Click += new System.EventHandler(this.btnJenisRuangan_Click);
+            // 
+            // btnKelolaRuangan
+            // 
+            this.btnKelolaRuangan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnKelolaRuangan.FlatAppearance.BorderSize = 0;
+            this.btnKelolaRuangan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKelolaRuangan.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKelolaRuangan.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnKelolaRuangan.Image = global::SpaceSolutions.Properties.Resources.Ruangan_btn;
+            this.btnKelolaRuangan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKelolaRuangan.Location = new System.Drawing.Point(0, 164);
+            this.btnKelolaRuangan.Name = "btnKelolaRuangan";
+            this.btnKelolaRuangan.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnKelolaRuangan.Size = new System.Drawing.Size(290, 50);
+            this.btnKelolaRuangan.TabIndex = 2;
+            this.btnKelolaRuangan.Text = "     Kelola Ruangan";
+            this.btnKelolaRuangan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnKelolaRuangan.UseVisualStyleBackColor = true;
+            this.btnKelolaRuangan.Click += new System.EventHandler(this.btnKelolaRuangan_Click);
+            // 
+            // btnKelolaUser
+            // 
+            this.btnKelolaUser.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnKelolaUser.FlatAppearance.BorderSize = 0;
+            this.btnKelolaUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKelolaUser.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKelolaUser.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnKelolaUser.Image = global::SpaceSolutions.Properties.Resources.user_btn;
+            this.btnKelolaUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKelolaUser.Location = new System.Drawing.Point(0, 114);
+            this.btnKelolaUser.Name = "btnKelolaUser";
+            this.btnKelolaUser.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnKelolaUser.Size = new System.Drawing.Size(290, 50);
+            this.btnKelolaUser.TabIndex = 1;
+            this.btnKelolaUser.Text = "     Kelola User";
+            this.btnKelolaUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKelolaUser.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnKelolaUser.UseVisualStyleBackColor = true;
+            this.btnKelolaUser.Click += new System.EventHandler(this.btnKelolaUser_Click);
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.Image = global::SpaceSolutions.Properties.Resources.Logo___text;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(50, 42);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
+            this.guna2PictureBox2.Size = new System.Drawing.Size(190, 45);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox2.TabIndex = 3;
+            this.guna2PictureBox2.TabStop = false;
+            // 
             // DashBoardAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -487,10 +487,10 @@
             this.panelSubMenuPeminjaman.ResumeLayout(false);
             this.panelSubMenuDenda.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.panelBar.ResumeLayout(false);
             this.panelBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

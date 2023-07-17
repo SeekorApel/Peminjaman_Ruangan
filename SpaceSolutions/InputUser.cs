@@ -163,9 +163,10 @@ namespace SpaceSolutions.CRUD
 
         private void txtUsername_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (txtUsername.Text.Length >= 20 && e.KeyChar != '\b') // '\b' adalah karakter backspace
+            if (!char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != '\b')
             {
-                e.Handled = true; // Mencegah karakter ditambahkan jika batas maksimum telah tercapai
+                // Jika bukan huruf alfabet, angka, atau backspace ('\b'), batalkan input karakter
+                e.Handled = true;
             }
         }
 

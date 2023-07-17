@@ -22,10 +22,10 @@ namespace SpaceSolutions
 
         private void CRUDJenisRuangan_Load(object sender, EventArgs e)
         {
-            getData();
+            getDataTabelJenisRuangan();
         }
 
-        private void getData()
+        private void getDataTabelJenisRuangan()
         {
             SqlConnection connection = new SqlConnection();
             connection.ConnectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
@@ -46,16 +46,61 @@ namespace SpaceSolutions
             }
         }
 
-        private void btnRefresh_Click(object sender, EventArgs e)
-        {
-            getData();
-            txtCariidJenisRuangan.Text = "";
-        }
-
-        private void btnAddJenisRuangan_Click(object sender, EventArgs e)
+        private void btnTambah_Click(object sender, EventArgs e)
         {
             InputJenisRuangan input = new InputJenisRuangan();
             input.Show();
+        }
+
+        private void btnRefesh_Click(object sender, EventArgs e)
+        {
+            getDataTabelJenisRuangan();
+            txtCariidJenisRuangan.Text = "";
+        }
+
+        private void btnCari_Click(object sender, EventArgs e)
+        {
+            string idCari = txtCariidJenisRuangan.Text.Trim();
+
+            // Jika ID yang dicari kosong, reset tampilan DataGridView
+            if (string.IsNullOrEmpty(idCari))
+            {
+                getDataTabelJenisRuangan();
+                return;
+            }
+
+            SqlConnection connection = new SqlConnection();
+            connection.ConnectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
+            connection.Open();
+            try
+            {
+                string query = "SELECT * FROM JenisRuangan WHERE idJenisRuangan = @idJenisRuangan AND [status] = '1'";
+                SqlCommand cmd = new SqlCommand(query, connection);
+                cmd.Parameters.AddWithValue("@idJenisRuangan", idCari);
+                SqlDataAdapter adp = new SqlDataAdapter(cmd);
+
+                DataTable dt = new DataTable();
+                adp.Fill(dt);
+
+
+                if (dt.Rows.Count > 0)
+                {
+                    dgvTabelJenisRuangan.DataSource = dt;
+                }
+                else
+                {
+                    MessageBox.Show("Data tidak ditemukan", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtCariidJenisRuangan.Text = "";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
         }
 
         private void dgvTabelJenisRuangan_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -91,7 +136,7 @@ namespace SpaceSolutions
                         if (hasil != 0)
                         {
                             MessageBox.Show("Hapus Data Berhasil", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            getData();
+                            getDataTabelJenisRuangan();
                         }
                         else
                         {

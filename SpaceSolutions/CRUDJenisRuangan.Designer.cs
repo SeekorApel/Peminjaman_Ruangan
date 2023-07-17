@@ -31,51 +31,24 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CRUDJenisRuangan));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
-            this.btnRefresh = new Guna.UI2.WinForms.Guna2Button();
             this.dgvTabelJenisRuangan = new System.Windows.Forms.DataGridView();
+            this.txtCariidJenisRuangan = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnCari = new System.Windows.Forms.PictureBox();
+            this.btnRefesh = new System.Windows.Forms.PictureBox();
+            this.btnTambah = new System.Windows.Forms.PictureBox();
             this.idJenisRuanganColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.namaJenisRuanganColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.KapasitasRuanganColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnAddJenisRuangan = new Guna.UI2.WinForms.Guna2Button();
-            this.txtCariidJenisRuangan = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Column9 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabelJenisRuangan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCari)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRefesh)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnTambah)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BorderRadius = 5;
-            this.btnSearch.CheckedState.Parent = this.btnSearch;
-            this.btnSearch.CustomImages.Parent = this.btnSearch;
-            this.btnSearch.Font = new System.Drawing.Font("Poppins SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.HoverState.Parent = this.btnSearch;
-            this.btnSearch.Location = new System.Drawing.Point(440, 143);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.ShadowDecoration.Parent = this.btnSearch;
-            this.btnSearch.Size = new System.Drawing.Size(80, 30);
-            this.btnSearch.TabIndex = 14;
-            this.btnSearch.Text = "Search";
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.BorderRadius = 5;
-            this.btnRefresh.CheckedState.Parent = this.btnRefresh;
-            this.btnRefresh.CustomImages.Parent = this.btnRefresh;
-            this.btnRefresh.Font = new System.Drawing.Font("Poppins SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnRefresh.HoverState.Parent = this.btnRefresh;
-            this.btnRefresh.Location = new System.Drawing.Point(738, 143);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.ShadowDecoration.Parent = this.btnRefresh;
-            this.btnRefresh.Size = new System.Drawing.Size(80, 30);
-            this.btnRefresh.TabIndex = 13;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // dgvTabelJenisRuangan
             // 
@@ -120,11 +93,71 @@
             this.dgvTabelJenisRuangan.ReadOnly = true;
             this.dgvTabelJenisRuangan.RowHeadersVisible = false;
             this.dgvTabelJenisRuangan.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvTabelJenisRuangan.RowTemplate.Height = 35;
             this.dgvTabelJenisRuangan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvTabelJenisRuangan.ShowEditingIcon = false;
             this.dgvTabelJenisRuangan.Size = new System.Drawing.Size(869, 384);
             this.dgvTabelJenisRuangan.TabIndex = 10;
             this.dgvTabelJenisRuangan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTabelJenisRuangan_CellClick);
+            // 
+            // txtCariidJenisRuangan
+            // 
+            this.txtCariidJenisRuangan.BorderRadius = 5;
+            this.txtCariidJenisRuangan.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCariidJenisRuangan.DefaultText = "";
+            this.txtCariidJenisRuangan.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtCariidJenisRuangan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtCariidJenisRuangan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCariidJenisRuangan.DisabledState.Parent = this.txtCariidJenisRuangan;
+            this.txtCariidJenisRuangan.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCariidJenisRuangan.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCariidJenisRuangan.FocusedState.Parent = this.txtCariidJenisRuangan;
+            this.txtCariidJenisRuangan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCariidJenisRuangan.HoverState.Parent = this.txtCariidJenisRuangan;
+            this.txtCariidJenisRuangan.Location = new System.Drawing.Point(53, 143);
+            this.txtCariidJenisRuangan.Name = "txtCariidJenisRuangan";
+            this.txtCariidJenisRuangan.PasswordChar = '\0';
+            this.txtCariidJenisRuangan.PlaceholderText = "Cari Berdasarkan ID";
+            this.txtCariidJenisRuangan.SelectedText = "";
+            this.txtCariidJenisRuangan.ShadowDecoration.Parent = this.txtCariidJenisRuangan;
+            this.txtCariidJenisRuangan.Size = new System.Drawing.Size(371, 37);
+            this.txtCariidJenisRuangan.TabIndex = 11;
+            // 
+            // btnCari
+            // 
+            this.btnCari.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCari.Image = global::SpaceSolutions.Properties.Resources.search_Use_1;
+            this.btnCari.Location = new System.Drawing.Point(442, 146);
+            this.btnCari.Name = "btnCari";
+            this.btnCari.Size = new System.Drawing.Size(32, 32);
+            this.btnCari.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnCari.TabIndex = 21;
+            this.btnCari.TabStop = false;
+            this.btnCari.Click += new System.EventHandler(this.btnCari_Click);
+            // 
+            // btnRefesh
+            // 
+            this.btnRefesh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRefesh.Image = global::SpaceSolutions.Properties.Resources.Refresh;
+            this.btnRefesh.Location = new System.Drawing.Point(815, 145);
+            this.btnRefesh.Name = "btnRefesh";
+            this.btnRefesh.Size = new System.Drawing.Size(35, 35);
+            this.btnRefesh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnRefesh.TabIndex = 20;
+            this.btnRefesh.TabStop = false;
+            this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click);
+            // 
+            // btnTambah
+            // 
+            this.btnTambah.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTambah.Image = global::SpaceSolutions.Properties.Resources.Add;
+            this.btnTambah.Location = new System.Drawing.Point(873, 145);
+            this.btnTambah.Name = "btnTambah";
+            this.btnTambah.Size = new System.Drawing.Size(35, 35);
+            this.btnTambah.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnTambah.TabIndex = 19;
+            this.btnTambah.TabStop = false;
+            this.btnTambah.Click += new System.EventHandler(this.btnTambah_Click);
             // 
             // idJenisRuanganColumn
             // 
@@ -158,71 +191,34 @@
             // Column9
             // 
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(135)))), ((int)(((byte)(35)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(135)))), ((int)(((byte)(35)))));
+            dataGridViewCellStyle2.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle2.NullValue")));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             this.Column9.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Column9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Column9.FillWeight = 40F;
             this.Column9.HeaderText = "";
+            this.Column9.Image = global::SpaceSolutions.Properties.Resources.Edit_CRUD_;
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
-            this.Column9.Text = "Update";
-            this.Column9.UseColumnTextForButtonValue = true;
+            this.Column9.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // Column10
             // 
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(88)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(88)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle3.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle3.NullValue")));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             this.Column10.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Column10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Column10.FillWeight = 40F;
             this.Column10.HeaderText = "";
+            this.Column10.Image = global::SpaceSolutions.Properties.Resources.delete_CRUD;
             this.Column10.Name = "Column10";
             this.Column10.ReadOnly = true;
-            this.Column10.Text = "Delete";
-            this.Column10.UseColumnTextForButtonValue = true;
-            // 
-            // btnAddJenisRuangan
-            // 
-            this.btnAddJenisRuangan.BorderRadius = 5;
-            this.btnAddJenisRuangan.CheckedState.Parent = this.btnAddJenisRuangan;
-            this.btnAddJenisRuangan.CustomImages.Parent = this.btnAddJenisRuangan;
-            this.btnAddJenisRuangan.Font = new System.Drawing.Font("Poppins SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddJenisRuangan.ForeColor = System.Drawing.Color.White;
-            this.btnAddJenisRuangan.HoverState.Parent = this.btnAddJenisRuangan;
-            this.btnAddJenisRuangan.Location = new System.Drawing.Point(840, 143);
-            this.btnAddJenisRuangan.Name = "btnAddJenisRuangan";
-            this.btnAddJenisRuangan.ShadowDecoration.Parent = this.btnAddJenisRuangan;
-            this.btnAddJenisRuangan.Size = new System.Drawing.Size(80, 30);
-            this.btnAddJenisRuangan.TabIndex = 12;
-            this.btnAddJenisRuangan.Text = "Add";
-            this.btnAddJenisRuangan.Click += new System.EventHandler(this.btnAddJenisRuangan_Click);
-            // 
-            // txtCariidJenisRuangan
-            // 
-            this.txtCariidJenisRuangan.BorderRadius = 5;
-            this.txtCariidJenisRuangan.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCariidJenisRuangan.DefaultText = "";
-            this.txtCariidJenisRuangan.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtCariidJenisRuangan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtCariidJenisRuangan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCariidJenisRuangan.DisabledState.Parent = this.txtCariidJenisRuangan;
-            this.txtCariidJenisRuangan.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCariidJenisRuangan.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCariidJenisRuangan.FocusedState.Parent = this.txtCariidJenisRuangan;
-            this.txtCariidJenisRuangan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCariidJenisRuangan.HoverState.Parent = this.txtCariidJenisRuangan;
-            this.txtCariidJenisRuangan.Location = new System.Drawing.Point(53, 143);
-            this.txtCariidJenisRuangan.Name = "txtCariidJenisRuangan";
-            this.txtCariidJenisRuangan.PasswordChar = '\0';
-            this.txtCariidJenisRuangan.PlaceholderText = "Search by ID";
-            this.txtCariidJenisRuangan.SelectedText = "";
-            this.txtCariidJenisRuangan.ShadowDecoration.Parent = this.txtCariidJenisRuangan;
-            this.txtCariidJenisRuangan.Size = new System.Drawing.Size(371, 30);
-            this.txtCariidJenisRuangan.TabIndex = 11;
+            this.Column10.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // CRUDJenisRuangan
             // 
@@ -230,32 +226,34 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(974, 681);
-            this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.btnRefresh);
+            this.Controls.Add(this.btnCari);
+            this.Controls.Add(this.btnRefesh);
+            this.Controls.Add(this.btnTambah);
             this.Controls.Add(this.dgvTabelJenisRuangan);
-            this.Controls.Add(this.btnAddJenisRuangan);
             this.Controls.Add(this.txtCariidJenisRuangan);
             this.Name = "CRUDJenisRuangan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CRUDJenisRuangan";
             this.Load += new System.EventHandler(this.CRUDJenisRuangan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabelJenisRuangan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCari)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRefesh)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnTambah)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2Button btnSearch;
-        private Guna.UI2.WinForms.Guna2Button btnRefresh;
         private System.Windows.Forms.DataGridView dgvTabelJenisRuangan;
-        private Guna.UI2.WinForms.Guna2Button btnAddJenisRuangan;
         private Guna.UI2.WinForms.Guna2TextBox txtCariidJenisRuangan;
+        private System.Windows.Forms.PictureBox btnCari;
+        private System.Windows.Forms.PictureBox btnRefesh;
+        private System.Windows.Forms.PictureBox btnTambah;
         private System.Windows.Forms.DataGridViewTextBoxColumn idJenisRuanganColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn namaJenisRuanganColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn KapasitasRuanganColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewButtonColumn Column9;
-        private System.Windows.Forms.DataGridViewButtonColumn Column10;
+        private System.Windows.Forms.DataGridViewImageColumn Column9;
+        private System.Windows.Forms.DataGridViewImageColumn Column10;
     }
 }

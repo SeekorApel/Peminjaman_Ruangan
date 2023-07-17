@@ -183,6 +183,16 @@ namespace SpaceSolutions.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Jenis_Ruangan_2 {
+            get {
+                object obj = ResourceManager.GetObject("Jenis Ruangan 2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Jenis_Ruangan_btn {
             get {
                 object obj = ResourceManager.GetObject("Jenis Ruangan btn", resourceCulture);
@@ -236,6 +246,46 @@ namespace SpaceSolutions.Properties {
         internal static System.Drawing.Bitmap Logout_btn {
             get {
                 object obj = ResourceManager.GetObject("Logout btn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Pattern {
+            get {
+                object obj = ResourceManager.GetObject("Pattern", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Pattern_List_1 {
+            get {
+                object obj = ResourceManager.GetObject("Pattern List 1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Pattern_List_2 {
+            get {
+                object obj = ResourceManager.GetObject("Pattern List 2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Peminjaman_Ruangan_btn {
+            get {
+                object obj = ResourceManager.GetObject("Peminjaman Ruangan btn", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
