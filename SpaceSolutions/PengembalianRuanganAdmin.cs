@@ -41,36 +41,64 @@ namespace SpaceSolutions
             dtTanggalPeminjaman.Enabled = false;
             query1ToolStrip.Visible = false;
             cbKerusakanRuangan.Visible = false;
-            btnTambahDenda.Visible = false;
-            btnHapusKerusakan.Visible = false;
+            btnTambahKeranjang.Visible = false;
+            btnHapusKeranjang.Visible = false;
             KeranjangKerusakan.Visible = false;
-
+            tglPengembalianSebelumnya = dtTanggalPengembalian.Value;
         }
 
         
 
         private void dgvTabelPeminjaman_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DateTime tanggalPeminjaman;
-            string tanggalConvert = "";
+            /* DateTime tanggalPeminjaman;
+             string tanggalConvert = "";
+             if (e.RowIndex >= 0)
+             {
+                 DataGridViewRow row = dgvTabelPeminjaman.Rows[e.RowIndex];
+
+                 txtIdPeminjaman.Text = row.Cells["Kolom1"].Value.ToString();
+                 tanggalConvert = row.Cells["Kolom8"].Value.ToString(); 
+
+
+                 if (DateTime.TryParse(tanggalConvert, out tanggalPeminjaman))
+                 {
+                     dtTanggalPeminjaman.Value = tanggalPeminjaman;
+                     tglPeminjaman = tanggalPeminjaman;
+                 }
+                 else
+                 {
+                     MessageBox.Show("Format tanggal tidak valid.");
+                 }
+             }*/
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dgvTabelPeminjaman.Rows[e.RowIndex];
 
+                // Get the string value from the DataGridView cell
+                string tanggalConvert = row.Cells["Kolom8"].Value.ToString();
                 txtIdPeminjaman.Text = row.Cells["Kolom1"].Value.ToString();
-                tanggalConvert = row.Cells["Kolom8"].Value.ToString(); 
 
-                
-                if (DateTime.TryParse(tanggalConvert, out tanggalPeminjaman))
+                if (DateTime.TryParse(tanggalConvert, out DateTime tanggalPeminjaman))
                 {
-                    dtTanggalPeminjaman.Value = tanggalPeminjaman;
-                    tglPeminjaman = tanggalPeminjaman;
+                    if (int.TryParse(row.Cells["Kolom9"].Value.ToString(), out int lamaPeminjaman))
+                    {
+                        DateTime tanggalKembali = tanggalPeminjaman.AddDays(lamaPeminjaman);
+                        dtTanggalPeminjaman.Value = tanggalKembali;
+                        tglPeminjaman = dtTanggalPeminjaman.Value;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Format lama peminjaman tidak valid.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Format tanggal tidak valid.");
+                    MessageBox.Show("Format tanggal tidak valid.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+
+
         }
 
         private void txtTotalDenda_TextChanged(object sender, EventArgs e)
@@ -226,8 +254,8 @@ namespace SpaceSolutions
             if (selectedRadioButton != null && selectedRadioButton.Checked && selectedRadioButton.Name == "rbRusak")
             {
                 cbKerusakanRuangan.Visible = true;
-                btnTambahDenda.Visible = true;
-                btnHapusKerusakan.Visible = true;
+                btnTambahKeranjang.Visible = true;
+                btnHapusKeranjang.Visible = true;
                 KeranjangKerusakan.Visible = true;
             }
         }
@@ -238,8 +266,8 @@ namespace SpaceSolutions
             if (selectedRadioButton != null && selectedRadioButton.Checked && selectedRadioButton.Name == "rbTidakKerusakan")
             {
                 cbKerusakanRuangan.Visible = false;
-                btnTambahDenda.Visible = false;
-                btnHapusKerusakan.Visible = false;
+                btnTambahKeranjang.Visible = false;
+                btnHapusKeranjang.Visible = false;
                 KeranjangKerusakan.Visible = false;
                 KeranjangKerusakan.Items.Clear();
                 txtTotalDendaKerusakanRuangan.Text = "0";
@@ -341,6 +369,106 @@ namespace SpaceSolutions
             {
 
                 MessageBox.Show("Error : " + ex.Message);
+            }
+        }
+
+        private void btnHapusKeranjang_Click(object sender, EventArgs e)
+        {
+            if (KeranjangKerusakan.SelectedItems.Count > 0)
+            {
+                for (int i = 0; i < KeranjangKerusakan.Items.Count; i++)
+                {
+                    if (KeranjangKerusakan.Items[i].Selected)
+                    {
+
+                        KeranjangKerusakan.Items[i].Remove();
+                        int totalDenda = 0;
+
+                        foreach (ListViewItem item in KeranjangKerusakan.Items)
+                        {
+                            int biayaDenda = int.Parse(item.SubItems[3].Text);
+                            totalDenda += biayaDenda;
+                        }
+
+                        txtTotalDendaKerusakanRuangan.Text = totalDenda.ToString();
+                    }
+                }
+            }
+        }
+
+        private void btnTambahKeranjang_Click(object sender, EventArgs e)
+        {
+            getDataDendaKerusakan();
+            idPeminjaman = txtIdPeminjaman.Text;
+
+            string[] barang = new string[5];
+            barang[0] = idPeminjaman;
+            barang[1] = idDenda;
+            barang[2] = descDenda;
+            barang[3] = hargaDenda;
+
+
+            idPeminjaman = null;
+            idDenda = null;
+            descDenda = null;
+            hargaDenda = null;
+
+            ListViewItem listBarang = new ListViewItem(barang);
+            KeranjangKerusakan.Items.Add(listBarang);
+
+            int totalDenda = 0;
+
+            foreach (ListViewItem item in KeranjangKerusakan.Items)
+            {
+                int biayaDenda = int.Parse(item.SubItems[3].Text);
+                totalDenda += biayaDenda;
+            }
+
+            txtTotalDendaKerusakanRuangan.Text = totalDenda.ToString();
+        }
+
+        private void btnCari_Click(object sender, EventArgs e)
+        {
+            string nama = txtCariNamaPeminjaman.Text.Trim();
+
+            // Jika ID yang dicari kosong, reset tampilan DataGridView
+            if (string.IsNullOrEmpty(nama))
+            {
+                getDataPeminjamanRuangan();
+                return;
+            }
+
+            SqlConnection connection = new SqlConnection();
+            connection.ConnectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
+            connection.Open();
+            try
+            {
+                string query = "SELECT * FROM GetPeminjamanRuangan() WHERE nama LIKE '%' + @namaPeminjam + '%' AND statusPeminjaman = 'Disetujui'";
+                SqlCommand cmd = new SqlCommand(query, connection);
+                cmd.Parameters.AddWithValue("@namaPeminjam", nama);
+                SqlDataAdapter adp = new SqlDataAdapter(cmd);
+
+                DataTable dt = new DataTable();
+                adp.Fill(dt);
+
+
+                if (dt.Rows.Count > 0)
+                {
+                    dgvTabelPeminjaman.DataSource = dt;
+                }
+                else
+                {
+                    MessageBox.Show("Data tidak ditemukan", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtCariNamaPeminjaman.Text = "";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                connection.Close();
             }
         }
 

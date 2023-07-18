@@ -44,7 +44,6 @@
             this.txtNamaUser = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtNamaRuangan = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.SuspendLayout();
             // 
@@ -213,7 +212,7 @@
             this.btnTolakPeminjaman.Font = new System.Drawing.Font("Gilmer Bold", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnTolakPeminjaman.ForeColor = System.Drawing.Color.White;
             this.btnTolakPeminjaman.HoverState.Parent = this.btnTolakPeminjaman;
-            this.btnTolakPeminjaman.Location = new System.Drawing.Point(441, 289);
+            this.btnTolakPeminjaman.Location = new System.Drawing.Point(435, 299);
             this.btnTolakPeminjaman.Name = "btnTolakPeminjaman";
             this.btnTolakPeminjaman.ShadowDecoration.Parent = this.btnTolakPeminjaman;
             this.btnTolakPeminjaman.Size = new System.Drawing.Size(139, 36);
@@ -279,22 +278,6 @@
             this.txtNamaRuangan.Size = new System.Drawing.Size(220, 36);
             this.txtNamaRuangan.TabIndex = 42;
             // 
-            // guna2Elipse1
-            // 
-            this.guna2Elipse1.TargetControl = this;
-            // 
-            // guna2ControlBox1
-            // 
-            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
-            this.guna2ControlBox1.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(743, 12);
-            this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
-            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
-            this.guna2ControlBox1.TabIndex = 43;
-            // 
             // guna2DragControl1
             // 
             this.guna2DragControl1.TargetControl = this;
@@ -305,7 +288,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 411);
-            this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.txtNamaRuangan);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtNamaUser);
@@ -320,7 +302,7 @@
             this.Controls.Add(this.dtTanggalPeminjaman);
             this.Controls.Add(this.txtLamaPeminjaman);
             this.Controls.Add(this.txtJenisKegitan);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "AccPeminjamanRuangan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AccPeminjamanRuangan";
@@ -346,7 +328,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtNamaUser;
         private Guna.UI2.WinForms.Guna2TextBox txtNamaRuangan;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
     }
 }

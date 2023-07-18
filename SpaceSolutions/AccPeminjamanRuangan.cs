@@ -16,7 +16,7 @@ namespace SpaceSolutions
 {
     public partial class AccPeminjamanRuangan : Form
     {
-        string idPeminjamanTemp, idUserTemp , idRuanganTemp , jenisKegiatanTemp , kapasitasOrangTemp , tanggalPeminjamanTemp , lamaPeminjamanTemp , statusPeminjamanTemp;
+        string idPeminjamanTemp, idUserTemp , idRuanganTemp , jenisKegiatanTemp , kapasitasOrangTemp , tanggalPeminjamanTemp , lamaPeminjamanTemp;
 
         private void btnTolakPeminjaman_Click(object sender, EventArgs e)
         {
@@ -41,7 +41,7 @@ namespace SpaceSolutions
             tanggalPeminjamanTemp = tanggalPeminjaman;
             convertTanggal = DateTime.Parse(tanggalPeminjamanTemp);
             lamaPeminjamanTemp = lamaPeminjaman;
-            statusPeminjamanTemp = statusPeminjaman;
+            
         }
 
         private void AccPeminjamanRuangan_Load(object sender, EventArgs e)
@@ -102,7 +102,7 @@ namespace SpaceSolutions
 
                 sqlcmd.Parameters.AddWithValue("@idPeminjamanRuangan", idPeminjamanTemp);
                 sqlcmd.Parameters.AddWithValue("@idRuangan", idRuanganTemp);
-                sqlcmd.Parameters.AddWithValue("@tanggalPeminjaman", tanggalPeminjamanTemp);
+                sqlcmd.Parameters.AddWithValue("@tanggalPeminjaman", dtTanggalPeminjaman.Value);
 
                 connection.Open();
                 int result = Convert.ToInt32(sqlcmd.ExecuteNonQuery());
