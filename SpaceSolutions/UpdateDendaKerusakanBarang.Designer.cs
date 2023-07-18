@@ -30,13 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             this.btnUpdate = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtBiayaKerusakan = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtDeskripsiKerusakan = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnUpdate
@@ -53,20 +53,8 @@
             this.btnUpdate.ShadowDecoration.Parent = this.btnUpdate;
             this.btnUpdate.Size = new System.Drawing.Size(140, 36);
             this.btnUpdate.TabIndex = 31;
-            this.btnUpdate.Text = "Update";
+            this.btnUpdate.Text = "Ubah";
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
-            // guna2ControlBox1
-            // 
-            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
-            this.guna2ControlBox1.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(363, 12);
-            this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
-            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
-            this.guna2ControlBox1.TabIndex = 30;
             // 
             // label2
             // 
@@ -144,9 +132,29 @@
             // 
             this.guna2DragControl1.TargetControl = this;
             // 
-            // guna2Elipse1
+            // label3
             // 
-            this.guna2Elipse1.TargetControl = this;
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(229, 80);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(16, 23);
+            this.label3.TabIndex = 64;
+            this.label3.Text = "*";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(191, 229);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(16, 23);
+            this.label4.TabIndex = 65;
+            this.label4.Text = "*";
             // 
             // UpdateDendaKerusakanBarang
             // 
@@ -154,13 +162,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(420, 450);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtBiayaKerusakan);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtDeskripsiKerusakan);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "UpdateDendaKerusakanBarang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UpdateDendaKerusakanBarang";
@@ -173,12 +182,12 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Button btnUpdate;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2TextBox txtBiayaKerusakan;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2TextBox txtDeskripsiKerusakan;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
     }
 }

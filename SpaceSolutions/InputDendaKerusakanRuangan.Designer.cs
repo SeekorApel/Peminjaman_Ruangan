@@ -33,20 +33,17 @@
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtBiayaKerusakan = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtDeskripsiKerusakan = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // guna2DragControl1
             // 
             this.guna2DragControl1.TargetControl = this;
-            // 
-            // guna2Elipse1
-            // 
-            this.guna2Elipse1.TargetControl = this;
             // 
             // btnCancel
             // 
@@ -62,7 +59,7 @@
             this.btnCancel.ShadowDecoration.Parent = this.btnCancel;
             this.btnCancel.Size = new System.Drawing.Size(140, 36);
             this.btnCancel.TabIndex = 33;
-            this.btnCancel.Text = "Cancel";
+            this.btnCancel.Text = "Batal";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSave
@@ -79,20 +76,8 @@
             this.btnSave.ShadowDecoration.Parent = this.btnSave;
             this.btnSave.Size = new System.Drawing.Size(140, 36);
             this.btnSave.TabIndex = 32;
-            this.btnSave.Text = "Save";
+            this.btnSave.Text = "Simpan";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // guna2ControlBox1
-            // 
-            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
-            this.guna2ControlBox1.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(363, 12);
-            this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
-            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
-            this.guna2ControlBox1.TabIndex = 31;
             // 
             // label2
             // 
@@ -166,20 +151,45 @@
             this.txtDeskripsiKerusakan.TabIndex = 27;
             this.txtDeskripsiKerusakan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDeskripsiKerusakan_KeyPress);
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Red;
+            this.label10.Location = new System.Drawing.Point(228, 77);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(16, 23);
+            this.label10.TabIndex = 59;
+            this.label10.Text = "*";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(192, 226);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(16, 23);
+            this.label3.TabIndex = 60;
+            this.label3.Text = "*";
+            // 
             // InputDendaKerusakanRuangan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(420, 500);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtBiayaKerusakan);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtDeskripsiKerusakan);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "InputDendaKerusakanRuangan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InputDendaKerusakanRuangan";
@@ -194,10 +204,11 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Button btnCancel;
         private Guna.UI2.WinForms.Guna2Button btnSave;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2TextBox txtBiayaKerusakan;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2TextBox txtDeskripsiKerusakan;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label10;
     }
 }

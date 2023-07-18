@@ -303,6 +303,16 @@ namespace SpaceSolutions.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Peminjaman_USER {
+            get {
+                object obj = ResourceManager.GetObject("Peminjaman USER", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Refresh {
             get {
                 object obj = ResourceManager.GetObject("Refresh", resourceCulture);
@@ -316,6 +326,16 @@ namespace SpaceSolutions.Properties {
         internal static System.Drawing.Bitmap Refresh1 {
             get {
                 object obj = ResourceManager.GetObject("Refresh1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Riwayat {
+            get {
+                object obj = ResourceManager.GetObject("Riwayat", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

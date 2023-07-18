@@ -22,7 +22,6 @@ namespace SpaceSolutions
             idUser = id;
         }
 
-
         private void DashBoardUser_Load(object sender, EventArgs e)
         {
             labelNama.Text = namaUser;
@@ -47,15 +46,15 @@ namespace SpaceSolutions
         private void customedesign()
         {
             panelSubMenuPeminjaman.Visible = false;
-            panelSubMenuPengembalian.Visible = false;
+            panelSubMenuRiwayatPeminjaman.Visible = false;
         }
 
         private void hidesubmenu()
         {
             if (panelSubMenuPeminjaman.Visible == true)
                 panelSubMenuPeminjaman.Visible = false;
-            if (panelSubMenuPengembalian.Visible == true)
-                panelSubMenuPengembalian.Visible = false;
+            if (panelSubMenuRiwayatPeminjaman.Visible == true)
+                panelSubMenuRiwayatPeminjaman.Visible = false;
 
         }
 
@@ -75,11 +74,6 @@ namespace SpaceSolutions
             showSubMenu(panelSubMenuPeminjaman);
         }
 
-        private void btnPengembalian_Click(object sender, EventArgs e)
-        {
-            showSubMenu(panelSubMenuPengembalian);
-        }
-
         private void btnPeminjamanRuangan_Click(object sender, EventArgs e)
         {
             openChildForm(new PeminjamanRuanganUser(idUser), sender);
@@ -88,6 +82,11 @@ namespace SpaceSolutions
         private void btnPeminjamanBarang_Click(object sender, EventArgs e)
         {
             openChildForm(new PeminjamanBarangUser(idUser), sender);
+        }
+
+        private void btnRiwayatPengembalian_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panelSubMenuRiwayatPeminjaman);
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)

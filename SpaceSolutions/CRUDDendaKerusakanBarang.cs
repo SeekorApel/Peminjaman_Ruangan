@@ -20,31 +20,33 @@ namespace SpaceSolutions
             InitializeComponent();
         }
 
-        private void btnAddBarang_Click(object sender, EventArgs e)
+        private void CRUDDendaKerusakanBarang_Load(object sender, EventArgs e)
+        {
+            getDataTabelDendaKerusakanUang();
+            dgvTabelDendaKerusakanBarang.Columns["Kolom3"].DefaultCellStyle.Format = "C0"; // "C0" untuk format mata uang tanpa desimal
+            dgvTabelDendaKerusakanBarang.Columns["Kolom3"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            getDataTabelDendaKerusakanUang();
+            txtCariidDendaKerusakanBarang.Text = "";
+        }
+
+        private void btnTambah_Click(object sender, EventArgs e)
         {
             InputDendaKerusakanBarang inputDenda = new InputDendaKerusakanBarang();
             inputDenda.Show();
         }
 
-        private void CRUDDendaKerusakanBarang_Load(object sender, EventArgs e)
-        {
-            getData();
-        }
-
-        private void btnRefresh_Click(object sender, EventArgs e)
-        {
-            getData();
-            txtCariidDendaKerusakanBarang.Text = "";
-        }
-
-        private void btnSearch_Click(object sender, EventArgs e)
+        private void btnCari_Click(object sender, EventArgs e)
         {
             string idCari = txtCariidDendaKerusakanBarang.Text.Trim();
 
             // Jika ID yang dicari kosong, reset tampilan DataGridView
             if (string.IsNullOrEmpty(idCari))
             {
-                getData();
+                getDataTabelDendaKerusakanUang();
                 return;
             }
 
@@ -82,7 +84,7 @@ namespace SpaceSolutions
             }
         }
 
-        private void getData()
+        private void getDataTabelDendaKerusakanUang()
         {
             SqlConnection connection = new SqlConnection();
             connection.ConnectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
@@ -107,9 +109,9 @@ namespace SpaceSolutions
         {
             if (e.ColumnIndex == 0)
             {
-                idDendaKerusakan = Convert.ToString(dgvTabelDendaKerusakanBarang.Rows[e.RowIndex].Cells["idDendaKerusakanBarangColumn"].Value);
-                deskripsiKerusakan = Convert.ToString(dgvTabelDendaKerusakanBarang.Rows[e.RowIndex].Cells["deskripsiKerusakanColumn"].Value);
-                biayaDenda = Convert.ToString(dgvTabelDendaKerusakanBarang.Rows[e.RowIndex].Cells["biayaDendaColumn"].Value);
+                idDendaKerusakan = Convert.ToString(dgvTabelDendaKerusakanBarang.Rows[e.RowIndex].Cells["Kolom1"].Value);
+                deskripsiKerusakan = Convert.ToString(dgvTabelDendaKerusakanBarang.Rows[e.RowIndex].Cells["Kolom2"].Value);
+                biayaDenda = Convert.ToString(dgvTabelDendaKerusakanBarang.Rows[e.RowIndex].Cells["Kolom3"].Value);
                 UpdateDendaKerusakanBarang updateDenda = new UpdateDendaKerusakanBarang(idDendaKerusakan, deskripsiKerusakan, biayaDenda);
                 updateDenda.ShowDialog();
             }
@@ -136,7 +138,7 @@ namespace SpaceSolutions
                         if (hasil != 0)
                         {
                             MessageBox.Show("Hapus Data Berhasil", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            getData();
+                            getDataTabelDendaKerusakanUang();
                         }
                         else
                         {

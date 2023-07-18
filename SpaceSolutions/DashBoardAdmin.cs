@@ -48,7 +48,6 @@ namespace SpaceSolutions
         private void customedesign()
         {
             panelSubMenuDenda.Visible = false;
-            panelSubMenuPeminjaman.Visible = false;
             panelSubMenuPengembalian.Visible = false;
         }
 
@@ -56,8 +55,6 @@ namespace SpaceSolutions
         {
             if (panelSubMenuDenda.Visible == true)
                 panelSubMenuDenda.Visible = false;
-            if (panelSubMenuPeminjaman.Visible == true)
-                panelSubMenuPeminjaman.Visible = false;
             if (panelSubMenuPengembalian.Visible == true)
                 panelSubMenuPengembalian.Visible = false;
 
@@ -86,7 +83,7 @@ namespace SpaceSolutions
 
         private void btnPeminjaman_Click(object sender, EventArgs e)
         {
-            showSubMenu(panelSubMenuPeminjaman);
+            openChildForm(new PeminjamanRuanganAdmin(), sender);
         }
 
         private void btnKelolaUser_Click(object sender, EventArgs e)
@@ -134,11 +131,6 @@ namespace SpaceSolutions
         private void btnPengembalian_Click(object sender, EventArgs e)
         {
             showSubMenu(panelSubMenuPengembalian);
-        }
-
-        private void btnPeminjamanRuangan_Click(object sender, EventArgs e)
-        {
-            openChildForm(new PeminjamanRuanganAdmin(), sender);
         }
 
         private void btnPeminjamanBarang_Click(object sender, EventArgs e)
