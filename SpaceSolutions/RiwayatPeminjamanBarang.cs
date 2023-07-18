@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualBasic.ApplicationServices;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -13,28 +12,33 @@ using System.Windows.Forms;
 
 namespace SpaceSolutions
 {
-    public partial class RiwayatPeminjamanRuangan : Form
+    public partial class RiwayatPeminjamanBarang : Form
     {
         string idUser;
-        public RiwayatPeminjamanRuangan(string id)
+        public RiwayatPeminjamanBarang(string id)
         {
             InitializeComponent();
             idUser = id;
         }
 
-        private void RiwayatPeminjamanRuangan_Load(object sender, EventArgs e)
+        private void RiwayatPeminjamanBarang_Load(object sender, EventArgs e)
         {
-            getDataPeminjamanRuanganByUser();
+            getDataPeminjamanBarangByUser();
         }
 
-        private void getDataPeminjamanRuanganByUser()
+        private void cbFilter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void getDataPeminjamanBarangByUser()
         {
             SqlConnection connection = new SqlConnection();
             connection.ConnectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
             connection.Open();
             try
             {
-                SqlCommand cmd = new SqlCommand("GetDataPeminjamanRuanganByUser", connection);
+                SqlCommand cmd = new SqlCommand("GetPeminjamanBarangByUser", connection);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 // Menambahkan parameter dan nilainya ke dalam stored procedure
@@ -44,32 +48,11 @@ namespace SpaceSolutions
 
                 DataTable dt = new DataTable();
                 adp.Fill(dt);
-                dgvViewRiwayatPeminjamanRuangan.DataSource = dt;
+                dgvViewRiwayatPeminjamanBarang.DataSource = dt;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void cbFilter_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if(cbFilter.SelectedIndex == 0)
-            {
-                filterBy(cbFilter.SelectedIndex.ToString());
-            }
-            else if(cbFilter.SelectedIndex == 1)
-            {
-                filterBy(cbFilter.SelectedIndex.ToString());
-
-            }
-            else if (cbFilter.SelectedIndex == 2)
-            {
-                filterBy(cbFilter.SelectedIndex.ToString());
-            }
-            else if (cbFilter.SelectedIndex == 3)
-            {
-                filterBy(cbFilter.SelectedIndex.ToString());
             }
         }
 
@@ -80,7 +63,7 @@ namespace SpaceSolutions
             connection.Open();
             try
             {
-                SqlCommand cmd = new SqlCommand("FilterPeminjamanRuanganByStatus", connection);
+                SqlCommand cmd = new SqlCommand("FilterPeminjamanBarangByStatus", connection);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 // Menambahkan parameter dan nilainya ke dalam stored procedure
@@ -91,17 +74,12 @@ namespace SpaceSolutions
 
                 DataTable dt = new DataTable();
                 adp.Fill(dt);
-                dgvViewRiwayatPeminjamanRuangan.DataSource = dt;
+                dgvViewRiwayatPeminjamanBarang.DataSource = dt;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        private void btnRefresh_Click(object sender, EventArgs e)
-        {
-            getDataPeminjamanRuanganByUser();
         }
     }
 }

@@ -29,50 +29,6 @@ namespace SpaceSolutions
 
         }
 
-        private void btnCariNamaBarang_Click(object sender, EventArgs e)
-        {
-            string idCari = txtCariBarang.Text.Trim();
-
-            // Jika ID yang dicari kosong, reset tampilan DataGridView
-            if (string.IsNullOrEmpty(idCari))
-            {
-                getDataTabelBarang();
-                return;
-            }
-
-            SqlConnection connection = new SqlConnection();
-            connection.ConnectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
-            connection.Open();
-            try
-            {
-                string query = "SELECT idBarang, namaBarang, stokBarang FROM Barang where namaBarang LIKE '%' + @CariBarang + '%' AND [status] = 1";
-                SqlCommand cmd = new SqlCommand(query, connection);
-                cmd.Parameters.AddWithValue("@CariBarang", idCari);
-                SqlDataAdapter adp = new SqlDataAdapter(cmd);
-
-                DataTable dt = new DataTable();
-                adp.Fill(dt);
-
-
-                if (dt.Rows.Count > 0)
-                {
-                    dgvTabelBarang.DataSource = dt;
-                }
-                else
-                {
-                    MessageBox.Show("Data tidak ditemukan", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtCariBarang.Text = "";
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
-        }
 
         public string autogenerateID(string firstText, string query)
         {
@@ -106,22 +62,6 @@ namespace SpaceSolutions
             return result;
         }
 
-        private void btnUbah_Click(object sender, EventArgs e)
-        {
-            if (keranjangBarang.SelectedItems.Count > 0) // Pastikan ada item yang dipilih
-            {
-                ListViewItem selectedRow = keranjangBarang.SelectedItems[0]; // Ambil item yang dipilih
-                // Update nilai kolom keempat (Jumlah Barang) dengan nilai dari txtJumlahBarang
-                selectedRow.SubItems[2].Text = getNamaBarang();
-                selectedRow.SubItems[3].Text = txtJumlahBarang.Text;
-            }
-        }
-
-        private void btnRefresh_Click(object sender, EventArgs e)
-        {
-            getDataTabelBarang();
-            txtCariBarang.Text = "";
-        }
 
         private void btnPinjam_Click(object sender, EventArgs e)
         {
@@ -216,31 +156,68 @@ namespace SpaceSolutions
             }
         }
 
-        private void keranjangBarang_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnUbah_Click_1(object sender, EventArgs e)
         {
-            if (keranjangBarang.SelectedItems.Count > 0)
+            if (keranjangBarang.SelectedItems.Count > 0) // Pastikan ada item yang dipilih
             {
-                ListViewItem selectedRow = keranjangBarang.SelectedItems[0]; // Ambil item yang dipilih (baris pertama
-                idPeminjamanBarangTemp = selectedRow.SubItems[0].Text; // Ambil nilai kolom ke 0 atau id Fasilitasnya
-                string valJumlahBarang = selectedRow.SubItems[3].Text; // Ambil nilai kolom ketiga
-                string valIDBarang = selectedRow.SubItems[1].Text; // Ambil nilai kolom ketiga
-                txtJumlahBarang.Text = valJumlahBarang;
-                txtIdBarang.Text = valIDBarang;
-                idBarangTemp = valIDBarang;
-                stokBarangTemp = valJumlahBarang;
+                ListViewItem selectedRow = keranjangBarang.SelectedItems[0]; // Ambil item yang dipilih
+                getDataBarang();
+
+                string stokBarangDipijam = txtJumlahBarang.Text;
+                int stok1 = 0;
+                stok1 = int.Parse(stokBarangDipijam);
+                int stok2 = 0;
+                stok2 = int.Parse(stokBarangDB);
+
+                if (stok1 > stok2)
+                {
+                    MessageBox.Show("Jumlah barang tidak Mencukupi", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtJumlahBarang.Text = "";
+                    return;
+                }
+                // Update nilai kolom keempat (Jumlah Barang) dengan nilai dari txtJumlahBarang
+                selectedRow.SubItems[1].Text = txtIdBarang.Text;
+                selectedRow.SubItems[2].Text = getNamaBarang();
+                selectedRow.SubItems[3].Text = txtJumlahBarang.Text;
             }
         }
 
-        private void btnTambahKeranjang_Click(object sender, EventArgs e)
+        private void btnHapus_Click(object sender, EventArgs e)
+        {
+            if (keranjangBarang.SelectedItems.Count > 0)
+            {
+                for (int i = 0; i < keranjangBarang.Items.Count; i++)
+                {
+                    if (keranjangBarang.Items[i].Selected)
+                    {
+
+                        keranjangBarang.Items[i].Remove();
+                        txtIdBarang.Text = "";
+                        txtJumlahBarang.Text = "";
+
+                    }
+                }
+            }
+        }
+
+        private void btnTambah_Click(object sender, EventArgs e)
         {
             getDataBarang();
+
+            if (string.IsNullOrEmpty(txtJumlahBarang.Text))
+            {
+                MessageBox.Show("Masukkan jumlah barang terlebih dahulu", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             string stokBarangDipijam = txtJumlahBarang.Text;
             int stok1 = 0;
             stok1 = int.Parse(stokBarangDipijam);
             int stok2 = 0;
             stok2 = int.Parse(stokBarangDB);
 
-            if(stok1 > stok2)
+            
+
+            if (stok1 > stok2)
             {
                 MessageBox.Show("Jumlah barang tidak Mencukupi", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtJumlahBarang.Text = "";
@@ -270,22 +247,75 @@ namespace SpaceSolutions
             txtIdBarang.Text = "";
         }
 
-        private void btnHapusKeranjang_Click(object sender, EventArgs e)
+        private void btnCari_Click(object sender, EventArgs e)
+        {
+            string idCari = txtCariBarang.Text.Trim();
+
+            // Jika ID yang dicari kosong, reset tampilan DataGridView
+            if (string.IsNullOrEmpty(idCari))
+            {
+                getDataTabelBarang();
+                return;
+            }
+
+            SqlConnection connection = new SqlConnection();
+            connection.ConnectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
+            connection.Open();
+            try
+            {
+                string query = "SELECT idBarang, namaBarang, stokBarang FROM Barang where namaBarang LIKE '%' + @CariBarang + '%' AND [status] = 1";
+                SqlCommand cmd = new SqlCommand(query, connection);
+                cmd.Parameters.AddWithValue("@CariBarang", idCari);
+                SqlDataAdapter adp = new SqlDataAdapter(cmd);
+
+                DataTable dt = new DataTable();
+                adp.Fill(dt);
+
+
+                if (dt.Rows.Count > 0)
+                {
+                    dgvTabelBarang.DataSource = dt;
+                }
+                else
+                {
+                    MessageBox.Show("Data tidak ditemukan", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtCariBarang.Text = "";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        private void btnRefesh_Click(object sender, EventArgs e)
+        {
+            getDataTabelBarang();
+            txtCariBarang.Text = "";
+        }
+
+        private void keranjangBarang_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (keranjangBarang.SelectedItems.Count > 0)
             {
-                for (int i = 0; i < keranjangBarang.Items.Count; i++)
-                {
-                    if (keranjangBarang.Items[i].Selected)
-                    {
-
-                        keranjangBarang.Items[i].Remove();
-                        txtIdBarang.Text = "";
-                        txtJumlahBarang.Text = "";
-
-                    }
-                }
+                ListViewItem selectedRow = keranjangBarang.SelectedItems[0]; // Ambil item yang dipilih (baris pertama
+                idPeminjamanBarangTemp = selectedRow.SubItems[0].Text; // Ambil nilai kolom ke 0 atau id Fasilitasnya
+                string valJumlahBarang = selectedRow.SubItems[3].Text; // Ambil nilai kolom ketiga
+                string valIDBarang = selectedRow.SubItems[1].Text; // Ambil nilai kolom ketiga
+                txtJumlahBarang.Text = valJumlahBarang;
+                txtIdBarang.Text = valIDBarang;
+                idBarangTemp = valIDBarang;
+                stokBarangTemp = valJumlahBarang;
             }
+        }
+
+        private void btnTambahKeranjang_Click(object sender, EventArgs e)
+        {
+            
         }
 
         private void getDataTabelBarang()

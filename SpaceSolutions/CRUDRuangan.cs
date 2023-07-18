@@ -15,7 +15,7 @@ namespace SpaceSolutions
 {
     public partial class CRUDRuangan : Form
     {
-        string idRuangan, namaFasilitas, namaJenisRuangan, namaRuangan, ketersediaanRuangan, lokasiRuangan, status;
+        string idRuangan, namaFasilitas, namaJenisRuangan, namaRuangan, ketersediaanRuangan, lokasiRuangan;
 
         private void dgvTabelRuangan_CellClick(object sender, DataGridViewCellEventArgs e)
         {

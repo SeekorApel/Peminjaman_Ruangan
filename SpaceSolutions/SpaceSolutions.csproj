@@ -227,6 +227,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RiwayatPeminjamanBarang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RiwayatPeminjamanBarang.Designer.cs">
+      <DependentUpon>RiwayatPeminjamanBarang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RiwayatPeminjamanRuangan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RiwayatPeminjamanRuangan.Designer.cs">
+      <DependentUpon>RiwayatPeminjamanRuangan.cs</DependentUpon>
+    </Compile>
     <Compile Include="SignUp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -357,6 +369,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RiwayatPeminjamanBarang.resx">
+      <DependentUpon>RiwayatPeminjamanBarang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RiwayatPeminjamanRuangan.resx">
+      <DependentUpon>RiwayatPeminjamanRuangan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
     </EmbeddedResource>
@@ -498,6 +516,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Icon\Peminjaman USER.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Icon\EDIT 2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

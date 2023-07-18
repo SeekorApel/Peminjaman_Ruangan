@@ -23,17 +23,14 @@ namespace SpaceSolutions
 
         private void PeminjamanRuanganUser_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dSSpaceSolutions.Ruangan' table. You can move, or remove it, as needed.
-            this.ruanganTableAdapter.Query1(this.dSSpaceSolutions.Ruangan);
+            txtIdRuangan.Visible = false;
             getDataRuangan();
-            query1ToolStrip.Visible = false;
-            label6.Text = idUser;
-
+            dtTanggalPeminjaman.Value = DateTime.Now;
         }
 
         private void btnPinjam_Click(object sender, EventArgs e)
         {
-            if (cbIdRuangan.SelectedIndex == -1 || txtJenisKegitan.Text == "" || txtKapasitasOrang.Text == "" || txtLamaPeminjaman.Text == "")
+            if (txtJenisKegitan.Text == "" || txtKapasitasOrang.Text == "" || txtLamaPeminjaman.Text == "")
             {
                 MessageBox.Show("Semua data harus di isi semua", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -85,7 +82,7 @@ namespace SpaceSolutions
             SqlCommand sqlcmd = new SqlCommand("sp_getKapasitasRuangan", connection);
             sqlcmd.CommandType = CommandType.StoredProcedure;
 
-            sqlcmd.Parameters.AddWithValue("@idRuangan", cbIdRuangan.SelectedValue.ToString());
+            sqlcmd.Parameters.AddWithValue("@idRuangan", txtIdRuangan.Text);
 
             connection.Open();
             object result = sqlcmd.ExecuteScalar();
@@ -102,7 +99,7 @@ namespace SpaceSolutions
             SqlCommand sqlcmd = new SqlCommand("sp_getketersediaanRuangan", connection);
             sqlcmd.CommandType = CommandType.StoredProcedure;
 
-            sqlcmd.Parameters.AddWithValue("@idRuangan", cbIdRuangan.SelectedValue.ToString());
+            sqlcmd.Parameters.AddWithValue("@idRuangan", txtIdRuangan.Text);
 
             connection.Open();
             object result = sqlcmd.ExecuteScalar();
@@ -112,7 +109,7 @@ namespace SpaceSolutions
 
         private DateTime getTanggalPeminjamanDB()
         {
-            int status = 0;
+            
             DateTime tanggal = DateTime.MinValue;
             SqlConnection connection = new SqlConnection();
             connection.ConnectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
@@ -120,7 +117,7 @@ namespace SpaceSolutions
             SqlCommand sqlcmd = new SqlCommand("sp_getTanggalPeminjaman", connection);
             sqlcmd.CommandType = CommandType.StoredProcedure;
 
-            sqlcmd.Parameters.AddWithValue("@idRuangan", cbIdRuangan.SelectedValue.ToString());
+            sqlcmd.Parameters.AddWithValue("@idRuangan", txtIdRuangan.Text);
             sqlcmd.Parameters.AddWithValue("@tanggalPeminjaman", dtTanggalPeminjaman.Value);
 
             connection.Open();
@@ -171,7 +168,7 @@ namespace SpaceSolutions
 
                     sqlcmd.Parameters.AddWithValue("@idPeminjamanRuangan", autogenerateID("PR", query));
                     sqlcmd.Parameters.AddWithValue("@idUser", idUser);
-                    sqlcmd.Parameters.AddWithValue("@idRuangan", cbIdRuangan.SelectedValue.ToString());
+                    sqlcmd.Parameters.AddWithValue("@idRuangan", txtIdRuangan.Text);
                     sqlcmd.Parameters.AddWithValue("@jenisKegiatan", txtJenisKegitan.Text);
                     sqlcmd.Parameters.AddWithValue("@kapasitasOrang", txtKapasitasOrang.Text);
                     sqlcmd.Parameters.AddWithValue("@tanggalPeminjaman", dtTanggalPeminjaman.Value);
@@ -208,7 +205,7 @@ namespace SpaceSolutions
             connection.Open();
             try
             {
-                string query = "SELECT * FROM GetDataRuangan() WHERE ketersediaanRuangan = 'Tersedia' AND  [status] = 'Aktif'";
+                string query = "SELECT * FROM GetDataRuangan() WHERE [status] = 'Aktif'";
                 SqlCommand cmd = new SqlCommand(query, connection);
                 SqlDataAdapter adp = new SqlDataAdapter(cmd);
 
@@ -222,18 +219,6 @@ namespace SpaceSolutions
             }
         }
 
-        private void query1ToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.ruanganTableAdapter.Query1(this.dSSpaceSolutions.Ruangan);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
 
         private void dtTanggalPeminjaman_ValueChanged(object sender, EventArgs e)
         {
@@ -243,6 +228,69 @@ namespace SpaceSolutions
         private void label5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgvTabelRuangan_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvTabelRuangan.Rows[e.RowIndex];
+
+                txtIdRuangan.Text = row.Cells["Kolom1"].Value.ToString();
+                txtNamaRuangan.Text = row.Cells["Kolom2"].Value.ToString();
+
+            }
+        }
+
+        private void btnCari_Click(object sender, EventArgs e)
+        {
+            string nama = txtCariRuangan.Text.Trim();
+
+            // Jika ID yang dicari kosong, reset tampilan DataGridView
+            if (string.IsNullOrEmpty(nama))
+            {
+                getDataRuangan();
+                return;
+            }
+
+            SqlConnection connection = new SqlConnection();
+            connection.ConnectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
+            connection.Open();
+            try
+            {
+                string query = "SELECT * FROM GetDataRuangan() WHERE namaRuangan LIKE '%' + @namaRuangan + '%' AND status = 'Aktif'";
+                SqlCommand cmd = new SqlCommand(query, connection);
+                cmd.Parameters.AddWithValue("@namaRuangan", nama);
+                SqlDataAdapter adp = new SqlDataAdapter(cmd);
+
+                DataTable dt = new DataTable();
+                adp.Fill(dt);
+
+
+                if (dt.Rows.Count > 0)
+                {
+                    dgvTabelRuangan.DataSource = dt;
+                }
+                else
+                {
+                    MessageBox.Show("Data tidak ditemukan", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtCariRuangan.Text = "";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            getDataRuangan();
+            txtCariRuangan.Text = "";
         }
     }
 }

@@ -133,6 +133,16 @@ namespace SpaceSolutions.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap EDIT_2 {
+            get {
+                object obj = ResourceManager.GetObject("EDIT 2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Edit_CRUD_ {
             get {
                 object obj = ResourceManager.GetObject("Edit CRUD ", resourceCulture);

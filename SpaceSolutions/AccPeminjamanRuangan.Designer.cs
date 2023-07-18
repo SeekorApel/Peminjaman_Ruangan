@@ -213,7 +213,7 @@
             this.btnTolakPeminjaman.Font = new System.Drawing.Font("Gilmer Bold", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnTolakPeminjaman.ForeColor = System.Drawing.Color.White;
             this.btnTolakPeminjaman.HoverState.Parent = this.btnTolakPeminjaman;
-            this.btnTolakPeminjaman.Location = new System.Drawing.Point(599, 245);
+            this.btnTolakPeminjaman.Location = new System.Drawing.Point(441, 289);
             this.btnTolakPeminjaman.Name = "btnTolakPeminjaman";
             this.btnTolakPeminjaman.ShadowDecoration.Parent = this.btnTolakPeminjaman;
             this.btnTolakPeminjaman.Size = new System.Drawing.Size(139, 36);

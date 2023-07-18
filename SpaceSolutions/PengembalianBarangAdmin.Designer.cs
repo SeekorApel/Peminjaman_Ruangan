@@ -71,8 +71,6 @@
             this.txtJumlahKerusakanBarang = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTotalDendaKerusakan = new Guna.UI2.WinForms.Guna2TextBox();
             this.labelBarangRusak = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.dendaKerusakanBarangTableAdapter = new SpaceSolutions.DSSpaceSolutionsTableAdapters.DendaKerusakanBarangTableAdapter();
             this.queryDendaBarangToolStrip = new System.Windows.Forms.ToolStrip();
             this.queryDendaBarangToolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -598,26 +596,6 @@
             this.labelBarangRusak.TabIndex = 64;
             this.labelBarangRusak.Text = "Jumlah Barang yang Rusak";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Poppins", 9F);
-            this.label9.Location = new System.Drawing.Point(854, 606);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(177, 22);
-            this.label9.TabIndex = 65;
-            this.label9.Text = "Total Telat Denda Kerusakan";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Poppins", 9F);
-            this.label10.Location = new System.Drawing.Point(849, 528);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(128, 22);
-            this.label10.TabIndex = 67;
-            this.label10.Text = "Telat Pengembalian";
-            // 
             // dendaKerusakanBarangTableAdapter
             // 
             this.dendaKerusakanBarangTableAdapter.ClearBeforeFill = true;
@@ -689,8 +667,6 @@
             this.Controls.Add(this.btnCari);
             this.Controls.Add(this.txtCariNamaPeminjam);
             this.Controls.Add(this.queryDendaBarangToolStrip);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.labelBarangRusak);
             this.Controls.Add(this.txtTotalDendaKerusakan);
             this.Controls.Add(this.txtJumlahKerusakanBarang);
@@ -772,9 +748,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtJumlahKerusakanBarang;
         private Guna.UI2.WinForms.Guna2TextBox txtTotalDendaKerusakan;
         private System.Windows.Forms.Label labelBarangRusak;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ColumnHeader columnHeader9;
-        private System.Windows.Forms.Label label10;
         private DSSpaceSolutions dSSpaceSolutions;
         private System.Windows.Forms.BindingSource dendaKerusakanBarangBindingSource;
         private DSSpaceSolutionsTableAdapters.DendaKerusakanBarangTableAdapter dendaKerusakanBarangTableAdapter;

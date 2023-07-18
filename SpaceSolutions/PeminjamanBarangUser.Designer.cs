@@ -47,15 +47,20 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnPinjam = new Guna.UI2.WinForms.Guna2Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnCariNamaBarang = new Guna.UI2.WinForms.Guna2Button();
             this.txtCariBarang = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnTambahKeranjang = new Guna.UI2.WinForms.Guna2Button();
-            this.btnHapusKeranjang = new Guna.UI2.WinForms.Guna2Button();
             this.label4 = new System.Windows.Forms.Label();
             this.txtLamaPeminjaman = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnRefresh = new Guna.UI2.WinForms.Guna2Button();
-            this.btnUbah = new Guna.UI2.WinForms.Guna2Button();
+            this.btnUbah = new System.Windows.Forms.PictureBox();
+            this.btnHapus = new System.Windows.Forms.PictureBox();
+            this.btnCari = new System.Windows.Forms.PictureBox();
+            this.btnRefesh = new System.Windows.Forms.PictureBox();
+            this.btnTambah = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabelBarang)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnUbah)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHapus)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCari)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRefesh)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnTambah)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -76,7 +81,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(476, 304);
+            this.label5.Location = new System.Drawing.Point(476, 242);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(174, 26);
             this.label5.TabIndex = 28;
@@ -91,7 +96,7 @@
             this.dtTanggalPeminjaman.FillColor = System.Drawing.Color.White;
             this.dtTanggalPeminjaman.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.dtTanggalPeminjaman.HoverState.Parent = this.dtTanggalPeminjaman;
-            this.dtTanggalPeminjaman.Location = new System.Drawing.Point(480, 333);
+            this.dtTanggalPeminjaman.Location = new System.Drawing.Point(480, 271);
             this.dtTanggalPeminjaman.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtTanggalPeminjaman.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtTanggalPeminjaman.Name = "dtTanggalPeminjaman";
@@ -239,10 +244,10 @@
             this.btnPinjam.Font = new System.Drawing.Font("Gilmer Bold", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnPinjam.ForeColor = System.Drawing.Color.White;
             this.btnPinjam.HoverState.Parent = this.btnPinjam;
-            this.btnPinjam.Location = new System.Drawing.Point(480, 487);
+            this.btnPinjam.Location = new System.Drawing.Point(480, 400);
             this.btnPinjam.Name = "btnPinjam";
             this.btnPinjam.ShadowDecoration.Parent = this.btnPinjam;
-            this.btnPinjam.Size = new System.Drawing.Size(180, 36);
+            this.btnPinjam.Size = new System.Drawing.Size(102, 36);
             this.btnPinjam.TabIndex = 34;
             this.btnPinjam.Text = "Pinjam";
             this.btnPinjam.Click += new System.EventHandler(this.btnPinjam_Click);
@@ -256,22 +261,6 @@
             this.label3.Size = new System.Drawing.Size(107, 26);
             this.label3.TabIndex = 35;
             this.label3.Text = "Data Barang";
-            // 
-            // btnCariNamaBarang
-            // 
-            this.btnCariNamaBarang.BorderRadius = 6;
-            this.btnCariNamaBarang.CheckedState.Parent = this.btnCariNamaBarang;
-            this.btnCariNamaBarang.CustomImages.Parent = this.btnCariNamaBarang;
-            this.btnCariNamaBarang.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnCariNamaBarang.ForeColor = System.Drawing.Color.White;
-            this.btnCariNamaBarang.HoverState.Parent = this.btnCariNamaBarang;
-            this.btnCariNamaBarang.Location = new System.Drawing.Point(480, 248);
-            this.btnCariNamaBarang.Name = "btnCariNamaBarang";
-            this.btnCariNamaBarang.ShadowDecoration.Parent = this.btnCariNamaBarang;
-            this.btnCariNamaBarang.Size = new System.Drawing.Size(83, 36);
-            this.btnCariNamaBarang.TabIndex = 37;
-            this.btnCariNamaBarang.Text = "Search";
-            this.btnCariNamaBarang.Click += new System.EventHandler(this.btnCariNamaBarang_Click);
             // 
             // txtCariBarang
             // 
@@ -293,46 +282,14 @@
             this.txtCariBarang.PlaceholderText = "Cari Nama Barang";
             this.txtCariBarang.SelectedText = "";
             this.txtCariBarang.ShadowDecoration.Parent = this.txtCariBarang;
-            this.txtCariBarang.Size = new System.Drawing.Size(250, 36);
+            this.txtCariBarang.Size = new System.Drawing.Size(221, 36);
             this.txtCariBarang.TabIndex = 36;
-            // 
-            // btnTambahKeranjang
-            // 
-            this.btnTambahKeranjang.BorderRadius = 5;
-            this.btnTambahKeranjang.CheckedState.Parent = this.btnTambahKeranjang;
-            this.btnTambahKeranjang.CustomImages.Parent = this.btnTambahKeranjang;
-            this.btnTambahKeranjang.Font = new System.Drawing.Font("Segoe UI", 13F);
-            this.btnTambahKeranjang.ForeColor = System.Drawing.Color.White;
-            this.btnTambahKeranjang.HoverState.Parent = this.btnTambahKeranjang;
-            this.btnTambahKeranjang.Location = new System.Drawing.Point(70, 354);
-            this.btnTambahKeranjang.Name = "btnTambahKeranjang";
-            this.btnTambahKeranjang.ShadowDecoration.Parent = this.btnTambahKeranjang;
-            this.btnTambahKeranjang.Size = new System.Drawing.Size(100, 30);
-            this.btnTambahKeranjang.TabIndex = 39;
-            this.btnTambahKeranjang.Text = "+";
-            this.btnTambahKeranjang.Click += new System.EventHandler(this.btnTambahKeranjang_Click);
-            // 
-            // btnHapusKeranjang
-            // 
-            this.btnHapusKeranjang.BorderRadius = 5;
-            this.btnHapusKeranjang.CheckedState.Parent = this.btnHapusKeranjang;
-            this.btnHapusKeranjang.CustomImages.Parent = this.btnHapusKeranjang;
-            this.btnHapusKeranjang.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.btnHapusKeranjang.ForeColor = System.Drawing.Color.White;
-            this.btnHapusKeranjang.HoverState.Parent = this.btnHapusKeranjang;
-            this.btnHapusKeranjang.Location = new System.Drawing.Point(185, 354);
-            this.btnHapusKeranjang.Name = "btnHapusKeranjang";
-            this.btnHapusKeranjang.ShadowDecoration.Parent = this.btnHapusKeranjang;
-            this.btnHapusKeranjang.Size = new System.Drawing.Size(100, 30);
-            this.btnHapusKeranjang.TabIndex = 38;
-            this.btnHapusKeranjang.Text = "-";
-            this.btnHapusKeranjang.Click += new System.EventHandler(this.btnHapusKeranjang_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(476, 382);
+            this.label4.Location = new System.Drawing.Point(476, 320);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(201, 26);
             this.label4.TabIndex = 41;
@@ -352,7 +309,7 @@
             this.txtLamaPeminjaman.FocusedState.Parent = this.txtLamaPeminjaman;
             this.txtLamaPeminjaman.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtLamaPeminjaman.HoverState.Parent = this.txtLamaPeminjaman;
-            this.txtLamaPeminjaman.Location = new System.Drawing.Point(481, 411);
+            this.txtLamaPeminjaman.Location = new System.Drawing.Point(481, 349);
             this.txtLamaPeminjaman.Name = "txtLamaPeminjaman";
             this.txtLamaPeminjaman.PasswordChar = '\0';
             this.txtLamaPeminjaman.PlaceholderText = "";
@@ -361,37 +318,65 @@
             this.txtLamaPeminjaman.Size = new System.Drawing.Size(220, 36);
             this.txtLamaPeminjaman.TabIndex = 40;
             // 
-            // btnRefresh
-            // 
-            this.btnRefresh.BorderRadius = 6;
-            this.btnRefresh.CheckedState.Parent = this.btnRefresh;
-            this.btnRefresh.CustomImages.Parent = this.btnRefresh;
-            this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnRefresh.HoverState.Parent = this.btnRefresh;
-            this.btnRefresh.Location = new System.Drawing.Point(589, 248);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.ShadowDecoration.Parent = this.btnRefresh;
-            this.btnRefresh.Size = new System.Drawing.Size(83, 36);
-            this.btnRefresh.TabIndex = 42;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
             // btnUbah
             // 
-            this.btnUbah.BorderRadius = 5;
-            this.btnUbah.CheckedState.Parent = this.btnUbah;
-            this.btnUbah.CustomImages.Parent = this.btnUbah;
-            this.btnUbah.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnUbah.ForeColor = System.Drawing.Color.White;
-            this.btnUbah.HoverState.Parent = this.btnUbah;
-            this.btnUbah.Location = new System.Drawing.Point(308, 354);
+            this.btnUbah.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUbah.Image = global::SpaceSolutions.Properties.Resources.EDIT_2;
+            this.btnUbah.Location = new System.Drawing.Point(186, 349);
             this.btnUbah.Name = "btnUbah";
-            this.btnUbah.ShadowDecoration.Parent = this.btnUbah;
-            this.btnUbah.Size = new System.Drawing.Size(73, 30);
-            this.btnUbah.TabIndex = 43;
-            this.btnUbah.Text = "Ubah";
-            this.btnUbah.Click += new System.EventHandler(this.btnUbah_Click);
+            this.btnUbah.Size = new System.Drawing.Size(35, 35);
+            this.btnUbah.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnUbah.TabIndex = 48;
+            this.btnUbah.TabStop = false;
+            this.btnUbah.Click += new System.EventHandler(this.btnUbah_Click_1);
+            // 
+            // btnHapus
+            // 
+            this.btnHapus.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHapus.Image = global::SpaceSolutions.Properties.Resources.Hapus_2;
+            this.btnHapus.Location = new System.Drawing.Point(126, 349);
+            this.btnHapus.Name = "btnHapus";
+            this.btnHapus.Size = new System.Drawing.Size(35, 35);
+            this.btnHapus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnHapus.TabIndex = 47;
+            this.btnHapus.TabStop = false;
+            this.btnHapus.Click += new System.EventHandler(this.btnHapus_Click);
+            // 
+            // btnCari
+            // 
+            this.btnCari.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCari.Image = global::SpaceSolutions.Properties.Resources.search_Use_1;
+            this.btnCari.Location = new System.Drawing.Point(718, 194);
+            this.btnCari.Name = "btnCari";
+            this.btnCari.Size = new System.Drawing.Size(32, 32);
+            this.btnCari.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnCari.TabIndex = 46;
+            this.btnCari.TabStop = false;
+            this.btnCari.Click += new System.EventHandler(this.btnCari_Click);
+            // 
+            // btnRefesh
+            // 
+            this.btnRefesh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRefesh.Image = global::SpaceSolutions.Properties.Resources.Refresh;
+            this.btnRefesh.Location = new System.Drawing.Point(766, 194);
+            this.btnRefesh.Name = "btnRefesh";
+            this.btnRefesh.Size = new System.Drawing.Size(33, 33);
+            this.btnRefesh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnRefesh.TabIndex = 45;
+            this.btnRefesh.TabStop = false;
+            this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click);
+            // 
+            // btnTambah
+            // 
+            this.btnTambah.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTambah.Image = global::SpaceSolutions.Properties.Resources.Add;
+            this.btnTambah.Location = new System.Drawing.Point(65, 349);
+            this.btnTambah.Name = "btnTambah";
+            this.btnTambah.Size = new System.Drawing.Size(35, 35);
+            this.btnTambah.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnTambah.TabIndex = 44;
+            this.btnTambah.TabStop = false;
+            this.btnTambah.Click += new System.EventHandler(this.btnTambah_Click);
             // 
             // PeminjamanBarangUser
             // 
@@ -400,12 +385,12 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(880, 562);
             this.Controls.Add(this.btnUbah);
-            this.Controls.Add(this.btnRefresh);
+            this.Controls.Add(this.btnHapus);
+            this.Controls.Add(this.btnCari);
+            this.Controls.Add(this.btnRefesh);
+            this.Controls.Add(this.btnTambah);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtLamaPeminjaman);
-            this.Controls.Add(this.btnTambahKeranjang);
-            this.Controls.Add(this.btnHapusKeranjang);
-            this.Controls.Add(this.btnCariNamaBarang);
             this.Controls.Add(this.txtCariBarang);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnPinjam);
@@ -423,6 +408,11 @@
             this.Text = "PeminjamanBarangUser";
             this.Load += new System.EventHandler(this.PeminjamanBarangUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabelBarang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnUbah)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHapus)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCari)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRefesh)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnTambah)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -444,16 +434,16 @@
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2Button btnPinjam;
-        private Guna.UI2.WinForms.Guna2Button btnCariNamaBarang;
         private Guna.UI2.WinForms.Guna2TextBox txtCariBarang;
-        private Guna.UI2.WinForms.Guna2Button btnTambahKeranjang;
-        private Guna.UI2.WinForms.Guna2Button btnHapusKeranjang;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2TextBox txtLamaPeminjaman;
-        private Guna.UI2.WinForms.Guna2Button btnRefresh;
         private System.Windows.Forms.DataGridViewTextBoxColumn Kolom1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private Guna.UI2.WinForms.Guna2Button btnUbah;
+        private System.Windows.Forms.PictureBox btnCari;
+        private System.Windows.Forms.PictureBox btnRefesh;
+        private System.Windows.Forms.PictureBox btnTambah;
+        private System.Windows.Forms.PictureBox btnUbah;
+        private System.Windows.Forms.PictureBox btnHapus;
     }
 }

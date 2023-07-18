@@ -89,6 +89,16 @@ namespace SpaceSolutions
             showSubMenu(panelSubMenuRiwayatPeminjaman);
         }
 
+        private void btnRiwayatPeminjamanRuangan_Click(object sender, EventArgs e)
+        {
+            openChildForm(new RiwayatPeminjamanRuangan(idUser), sender);
+        }
+
+        private void btnRiwayatPeminajanBarang_Click(object sender, EventArgs e)
+        {
+            openChildForm(new RiwayatPeminjamanBarang(idUser), sender);
+        }
+
         private void btnLogOut_Click(object sender, EventArgs e)
         {
             this.Hide();
