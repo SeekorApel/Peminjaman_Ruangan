@@ -71,16 +71,16 @@ namespace SpaceSolutions
 
                 if (returnValue == 1)
                 {
-                    MessageBox.Show("Selamat Datang Manager!", "Login Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else if (returnValue == 2)
-                {
                     string idUser = getIdUser();
                     string namaUser = getNamaUser();
                     MessageBox.Show("Selamat Datang Admin!", "Login Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     DashBoardAdmin formAdmin = new DashBoardAdmin(idUser, namaUser);
                     this.Hide();
                     formAdmin.Show();
+                }
+                else if (returnValue == 2)
+                {
+                    MessageBox.Show("Selamat Datang Manager!", "Login Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else if (returnValue == 3)
                 {

@@ -20,12 +20,12 @@ namespace SpaceSolutions
             InitializeComponent();
         }
 
-        private void CRUDJenisRuangan_Load(object sender, EventArgs e)
+        public void CRUDJenisRuangan_Load(object sender, EventArgs e)
         {
             getDataTabelJenisRuangan();
         }
 
-        private void getDataTabelJenisRuangan()
+        public void getDataTabelJenisRuangan()
         {
             SqlConnection connection = new SqlConnection();
             connection.ConnectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;

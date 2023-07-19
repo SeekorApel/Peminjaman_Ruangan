@@ -54,9 +54,15 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.queryJenisRuanganToolStrip = new System.Windows.Forms.ToolStrip();
+            this.queryJenisRuanganToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.queryFasilitasToolStrip = new System.Windows.Forms.ToolStrip();
+            this.queryFasilitasToolStripButton = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.fasilitasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSSpaceSolutions)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jenisRuanganBindingSource)).BeginInit();
+            this.queryJenisRuanganToolStrip.SuspendLayout();
+            this.queryFasilitasToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -370,12 +376,50 @@
             this.label9.TabIndex = 40;
             this.label9.Text = "*";
             // 
+            // queryJenisRuanganToolStrip
+            // 
+            this.queryJenisRuanganToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.queryJenisRuanganToolStripButton});
+            this.queryJenisRuanganToolStrip.Location = new System.Drawing.Point(0, 0);
+            this.queryJenisRuanganToolStrip.Name = "queryJenisRuanganToolStrip";
+            this.queryJenisRuanganToolStrip.Size = new System.Drawing.Size(400, 25);
+            this.queryJenisRuanganToolStrip.TabIndex = 41;
+            this.queryJenisRuanganToolStrip.Text = "queryJenisRuanganToolStrip";
+            // 
+            // queryJenisRuanganToolStripButton
+            // 
+            this.queryJenisRuanganToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.queryJenisRuanganToolStripButton.Name = "queryJenisRuanganToolStripButton";
+            this.queryJenisRuanganToolStripButton.Size = new System.Drawing.Size(115, 22);
+            this.queryJenisRuanganToolStripButton.Text = "QueryJenisRuangan";
+            this.queryJenisRuanganToolStripButton.Click += new System.EventHandler(this.queryJenisRuanganToolStripButton_Click);
+            // 
+            // queryFasilitasToolStrip
+            // 
+            this.queryFasilitasToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.queryFasilitasToolStripButton});
+            this.queryFasilitasToolStrip.Location = new System.Drawing.Point(0, 0);
+            this.queryFasilitasToolStrip.Name = "queryFasilitasToolStrip";
+            this.queryFasilitasToolStrip.Size = new System.Drawing.Size(111, 25);
+            this.queryFasilitasToolStrip.TabIndex = 42;
+            this.queryFasilitasToolStrip.Text = "queryFasilitasToolStrip";
+            // 
+            // queryFasilitasToolStripButton
+            // 
+            this.queryFasilitasToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.queryFasilitasToolStripButton.Name = "queryFasilitasToolStripButton";
+            this.queryFasilitasToolStripButton.Size = new System.Drawing.Size(84, 22);
+            this.queryFasilitasToolStripButton.Text = "QueryFasilitas";
+            this.queryFasilitasToolStripButton.Click += new System.EventHandler(this.queryFasilitasToolStripButton_Click);
+            // 
             // InputRuangan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(400, 638);
+            this.Controls.Add(this.queryFasilitasToolStrip);
+            this.Controls.Add(this.queryJenisRuanganToolStrip);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -402,6 +446,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.fasilitasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSSpaceSolutions)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.jenisRuanganBindingSource)).EndInit();
+            this.queryJenisRuanganToolStrip.ResumeLayout(false);
+            this.queryJenisRuanganToolStrip.PerformLayout();
+            this.queryFasilitasToolStrip.ResumeLayout(false);
+            this.queryFasilitasToolStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -434,5 +482,9 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ToolStrip queryJenisRuanganToolStrip;
+        private System.Windows.Forms.ToolStripButton queryJenisRuanganToolStripButton;
+        private System.Windows.Forms.ToolStrip queryFasilitasToolStrip;
+        private System.Windows.Forms.ToolStripButton queryFasilitasToolStripButton;
     }
 }

@@ -28,6 +28,8 @@ namespace SpaceSolutions
             this.fasilitasTableAdapter.Fill(this.dSSpaceSolutions.Fasilitas);
             cbFasilitas.SelectedIndex = -1;
             cbJenisRuangan.SelectedIndex = -1;
+            queryFasilitasToolStrip.Visible = false;
+            queryJenisRuanganToolStrip.Visible = false;
 
         }
 
@@ -160,6 +162,32 @@ namespace SpaceSolutions
                 // Jika karakter bukan huruf, angka, atau spasi, hentikan event KeyPress
                 e.Handled = true;
             }
+        }
+
+        private void queryJenisRuanganToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.jenisRuanganTableAdapter.QueryJenisRuangan(this.dSSpaceSolutions.JenisRuangan);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void queryFasilitasToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.fasilitasTableAdapter.QueryFasilitas(this.dSSpaceSolutions.Fasilitas);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }

@@ -249,14 +249,39 @@ namespace SpaceSolutions
             {
 
                 InputPengembalianBarang();
+                cbKerusakanBarang.Visible = false;
+                btnTambahKeranjang.Visible = false;
+                btnHapusKeranjang.Visible = false;
+                LabelDetailDenda.Visible = false;
+                labelJumlahBarangRusak.Visible = false;
+                txtJumlahKerusakanBarang.Visible = false;
+                KeranjangKerusakan.Visible = false;
+                KeranjangKerusakan.Items.Clear();
+                keranjangBarang.Items.Clear();
+                rbRusak.Checked = false;
+                rbTidakRusak.Checked = false;
+                txtTotalDenda.Text = "0";
                 pengembalianStockBarang();
-
+                getDataPeminjamanBarang();
             }
             else if(kondisiBarang == 1)
             {
                 InputPengembalianBarang();
                 InputdetailDendaKerusakanBarang();
+                cbKerusakanBarang.Visible = false;
+                btnTambahKeranjang.Visible = false;
+                btnHapusKeranjang.Visible = false;
+                LabelDetailDenda.Visible = false;
+                labelJumlahBarangRusak.Visible = false;
+                txtJumlahKerusakanBarang.Visible = false;
+                KeranjangKerusakan.Visible = false;
+                KeranjangKerusakan.Items.Clear();
+                keranjangBarang.Items.Clear();
+                rbRusak.Checked = false;
+                rbTidakRusak.Checked = false;
+                txtTotalDenda.Text = "0";
                 pengembalianStockBarang();
+                getDataPeminjamanBarang();
             }
         }
 
@@ -328,7 +353,7 @@ namespace SpaceSolutions
 
                 connection.Close();
 
-                MessageBox.Show("Pengembalian Barang Berhasil", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                /*MessageBox.Show("Pengembalian Barang Berhasil", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);*/
 
             }
             catch (Exception ex)
@@ -360,7 +385,7 @@ namespace SpaceSolutions
 
                 connection.Close();
 
-                MessageBox.Show("Pengembalian Barang Berhasil", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                /*MessageBox.Show("Pengembalian Barang Berhasil", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);*/
 
             }
             catch (Exception ex)

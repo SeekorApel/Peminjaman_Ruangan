@@ -45,6 +45,7 @@ namespace SpaceSolutions
             btnHapusKeranjang.Visible = false;
             KeranjangKerusakan.Visible = false;
             tglPengembalianSebelumnya = dtTanggalPengembalian.Value;
+            txtTotalDenda.Text = "0";
         }
 
         
@@ -288,10 +289,15 @@ namespace SpaceSolutions
             if(statusKerusakan == 0)
             {
                 inputPeminjamanRuangan();
-            }else if (statusKerusakan == 1)
+                getDataPeminjamanRuangan();
+                clear();
+            }
+            else if (statusKerusakan == 1)
             {
                 inputPeminjamanRuangan();
                 inputDetailKerusakanRuangan();
+                getDataPeminjamanRuangan();
+                clear();
             }
         }
 
@@ -362,7 +368,7 @@ namespace SpaceSolutions
 
                 connection.Close();
 
-                MessageBox.Show("Pengembalian Ruangan Berhasil", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                /*MessageBox.Show("Pengembalian Ruangan Berhasil", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);*/
 
             }
             catch (Exception ex)
@@ -530,6 +536,21 @@ namespace SpaceSolutions
         private void txtIdPeminjaman_Leave(object sender, EventArgs e)
         {
 
+        }
+
+        private void clear()
+        {
+            txtIdPeminjaman.Text = "";
+            dtTanggalPeminjaman.Value = DateTime.Now;
+            dtTanggalPengembalian.Value = DateTime.Now;
+            rbRusak.Checked = false;
+            rbTidakKerusakan.Checked = false;
+            txtTotalDenda.Text = "0";
+            cbKerusakanRuangan.Visible = false;
+            btnTambahKeranjang.Visible = false;
+            btnHapusKeranjang.Visible = false;
+            KeranjangKerusakan.Visible = false;
+            KeranjangKerusakan.Items.Clear();
         }
     }
 }

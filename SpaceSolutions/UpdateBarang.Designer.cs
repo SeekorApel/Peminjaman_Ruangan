@@ -176,7 +176,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(167, 222);
+            this.label5.Location = new System.Drawing.Point(167, 220);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(16, 23);
             this.label5.TabIndex = 64;

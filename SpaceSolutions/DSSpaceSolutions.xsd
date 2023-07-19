@@ -62,7 +62,17 @@ SELECT idFasilitas, namaFasilitas, status FROM Fasilitas WHERE (idFasilitas = @i
               <Mapping SourceColumn="namaFasilitas" DataSetColumn="namaFasilitas" />
               <Mapping SourceColumn="status" DataSetColumn="status" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="SpaceSolutionConnectionString (Settings)" DbObjectName="SpaceSolution.dbo.Fasilitas" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="QueryFasilitas" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="QueryFasilitas" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="QueryFasilitas">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT idFasilitas, namaFasilitas, status FROM dbo.Fasilitas
+WHERE status = 1 </CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="JenisRuanganTableAdapter" GeneratorDataComponentClassName="JenisRuanganTableAdapter" Name="JenisRuangan" UserDataComponentName="JenisRuanganTableAdapter">
             <MainSource>
@@ -126,7 +136,17 @@ SELECT idJenisRuangan, namaJenisRuangan, KapasitasRuangan, status FROM JenisRuan
               <Mapping SourceColumn="KapasitasRuangan" DataSetColumn="KapasitasRuangan" />
               <Mapping SourceColumn="status" DataSetColumn="status" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="SpaceSolutionConnectionString (Settings)" DbObjectName="SpaceSolution.dbo.JenisRuangan" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="QueryJenisRuangan" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="QueryJenisRuangan" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="QueryJenisRuangan">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT idJenisRuangan, namaJenisRuangan, KapasitasRuangan, status FROM dbo.JenisRuangan
+WHERE status = 1</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="RuanganTableAdapter" GeneratorDataComponentClassName="RuanganTableAdapter" Name="Ruangan" UserDataComponentName="RuanganTableAdapter">
             <MainSource>
@@ -667,32 +687,32 @@ SELECT IdBarang, namaBarang, kategoriBarang, stokBarang, status FROM Barang WHER
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Barang" msprop:Generator_RowEvHandlerName="BarangRowChangeEventHandler" msprop:Generator_RowDeletedName="BarangRowDeleted" msprop:Generator_RowDeletingName="BarangRowDeleting" msprop:Generator_RowEvArgName="BarangRowChangeEvent" msprop:Generator_TablePropName="Barang" msprop:Generator_RowChangedName="BarangRowChanged" msprop:Generator_RowChangingName="BarangRowChanging" msprop:Generator_TableClassName="BarangDataTable" msprop:Generator_RowClassName="BarangRow" msprop:Generator_TableVarName="tableBarang" msprop:Generator_UserTableName="Barang">
+        <xs:element name="Barang" msprop:Generator_RowClassName="BarangRow" msprop:Generator_RowEvHandlerName="BarangRowChangeEventHandler" msprop:Generator_RowDeletedName="BarangRowDeleted" msprop:Generator_RowDeletingName="BarangRowDeleting" msprop:Generator_RowEvArgName="BarangRowChangeEvent" msprop:Generator_TablePropName="Barang" msprop:Generator_RowChangedName="BarangRowChanged" msprop:Generator_UserTableName="Barang" msprop:Generator_RowChangingName="BarangRowChanging" msprop:Generator_TableClassName="BarangDataTable" msprop:Generator_TableVarName="tableBarang">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="IdBarang" msprop:Generator_ColumnPropNameInRow="IdBarang" msprop:Generator_ColumnPropNameInTable="IdBarangColumn" msprop:Generator_ColumnVarNameInTable="columnIdBarang" msprop:Generator_UserColumnName="IdBarang">
+              <xs:element name="IdBarang" msprop:Generator_UserColumnName="IdBarang" msprop:Generator_ColumnPropNameInTable="IdBarangColumn" msprop:Generator_ColumnPropNameInRow="IdBarang" msprop:Generator_ColumnVarNameInTable="columnIdBarang">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="namaBarang" msprop:Generator_ColumnPropNameInRow="namaBarang" msprop:Generator_ColumnPropNameInTable="namaBarangColumn" msprop:Generator_ColumnVarNameInTable="columnnamaBarang" msprop:Generator_UserColumnName="namaBarang" minOccurs="0">
+              <xs:element name="namaBarang" msprop:Generator_UserColumnName="namaBarang" msprop:Generator_ColumnPropNameInTable="namaBarangColumn" msprop:Generator_ColumnPropNameInRow="namaBarang" msprop:Generator_ColumnVarNameInTable="columnnamaBarang" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="kategoriBarang" msprop:Generator_ColumnPropNameInRow="kategoriBarang" msprop:Generator_ColumnPropNameInTable="kategoriBarangColumn" msprop:Generator_ColumnVarNameInTable="columnkategoriBarang" msprop:Generator_UserColumnName="kategoriBarang" minOccurs="0">
+              <xs:element name="kategoriBarang" msprop:Generator_UserColumnName="kategoriBarang" msprop:Generator_ColumnPropNameInTable="kategoriBarangColumn" msprop:Generator_ColumnPropNameInRow="kategoriBarang" msprop:Generator_ColumnVarNameInTable="columnkategoriBarang" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="30" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="stokBarang" msprop:Generator_ColumnPropNameInRow="stokBarang" msprop:Generator_ColumnPropNameInTable="stokBarangColumn" msprop:Generator_ColumnVarNameInTable="columnstokBarang" msprop:Generator_UserColumnName="stokBarang" type="xs:int" minOccurs="0" />
-              <xs:element name="status" msprop:Generator_ColumnPropNameInRow="status" msprop:Generator_ColumnPropNameInTable="statusColumn" msprop:Generator_ColumnVarNameInTable="columnstatus" msprop:Generator_UserColumnName="status" type="xs:int" minOccurs="0" />
+              <xs:element name="stokBarang" msprop:Generator_UserColumnName="stokBarang" msprop:Generator_ColumnPropNameInTable="stokBarangColumn" msprop:Generator_ColumnPropNameInRow="stokBarang" msprop:Generator_ColumnVarNameInTable="columnstokBarang" type="xs:int" minOccurs="0" />
+              <xs:element name="status" msprop:Generator_UserColumnName="status" msprop:Generator_ColumnPropNameInTable="statusColumn" msprop:Generator_ColumnPropNameInRow="status" msprop:Generator_ColumnVarNameInTable="columnstatus" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

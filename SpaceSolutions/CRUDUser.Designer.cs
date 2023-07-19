@@ -249,7 +249,7 @@
             // roleColumn
             // 
             this.roleColumn.DataPropertyName = "role";
-            this.roleColumn.HeaderText = "Role";
+            this.roleColumn.HeaderText = "Hak Akses";
             this.roleColumn.Name = "roleColumn";
             this.roleColumn.ReadOnly = true;
             // 

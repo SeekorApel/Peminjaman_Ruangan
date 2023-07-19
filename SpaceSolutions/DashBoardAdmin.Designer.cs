@@ -388,7 +388,7 @@
             // 
             this.labelNama.AutoSize = true;
             this.labelNama.Font = new System.Drawing.Font("Poppins SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNama.Location = new System.Drawing.Point(831, 40);
+            this.labelNama.Location = new System.Drawing.Point(819, 43);
             this.labelNama.Name = "labelNama";
             this.labelNama.Size = new System.Drawing.Size(18, 23);
             this.labelNama.TabIndex = 3;
@@ -398,7 +398,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Poppins SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(830, 62);
+            this.label2.Location = new System.Drawing.Point(818, 65);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 23);
             this.label2.TabIndex = 4;
@@ -429,7 +429,7 @@
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.Image = global::SpaceSolutions.Properties.Resources.user__Black_;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(774, 38);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(762, 41);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
             this.guna2PictureBox1.Size = new System.Drawing.Size(45, 45);

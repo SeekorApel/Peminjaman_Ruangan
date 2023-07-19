@@ -133,7 +133,7 @@ namespace SpaceSolutions
                 }
                 connection.Close();
 
-                MessageBox.Show("Peminjaman Barang Berhasil", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                /*MessageBox.Show("Peminjaman Barang Berhasil", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);*/
 
             }
             catch (Exception ex)

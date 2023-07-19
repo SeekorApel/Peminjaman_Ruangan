@@ -15,6 +15,12 @@ namespace SpaceSolutions
     public partial class PeminjamanRuanganAdmin : Form
     {
         string idPeminjaman, idUser, idRuangan, jenisKegiatan, kapasitasOrang, tanggalPeminjamanTemp,lamaPeminjaman, statusPeminjaman;
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            getDataTabelPeminjamanRuangan();
+        }
+
         public PeminjamanRuanganAdmin()
         {
             InitializeComponent();

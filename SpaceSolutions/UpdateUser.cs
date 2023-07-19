@@ -141,17 +141,17 @@ namespace SpaceSolutions
             int role = 0;
             try
             {
-                if (cbRole.Text.Equals("Admin"))
+                if (cbRole.SelectedItem.Equals("Admin"))
                 {
                     role = 1;
                 }
-                else if (cbRole.Text.Equals("User"))
-                {
-                    role = 3;
-                }
-                else if (cbRole.Text.Equals("Manager"))
+                else if (cbRole.SelectedItem.Equals("Manager"))
                 {
                     role = 2;
+                }
+                else if (cbRole.SelectedItem.Equals("User"))
+                {
+                    role = 3;
                 }
 
                 SqlConnection connection = new SqlConnection();

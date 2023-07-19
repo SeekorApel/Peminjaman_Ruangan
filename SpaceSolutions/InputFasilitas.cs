@@ -36,7 +36,7 @@ namespace SpaceSolutions
             connection.Open();
             try
             {
-                string query = "SELECT idBarang, namaBarang , stokBarang FROM Barang WHERE status = 1";
+                string query = "SELECT idBarang, namaBarang, kategoriBarang, stokBarang FROM Barang WHERE status = 1";
                 SqlCommand cmd = new SqlCommand(query, connection);
                 SqlDataAdapter adp = new SqlDataAdapter(cmd);
 
@@ -153,7 +153,7 @@ namespace SpaceSolutions
             connection.Open();
             try
             {
-                string query = "SELECT idBarang, namaBarang FROM Barang where namaBarang LIKE '%' + @CariBarang + '%' AND [status] = 1";
+                string query = "SELECT idBarang, namaBarang, kategoriBarang, stokBarang FROM Barang where namaBarang LIKE '%' + @CariBarang + '%' AND [status] = 1";
                 SqlCommand cmd = new SqlCommand(query, connection);
                 cmd.Parameters.AddWithValue("@CariBarang", idCari);
                 SqlDataAdapter adp = new SqlDataAdapter(cmd);
@@ -341,7 +341,7 @@ namespace SpaceSolutions
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error : " + ex.Message);
+                MessageBox.Show("Error inputTabelFasilitas : " + ex.Message);
             }
         }
 
@@ -368,12 +368,12 @@ namespace SpaceSolutions
                 
                 connection.Close();
 
-                MessageBox.Show("Input Data Berhasil", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                /*MessageBox.Show("Input Data Berhasil", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);*/
 
             }
             catch (Exception ex) {
 
-                MessageBox.Show("Error : " + ex.Message);
+                MessageBox.Show("Error input tabelDetailFasilitas : " + ex.Message);
             }
         }
     }

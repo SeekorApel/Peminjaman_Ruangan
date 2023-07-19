@@ -39,9 +39,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dgvTabelRuangan = new System.Windows.Forms.DataGridView();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtNamaRuangan = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtIdRuangan = new Guna.UI2.WinForms.Guna2TextBox();
             this.Kolom1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Kolom2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Kolom3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,9 +46,17 @@
             this.Kolom5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Kolom555 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtNamaRuangan = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtIdRuangan = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtCariRuangan = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnCari = new System.Windows.Forms.PictureBox();
             this.btnRefresh = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabelRuangan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCari)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRefresh)).BeginInit();
@@ -233,6 +238,60 @@
             this.dgvTabelRuangan.TabIndex = 29;
             this.dgvTabelRuangan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTabelRuangan_CellClick);
             // 
+            // Kolom1
+            // 
+            this.Kolom1.DataPropertyName = "idRuangan";
+            this.Kolom1.HeaderText = "ID Ruangan";
+            this.Kolom1.Name = "Kolom1";
+            this.Kolom1.ReadOnly = true;
+            this.Kolom1.Visible = false;
+            // 
+            // Kolom2
+            // 
+            this.Kolom2.DataPropertyName = "namaRuangan";
+            this.Kolom2.HeaderText = "Nama Ruangan";
+            this.Kolom2.Name = "Kolom2";
+            this.Kolom2.ReadOnly = true;
+            this.Kolom2.Width = 130;
+            // 
+            // Kolom3
+            // 
+            this.Kolom3.DataPropertyName = "namaJenisRuangan";
+            this.Kolom3.HeaderText = "Jenis Ruangan";
+            this.Kolom3.Name = "Kolom3";
+            this.Kolom3.ReadOnly = true;
+            // 
+            // Kolom4
+            // 
+            this.Kolom4.DataPropertyName = "namaFasilitas";
+            this.Kolom4.HeaderText = "Fasilitas";
+            this.Kolom4.Name = "Kolom4";
+            this.Kolom4.ReadOnly = true;
+            // 
+            // Kolom5
+            // 
+            this.Kolom5.DataPropertyName = "ketersediaanRuangan";
+            this.Kolom5.HeaderText = "Ketersediaan Ruangan";
+            this.Kolom5.Name = "Kolom5";
+            this.Kolom5.ReadOnly = true;
+            this.Kolom5.Width = 150;
+            // 
+            // Kolom555
+            // 
+            this.Kolom555.DataPropertyName = "lokasiRuangan";
+            this.Kolom555.HeaderText = "Lokasi Ruangan";
+            this.Kolom555.Name = "Kolom555";
+            this.Kolom555.ReadOnly = true;
+            this.Kolom555.Width = 120;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "status";
+            this.Column6.HeaderText = "Status";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Visible = false;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -290,60 +349,6 @@
             this.txtIdRuangan.Size = new System.Drawing.Size(33, 36);
             this.txtIdRuangan.TabIndex = 33;
             // 
-            // Kolom1
-            // 
-            this.Kolom1.DataPropertyName = "idRuangan";
-            this.Kolom1.HeaderText = "ID Ruangan";
-            this.Kolom1.Name = "Kolom1";
-            this.Kolom1.ReadOnly = true;
-            this.Kolom1.Visible = false;
-            // 
-            // Kolom2
-            // 
-            this.Kolom2.DataPropertyName = "namaRuangan";
-            this.Kolom2.HeaderText = "Nama Ruangan";
-            this.Kolom2.Name = "Kolom2";
-            this.Kolom2.ReadOnly = true;
-            this.Kolom2.Width = 130;
-            // 
-            // Kolom3
-            // 
-            this.Kolom3.DataPropertyName = "namaJenisRuangan";
-            this.Kolom3.HeaderText = "Jenis Ruangan";
-            this.Kolom3.Name = "Kolom3";
-            this.Kolom3.ReadOnly = true;
-            // 
-            // Kolom4
-            // 
-            this.Kolom4.DataPropertyName = "namaFasilitas";
-            this.Kolom4.HeaderText = "Fasilitas";
-            this.Kolom4.Name = "Kolom4";
-            this.Kolom4.ReadOnly = true;
-            // 
-            // Kolom5
-            // 
-            this.Kolom5.DataPropertyName = "ketersediaanRuangan";
-            this.Kolom5.HeaderText = "Ketersediaan Ruangan";
-            this.Kolom5.Name = "Kolom5";
-            this.Kolom5.ReadOnly = true;
-            this.Kolom5.Width = 150;
-            // 
-            // Kolom555
-            // 
-            this.Kolom555.DataPropertyName = "lokasiRuangan";
-            this.Kolom555.HeaderText = "Lokasi Ruangan";
-            this.Kolom555.Name = "Kolom555";
-            this.Kolom555.ReadOnly = true;
-            this.Kolom555.Width = 120;
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "status";
-            this.Column6.HeaderText = "Status";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Visible = false;
-            // 
             // txtCariRuangan
             // 
             this.txtCariRuangan.BorderRadius = 4;
@@ -391,12 +396,77 @@
             this.btnRefresh.TabStop = false;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Red;
+            this.label6.Location = new System.Drawing.Point(131, 284);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(19, 26);
+            this.label6.TabIndex = 40;
+            this.label6.Text = "*";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Red;
+            this.label8.Location = new System.Drawing.Point(176, 364);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(19, 26);
+            this.label8.TabIndex = 41;
+            this.label8.Text = "*";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.Location = new System.Drawing.Point(530, 284);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(19, 26);
+            this.label9.TabIndex = 42;
+            this.label9.Text = "*";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Red;
+            this.label10.Location = new System.Drawing.Point(472, 364);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(19, 26);
+            this.label10.TabIndex = 43;
+            this.label10.Text = "*";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Red;
+            this.label11.Location = new System.Drawing.Point(788, 284);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(19, 26);
+            this.label11.TabIndex = 44;
+            this.label11.Text = "*";
+            // 
             // PeminjamanRuanganUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(987, 519);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.btnCari);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.txtCariRuangan);
@@ -452,5 +522,10 @@
         private Guna.UI2.WinForms.Guna2TextBox txtCariRuangan;
         private System.Windows.Forms.PictureBox btnCari;
         private System.Windows.Forms.PictureBox btnRefresh;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
     }
 }
