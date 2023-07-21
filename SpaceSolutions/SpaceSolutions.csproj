@@ -351,6 +351,9 @@
     <EmbeddedResource Include="CRUDUser.resx">
       <DependentUpon>CRUDUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DashBoardManager.resx">
+      <DependentUpon>DashBoardManager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DashBoardUser.resx">
       <DependentUpon>DashBoardUser.cs</DependentUpon>
     </EmbeddedResource>

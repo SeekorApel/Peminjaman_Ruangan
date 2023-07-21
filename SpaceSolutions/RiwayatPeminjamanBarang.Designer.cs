@@ -33,11 +33,11 @@
             this.cbFilter = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvViewRiwayatPeminjamanBarang = new System.Windows.Forms.DataGridView();
-            this.btnRefresh = new System.Windows.Forms.PictureBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnRefresh = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvViewRiwayatPeminjamanBarang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRefresh)).BeginInit();
             this.SuspendLayout();
@@ -111,17 +111,6 @@
             this.dgvViewRiwayatPeminjamanBarang.Size = new System.Drawing.Size(525, 293);
             this.dgvViewRiwayatPeminjamanBarang.TabIndex = 48;
             // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRefresh.Image = global::SpaceSolutions.Properties.Resources.Refresh;
-            this.btnRefresh.Location = new System.Drawing.Point(627, 422);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(35, 35);
-            this.btnRefresh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnRefresh.TabIndex = 52;
-            this.btnRefresh.TabStop = false;
-            // 
             // Column1
             // 
             this.Column1.DataPropertyName = "namaBarang";
@@ -152,6 +141,18 @@
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
             this.Column6.Width = 200;
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRefresh.Image = global::SpaceSolutions.Properties.Resources.Refresh;
+            this.btnRefresh.Location = new System.Drawing.Point(627, 422);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(35, 35);
+            this.btnRefresh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnRefresh.TabIndex = 52;
+            this.btnRefresh.TabStop = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // RiwayatPeminjamanBarang
             // 

@@ -52,7 +52,15 @@ namespace SpaceSolutions
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            updateDB();
+            if (txtNamaRuangan.Text == "" || cbFasilitas.SelectedIndex == -1 || cbJenisRuangan.SelectedIndex == -1 || (rbTersedia.Checked == false && rbTidakTersedia.Checked == false) || txtLokasiRuangan.Text == "")
+            {
+                MessageBox.Show("Tidak boleh ada field yang kosong", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                updateDB();
+            }
+            
         }
 
         private void UpdateRuangan_Load(object sender, EventArgs e)

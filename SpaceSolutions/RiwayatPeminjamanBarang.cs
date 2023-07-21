@@ -28,7 +28,18 @@ namespace SpaceSolutions
 
         private void cbFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (cbFilter.SelectedIndex == 0)
+            {
+                string status = "1";
+                filterBy(status);
+                
+            }
+            else if (cbFilter.SelectedIndex == 1)
+            {
+                string status = "2";
+                filterBy(status);
 
+            }
         }
 
         private void getDataPeminjamanBarangByUser()
@@ -68,7 +79,7 @@ namespace SpaceSolutions
 
                 // Menambahkan parameter dan nilainya ke dalam stored procedure
                 cmd.Parameters.AddWithValue("@idUser", idUser);
-                cmd.Parameters.AddWithValue("@status", status);
+                cmd.Parameters.AddWithValue("@statusPeminjaman", status);
 
                 SqlDataAdapter adp = new SqlDataAdapter(cmd);
 
@@ -80,6 +91,11 @@ namespace SpaceSolutions
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            getDataPeminjamanBarangByUser();
         }
     }
 }

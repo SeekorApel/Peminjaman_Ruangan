@@ -147,3 +147,4 @@ D:\Project Semester 2\PRG2\SpaceSolutions\bin\Debug\zh-CHS\Microsoft.ReportViewe
 D:\Project Semester 2\PRG2\SpaceSolutions\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 D:\Project Semester 2\PRG2\SpaceSolutions\obj\Debug\SpaceSolutions.LaporanPeminjamanRuangan.resources
 D:\Project Semester 2\PRG2\SpaceSolutions\obj\Debug\SpaceSolutions.LaporanPeminjamanBarang.resources
+D:\Project Semester 2\PRG2\SpaceSolutions\obj\Debug\SpaceSolutions.DashBoardManager.resources

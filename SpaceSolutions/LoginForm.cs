@@ -80,7 +80,12 @@ namespace SpaceSolutions
                 }
                 else if (returnValue == 2)
                 {
+                    string idUser = getIdUser();
+                    string namaUser = getNamaUser();
                     MessageBox.Show("Selamat Datang Manager!", "Login Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    DashBoardManager manager = new DashBoardManager(idUser, namaUser);
+                    this.Hide();
+                    manager.Show();
                 }
                 else if (returnValue == 3)
                 {

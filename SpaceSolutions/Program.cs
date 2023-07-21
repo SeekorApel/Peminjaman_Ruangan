@@ -17,7 +17,7 @@ namespace SpaceSolutions
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LaporanPeminjamanBarang());
+            Application.Run(new LoginForm());
         }
     }
 }

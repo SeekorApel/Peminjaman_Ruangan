@@ -60,5 +60,20 @@ namespace SpaceSolutions
                 this.reportViewer1.RefreshReport();
             }
         }
+
+        private void txtTahun_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Memeriksa apakah karakter yang ditekan adalah angka atau kontrol (seperti backspace)
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true; // Mencegah karakter yang tidak valid dimasukkan
+            }
+
+            // Memeriksa apakah jumlah karakter telah mencapai batas maksimum
+            if (txtTahun.Text.Length >= 4 && e.KeyChar != '\b') // '\b' adalah karakter backspace
+            {
+                e.Handled = true; // Mencegah karakter ditambahkan jika batas maksimum telah tercapai
+            }
+        }
     }
 }

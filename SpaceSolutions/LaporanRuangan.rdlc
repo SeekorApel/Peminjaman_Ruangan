@@ -6,7 +6,7 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>4.63935cm</Width>
+              <Width>5.14206cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>3.58041cm</Width>
@@ -44,6 +44,7 @@
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
+                                <Color>Gray</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -79,6 +80,7 @@
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
+                                <Color>Gray</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -114,6 +116,7 @@
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
+                                <Color>Gray</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -149,6 +152,7 @@
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
+                                <Color>Gray</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -184,6 +188,7 @@
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
+                                <Color>Gray</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -219,6 +224,7 @@
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
+                                <Color>Gray</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -254,6 +260,7 @@
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
+                                <Color>Gray</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -534,9 +541,9 @@
         </TablixRowHierarchy>
         <DataSetName>DSLaporanRuangan</DataSetName>
         <Top>1.21391cm</Top>
-        <Left>1.85487cm</Left>
+        <Left>1.53737cm</Left>
         <Height>1.2cm</Height>
-        <Width>27.8446cm</Width>
+        <Width>28.34731cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -559,7 +566,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox37</rd:DefaultName>
         <Top>2.80196cm</Top>
-        <Left>23.07257cm</Left>
+        <Left>24.02507cm</Left>
         <Height>0.6cm</Height>
         <Width>2.65875cm</Width>
         <ZIndex>1</ZIndex>
@@ -591,7 +598,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox37</rd:DefaultName>
         <Top>2.80196cm</Top>
-        <Left>26.08822cm</Left>
+        <Left>27.04072cm</Left>
         <Height>0.6cm</Height>
         <Width>2.65875cm</Width>
         <ZIndex>2</ZIndex>
