@@ -38,6 +38,10 @@ namespace SpaceSolutions {
         
         private BarangDataTable tableBarang;
         
+        private LaporanPeminjamanRuanganDataTable tableLaporanPeminjamanRuangan;
+        
+        private LaporanPeminjamanBarangDataTable tableLaporanPeminjamanBarang;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -86,6 +90,12 @@ namespace SpaceSolutions {
                 }
                 if ((ds.Tables["Barang"] != null)) {
                     base.Tables.Add(new BarangDataTable(ds.Tables["Barang"]));
+                }
+                if ((ds.Tables["LaporanPeminjamanRuangan"] != null)) {
+                    base.Tables.Add(new LaporanPeminjamanRuanganDataTable(ds.Tables["LaporanPeminjamanRuangan"]));
+                }
+                if ((ds.Tables["LaporanPeminjamanBarang"] != null)) {
+                    base.Tables.Add(new LaporanPeminjamanBarangDataTable(ds.Tables["LaporanPeminjamanBarang"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -177,6 +187,26 @@ namespace SpaceSolutions {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public LaporanPeminjamanRuanganDataTable LaporanPeminjamanRuangan {
+            get {
+                return this.tableLaporanPeminjamanRuangan;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public LaporanPeminjamanBarangDataTable LaporanPeminjamanBarang {
+            get {
+                return this.tableLaporanPeminjamanBarang;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -263,6 +293,12 @@ namespace SpaceSolutions {
                 if ((ds.Tables["Barang"] != null)) {
                     base.Tables.Add(new BarangDataTable(ds.Tables["Barang"]));
                 }
+                if ((ds.Tables["LaporanPeminjamanRuangan"] != null)) {
+                    base.Tables.Add(new LaporanPeminjamanRuanganDataTable(ds.Tables["LaporanPeminjamanRuangan"]));
+                }
+                if ((ds.Tables["LaporanPeminjamanBarang"] != null)) {
+                    base.Tables.Add(new LaporanPeminjamanBarangDataTable(ds.Tables["LaporanPeminjamanBarang"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -338,6 +374,18 @@ namespace SpaceSolutions {
                     this.tableBarang.InitVars();
                 }
             }
+            this.tableLaporanPeminjamanRuangan = ((LaporanPeminjamanRuanganDataTable)(base.Tables["LaporanPeminjamanRuangan"]));
+            if ((initTable == true)) {
+                if ((this.tableLaporanPeminjamanRuangan != null)) {
+                    this.tableLaporanPeminjamanRuangan.InitVars();
+                }
+            }
+            this.tableLaporanPeminjamanBarang = ((LaporanPeminjamanBarangDataTable)(base.Tables["LaporanPeminjamanBarang"]));
+            if ((initTable == true)) {
+                if ((this.tableLaporanPeminjamanBarang != null)) {
+                    this.tableLaporanPeminjamanBarang.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -362,6 +410,10 @@ namespace SpaceSolutions {
             base.Tables.Add(this.tableDendaKerusakanBarang);
             this.tableBarang = new BarangDataTable();
             base.Tables.Add(this.tableBarang);
+            this.tableLaporanPeminjamanRuangan = new LaporanPeminjamanRuanganDataTable();
+            base.Tables.Add(this.tableLaporanPeminjamanRuangan);
+            this.tableLaporanPeminjamanBarang = new LaporanPeminjamanBarangDataTable();
+            base.Tables.Add(this.tableLaporanPeminjamanBarang);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -403,6 +455,18 @@ namespace SpaceSolutions {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private bool ShouldSerializeBarang() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializeLaporanPeminjamanRuangan() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializeLaporanPeminjamanBarang() {
             return false;
         }
         
@@ -481,6 +545,12 @@ namespace SpaceSolutions {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void BarangRowChangeEventHandler(object sender, BarangRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void LaporanPeminjamanRuanganRowChangeEventHandler(object sender, LaporanPeminjamanRuanganRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void LaporanPeminjamanBarangRowChangeEventHandler(object sender, LaporanPeminjamanBarangRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -2738,6 +2808,708 @@ namespace SpaceSolutions {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class LaporanPeminjamanRuanganDataTable : global::System.Data.TypedTableBase<LaporanPeminjamanRuanganRow> {
+            
+            private global::System.Data.DataColumn columnidPeminjamanRuangan;
+            
+            private global::System.Data.DataColumn columntanggalPeminjaman;
+            
+            private global::System.Data.DataColumn columnlamaPeminjaman;
+            
+            private global::System.Data.DataColumn columnnama;
+            
+            private global::System.Data.DataColumn columnnamaRuangan;
+            
+            private global::System.Data.DataColumn columnstatusPeminjaman;
+            
+            private global::System.Data.DataColumn columnkondisiRuangan;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public LaporanPeminjamanRuanganDataTable() {
+                this.TableName = "LaporanPeminjamanRuangan";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal LaporanPeminjamanRuanganDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected LaporanPeminjamanRuanganDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn idPeminjamanRuanganColumn {
+                get {
+                    return this.columnidPeminjamanRuangan;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn tanggalPeminjamanColumn {
+                get {
+                    return this.columntanggalPeminjaman;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn lamaPeminjamanColumn {
+                get {
+                    return this.columnlamaPeminjaman;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn namaColumn {
+                get {
+                    return this.columnnama;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn namaRuanganColumn {
+                get {
+                    return this.columnnamaRuangan;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn statusPeminjamanColumn {
+                get {
+                    return this.columnstatusPeminjaman;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn kondisiRuanganColumn {
+                get {
+                    return this.columnkondisiRuangan;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public LaporanPeminjamanRuanganRow this[int index] {
+                get {
+                    return ((LaporanPeminjamanRuanganRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event LaporanPeminjamanRuanganRowChangeEventHandler LaporanPeminjamanRuanganRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event LaporanPeminjamanRuanganRowChangeEventHandler LaporanPeminjamanRuanganRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event LaporanPeminjamanRuanganRowChangeEventHandler LaporanPeminjamanRuanganRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event LaporanPeminjamanRuanganRowChangeEventHandler LaporanPeminjamanRuanganRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AddLaporanPeminjamanRuanganRow(LaporanPeminjamanRuanganRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public LaporanPeminjamanRuanganRow AddLaporanPeminjamanRuanganRow(string idPeminjamanRuangan, System.DateTime tanggalPeminjaman, int lamaPeminjaman, string nama, string namaRuangan, string statusPeminjaman, string kondisiRuangan) {
+                LaporanPeminjamanRuanganRow rowLaporanPeminjamanRuanganRow = ((LaporanPeminjamanRuanganRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        idPeminjamanRuangan,
+                        tanggalPeminjaman,
+                        lamaPeminjaman,
+                        nama,
+                        namaRuangan,
+                        statusPeminjaman,
+                        kondisiRuangan};
+                rowLaporanPeminjamanRuanganRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowLaporanPeminjamanRuanganRow);
+                return rowLaporanPeminjamanRuanganRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public LaporanPeminjamanRuanganRow FindByidPeminjamanRuangan(string idPeminjamanRuangan) {
+                return ((LaporanPeminjamanRuanganRow)(this.Rows.Find(new object[] {
+                            idPeminjamanRuangan})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                LaporanPeminjamanRuanganDataTable cln = ((LaporanPeminjamanRuanganDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new LaporanPeminjamanRuanganDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnidPeminjamanRuangan = base.Columns["idPeminjamanRuangan"];
+                this.columntanggalPeminjaman = base.Columns["tanggalPeminjaman"];
+                this.columnlamaPeminjaman = base.Columns["lamaPeminjaman"];
+                this.columnnama = base.Columns["nama"];
+                this.columnnamaRuangan = base.Columns["namaRuangan"];
+                this.columnstatusPeminjaman = base.Columns["statusPeminjaman"];
+                this.columnkondisiRuangan = base.Columns["kondisiRuangan"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnidPeminjamanRuangan = new global::System.Data.DataColumn("idPeminjamanRuangan", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnidPeminjamanRuangan);
+                this.columntanggalPeminjaman = new global::System.Data.DataColumn("tanggalPeminjaman", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntanggalPeminjaman);
+                this.columnlamaPeminjaman = new global::System.Data.DataColumn("lamaPeminjaman", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnlamaPeminjaman);
+                this.columnnama = new global::System.Data.DataColumn("nama", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnama);
+                this.columnnamaRuangan = new global::System.Data.DataColumn("namaRuangan", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnamaRuangan);
+                this.columnstatusPeminjaman = new global::System.Data.DataColumn("statusPeminjaman", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstatusPeminjaman);
+                this.columnkondisiRuangan = new global::System.Data.DataColumn("kondisiRuangan", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnkondisiRuangan);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnidPeminjamanRuangan}, true));
+                this.columnidPeminjamanRuangan.AllowDBNull = false;
+                this.columnidPeminjamanRuangan.Unique = true;
+                this.columnidPeminjamanRuangan.MaxLength = 10;
+                this.columntanggalPeminjaman.AllowDBNull = false;
+                this.columnlamaPeminjaman.AllowDBNull = false;
+                this.columnnama.MaxLength = 50;
+                this.columnnamaRuangan.MaxLength = 50;
+                this.columnstatusPeminjaman.ReadOnly = true;
+                this.columnstatusPeminjaman.MaxLength = 12;
+                this.columnkondisiRuangan.ReadOnly = true;
+                this.columnkondisiRuangan.MaxLength = 17;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public LaporanPeminjamanRuanganRow NewLaporanPeminjamanRuanganRow() {
+                return ((LaporanPeminjamanRuanganRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new LaporanPeminjamanRuanganRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(LaporanPeminjamanRuanganRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.LaporanPeminjamanRuanganRowChanged != null)) {
+                    this.LaporanPeminjamanRuanganRowChanged(this, new LaporanPeminjamanRuanganRowChangeEvent(((LaporanPeminjamanRuanganRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.LaporanPeminjamanRuanganRowChanging != null)) {
+                    this.LaporanPeminjamanRuanganRowChanging(this, new LaporanPeminjamanRuanganRowChangeEvent(((LaporanPeminjamanRuanganRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.LaporanPeminjamanRuanganRowDeleted != null)) {
+                    this.LaporanPeminjamanRuanganRowDeleted(this, new LaporanPeminjamanRuanganRowChangeEvent(((LaporanPeminjamanRuanganRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.LaporanPeminjamanRuanganRowDeleting != null)) {
+                    this.LaporanPeminjamanRuanganRowDeleting(this, new LaporanPeminjamanRuanganRowChangeEvent(((LaporanPeminjamanRuanganRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemoveLaporanPeminjamanRuanganRow(LaporanPeminjamanRuanganRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                DSSpaceSolutions ds = new DSSpaceSolutions();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "LaporanPeminjamanRuanganDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class LaporanPeminjamanBarangDataTable : global::System.Data.TypedTableBase<LaporanPeminjamanBarangRow> {
+            
+            private global::System.Data.DataColumn columnidPeminjamanBarang;
+            
+            private global::System.Data.DataColumn columnnama;
+            
+            private global::System.Data.DataColumn columntanggalPeminjaman;
+            
+            private global::System.Data.DataColumn columnlamaPeminjaman;
+            
+            private global::System.Data.DataColumn columntotal;
+            
+            private global::System.Data.DataColumn columnkondisiBarang;
+            
+            private global::System.Data.DataColumn columnstatusPeminjaman;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public LaporanPeminjamanBarangDataTable() {
+                this.TableName = "LaporanPeminjamanBarang";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal LaporanPeminjamanBarangDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected LaporanPeminjamanBarangDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn idPeminjamanBarangColumn {
+                get {
+                    return this.columnidPeminjamanBarang;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn namaColumn {
+                get {
+                    return this.columnnama;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn tanggalPeminjamanColumn {
+                get {
+                    return this.columntanggalPeminjaman;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn lamaPeminjamanColumn {
+                get {
+                    return this.columnlamaPeminjaman;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn totalColumn {
+                get {
+                    return this.columntotal;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn kondisiBarangColumn {
+                get {
+                    return this.columnkondisiBarang;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn statusPeminjamanColumn {
+                get {
+                    return this.columnstatusPeminjaman;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public LaporanPeminjamanBarangRow this[int index] {
+                get {
+                    return ((LaporanPeminjamanBarangRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event LaporanPeminjamanBarangRowChangeEventHandler LaporanPeminjamanBarangRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event LaporanPeminjamanBarangRowChangeEventHandler LaporanPeminjamanBarangRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event LaporanPeminjamanBarangRowChangeEventHandler LaporanPeminjamanBarangRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event LaporanPeminjamanBarangRowChangeEventHandler LaporanPeminjamanBarangRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AddLaporanPeminjamanBarangRow(LaporanPeminjamanBarangRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public LaporanPeminjamanBarangRow AddLaporanPeminjamanBarangRow(string idPeminjamanBarang, string nama, System.DateTime tanggalPeminjaman, int lamaPeminjaman, int total, string kondisiBarang, string statusPeminjaman) {
+                LaporanPeminjamanBarangRow rowLaporanPeminjamanBarangRow = ((LaporanPeminjamanBarangRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        idPeminjamanBarang,
+                        nama,
+                        tanggalPeminjaman,
+                        lamaPeminjaman,
+                        total,
+                        kondisiBarang,
+                        statusPeminjaman};
+                rowLaporanPeminjamanBarangRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowLaporanPeminjamanBarangRow);
+                return rowLaporanPeminjamanBarangRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public LaporanPeminjamanBarangRow FindByidPeminjamanBarang(string idPeminjamanBarang) {
+                return ((LaporanPeminjamanBarangRow)(this.Rows.Find(new object[] {
+                            idPeminjamanBarang})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                LaporanPeminjamanBarangDataTable cln = ((LaporanPeminjamanBarangDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new LaporanPeminjamanBarangDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnidPeminjamanBarang = base.Columns["idPeminjamanBarang"];
+                this.columnnama = base.Columns["nama"];
+                this.columntanggalPeminjaman = base.Columns["tanggalPeminjaman"];
+                this.columnlamaPeminjaman = base.Columns["lamaPeminjaman"];
+                this.columntotal = base.Columns["total"];
+                this.columnkondisiBarang = base.Columns["kondisiBarang"];
+                this.columnstatusPeminjaman = base.Columns["statusPeminjaman"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnidPeminjamanBarang = new global::System.Data.DataColumn("idPeminjamanBarang", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnidPeminjamanBarang);
+                this.columnnama = new global::System.Data.DataColumn("nama", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnama);
+                this.columntanggalPeminjaman = new global::System.Data.DataColumn("tanggalPeminjaman", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntanggalPeminjaman);
+                this.columnlamaPeminjaman = new global::System.Data.DataColumn("lamaPeminjaman", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnlamaPeminjaman);
+                this.columntotal = new global::System.Data.DataColumn("total", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntotal);
+                this.columnkondisiBarang = new global::System.Data.DataColumn("kondisiBarang", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnkondisiBarang);
+                this.columnstatusPeminjaman = new global::System.Data.DataColumn("statusPeminjaman", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstatusPeminjaman);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnidPeminjamanBarang}, true));
+                this.columnidPeminjamanBarang.AllowDBNull = false;
+                this.columnidPeminjamanBarang.Unique = true;
+                this.columnidPeminjamanBarang.MaxLength = 10;
+                this.columnnama.MaxLength = 50;
+                this.columntanggalPeminjaman.AllowDBNull = false;
+                this.columnlamaPeminjaman.AllowDBNull = false;
+                this.columntotal.ReadOnly = true;
+                this.columnkondisiBarang.ReadOnly = true;
+                this.columnkondisiBarang.MaxLength = 17;
+                this.columnstatusPeminjaman.ReadOnly = true;
+                this.columnstatusPeminjaman.MaxLength = 12;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public LaporanPeminjamanBarangRow NewLaporanPeminjamanBarangRow() {
+                return ((LaporanPeminjamanBarangRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new LaporanPeminjamanBarangRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(LaporanPeminjamanBarangRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.LaporanPeminjamanBarangRowChanged != null)) {
+                    this.LaporanPeminjamanBarangRowChanged(this, new LaporanPeminjamanBarangRowChangeEvent(((LaporanPeminjamanBarangRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.LaporanPeminjamanBarangRowChanging != null)) {
+                    this.LaporanPeminjamanBarangRowChanging(this, new LaporanPeminjamanBarangRowChangeEvent(((LaporanPeminjamanBarangRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.LaporanPeminjamanBarangRowDeleted != null)) {
+                    this.LaporanPeminjamanBarangRowDeleted(this, new LaporanPeminjamanBarangRowChangeEvent(((LaporanPeminjamanBarangRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.LaporanPeminjamanBarangRowDeleting != null)) {
+                    this.LaporanPeminjamanBarangRowDeleting(this, new LaporanPeminjamanBarangRowChangeEvent(((LaporanPeminjamanBarangRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemoveLaporanPeminjamanBarangRow(LaporanPeminjamanBarangRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                DSSpaceSolutions ds = new DSSpaceSolutions();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "LaporanPeminjamanBarangDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class FasilitasRow : global::System.Data.DataRow {
@@ -3643,6 +4415,331 @@ namespace SpaceSolutions {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class LaporanPeminjamanRuanganRow : global::System.Data.DataRow {
+            
+            private LaporanPeminjamanRuanganDataTable tableLaporanPeminjamanRuangan;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal LaporanPeminjamanRuanganRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableLaporanPeminjamanRuangan = ((LaporanPeminjamanRuanganDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string idPeminjamanRuangan {
+                get {
+                    return ((string)(this[this.tableLaporanPeminjamanRuangan.idPeminjamanRuanganColumn]));
+                }
+                set {
+                    this[this.tableLaporanPeminjamanRuangan.idPeminjamanRuanganColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime tanggalPeminjaman {
+                get {
+                    return ((global::System.DateTime)(this[this.tableLaporanPeminjamanRuangan.tanggalPeminjamanColumn]));
+                }
+                set {
+                    this[this.tableLaporanPeminjamanRuangan.tanggalPeminjamanColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int lamaPeminjaman {
+                get {
+                    return ((int)(this[this.tableLaporanPeminjamanRuangan.lamaPeminjamanColumn]));
+                }
+                set {
+                    this[this.tableLaporanPeminjamanRuangan.lamaPeminjamanColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string nama {
+                get {
+                    try {
+                        return ((string)(this[this.tableLaporanPeminjamanRuangan.namaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'nama\' in table \'LaporanPeminjamanRuangan\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLaporanPeminjamanRuangan.namaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string namaRuangan {
+                get {
+                    try {
+                        return ((string)(this[this.tableLaporanPeminjamanRuangan.namaRuanganColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'namaRuangan\' in table \'LaporanPeminjamanRuangan\' is DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableLaporanPeminjamanRuangan.namaRuanganColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string statusPeminjaman {
+                get {
+                    try {
+                        return ((string)(this[this.tableLaporanPeminjamanRuangan.statusPeminjamanColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'statusPeminjaman\' in table \'LaporanPeminjamanRuangan\' is DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tableLaporanPeminjamanRuangan.statusPeminjamanColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string kondisiRuangan {
+                get {
+                    try {
+                        return ((string)(this[this.tableLaporanPeminjamanRuangan.kondisiRuanganColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'kondisiRuangan\' in table \'LaporanPeminjamanRuangan\' is DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tableLaporanPeminjamanRuangan.kondisiRuanganColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsnamaNull() {
+                return this.IsNull(this.tableLaporanPeminjamanRuangan.namaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetnamaNull() {
+                this[this.tableLaporanPeminjamanRuangan.namaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsnamaRuanganNull() {
+                return this.IsNull(this.tableLaporanPeminjamanRuangan.namaRuanganColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetnamaRuanganNull() {
+                this[this.tableLaporanPeminjamanRuangan.namaRuanganColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsstatusPeminjamanNull() {
+                return this.IsNull(this.tableLaporanPeminjamanRuangan.statusPeminjamanColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetstatusPeminjamanNull() {
+                this[this.tableLaporanPeminjamanRuangan.statusPeminjamanColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IskondisiRuanganNull() {
+                return this.IsNull(this.tableLaporanPeminjamanRuangan.kondisiRuanganColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetkondisiRuanganNull() {
+                this[this.tableLaporanPeminjamanRuangan.kondisiRuanganColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class LaporanPeminjamanBarangRow : global::System.Data.DataRow {
+            
+            private LaporanPeminjamanBarangDataTable tableLaporanPeminjamanBarang;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal LaporanPeminjamanBarangRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableLaporanPeminjamanBarang = ((LaporanPeminjamanBarangDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string idPeminjamanBarang {
+                get {
+                    return ((string)(this[this.tableLaporanPeminjamanBarang.idPeminjamanBarangColumn]));
+                }
+                set {
+                    this[this.tableLaporanPeminjamanBarang.idPeminjamanBarangColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string nama {
+                get {
+                    try {
+                        return ((string)(this[this.tableLaporanPeminjamanBarang.namaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'nama\' in table \'LaporanPeminjamanBarang\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLaporanPeminjamanBarang.namaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime tanggalPeminjaman {
+                get {
+                    return ((global::System.DateTime)(this[this.tableLaporanPeminjamanBarang.tanggalPeminjamanColumn]));
+                }
+                set {
+                    this[this.tableLaporanPeminjamanBarang.tanggalPeminjamanColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int lamaPeminjaman {
+                get {
+                    return ((int)(this[this.tableLaporanPeminjamanBarang.lamaPeminjamanColumn]));
+                }
+                set {
+                    this[this.tableLaporanPeminjamanBarang.lamaPeminjamanColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int total {
+                get {
+                    try {
+                        return ((int)(this[this.tableLaporanPeminjamanBarang.totalColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'total\' in table \'LaporanPeminjamanBarang\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLaporanPeminjamanBarang.totalColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string kondisiBarang {
+                get {
+                    try {
+                        return ((string)(this[this.tableLaporanPeminjamanBarang.kondisiBarangColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'kondisiBarang\' in table \'LaporanPeminjamanBarang\' is DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableLaporanPeminjamanBarang.kondisiBarangColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string statusPeminjaman {
+                get {
+                    try {
+                        return ((string)(this[this.tableLaporanPeminjamanBarang.statusPeminjamanColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'statusPeminjaman\' in table \'LaporanPeminjamanBarang\' is DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLaporanPeminjamanBarang.statusPeminjamanColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsnamaNull() {
+                return this.IsNull(this.tableLaporanPeminjamanBarang.namaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetnamaNull() {
+                this[this.tableLaporanPeminjamanBarang.namaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IstotalNull() {
+                return this.IsNull(this.tableLaporanPeminjamanBarang.totalColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SettotalNull() {
+                this[this.tableLaporanPeminjamanBarang.totalColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IskondisiBarangNull() {
+                return this.IsNull(this.tableLaporanPeminjamanBarang.kondisiBarangColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetkondisiBarangNull() {
+                this[this.tableLaporanPeminjamanBarang.kondisiBarangColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsstatusPeminjamanNull() {
+                return this.IsNull(this.tableLaporanPeminjamanBarang.statusPeminjamanColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetstatusPeminjamanNull() {
+                this[this.tableLaporanPeminjamanBarang.statusPeminjamanColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -3866,6 +4963,74 @@ namespace SpaceSolutions {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public BarangRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class LaporanPeminjamanRuanganRowChangeEvent : global::System.EventArgs {
+            
+            private LaporanPeminjamanRuanganRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public LaporanPeminjamanRuanganRowChangeEvent(LaporanPeminjamanRuanganRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public LaporanPeminjamanRuanganRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class LaporanPeminjamanBarangRowChangeEvent : global::System.EventArgs {
+            
+            private LaporanPeminjamanBarangRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public LaporanPeminjamanBarangRowChangeEvent(LaporanPeminjamanBarangRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public LaporanPeminjamanBarangRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -6760,6 +7925,383 @@ SELECT IdBarang, namaBarang, kategoriBarang, stokBarang, status FROM Barang WHER
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(string namaBarang, string kategoriBarang, global::System.Nullable<int> stokBarang, global::System.Nullable<int> status, string Original_IdBarang, string Original_namaBarang, string Original_kategoriBarang, global::System.Nullable<int> Original_stokBarang, global::System.Nullable<int> Original_status) {
             return this.Update(Original_IdBarang, namaBarang, kategoriBarang, stokBarang, status, Original_IdBarang, Original_namaBarang, Original_kategoriBarang, Original_stokBarang, Original_status);
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class LaporanPeminjamanRuanganTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public LaporanPeminjamanRuanganTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "LaporanPeminjamanRuangan";
+            tableMapping.ColumnMappings.Add("idPeminjamanRuangan", "idPeminjamanRuangan");
+            tableMapping.ColumnMappings.Add("tanggalPeminjaman", "tanggalPeminjaman");
+            tableMapping.ColumnMappings.Add("lamaPeminjaman", "lamaPeminjaman");
+            tableMapping.ColumnMappings.Add("nama", "nama");
+            tableMapping.ColumnMappings.Add("namaRuangan", "namaRuangan");
+            tableMapping.ColumnMappings.Add("statusPeminjaman", "statusPeminjaman");
+            tableMapping.ColumnMappings.Add("kondisiRuangan", "kondisiRuangan");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::SpaceSolutions.Properties.Settings.Default.SpaceSolutionConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"SELECT        PeminjamanRuangan.idPeminjamanRuangan, [User].nama, Ruangan.namaRuangan, PeminjamanRuangan.tanggalPeminjaman, PeminjamanRuangan.lamaPeminjaman, 
+                         CASE WHEN PeminjamanRuangan.statusPeminjaman = 0 THEN 'Pending' WHEN PeminjamanRuangan.statusPeminjaman = 1 THEN 'Dipinjam' WHEN PeminjamanRuangan.statusPeminjaman = 2 THEN 'Ditolak' WHEN PeminjamanRuangan.statusPeminjaman
+                          = 3 THEN 'Dikembalikan' ELSE 'Unknown' END AS statusPeminjaman, 
+                         CASE WHEN PeminjamanRuangan.kondisiRuangan = 0 THEN 'Tidak Rusak' WHEN PeminjamanRuangan.kondisiRuangan = 1 THEN 'Terjadi kerusakan' ELSE '' END AS kondisiRuangan
+FROM            PeminjamanRuangan INNER JOIN
+                         Ruangan ON PeminjamanRuangan.idRuangan = Ruangan.idRuangan INNER JOIN
+                         [User] ON PeminjamanRuangan.idUser = [User].idUser
+WHERE        (PeminjamanRuangan.statusPeminjaman = @status) AND (MONTH(PeminjamanRuangan.tanggalPeminjaman) = @bulan) AND (YEAR(PeminjamanRuangan.tanggalPeminjaman) = @tahun)";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@status", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "statusPeminjaman", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@bulan", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tahun", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(DSSpaceSolutions.LaporanPeminjamanRuanganDataTable dataTable, int status, decimal bulan, decimal tahun) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(status));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((decimal)(bulan));
+            this.Adapter.SelectCommand.Parameters[2].Value = ((decimal)(tahun));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual DSSpaceSolutions.LaporanPeminjamanRuanganDataTable GetData(int status, decimal bulan, decimal tahun) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(status));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((decimal)(bulan));
+            this.Adapter.SelectCommand.Parameters[2].Value = ((decimal)(tahun));
+            DSSpaceSolutions.LaporanPeminjamanRuanganDataTable dataTable = new DSSpaceSolutions.LaporanPeminjamanRuanganDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class LaporanPeminjamanBarangTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public LaporanPeminjamanBarangTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "LaporanPeminjamanBarang";
+            tableMapping.ColumnMappings.Add("idPeminjamanBarang", "idPeminjamanBarang");
+            tableMapping.ColumnMappings.Add("nama", "nama");
+            tableMapping.ColumnMappings.Add("tanggalPeminjaman", "tanggalPeminjaman");
+            tableMapping.ColumnMappings.Add("lamaPeminjaman", "lamaPeminjaman");
+            tableMapping.ColumnMappings.Add("total", "total");
+            tableMapping.ColumnMappings.Add("kondisiBarang", "kondisiBarang");
+            tableMapping.ColumnMappings.Add("statusPeminjaman", "statusPeminjaman");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::SpaceSolutions.Properties.Settings.Default.SpaceSolutionConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"SELECT        PB.idPeminjamanBarang, usr.nama, PB.tanggalPeminjaman, PB.lamaPeminjaman, SUM(DP.qty) AS total, CASE pb.kondisiBarang WHEN 0 THEN 'Tidak Rusak' WHEN 1 THEN 'Terjadi Kerusakan' ELSE '' END AS kondisiBarang, 
+                         CASE pb.statusPeminjaman WHEN 1 THEN 'DiPinjam' WHEN 2 THEN 'Dikembalikan' ELSE '' END AS statusPeminjaman
+FROM            PeminjamanBarang AS PB INNER JOIN
+                         DetailPeminjamanBarang AS DP ON PB.idPeminjamanBarang = DP.idPeminjamanBarang INNER JOIN
+                         [User] AS usr ON PB.idUser = usr.idUser
+WHERE        (PB.statusPeminjaman = @status) AND (MONTH(PB.tanggalPeminjaman) = @bulan) AND (YEAR(PB.tanggalPeminjaman) = @tahun)
+GROUP BY PB.idPeminjamanBarang, PB.tanggalPeminjaman, PB.lamaPeminjaman, PB.kondisiBarang, PB.statusPeminjaman, usr.nama";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@status", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "statusPeminjaman", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@bulan", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tahun", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(DSSpaceSolutions.LaporanPeminjamanBarangDataTable dataTable, int status, decimal bulan, decimal tahun) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(status));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((decimal)(bulan));
+            this.Adapter.SelectCommand.Parameters[2].Value = ((decimal)(tahun));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual DSSpaceSolutions.LaporanPeminjamanBarangDataTable GetData(int status, decimal bulan, decimal tahun) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(status));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((decimal)(bulan));
+            this.Adapter.SelectCommand.Parameters[2].Value = ((decimal)(tahun));
+            DSSpaceSolutions.LaporanPeminjamanBarangDataTable dataTable = new DSSpaceSolutions.LaporanPeminjamanBarangDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
         }
     }
     

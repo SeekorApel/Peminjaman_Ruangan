@@ -210,6 +210,18 @@
     <Compile Include="InputUser.Designer.cs">
       <DependentUpon>InputUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="LaporanPeminjamanBarang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LaporanPeminjamanBarang.Designer.cs">
+      <DependentUpon>LaporanPeminjamanBarang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LaporanPeminjamanRuangan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LaporanPeminjamanRuangan.Designer.cs">
+      <DependentUpon>LaporanPeminjamanRuangan.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -363,6 +375,14 @@
     <EmbeddedResource Include="InputUser.resx">
       <DependentUpon>InputUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LaporanBarang.rdlc" />
+    <EmbeddedResource Include="LaporanPeminjamanBarang.resx">
+      <DependentUpon>LaporanPeminjamanBarang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LaporanPeminjamanRuangan.resx">
+      <DependentUpon>LaporanPeminjamanRuangan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LaporanRuangan.rdlc" />
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>

@@ -4,7 +4,7 @@
 
     partial class DSSpaceSolutions
     {
-        partial class DataTable1DataTable
+        partial class LaporanPeminjamanBarangDataTable
         {
         }
 

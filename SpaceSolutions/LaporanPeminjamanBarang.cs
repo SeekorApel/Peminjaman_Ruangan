@@ -11,14 +11,14 @@ using System.Windows.Forms;
 
 namespace SpaceSolutions
 {
-    public partial class LaporanPeminjamanRuangan : Form
+    public partial class LaporanPeminjamanBarang : Form
     {
-        public LaporanPeminjamanRuangan()
+        public LaporanPeminjamanBarang()
         {
             InitializeComponent();
         }
 
-        private void LaporanPeminjamanRuangan_Load(object sender, EventArgs e)
+        private void LaporanPeminjamanBarang_Load(object sender, EventArgs e)
         {
 
             this.reportViewer1.RefreshReport();
@@ -40,7 +40,7 @@ namespace SpaceSolutions
                 }
                 else if (cbFilterStatus.SelectedIndex.Equals(1))
                 {
-                    statusPeminjaman = 3;
+                    statusPeminjaman = 2;
                 }
 
                 string bulan = cbFilterBulan.SelectedItem?.ToString();
@@ -53,7 +53,7 @@ namespace SpaceSolutions
                     bulanAngka = Array.IndexOf(formatInfo.MonthNames, bulan) + 1;
                 }
 
-                this.laporanPeminjamanRuanganTableAdapter.Fill(this.dSSpaceSolutions.LaporanPeminjamanRuangan, statusPeminjaman, bulanAngka, tahun);
+                this.laporanPeminjamanBarangTableAdapter.Fill(this.dSSpaceSolutions.LaporanPeminjamanBarang, statusPeminjaman, bulanAngka, tahun);
 
 
 
