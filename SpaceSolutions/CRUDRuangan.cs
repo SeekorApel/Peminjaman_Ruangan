@@ -36,7 +36,36 @@ namespace SpaceSolutions
                 DialogResult result = MessageBox.Show("Apakah Anda yakin ingin menghapus data ini?", "Peringatan", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (result == DialogResult.Yes)
                 {
+                    try
+                    {
+                        SqlConnection connection = new SqlConnection();
+                        connection.ConnectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
+                        SqlCommand sqlcmd = new SqlCommand("sp_deleteRuangan", connection);
+                        sqlcmd.CommandType = CommandType.StoredProcedure;
 
+                        idRuangan = Convert.ToString(dgvTabelRuangan.Rows[e.RowIndex].Cells["idRuanganColumn"].Value);
+
+                        sqlcmd.Parameters.AddWithValue("@idRuangan", idRuangan);
+
+                        connection.Open();
+                        int hasil = Convert.ToInt32(sqlcmd.ExecuteNonQuery());
+                        connection.Close();
+
+                        if (hasil != 0)
+                        {
+                            MessageBox.Show("Hapus Data Berhasil", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            getDataTabelRuangan();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Hapus data Gagal", "Peringantan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("error: " + ex.Message);
+                    }
                 }
                 else if (result == DialogResult.No)
                 {

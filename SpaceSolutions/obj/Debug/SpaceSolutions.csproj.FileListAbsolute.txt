@@ -145,4 +145,3 @@ D:\Project Semester 2\PRG2\SpaceSolutions\bin\Debug\pt\Microsoft.ReportViewer.Wi
 D:\Project Semester 2\PRG2\SpaceSolutions\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 D:\Project Semester 2\PRG2\SpaceSolutions\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 D:\Project Semester 2\PRG2\SpaceSolutions\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
-D:\Project Semester 2\PRG2\SpaceSolutions\obj\Debug\SpaceSolutions.LaporanPeminjamanRuangan.resources
