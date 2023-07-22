@@ -54,6 +54,7 @@
             this.panelDesktopAdmin = new System.Windows.Forms.Panel();
             this.panelBar = new System.Windows.Forms.Panel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.labelStatusMenu = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.panelSubMenuPengembalian.SuspendLayout();
             this.panelSubMenuDenda.SuspendLayout();
@@ -216,7 +217,7 @@
             this.btnDendaKerusakanRuangan.ShadowDecoration.Parent = this.btnDendaKerusakanRuangan;
             this.btnDendaKerusakanRuangan.Size = new System.Drawing.Size(290, 50);
             this.btnDendaKerusakanRuangan.TabIndex = 1;
-            this.btnDendaKerusakanRuangan.Text = "Denda Kerusakan Ruangan";
+            this.btnDendaKerusakanRuangan.Text = "Denda Barang";
             this.btnDendaKerusakanRuangan.Click += new System.EventHandler(this.btnDendaKerusakanRuangan_Click);
             // 
             // btnDendaKerusakanBarang
@@ -233,7 +234,7 @@
             this.btnDendaKerusakanBarang.ShadowDecoration.Parent = this.btnDendaKerusakanBarang;
             this.btnDendaKerusakanBarang.Size = new System.Drawing.Size(290, 50);
             this.btnDendaKerusakanBarang.TabIndex = 0;
-            this.btnDendaKerusakanBarang.Text = "Denda Kerusakan Barang";
+            this.btnDendaKerusakanBarang.Text = "Denda Kerusakan Ruangan";
             this.btnDendaKerusakanBarang.Click += new System.EventHandler(this.btnDendaKerusakanBarang_Click);
             // 
             // btnDenda
@@ -416,6 +417,7 @@
             // panelBar
             // 
             this.panelBar.BackColor = System.Drawing.Color.Transparent;
+            this.panelBar.Controls.Add(this.labelStatusMenu);
             this.panelBar.Controls.Add(this.btnClose);
             this.panelBar.Controls.Add(this.guna2PictureBox1);
             this.panelBar.Controls.Add(this.label2);
@@ -436,6 +438,17 @@
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 2;
             this.guna2PictureBox1.TabStop = false;
+            // 
+            // labelStatusMenu
+            // 
+            this.labelStatusMenu.AutoSize = true;
+            this.labelStatusMenu.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.labelStatusMenu.Location = new System.Drawing.Point(48, 60);
+            this.labelStatusMenu.Name = "labelStatusMenu";
+            this.labelStatusMenu.Size = new System.Drawing.Size(21, 26);
+            this.labelStatusMenu.TabIndex = 5;
+            this.labelStatusMenu.Text = "-";
+            this.labelStatusMenu.Visible = false;
             // 
             // DashBoardAdmin
             // 
@@ -490,5 +503,6 @@
         private System.Windows.Forms.Button btnPengembalian;
         private Guna.UI2.WinForms.Guna2Button btnPengembalianRuangan;
         private Guna.UI2.WinForms.Guna2Button btnPengembalianBarang;
+        private System.Windows.Forms.Label labelStatusMenu;
     }
 }

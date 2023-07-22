@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvTabelDendaKerusakanBarang = new System.Windows.Forms.DataGridView();
+            this.txtCariidDendaKerusakanBarang = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnCari = new System.Windows.Forms.PictureBox();
+            this.btnRefresh = new System.Windows.Forms.PictureBox();
+            this.btnTambah = new System.Windows.Forms.PictureBox();
             this.Kolom1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Kolom2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Kolom3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Kolom4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.txtCariidDendaKerusakanBarang = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnCari = new System.Windows.Forms.PictureBox();
-            this.btnRefresh = new System.Windows.Forms.PictureBox();
-            this.btnTambah = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabelDendaKerusakanBarang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCari)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRefresh)).BeginInit();
@@ -61,14 +61,14 @@
             this.dgvTabelDendaKerusakanBarang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTabelDendaKerusakanBarang.BackgroundColor = System.Drawing.Color.White;
             this.dgvTabelDendaKerusakanBarang.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTabelDendaKerusakanBarang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTabelDendaKerusakanBarang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvTabelDendaKerusakanBarang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTabelDendaKerusakanBarang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Kolom1,
@@ -77,14 +77,14 @@
             this.Kolom4,
             this.Column9,
             this.Column10});
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTabelDendaKerusakanBarang.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTabelDendaKerusakanBarang.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvTabelDendaKerusakanBarang.GridColor = System.Drawing.Color.White;
             this.dgvTabelDendaKerusakanBarang.Location = new System.Drawing.Point(54, 196);
             this.dgvTabelDendaKerusakanBarang.MultiSelect = false;
@@ -98,67 +98,6 @@
             this.dgvTabelDendaKerusakanBarang.Size = new System.Drawing.Size(869, 384);
             this.dgvTabelDendaKerusakanBarang.TabIndex = 10;
             this.dgvTabelDendaKerusakanBarang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTabelDendaKerusakanBarang_CellClick);
-            // 
-            // Kolom1
-            // 
-            this.Kolom1.DataPropertyName = "idDendaKerusakanBarang";
-            this.Kolom1.HeaderText = "ID Denda";
-            this.Kolom1.Name = "Kolom1";
-            this.Kolom1.ReadOnly = true;
-            // 
-            // Kolom2
-            // 
-            this.Kolom2.DataPropertyName = "deskripsiKerusakan";
-            this.Kolom2.HeaderText = "Deskripsi Kerusakan";
-            this.Kolom2.Name = "Kolom2";
-            this.Kolom2.ReadOnly = true;
-            // 
-            // Kolom3
-            // 
-            this.Kolom3.DataPropertyName = "biayaDenda";
-            this.Kolom3.HeaderText = "Biaya Denda";
-            this.Kolom3.Name = "Kolom3";
-            this.Kolom3.ReadOnly = true;
-            // 
-            // Kolom4
-            // 
-            this.Kolom4.DataPropertyName = "status";
-            this.Kolom4.HeaderText = "Status";
-            this.Kolom4.Name = "Kolom4";
-            this.Kolom4.ReadOnly = true;
-            this.Kolom4.Visible = false;
-            // 
-            // Column9
-            // 
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.NullValue = null;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.White;
-            this.Column9.DefaultCellStyle = dataGridViewCellStyle14;
-            this.Column9.FillWeight = 50F;
-            this.Column9.HeaderText = "";
-            this.Column9.Image = global::SpaceSolutions.Properties.Resources.Edit_CRUD_;
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            this.Column9.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // Column10
-            // 
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.NullValue = null;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.White;
-            this.Column10.DefaultCellStyle = dataGridViewCellStyle15;
-            this.Column10.FillWeight = 50F;
-            this.Column10.HeaderText = "";
-            this.Column10.Image = global::SpaceSolutions.Properties.Resources.delete_CRUD;
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            this.Column10.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // txtCariidDendaKerusakanBarang
             // 
@@ -177,7 +116,7 @@
             this.txtCariidDendaKerusakanBarang.Location = new System.Drawing.Point(54, 143);
             this.txtCariidDendaKerusakanBarang.Name = "txtCariidDendaKerusakanBarang";
             this.txtCariidDendaKerusakanBarang.PasswordChar = '\0';
-            this.txtCariidDendaKerusakanBarang.PlaceholderText = "Search by ID";
+            this.txtCariidDendaKerusakanBarang.PlaceholderText = "Cari Berdasarkan ID";
             this.txtCariidDendaKerusakanBarang.SelectedText = "";
             this.txtCariidDendaKerusakanBarang.ShadowDecoration.Parent = this.txtCariidDendaKerusakanBarang;
             this.txtCariidDendaKerusakanBarang.Size = new System.Drawing.Size(371, 37);
@@ -218,6 +157,67 @@
             this.btnTambah.TabIndex = 31;
             this.btnTambah.TabStop = false;
             this.btnTambah.Click += new System.EventHandler(this.btnTambah_Click);
+            // 
+            // Kolom1
+            // 
+            this.Kolom1.DataPropertyName = "idDendaKerusakanBarang";
+            this.Kolom1.HeaderText = "ID Denda";
+            this.Kolom1.Name = "Kolom1";
+            this.Kolom1.ReadOnly = true;
+            // 
+            // Kolom2
+            // 
+            this.Kolom2.DataPropertyName = "deskripsiKerusakan";
+            this.Kolom2.HeaderText = "Deskripsi Denda";
+            this.Kolom2.Name = "Kolom2";
+            this.Kolom2.ReadOnly = true;
+            // 
+            // Kolom3
+            // 
+            this.Kolom3.DataPropertyName = "biayaDenda";
+            this.Kolom3.HeaderText = "Biaya Denda";
+            this.Kolom3.Name = "Kolom3";
+            this.Kolom3.ReadOnly = true;
+            // 
+            // Kolom4
+            // 
+            this.Kolom4.DataPropertyName = "status";
+            this.Kolom4.HeaderText = "Status";
+            this.Kolom4.Name = "Kolom4";
+            this.Kolom4.ReadOnly = true;
+            this.Kolom4.Visible = false;
+            // 
+            // Column9
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.NullValue = null;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.Column9.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Column9.FillWeight = 50F;
+            this.Column9.HeaderText = "";
+            this.Column9.Image = global::SpaceSolutions.Properties.Resources.Edit_CRUD_;
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // Column10
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.NullValue = null;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.Column10.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Column10.FillWeight = 50F;
+            this.Column10.HeaderText = "";
+            this.Column10.Image = global::SpaceSolutions.Properties.Resources.delete_CRUD;
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            this.Column10.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // CRUDDendaKerusakanBarang
             // 

@@ -288,12 +288,22 @@ namespace SpaceSolutions
 
             if(statusKerusakan == 0)
             {
+                if(txtIdPeminjaman.Text == "" || txtTotalDenda.Text == "")
+                {
+                    MessageBox.Show("Tidak boleh ada data yang kosong", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
                 inputPeminjamanRuangan();
                 getDataPeminjamanRuangan();
                 clear();
             }
             else if (statusKerusakan == 1)
             {
+                if (txtIdPeminjaman.Text == "" || txtTotalDenda.Text == "")
+                {
+                    MessageBox.Show("Tidak boleh ada data yang kosong", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
                 inputPeminjamanRuangan();
                 inputDetailKerusakanRuangan();
                 getDataPeminjamanRuangan();

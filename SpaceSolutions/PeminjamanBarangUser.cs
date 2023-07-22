@@ -65,6 +65,11 @@ namespace SpaceSolutions
 
         private void btnPinjam_Click(object sender, EventArgs e)
         {
+            if (txtLamaPeminjaman.Text == "")
+            {
+                MessageBox.Show("Tidak boleh ada data yang kosong", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             inputTabelPeminjamanBarang();
             inputDetailPeminjamanBarang();
             getDataTabelBarang();

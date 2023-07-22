@@ -72,6 +72,10 @@
             this.btnCari = new System.Windows.Forms.PictureBox();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabelPeminjaman)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dendaKerusakanRuanganBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSSpaceSolutions)).BeginInit();
@@ -632,12 +636,64 @@
             this.guna2TextBox2.Visible = false;
             this.guna2TextBox2.TextChanged += new System.EventHandler(this.txtTotalDendaTelatPengembalian_TextChanged);
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Red;
+            this.label10.Location = new System.Drawing.Point(219, 145);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(16, 23);
+            this.label10.TabIndex = 58;
+            this.label10.Text = "*";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(256, 216);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(16, 23);
+            this.label3.TabIndex = 59;
+            this.label3.Text = "*";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Red;
+            this.label6.Location = new System.Drawing.Point(268, 290);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(16, 23);
+            this.label6.TabIndex = 60;
+            this.label6.Text = "*";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.Location = new System.Drawing.Point(623, 413);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(16, 23);
+            this.label7.TabIndex = 61;
+            this.label7.Text = "*";
+            // 
             // PengembalianRuanganAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1004, 720);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.btnCari);
             this.Controls.Add(this.btnHapusKeranjang);
             this.Controls.Add(this.btnTambahKeranjang);
@@ -726,5 +782,9 @@
         private System.Windows.Forms.PictureBox btnCari;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }

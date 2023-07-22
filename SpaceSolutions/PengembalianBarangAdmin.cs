@@ -247,6 +247,11 @@ namespace SpaceSolutions
 
             if(kondisiBarang == 0)
             {
+                if (txtIdPeminjaman.Text == "" || txtTotalDenda.Text == "")
+                {
+                    MessageBox.Show("Tidak boleh ada data yang kosong", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
 
                 InputPengembalianBarang();
                 cbKerusakanBarang.Visible = false;
@@ -266,6 +271,12 @@ namespace SpaceSolutions
             }
             else if(kondisiBarang == 1)
             {
+                if (txtIdPeminjaman.Text == "" || txtTotalDenda.Text == "")
+                {
+                    MessageBox.Show("Tidak boleh ada data yang kosong", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
                 InputPengembalianBarang();
                 InputdetailDendaKerusakanBarang();
                 cbKerusakanBarang.Visible = false;

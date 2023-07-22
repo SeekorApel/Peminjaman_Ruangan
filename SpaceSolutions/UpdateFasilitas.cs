@@ -116,6 +116,12 @@ namespace SpaceSolutions
         private void btnSimpan_Click(object sender, EventArgs e)
         {
 
+            if(txtNamaFasilitas.Text == "")
+            {
+                MessageBox.Show("Tidak boleh ada data yang kosong", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             if(txtIDBarang.Text == "" && txtJumlahBarang.Text == "")
             {
                 updateTabelFasilitas();
