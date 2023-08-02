@@ -19,6 +19,7 @@ namespace SpaceSolutions
     {
         string idFasilitasTemp, idfstemp, namaFasilitasTemp, idBarang, idBrgTemp, namaBarang, jmlhTemp;
         string idBarangNew, jumlahBarangNew;
+        string stokBarangDB = "";
         public UpdateFasilitas(string idFasilitas, string namaFasilitas)
         {
             InitializeComponent();
@@ -115,14 +116,15 @@ namespace SpaceSolutions
 
         private void btnSimpan_Click(object sender, EventArgs e)
         {
+            
 
-            if(txtNamaFasilitas.Text == "")
+            if (txtNamaFasilitas.Text == "" || txtJumlahBarang.Text == "")
             {
                 MessageBox.Show("Tidak boleh ada data yang kosong", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            if(txtIDBarang.Text == "" && txtJumlahBarang.Text == "")
+            if (txtIDBarang.Text == "" && txtJumlahBarang.Text == "")
             {
                 updateTabelFasilitas();
                 this.Close();
@@ -130,7 +132,23 @@ namespace SpaceSolutions
 
             }else if (!string.IsNullOrEmpty(txtIDBarang.Text) && !string.IsNullOrEmpty(txtIDBarang.Text))
             {
+                getStokBarang();
+
+                string stokBarangDiUpdate = txtJumlahBarang.Text;
+                int stok1 = 0;
+                stok1 = int.Parse(stokBarangDiUpdate);
+                int stok2 = 0;
+                stok2 = int.Parse(stokBarangDB);
+
+                if (stok1 > stok2)
+                {
+                    MessageBox.Show("Jumlah barang tidak Mencukupi", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtJumlahBarang.Text = "";
+                    return;
+                }
+
                 updateTabelFasilitas();
+
                 if (keranjangDetail.SelectedItems.Count > 0) // Pastikan ada item yang dipilih
                 {
                     ListViewItem selectedRow = keranjangDetail.SelectedItems[0]; // Ambil item yang dipilih
@@ -172,6 +190,17 @@ namespace SpaceSolutions
             }
         }
 
+        private void dgvTabelBarang_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvTabelBarang.Rows[e.RowIndex];
+
+                txtIDBarang.Text = row.Cells["Kolom1"].Value.ToString();
+
+            }
+        }
+
         private void keranjangDetail_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (keranjangDetail.SelectedItems.Count > 0)
@@ -200,7 +229,7 @@ namespace SpaceSolutions
             
         }
 
-        private void updateTabelFasilitas()
+        private void updateTabelFasilitas() 
         {
             try
             {
@@ -300,10 +329,11 @@ namespace SpaceSolutions
             }
         }
 
-        private void getDataBarang()
+        private void getStokBarang()
         {
             try
             {
+
                 SqlConnection connection = new SqlConnection();
                 connection.ConnectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
                 connection.Open();
@@ -315,8 +345,7 @@ namespace SpaceSolutions
 
                 if (dt.Rows.Count > 0)
                 {
-                    idBarang = dt.Rows[0]["IdBarang"].ToString();
-                    namaBarang = dt.Rows[0]["namaBarang"].ToString();
+                    stokBarangDB = dt.Rows[0]["stokBarang"].ToString();
                 }
                 else
                 {
@@ -329,7 +358,7 @@ namespace SpaceSolutions
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Terjadi error pada saat koneksi dengan database :" + ex.Message);
+                MessageBox.Show("Terjadi error pada saat mengambil stok :" + ex.Message);
             }
         }
     }

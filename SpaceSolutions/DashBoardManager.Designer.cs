@@ -34,10 +34,11 @@
             this.btnLaporanRuangan = new Guna.UI2.WinForms.Guna2Button();
             this.btnLaporan = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
-            this.btnPeminjaman = new System.Windows.Forms.Button();
+            this.btnHalamanUtama = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panelBar = new System.Windows.Forms.Panel();
+            this.labelStatusMenu = new System.Windows.Forms.Label();
             this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -58,7 +59,7 @@
             this.guna2Panel1.Controls.Add(this.panelSubMenuLaporan);
             this.guna2Panel1.Controls.Add(this.btnLaporan);
             this.guna2Panel1.Controls.Add(this.btnLogOut);
-            this.guna2Panel1.Controls.Add(this.btnPeminjaman);
+            this.guna2Panel1.Controls.Add(this.btnHalamanUtama);
             this.guna2Panel1.Controls.Add(this.panel1);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
@@ -75,7 +76,7 @@
             this.panelSubMenuLaporan.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSubMenuLaporan.Location = new System.Drawing.Point(0, 230);
             this.panelSubMenuLaporan.Name = "panelSubMenuLaporan";
-            this.panelSubMenuLaporan.Size = new System.Drawing.Size(290, 156);
+            this.panelSubMenuLaporan.Size = new System.Drawing.Size(290, 102);
             this.panelSubMenuLaporan.TabIndex = 14;
             // 
             // btnLaporanBarang
@@ -119,11 +120,11 @@
             this.btnLaporan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLaporan.Font = new System.Drawing.Font("Poppins SemiBold", 10F, System.Drawing.FontStyle.Bold);
             this.btnLaporan.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnLaporan.Image = global::SpaceSolutions.Properties.Resources.Riwayat;
+            this.btnLaporan.Image = global::SpaceSolutions.Properties.Resources.Laporan;
             this.btnLaporan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLaporan.Location = new System.Drawing.Point(0, 180);
             this.btnLaporan.Name = "btnLaporan";
-            this.btnLaporan.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnLaporan.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.btnLaporan.Size = new System.Drawing.Size(290, 50);
             this.btnLaporan.TabIndex = 13;
             this.btnLaporan.Text = "         Laporan";
@@ -147,24 +148,26 @@
             this.btnLogOut.Text = "      Log Out";
             this.btnLogOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
-            // btnPeminjaman
+            // btnHalamanUtama
             // 
-            this.btnPeminjaman.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPeminjaman.FlatAppearance.BorderSize = 0;
-            this.btnPeminjaman.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPeminjaman.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPeminjaman.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnPeminjaman.Image = global::SpaceSolutions.Properties.Resources.Peminjaman_USER;
-            this.btnPeminjaman.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPeminjaman.Location = new System.Drawing.Point(0, 130);
-            this.btnPeminjaman.Name = "btnPeminjaman";
-            this.btnPeminjaman.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnPeminjaman.Size = new System.Drawing.Size(290, 50);
-            this.btnPeminjaman.TabIndex = 9;
-            this.btnPeminjaman.Text = "     Halaman Utama";
-            this.btnPeminjaman.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPeminjaman.UseVisualStyleBackColor = true;
+            this.btnHalamanUtama.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHalamanUtama.FlatAppearance.BorderSize = 0;
+            this.btnHalamanUtama.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHalamanUtama.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHalamanUtama.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnHalamanUtama.Image = global::SpaceSolutions.Properties.Resources.HomePageIcon;
+            this.btnHalamanUtama.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHalamanUtama.Location = new System.Drawing.Point(0, 130);
+            this.btnHalamanUtama.Name = "btnHalamanUtama";
+            this.btnHalamanUtama.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnHalamanUtama.Size = new System.Drawing.Size(290, 50);
+            this.btnHalamanUtama.TabIndex = 9;
+            this.btnHalamanUtama.Text = "     Halaman Utama";
+            this.btnHalamanUtama.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHalamanUtama.UseVisualStyleBackColor = true;
+            this.btnHalamanUtama.Click += new System.EventHandler(this.btnHalamanUtama_Click);
             // 
             // panel1
             // 
@@ -181,7 +184,7 @@
             this.guna2PictureBox2.Location = new System.Drawing.Point(50, 42);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
             this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
-            this.guna2PictureBox2.Size = new System.Drawing.Size(190, 45);
+            this.guna2PictureBox2.Size = new System.Drawing.Size(180, 45);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox2.TabIndex = 4;
             this.guna2PictureBox2.TabStop = false;
@@ -189,6 +192,7 @@
             // panelBar
             // 
             this.panelBar.BackColor = System.Drawing.Color.Transparent;
+            this.panelBar.Controls.Add(this.labelStatusMenu);
             this.panelBar.Controls.Add(this.btnClose);
             this.panelBar.Controls.Add(this.guna2ControlBox1);
             this.panelBar.Controls.Add(this.guna2PictureBox1);
@@ -199,6 +203,17 @@
             this.panelBar.Name = "panelBar";
             this.panelBar.Size = new System.Drawing.Size(990, 130);
             this.panelBar.TabIndex = 8;
+            // 
+            // labelStatusMenu
+            // 
+            this.labelStatusMenu.AutoSize = true;
+            this.labelStatusMenu.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.labelStatusMenu.Location = new System.Drawing.Point(48, 60);
+            this.labelStatusMenu.Name = "labelStatusMenu";
+            this.labelStatusMenu.Size = new System.Drawing.Size(21, 26);
+            this.labelStatusMenu.TabIndex = 15;
+            this.labelStatusMenu.Text = "-";
+            this.labelStatusMenu.Visible = false;
             // 
             // btnClose
             // 
@@ -294,7 +309,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Button btnLaporan;
         private System.Windows.Forms.Button btnLogOut;
-        private System.Windows.Forms.Button btnPeminjaman;
+        private System.Windows.Forms.Button btnHalamanUtama;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private System.Windows.Forms.Panel panelBar;
@@ -307,5 +322,6 @@
         private Guna.UI2.WinForms.Guna2Button btnLaporanBarang;
         private Guna.UI2.WinForms.Guna2Button btnLaporanRuangan;
         private System.Windows.Forms.Panel panelDesktopManager;
+        private System.Windows.Forms.Label labelStatusMenu;
     }
 }

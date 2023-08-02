@@ -30,10 +30,12 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PeminjamanRuanganAdmin));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvTabelPeminjaman = new System.Windows.Forms.DataGridView();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnRefresh = new System.Windows.Forms.PictureBox();
             this.kolom1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Kolom2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kolom3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,9 +46,8 @@
             this.kolom8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kolom9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kolom10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btnRefresh = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabelPeminjaman)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRefresh)).BeginInit();
             this.SuspendLayout();
@@ -83,6 +84,7 @@
             this.kolom8,
             this.kolom9,
             this.kolom10,
+            this.Column1,
             this.Column9});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
@@ -104,6 +106,35 @@
             this.dgvTabelPeminjaman.Size = new System.Drawing.Size(912, 302);
             this.dgvTabelPeminjaman.TabIndex = 11;
             this.dgvTabelPeminjaman.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTabelPeminjaman_CellClick);
+            // 
+            // dataGridViewImageColumn1
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle4.NullValue")));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridViewImageColumn1.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridViewImageColumn1.FillWeight = 91.37056F;
+            this.dataGridViewImageColumn1.HeaderText = "";
+            this.dataGridViewImageColumn1.Image = global::SpaceSolutions.Properties.Resources.AccMenu1;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.ReadOnly = true;
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImageColumn1.Width = 92;
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRefresh.Image = global::SpaceSolutions.Properties.Resources.Refresh;
+            this.btnRefresh.Location = new System.Drawing.Point(914, 138);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(35, 35);
+            this.btnRefresh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnRefresh.TabIndex = 27;
+            this.btnRefresh.TabStop = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // kolom1
             // 
@@ -186,6 +217,15 @@
             this.kolom10.ReadOnly = true;
             this.kolom10.Visible = false;
             // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "alasanPenolakan";
+            this.Column1.HeaderText = "Alasan";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column1.Visible = false;
+            // 
             // Column9
             // 
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -201,35 +241,6 @@
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
             this.Column9.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // dataGridViewImageColumn1
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle4.NullValue")));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridViewImageColumn1.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridViewImageColumn1.FillWeight = 91.37056F;
-            this.dataGridViewImageColumn1.HeaderText = "";
-            this.dataGridViewImageColumn1.Image = global::SpaceSolutions.Properties.Resources.AccMenu1;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.ReadOnly = true;
-            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewImageColumn1.Width = 92;
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRefresh.Image = global::SpaceSolutions.Properties.Resources.Refresh;
-            this.btnRefresh.Location = new System.Drawing.Point(914, 138);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(35, 35);
-            this.btnRefresh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnRefresh.TabIndex = 27;
-            this.btnRefresh.TabStop = false;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // PeminjamanRuanganAdmin
             // 
@@ -253,6 +264,7 @@
         #endregion
         private System.Windows.Forms.DataGridView dgvTabelPeminjaman;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.PictureBox btnRefresh;
         private System.Windows.Forms.DataGridViewTextBoxColumn kolom1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Kolom2;
         private System.Windows.Forms.DataGridViewTextBoxColumn kolom3;
@@ -263,7 +275,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn kolom8;
         private System.Windows.Forms.DataGridViewTextBoxColumn kolom9;
         private System.Windows.Forms.DataGridViewTextBoxColumn kolom10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewImageColumn Column9;
-        private System.Windows.Forms.PictureBox btnRefresh;
     }
 }

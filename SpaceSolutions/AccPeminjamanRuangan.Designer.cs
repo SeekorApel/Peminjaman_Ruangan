@@ -45,6 +45,13 @@
             this.txtNamaRuangan = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.cbSetujuiPeminjaman = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.cbTolakPeminjaman = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtAlasanPenolakan = new Guna.UI2.WinForms.Guna2TextBox();
+            this.labelAlasan = new System.Windows.Forms.Label();
+            this.labelBintang = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label5
@@ -105,12 +112,13 @@
             this.btnSetujui.Font = new System.Drawing.Font("Gilmer Bold", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnSetujui.ForeColor = System.Drawing.Color.White;
             this.btnSetujui.HoverState.Parent = this.btnSetujui;
-            this.btnSetujui.Location = new System.Drawing.Point(435, 245);
+            this.btnSetujui.Location = new System.Drawing.Point(435, 268);
             this.btnSetujui.Name = "btnSetujui";
             this.btnSetujui.ShadowDecoration.Parent = this.btnSetujui;
             this.btnSetujui.Size = new System.Drawing.Size(145, 36);
             this.btnSetujui.TabIndex = 33;
             this.btnSetujui.Text = "Setujui Peminjaman";
+            this.btnSetujui.Visible = false;
             this.btnSetujui.Click += new System.EventHandler(this.btnSetujui_Click);
             // 
             // txtKapasitasOrang
@@ -212,12 +220,13 @@
             this.btnTolakPeminjaman.Font = new System.Drawing.Font("Gilmer Bold", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnTolakPeminjaman.ForeColor = System.Drawing.Color.White;
             this.btnTolakPeminjaman.HoverState.Parent = this.btnTolakPeminjaman;
-            this.btnTolakPeminjaman.Location = new System.Drawing.Point(435, 299);
+            this.btnTolakPeminjaman.Location = new System.Drawing.Point(435, 406);
             this.btnTolakPeminjaman.Name = "btnTolakPeminjaman";
             this.btnTolakPeminjaman.ShadowDecoration.Parent = this.btnTolakPeminjaman;
-            this.btnTolakPeminjaman.Size = new System.Drawing.Size(139, 36);
+            this.btnTolakPeminjaman.Size = new System.Drawing.Size(145, 36);
             this.btnTolakPeminjaman.TabIndex = 39;
             this.btnTolakPeminjaman.Text = "Tolak Peminjaman";
+            this.btnTolakPeminjaman.Visible = false;
             this.btnTolakPeminjaman.Click += new System.EventHandler(this.btnTolakPeminjaman_Click);
             // 
             // label6
@@ -226,9 +235,9 @@
             this.label6.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(127, 55);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(95, 26);
+            this.label6.Size = new System.Drawing.Size(138, 26);
             this.label6.TabIndex = 41;
-            this.label6.Text = "Nama User";
+            this.label6.Text = "Nama Peminjam";
             // 
             // txtNamaUser
             // 
@@ -282,12 +291,125 @@
             // 
             this.guna2DragControl1.TargetControl = this;
             // 
+            // cbSetujuiPeminjaman
+            // 
+            this.cbSetujuiPeminjaman.AutoSize = true;
+            this.cbSetujuiPeminjaman.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbSetujuiPeminjaman.CheckedState.BorderRadius = 2;
+            this.cbSetujuiPeminjaman.CheckedState.BorderThickness = 0;
+            this.cbSetujuiPeminjaman.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbSetujuiPeminjaman.Font = new System.Drawing.Font("Poppins", 11.25F);
+            this.cbSetujuiPeminjaman.Location = new System.Drawing.Point(435, 228);
+            this.cbSetujuiPeminjaman.Name = "cbSetujuiPeminjaman";
+            this.cbSetujuiPeminjaman.Size = new System.Drawing.Size(15, 14);
+            this.cbSetujuiPeminjaman.TabIndex = 43;
+            this.cbSetujuiPeminjaman.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbSetujuiPeminjaman.UncheckedState.BorderRadius = 2;
+            this.cbSetujuiPeminjaman.UncheckedState.BorderThickness = 0;
+            this.cbSetujuiPeminjaman.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbSetujuiPeminjaman.UseVisualStyleBackColor = true;
+            this.cbSetujuiPeminjaman.CheckedChanged += new System.EventHandler(this.cbSetujuiPeminjaman_CheckedChanged);
+            // 
+            // cbTolakPeminjaman
+            // 
+            this.cbTolakPeminjaman.AutoSize = true;
+            this.cbTolakPeminjaman.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbTolakPeminjaman.CheckedState.BorderRadius = 2;
+            this.cbTolakPeminjaman.CheckedState.BorderThickness = 0;
+            this.cbTolakPeminjaman.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbTolakPeminjaman.Location = new System.Drawing.Point(541, 228);
+            this.cbTolakPeminjaman.Name = "cbTolakPeminjaman";
+            this.cbTolakPeminjaman.Size = new System.Drawing.Size(15, 14);
+            this.cbTolakPeminjaman.TabIndex = 44;
+            this.cbTolakPeminjaman.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbTolakPeminjaman.UncheckedState.BorderRadius = 2;
+            this.cbTolakPeminjaman.UncheckedState.BorderThickness = 0;
+            this.cbTolakPeminjaman.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbTolakPeminjaman.UseVisualStyleBackColor = true;
+            this.cbTolakPeminjaman.CheckedChanged += new System.EventHandler(this.cbTolakPeminjaman_CheckedChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(456, 224);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(63, 26);
+            this.label7.TabIndex = 45;
+            this.label7.Text = "Setujui";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(562, 224);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(52, 26);
+            this.label8.TabIndex = 46;
+            this.label8.Text = "Tolak";
+            // 
+            // txtAlasanPenolakan
+            // 
+            this.txtAlasanPenolakan.BorderRadius = 4;
+            this.txtAlasanPenolakan.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtAlasanPenolakan.DefaultText = "";
+            this.txtAlasanPenolakan.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtAlasanPenolakan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtAlasanPenolakan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAlasanPenolakan.DisabledState.Parent = this.txtAlasanPenolakan;
+            this.txtAlasanPenolakan.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAlasanPenolakan.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAlasanPenolakan.FocusedState.Parent = this.txtAlasanPenolakan;
+            this.txtAlasanPenolakan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAlasanPenolakan.HoverState.Parent = this.txtAlasanPenolakan;
+            this.txtAlasanPenolakan.Location = new System.Drawing.Point(437, 286);
+            this.txtAlasanPenolakan.Multiline = true;
+            this.txtAlasanPenolakan.Name = "txtAlasanPenolakan";
+            this.txtAlasanPenolakan.PasswordChar = '\0';
+            this.txtAlasanPenolakan.PlaceholderText = "";
+            this.txtAlasanPenolakan.SelectedText = "";
+            this.txtAlasanPenolakan.ShadowDecoration.Parent = this.txtAlasanPenolakan;
+            this.txtAlasanPenolakan.Size = new System.Drawing.Size(220, 107);
+            this.txtAlasanPenolakan.TabIndex = 47;
+            this.txtAlasanPenolakan.Visible = false;
+            // 
+            // labelAlasan
+            // 
+            this.labelAlasan.AutoSize = true;
+            this.labelAlasan.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAlasan.Location = new System.Drawing.Point(433, 254);
+            this.labelAlasan.Name = "labelAlasan";
+            this.labelAlasan.Size = new System.Drawing.Size(64, 26);
+            this.labelAlasan.TabIndex = 48;
+            this.labelAlasan.Text = "Alasan";
+            this.labelAlasan.Visible = false;
+            // 
+            // labelBintang
+            // 
+            this.labelBintang.AutoSize = true;
+            this.labelBintang.BackColor = System.Drawing.Color.Transparent;
+            this.labelBintang.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBintang.ForeColor = System.Drawing.Color.Red;
+            this.labelBintang.Location = new System.Drawing.Point(503, 254);
+            this.labelBintang.Name = "labelBintang";
+            this.labelBintang.Size = new System.Drawing.Size(19, 26);
+            this.labelBintang.TabIndex = 49;
+            this.labelBintang.Text = "*";
+            this.labelBintang.Visible = false;
+            // 
             // AccPeminjamanRuangan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 411);
+            this.ClientSize = new System.Drawing.Size(800, 488);
+            this.Controls.Add(this.labelBintang);
+            this.Controls.Add(this.labelAlasan);
+            this.Controls.Add(this.txtAlasanPenolakan);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.cbTolakPeminjaman);
+            this.Controls.Add(this.cbSetujuiPeminjaman);
             this.Controls.Add(this.txtNamaRuangan);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtNamaUser);
@@ -329,5 +451,12 @@
         private Guna.UI2.WinForms.Guna2TextBox txtNamaRuangan;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
+        private Guna.UI2.WinForms.Guna2CheckBox cbTolakPeminjaman;
+        private Guna.UI2.WinForms.Guna2CheckBox cbSetujuiPeminjaman;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label labelAlasan;
+        private Guna.UI2.WinForms.Guna2TextBox txtAlasanPenolakan;
+        private System.Windows.Forms.Label labelBintang;
     }
 }

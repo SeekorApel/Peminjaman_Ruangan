@@ -15,7 +15,8 @@ namespace SpaceSolutions
 {
     public partial class CRUDBarang : Form
     {
-        string idBarang, namaBarang,stokBarang, kategoriBarang;
+        string idBarang, namaBarang,stokBarang, kategoriBarang, deskripsi;
+
        
         public CRUDBarang()
         {
@@ -56,11 +57,11 @@ namespace SpaceSolutions
                 namaBarang = Convert.ToString(dgvTabelBarang.Rows[e.RowIndex].Cells["namaBarangColumn"].Value);
                 kategoriBarang = Convert.ToString(dgvTabelBarang.Rows[e.RowIndex].Cells["kategoriBarangColumn"].Value);
                 stokBarang = Convert.ToString(dgvTabelBarang.Rows[e.RowIndex].Cells["stokBarangColumn"].Value);
+                deskripsi = Convert.ToString(dgvTabelBarang.Rows[e.RowIndex].Cells["column1"].Value);
 
                 UpdateBarang updateBrg = new UpdateBarang(idBarang, namaBarang, kategoriBarang, stokBarang);
                 updateBrg.ShowDialog();
-
-                
+                getDataTabelBarang();
             }
             if(e.ColumnIndex == 1)
             {
@@ -160,7 +161,8 @@ namespace SpaceSolutions
         private void btnTambah_Click(object sender, EventArgs e)
         {
             InputBarang barang = new InputBarang();
-            barang.Show();
+            barang.ShowDialog();
+            getDataTabelBarang();
         }
 
     }

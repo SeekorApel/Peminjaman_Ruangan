@@ -55,7 +55,10 @@ namespace SpaceSolutions
         private void btnTambah_Click(object sender, EventArgs e)
         {
             InputDendaKerusakanRuangan inputRuangan = new InputDendaKerusakanRuangan();
-            inputRuangan.Show();
+            inputRuangan.ShowDialog();
+            getDataTabelDendaKerusakanRuangan();
+            dgvTabelDendaKerusakanRuangan.Columns["Kolom3"].DefaultCellStyle.Format = "C0"; // "C0" untuk format mata uang tanpa desimal
+            dgvTabelDendaKerusakanRuangan.Columns["Kolom3"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
         }
 
         private void btnCari_Click(object sender, EventArgs e)
@@ -118,6 +121,9 @@ namespace SpaceSolutions
                 biayaDenda = Convert.ToString(dgvTabelDendaKerusakanRuangan.Rows[e.RowIndex].Cells["Kolom3"].Value);
                 UpdateDendaKerusakanRuangan updateDenda = new UpdateDendaKerusakanRuangan(idDendaKerusakan, deskripsiKerusakan, biayaDenda);
                 updateDenda.ShowDialog();
+                getDataTabelDendaKerusakanRuangan();
+                dgvTabelDendaKerusakanRuangan.Columns["Kolom3"].DefaultCellStyle.Format = "C0"; // "C0" untuk format mata uang tanpa desimal
+                dgvTabelDendaKerusakanRuangan.Columns["Kolom3"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
             }
             if (e.ColumnIndex == 1)
             {
@@ -143,6 +149,8 @@ namespace SpaceSolutions
                         {
                             MessageBox.Show("Hapus Data Berhasil", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             getDataTabelDendaKerusakanRuangan();
+                            dgvTabelDendaKerusakanRuangan.Columns["Kolom3"].DefaultCellStyle.Format = "C0"; // "C0" untuk format mata uang tanpa desimal
+                            dgvTabelDendaKerusakanRuangan.Columns["Kolom3"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
                         }
                         else
                         {

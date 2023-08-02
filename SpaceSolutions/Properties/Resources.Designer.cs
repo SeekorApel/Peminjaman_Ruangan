@@ -103,6 +103,16 @@ namespace SpaceSolutions.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BarangBesar {
+            get {
+                object obj = ResourceManager.GetObject("BarangBesar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap delete_CRUD {
             get {
                 object obj = ResourceManager.GetObject("delete CRUD", resourceCulture);
@@ -193,6 +203,16 @@ namespace SpaceSolutions.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap HomePageIcon {
+            get {
+                object obj = ResourceManager.GetObject("HomePageIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Input {
             get {
                 object obj = ResourceManager.GetObject("Input", resourceCulture);
@@ -216,6 +236,16 @@ namespace SpaceSolutions.Properties {
         internal static System.Drawing.Bitmap Jenis_Ruangan_btn {
             get {
                 object obj = ResourceManager.GetObject("Jenis Ruangan btn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Laporan {
+            get {
+                object obj = ResourceManager.GetObject("Laporan", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -353,6 +383,16 @@ namespace SpaceSolutions.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Ruangan_Besar {
+            get {
+                object obj = ResourceManager.GetObject("Ruangan Besar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Ruangan_btn {
             get {
                 object obj = ResourceManager.GetObject("Ruangan btn", resourceCulture);
@@ -396,6 +436,16 @@ namespace SpaceSolutions.Properties {
         internal static System.Drawing.Bitmap user__Black_ {
             get {
                 object obj = ResourceManager.GetObject("user (Black)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap User_Besar {
+            get {
+                object obj = ResourceManager.GetObject("User Besar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

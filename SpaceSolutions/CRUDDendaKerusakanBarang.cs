@@ -36,7 +36,10 @@ namespace SpaceSolutions
         private void btnTambah_Click(object sender, EventArgs e)
         {
             InputDendaKerusakanBarang inputDenda = new InputDendaKerusakanBarang();
-            inputDenda.Show();
+            inputDenda.ShowDialog();
+            getDataTabelDendaKerusakanUang();
+            dgvTabelDendaKerusakanBarang.Columns["Kolom3"].DefaultCellStyle.Format = "C0"; // "C0" untuk format mata uang tanpa desimal
+            dgvTabelDendaKerusakanBarang.Columns["Kolom3"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
         }
 
         private void btnCari_Click(object sender, EventArgs e)
@@ -114,6 +117,9 @@ namespace SpaceSolutions
                 biayaDenda = Convert.ToString(dgvTabelDendaKerusakanBarang.Rows[e.RowIndex].Cells["Kolom3"].Value);
                 UpdateDendaKerusakanBarang updateDenda = new UpdateDendaKerusakanBarang(idDendaKerusakan, deskripsiKerusakan, biayaDenda);
                 updateDenda.ShowDialog();
+                getDataTabelDendaKerusakanUang();
+                dgvTabelDendaKerusakanBarang.Columns["Kolom3"].DefaultCellStyle.Format = "C0"; // "C0" untuk format mata uang tanpa desimal
+                dgvTabelDendaKerusakanBarang.Columns["Kolom3"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
             }
             if (e.ColumnIndex == 1)
             {
@@ -139,6 +145,8 @@ namespace SpaceSolutions
                         {
                             MessageBox.Show("Hapus Data Berhasil", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             getDataTabelDendaKerusakanUang();
+                            dgvTabelDendaKerusakanBarang.Columns["Kolom3"].DefaultCellStyle.Format = "C0"; // "C0" untuk format mata uang tanpa desimal
+                            dgvTabelDendaKerusakanBarang.Columns["Kolom3"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
                         }
                         else
                         {

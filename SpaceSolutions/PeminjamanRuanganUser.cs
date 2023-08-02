@@ -139,8 +139,8 @@ namespace SpaceSolutions
             int kapasitasDB = 0;
             kapasitasDB = getKapasitasDB();
             int ketersediaanRuanganDB = getKetersediaanRuanganDB();
-            DateTime tanggalDB = getTanggalPeminjamanDB();
-            DateTime tanggalForm = dtTanggalPeminjaman.Value;
+            /*DateTime tanggalDB = getTanggalPeminjamanDB();*/
+            /*DateTime tanggalForm = dtTanggalPeminjaman.Value;*/
    
 
             if (kapasitasForm > kapasitasDB)
@@ -291,6 +291,48 @@ namespace SpaceSolutions
         {
             getDataRuangan();
             txtCariRuangan.Text = "";
+        }
+
+        private void txtJenisKegitan_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter) // Memeriksa jika tombol Enter ditekan
+            {
+                txtJenisKegitan.AppendText(Environment.NewLine); // Menambahkan baris baru
+                e.Handled = true; // Menghentikan penanganan karakter
+            }
+            else if (!char.IsLetter(e.KeyChar) && e.KeyChar != ' ' && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtLamaPeminjaman_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+
+            // Memeriksa apakah jumlah karakter telah mencapai batas maksimum
+            if (txtLamaPeminjaman.Text.Length >= 2 && e.KeyChar != '\b') // '\b' adalah karakter backspace
+            {
+                e.Handled = true; // Mencegah karakter ditambahkan jika batas maksimum telah tercapai
+            }
+        }
+
+        private void txtKapasitasOrang_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Memeriksa apakah karakter yang ditekan adalah angka atau kontrol (seperti backspace)
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true; // Mencegah karakter yang tidak valid dimasukkan
+            }
+
+            // Memeriksa apakah jumlah karakter telah mencapai batas maksimum
+            if (txtKapasitasOrang.Text.Length >= 5 && e.KeyChar != '\b') // '\b' adalah karakter backspace
+            {
+                e.Handled = true; // Mencegah karakter ditambahkan jika batas maksimum telah tercapai
+            }
         }
     }
 }

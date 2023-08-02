@@ -193,6 +193,7 @@
             this.txtJumlahBarang.ShadowDecoration.Parent = this.txtJumlahBarang;
             this.txtJumlahBarang.Size = new System.Drawing.Size(220, 36);
             this.txtJumlahBarang.TabIndex = 32;
+            this.txtJumlahBarang.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtJumlahBarang_KeyPress);
             // 
             // label1
             // 
@@ -321,6 +322,7 @@
             this.txtLamaPeminjaman.ShadowDecoration.Parent = this.txtLamaPeminjaman;
             this.txtLamaPeminjaman.Size = new System.Drawing.Size(220, 36);
             this.txtLamaPeminjaman.TabIndex = 40;
+            this.txtLamaPeminjaman.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLamaPeminjaman_KeyPress);
             // 
             // btnUbah
             // 

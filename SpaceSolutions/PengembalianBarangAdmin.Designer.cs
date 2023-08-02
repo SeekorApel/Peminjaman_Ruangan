@@ -77,6 +77,12 @@
             this.btnTambahKeranjang = new System.Windows.Forms.PictureBox();
             this.btnCari = new System.Windows.Forms.PictureBox();
             this.btnRefresh = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabelPeminjamanBarang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dendaKerusakanBarangBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSSpaceSolutions)).BeginInit();
@@ -435,6 +441,7 @@
             this.txtTotalDenda.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtTotalDenda.DisabledState.Parent = this.txtTotalDenda;
             this.txtTotalDenda.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTotalDenda.Enabled = false;
             this.txtTotalDenda.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTotalDenda.FocusedState.Parent = this.txtTotalDenda;
             this.txtTotalDenda.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -537,6 +544,7 @@
             this.txtJumlahKerusakanBarang.Size = new System.Drawing.Size(95, 36);
             this.txtJumlahKerusakanBarang.TabIndex = 62;
             this.txtJumlahKerusakanBarang.Visible = false;
+            this.txtJumlahKerusakanBarang.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtJumlahKerusakanBarang_KeyPress);
             // 
             // txtTotalDendaKerusakan
             // 
@@ -552,7 +560,7 @@
             this.txtTotalDendaKerusakan.FocusedState.Parent = this.txtTotalDendaKerusakan;
             this.txtTotalDendaKerusakan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTotalDendaKerusakan.HoverState.Parent = this.txtTotalDendaKerusakan;
-            this.txtTotalDendaKerusakan.Location = new System.Drawing.Point(591, 645);
+            this.txtTotalDendaKerusakan.Location = new System.Drawing.Point(591, 610);
             this.txtTotalDendaKerusakan.Name = "txtTotalDendaKerusakan";
             this.txtTotalDendaKerusakan.PasswordChar = '\0';
             this.txtTotalDendaKerusakan.PlaceholderText = "";
@@ -649,27 +657,98 @@
             // 
             this.btnCari.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCari.Image = global::SpaceSolutions.Properties.Resources.search_Use_1;
-            this.btnCari.Location = new System.Drawing.Point(652, 288);
+            this.btnCari.Location = new System.Drawing.Point(652, 290);
             this.btnCari.Name = "btnCari";
-            this.btnCari.Size = new System.Drawing.Size(35, 35);
+            this.btnCari.Size = new System.Drawing.Size(30, 30);
             this.btnCari.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnCari.TabIndex = 74;
             this.btnCari.TabStop = false;
-            this.btnCari.Visible = false;
             this.btnCari.Click += new System.EventHandler(this.btnCari_Click_1);
             // 
             // btnRefresh
             // 
             this.btnRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRefresh.Image = global::SpaceSolutions.Properties.Resources.Refresh1;
-            this.btnRefresh.Location = new System.Drawing.Point(705, 288);
+            this.btnRefresh.Location = new System.Drawing.Point(705, 290);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(35, 35);
+            this.btnRefresh.Size = new System.Drawing.Size(30, 30);
             this.btnRefresh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnRefresh.TabIndex = 75;
             this.btnRefresh.TabStop = false;
-            this.btnRefresh.Visible = false;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.Location = new System.Drawing.Point(227, 122);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(16, 23);
+            this.label7.TabIndex = 76;
+            this.label7.Text = "*";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Red;
+            this.label8.Location = new System.Drawing.Point(266, 195);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(16, 23);
+            this.label8.TabIndex = 77;
+            this.label8.Text = "*";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.Location = new System.Drawing.Point(281, 270);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(16, 23);
+            this.label9.TabIndex = 78;
+            this.label9.Text = "*";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Red;
+            this.label10.Location = new System.Drawing.Point(220, 358);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(16, 23);
+            this.label10.TabIndex = 79;
+            this.label10.Text = "*";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Red;
+            this.label11.Location = new System.Drawing.Point(266, 469);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(16, 23);
+            this.label11.TabIndex = 80;
+            this.label11.Text = "*";
+            this.label11.Visible = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Red;
+            this.label12.Location = new System.Drawing.Point(540, 487);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(16, 23);
+            this.label12.TabIndex = 81;
+            this.label12.Text = "*";
             // 
             // PengembalianBarangAdmin
             // 
@@ -677,6 +756,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1050, 724);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnCari);
             this.Controls.Add(this.btnHapusKeranjang);
@@ -775,5 +860,11 @@
         private System.Windows.Forms.PictureBox btnTambahKeranjang;
         private System.Windows.Forms.PictureBox btnCari;
         private System.Windows.Forms.PictureBox btnRefresh;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
     }
 }

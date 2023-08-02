@@ -34,6 +34,7 @@ namespace SpaceSolutions
             // TODO: This line of code loads data into the 'dSSpaceSolutions.DendaKerusakanBarang' table. You can move, or remove it, as needed.
             this.dendaKerusakanBarangTableAdapter.QueryDendaBarang(this.dSSpaceSolutions.DendaKerusakanBarang);
             getDataPeminjamanBarang();
+            txtTotalDenda.Text = "0";
         }
 
         private void getDataPeminjamanBarang()
@@ -212,6 +213,7 @@ namespace SpaceSolutions
                 labelJumlahBarangRusak.Visible = true;
                 txtJumlahKerusakanBarang.Visible = true;
                 KeranjangKerusakan.Visible = true;
+                label11.Visible = true;
             }
         }
 
@@ -221,6 +223,7 @@ namespace SpaceSolutions
             if (selectedRadioButton != null && selectedRadioButton.Checked && selectedRadioButton.Name == "rbTidakRusak")
             {
                 cbKerusakanBarang.Visible = false;
+                label11.Visible = false;
                 btnTambahKeranjang.Visible = false;
                 btnHapusKeranjang.Visible = false;
                 LabelDetailDenda.Visible = false;
@@ -247,7 +250,7 @@ namespace SpaceSolutions
 
             if(kondisiBarang == 0)
             {
-                if (txtIdPeminjaman.Text == "" || txtTotalDenda.Text == "")
+                if (txtIdPeminjaman.Text == "" || txtTotalDenda.Text == "" || rbTidakRusak.Checked == false)
                 {
                     MessageBox.Show("Tidak boleh ada data yang kosong", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
@@ -262,16 +265,17 @@ namespace SpaceSolutions
                 txtJumlahKerusakanBarang.Visible = false;
                 KeranjangKerusakan.Visible = false;
                 KeranjangKerusakan.Items.Clear();
-                keranjangBarang.Items.Clear();
                 rbRusak.Checked = false;
                 rbTidakRusak.Checked = false;
                 txtTotalDenda.Text = "0";
                 pengembalianStockBarang();
+                keranjangBarang.Items.Clear();
                 getDataPeminjamanBarang();
+                txtIdPeminjaman.Text = "";
             }
             else if(kondisiBarang == 1)
             {
-                if (txtIdPeminjaman.Text == "" || txtTotalDenda.Text == "")
+                if (txtIdPeminjaman.Text == "" || txtTotalDenda.Text == "" || KeranjangKerusakan.Items.Count == 0)
                 {
                     MessageBox.Show("Tidak boleh ada data yang kosong", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
@@ -287,12 +291,13 @@ namespace SpaceSolutions
                 txtJumlahKerusakanBarang.Visible = false;
                 KeranjangKerusakan.Visible = false;
                 KeranjangKerusakan.Items.Clear();
-                keranjangBarang.Items.Clear();
                 rbRusak.Checked = false;
                 rbTidakRusak.Checked = false;
                 txtTotalDenda.Text = "0";
                 pengembalianStockBarang();
+                keranjangBarang.Items.Clear();
                 getDataPeminjamanBarang();
+                txtIdPeminjaman.Text = "";
             }
         }
 
@@ -409,6 +414,13 @@ namespace SpaceSolutions
         private void btnTambahKeranjang_Click(object sender, EventArgs e)
         {
             getDataDendaKerusakanBarang();
+
+            if(txtJumlahKerusakanBarang.Text == "")
+            {
+                MessageBox.Show("Masukan Jumlah Barang terlebih dahulu", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             idPeminjamanBarang = txtIdPeminjaman.Text;
             string jumlahBarangRusak = txtJumlahKerusakanBarang.Text;
 
@@ -521,6 +533,14 @@ namespace SpaceSolutions
         {
             getDataPeminjamanBarang();
             txtCariNamaPeminjam.Text = "";
+        }
+
+        private void txtJumlahKerusakanBarang_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
         }
 
         private void UpdateTotalDendaKerusakan()

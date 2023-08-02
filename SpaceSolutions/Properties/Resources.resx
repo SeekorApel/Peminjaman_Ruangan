@@ -121,11 +121,8 @@
   <data name="barang btn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\Icon\barang btn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Logout btn" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Icon\Logout btn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Hapus1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Icon\Hapus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Laporan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Icon\Laporan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Denda Kerusakan Barang btn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\Icon\Denda Kerusakan Barang btn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -136,6 +133,9 @@
   <data name="Pattern List 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\Background\Pattern List 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="User Besar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Icon\User Besar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Input" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\Icon\Input.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -144,6 +144,9 @@
   </data>
   <data name="Ruangan btn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\Icon\Ruangan btn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HomePageIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Icon\HomePageIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Save 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\Icon\Save 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -159,6 +162,12 @@
   </data>
   <data name="Riwayat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\Icon\Riwayat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Logout btn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Icon\Logout btn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EDIT 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Icon\EDIT 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Refresh1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\Icon\Refresh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,20 +190,23 @@
   <data name="Denda Kerusakan Ruangan btm" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\Icon\Denda Kerusakan Ruangan btm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Search" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Icon\Search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Peminjaman USER" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\Icon\Peminjaman USER.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Edit CRUD " type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Icon\Edit CRUD .png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Logo + text" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\Background\Logo + text.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="user (Black)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Icon\user (Black).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Hapus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\Icon\Hapus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="user (Black)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Icon\user (Black).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Search" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Icon\Search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Fasilitas btn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\Icon\Fasilitas btn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -208,8 +220,8 @@
   <data name="user btn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\Icon\user btn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Edit CRUD " type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Icon\Edit CRUD .png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Hapus1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Icon\Hapus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Login Page" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\Background\Login Page.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -220,7 +232,10 @@
   <data name="Peminjaman Ruangan btn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\Icon\Peminjaman Ruangan btn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="EDIT 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Icon\EDIT 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BarangBesar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Icon\BarangBesar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ruangan Besar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Icon\Ruangan Besar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

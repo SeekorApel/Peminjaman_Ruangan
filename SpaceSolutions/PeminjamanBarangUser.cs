@@ -70,6 +70,13 @@ namespace SpaceSolutions
                 MessageBox.Show("Tidak boleh ada data yang kosong", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
+            if (keranjangBarang.Items.Count == 0)
+            {
+                // Tampilkan pesan kesalahan atau lakukan tindakan lainnya
+                MessageBox.Show("Tidak Boleh ada data yang kosong", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             inputTabelPeminjamanBarang();
             inputDetailPeminjamanBarang();
             getDataTabelBarang();
@@ -294,6 +301,29 @@ namespace SpaceSolutions
             finally
             {
                 connection.Close();
+            }
+        }
+
+        private void txtJumlahBarang_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Memeriksa apakah karakter yang ditekan adalah angka atau kontrol (seperti backspace)
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true; // Mencegah karakter yang tidak valid dimasukkan
+            }
+        }
+
+        private void txtLamaPeminjaman_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+
+            // Memeriksa apakah jumlah karakter telah mencapai batas maksimum
+            if (txtLamaPeminjaman.Text.Length >= 2 && e.KeyChar != '\b') // '\b' adalah karakter backspace
+            {
+                e.Handled = true; // Mencegah karakter ditambahkan jika batas maksimum telah tercapai
             }
         }
 

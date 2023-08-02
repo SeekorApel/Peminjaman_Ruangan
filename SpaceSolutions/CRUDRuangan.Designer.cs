@@ -44,6 +44,7 @@
             this.namaFasilitasColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ketersediaanRuanganColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lokasiRuanganColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewImageColumn();
@@ -105,6 +106,7 @@
             this.namaFasilitasColumn,
             this.ketersediaanRuanganColumn,
             this.lokasiRuanganColumn,
+            this.Column2,
             this.Column1,
             this.Column9,
             this.Column10});
@@ -208,6 +210,13 @@
             this.lokasiRuanganColumn.Name = "lokasiRuanganColumn";
             this.lokasiRuanganColumn.ReadOnly = true;
             // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "kapasitasRuangan";
+            this.Column2.HeaderText = "Kapasitas Ruangan";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
             // Column1
             // 
             this.Column1.DataPropertyName = "status";
@@ -283,6 +292,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn namaFasilitasColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ketersediaanRuanganColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lokasiRuanganColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewImageColumn Column9;
         private System.Windows.Forms.DataGridViewImageColumn Column10;

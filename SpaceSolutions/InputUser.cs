@@ -14,6 +14,7 @@ namespace SpaceSolutions.CRUD
 {
     public partial class InputUser : Form
     {
+  
         public InputUser()
         {
             InitializeComponent();

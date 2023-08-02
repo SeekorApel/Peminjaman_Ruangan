@@ -37,6 +37,8 @@
             this.qtycolumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.txtIDBarang = new Guna.UI2.WinForms.Guna2TextBox();
             this.dgvTabelBarang = new System.Windows.Forms.DataGridView();
+            this.barangBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dSSpaceSolutions = new SpaceSolutions.DSSpaceSolutions();
             this.txtNamaFasilitas = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -51,20 +53,18 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.dSSpaceSolutions = new SpaceSolutions.DSSpaceSolutions();
-            this.barangBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.barangTableAdapter = new SpaceSolutions.DSSpaceSolutionsTableAdapters.BarangTableAdapter();
-            this.idBarangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Kolom1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.namaBarangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kategoriBarangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stokBarangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabelBarang)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barangBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSSpaceSolutions)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSimpan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCari)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRefesh)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dSSpaceSolutions)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.barangBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // txtJumlahBarang
@@ -161,7 +161,7 @@
             this.dgvTabelBarang.AutoGenerateColumns = false;
             this.dgvTabelBarang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTabelBarang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idBarangDataGridViewTextBoxColumn,
+            this.Kolom1,
             this.namaBarangDataGridViewTextBoxColumn,
             this.kategoriBarangDataGridViewTextBoxColumn,
             this.stokBarangDataGridViewTextBoxColumn,
@@ -173,6 +173,17 @@
             this.dgvTabelBarang.RowHeadersVisible = false;
             this.dgvTabelBarang.Size = new System.Drawing.Size(387, 150);
             this.dgvTabelBarang.TabIndex = 23;
+            this.dgvTabelBarang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTabelBarang_CellClick);
+            // 
+            // barangBindingSource
+            // 
+            this.barangBindingSource.DataMember = "Barang";
+            this.barangBindingSource.DataSource = this.dSSpaceSolutions;
+            // 
+            // dSSpaceSolutions
+            // 
+            this.dSSpaceSolutions.DataSetName = "DSSpaceSolutions";
+            this.dSSpaceSolutions.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // txtNamaFasilitas
             // 
@@ -214,11 +225,11 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Poppins", 10F);
-            this.label5.Location = new System.Drawing.Point(97, 124);
+            this.label5.Location = new System.Drawing.Point(98, 124);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 25);
+            this.label5.Size = new System.Drawing.Size(79, 25);
             this.label5.TabIndex = 38;
-            this.label5.Text = "Barang";
+            this.label5.Text = "ID Barang";
             // 
             // label6
             // 
@@ -334,7 +345,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(154, 125);
+            this.label3.Location = new System.Drawing.Point(176, 125);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(16, 23);
             this.label3.TabIndex = 56;
@@ -352,26 +363,16 @@
             this.label7.TabIndex = 57;
             this.label7.Text = "*";
             // 
-            // dSSpaceSolutions
-            // 
-            this.dSSpaceSolutions.DataSetName = "DSSpaceSolutions";
-            this.dSSpaceSolutions.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // barangBindingSource
-            // 
-            this.barangBindingSource.DataMember = "Barang";
-            this.barangBindingSource.DataSource = this.dSSpaceSolutions;
-            // 
             // barangTableAdapter
             // 
             this.barangTableAdapter.ClearBeforeFill = true;
             // 
-            // idBarangDataGridViewTextBoxColumn
+            // Kolom1
             // 
-            this.idBarangDataGridViewTextBoxColumn.DataPropertyName = "IdBarang";
-            this.idBarangDataGridViewTextBoxColumn.HeaderText = "IdBarang";
-            this.idBarangDataGridViewTextBoxColumn.Name = "idBarangDataGridViewTextBoxColumn";
-            this.idBarangDataGridViewTextBoxColumn.ReadOnly = true;
+            this.Kolom1.DataPropertyName = "IdBarang";
+            this.Kolom1.HeaderText = "IdBarang";
+            this.Kolom1.Name = "Kolom1";
+            this.Kolom1.ReadOnly = true;
             // 
             // namaBarangDataGridViewTextBoxColumn
             // 
@@ -431,11 +432,11 @@
             this.Text = "UpdateFasilitas";
             this.Load += new System.EventHandler(this.UpdateFasilitas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabelBarang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barangBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSSpaceSolutions)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSimpan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCari)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRefesh)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dSSpaceSolutions)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.barangBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -467,7 +468,7 @@
         private DSSpaceSolutions dSSpaceSolutions;
         private System.Windows.Forms.BindingSource barangBindingSource;
         private DSSpaceSolutionsTableAdapters.BarangTableAdapter barangTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idBarangDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Kolom1;
         private System.Windows.Forms.DataGridViewTextBoxColumn namaBarangDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn kategoriBarangDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn stokBarangDataGridViewTextBoxColumn;

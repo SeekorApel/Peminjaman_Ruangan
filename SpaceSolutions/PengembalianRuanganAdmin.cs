@@ -254,6 +254,7 @@ namespace SpaceSolutions
             RadioButton selectedRadioButton = sender as RadioButton;
             if (selectedRadioButton != null && selectedRadioButton.Checked && selectedRadioButton.Name == "rbRusak")
             {
+                cbKerusakanRuangan.SelectedIndex = -1;
                 cbKerusakanRuangan.Visible = true;
                 btnTambahKeranjang.Visible = true;
                 btnHapusKeranjang.Visible = true;
@@ -288,7 +289,7 @@ namespace SpaceSolutions
 
             if(statusKerusakan == 0)
             {
-                if(txtIdPeminjaman.Text == "" || txtTotalDenda.Text == "")
+                if(txtIdPeminjaman.Text == "" || txtTotalDenda.Text == "" || rbTidakKerusakan.Checked == false)
                 {
                     MessageBox.Show("Tidak boleh ada data yang kosong", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
@@ -299,11 +300,12 @@ namespace SpaceSolutions
             }
             else if (statusKerusakan == 1)
             {
-                if (txtIdPeminjaman.Text == "" || txtTotalDenda.Text == "")
+                if (txtIdPeminjaman.Text == "" || txtTotalDenda.Text == "" || KeranjangKerusakan.Items.Count == 0)
                 {
                     MessageBox.Show("Tidak boleh ada data yang kosong", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
+
                 inputPeminjamanRuangan();
                 inputDetailKerusakanRuangan();
                 getDataPeminjamanRuangan();
@@ -507,6 +509,20 @@ namespace SpaceSolutions
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            getDataPeminjamanRuangan();
+            txtCariNamaPeminjaman.Text = "";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            txtIdPeminjaman.Text = "";
+            rbRusak.Checked = false;
+            rbTidakKerusakan.Checked = false;
+            txtTotalDenda.Text = "";
         }
 
         private void getDataDendaKerusakan()

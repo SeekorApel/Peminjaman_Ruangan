@@ -20,7 +20,20 @@ namespace SpaceSolutions
 
         private void btnTolakPeminjaman_Click(object sender, EventArgs e)
         {
-
+            DialogResult result = MessageBox.Show("Apakah Anda yakin menolak peminjaman ruangan ini ?", "Peringatan", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                if(txtAlasanPenolakan.Text == "")
+                {
+                    MessageBox.Show("Wajib Mengisi Alasan !", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    tolakPeminjamanRuangan();
+                }
+                
+            }
+                
         }
 
         private void btnSetujui_Click(object sender, EventArgs e)
@@ -29,6 +42,32 @@ namespace SpaceSolutions
         }
 
         DateTime convertTanggal;
+
+        private void cbSetujuiPeminjaman_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbSetujuiPeminjaman.Checked)
+            {
+                cbTolakPeminjaman.Checked = false;
+                btnSetujui.Visible = true;
+                labelAlasan.Visible = false;
+                labelBintang.Visible = false;
+                txtAlasanPenolakan.Visible = false;
+                btnTolakPeminjaman.Visible = false;
+            }
+        }
+
+        private void cbTolakPeminjaman_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbTolakPeminjaman.Checked)
+            {
+                cbSetujuiPeminjaman.Checked = false;
+                labelAlasan.Visible = true;
+                labelBintang.Visible = true;
+                txtAlasanPenolakan.Visible = true;
+                btnTolakPeminjaman.Visible = true;
+                btnSetujui.Visible = false;
+            }
+        }
 
         public AccPeminjamanRuangan(string idPeminjaman, string idUser, string idRuangan, string jenisKegiatan, string kapasitasOrang, string tanggalPeminjaman, string lamaPeminjaman, string statusPeminjaman)
         {
@@ -115,7 +154,39 @@ namespace SpaceSolutions
                 }
                 else
                 {
-                    MessageBox.Show("Peminjaman Di setujui", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Peminjaman Tidak Bisa setujui", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error : " + ex.Message);
+            }
+        }
+
+        private void tolakPeminjamanRuangan()
+        {
+            try
+            {
+                SqlConnection connection = new SqlConnection();
+                connection.ConnectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
+                SqlCommand sqlcmd = new SqlCommand("sp_TolakPeminjamanRuangan", connection);
+                sqlcmd.CommandType = CommandType.StoredProcedure;
+
+                sqlcmd.Parameters.AddWithValue("@idPeminjamanRuangan", idPeminjamanTemp);
+                sqlcmd.Parameters.AddWithValue("@alasan", txtAlasanPenolakan.Text);
+
+                connection.Open();
+                int result = Convert.ToInt32(sqlcmd.ExecuteNonQuery());
+                connection.Close();
+
+                if (result != 0)
+                {
+                    MessageBox.Show("Peminjaman Di Tolak", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Peminjaman tidak bisa Tolak", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)

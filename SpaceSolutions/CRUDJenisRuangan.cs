@@ -49,7 +49,8 @@ namespace SpaceSolutions
         private void btnTambah_Click(object sender, EventArgs e)
         {
             InputJenisRuangan input = new InputJenisRuangan();
-            input.Show();
+            input.ShowDialog();
+            getDataTabelJenisRuangan();
         }
 
         private void btnRefesh_Click(object sender, EventArgs e)
@@ -112,6 +113,7 @@ namespace SpaceSolutions
                 kapasitasRuangan = Convert.ToString(dgvTabelJenisRuangan.Rows[e.RowIndex].Cells["kapasitasRuanganColumn"].Value);
                 UpdateJenisRuangan updateJns = new UpdateJenisRuangan(idJenisRuangan, namaJenisRuangan, kapasitasRuangan);
                 updateJns.ShowDialog();
+                getDataTabelJenisRuangan();
             }
             if (e.ColumnIndex == 1)
             {

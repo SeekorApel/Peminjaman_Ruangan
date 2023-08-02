@@ -65,7 +65,9 @@ namespace SpaceSolutions.Page
         private void btnTambah_Click(object sender, EventArgs e)
         {
             InputUser inputUser = new InputUser();
-            inputUser.Show();
+            inputUser.ShowDialog();
+
+            getDataTabelUser();
         }
 
         private void btnRefesh_Click(object sender, EventArgs e)
@@ -102,6 +104,8 @@ namespace SpaceSolutions.Page
                 
                 UpdateUser updateUsr = new UpdateUser(idUser, nama, username, password, notelp, jabatan, role);
                 updateUsr.ShowDialog();
+
+                getDataTabelUser();
                 
             }
             if(e.ColumnIndex == 1)
@@ -166,5 +170,7 @@ namespace SpaceSolutions.Page
                 MessageBox.Show(ex.Message);
             }
         }
+
+
     }
 }

@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.panelBar = new System.Windows.Forms.Panel();
+            this.labelStatusMenu = new System.Windows.Forms.Label();
             this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -42,12 +43,12 @@
             this.btnPeminjaman = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.panelSubMenuPeminjaman = new System.Windows.Forms.Panel();
-            this.btnPeminjamanRuangan = new Guna.UI2.WinForms.Guna2Button();
             this.btnPeminjamanBarang = new Guna.UI2.WinForms.Guna2Button();
+            this.btnPeminjamanRuangan = new Guna.UI2.WinForms.Guna2Button();
             this.btnRiwayatPengembalian = new System.Windows.Forms.Button();
             this.panelSubMenuRiwayatPeminjaman = new System.Windows.Forms.Panel();
-            this.btnRiwayatPeminjamanRuangan = new Guna.UI2.WinForms.Guna2Button();
             this.btnRiwayatPeminajanBarang = new Guna.UI2.WinForms.Guna2Button();
+            this.btnRiwayatPeminjamanRuangan = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.panelBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -65,6 +66,7 @@
             // panelBar
             // 
             this.panelBar.BackColor = System.Drawing.Color.Transparent;
+            this.panelBar.Controls.Add(this.labelStatusMenu);
             this.panelBar.Controls.Add(this.btnClose);
             this.panelBar.Controls.Add(this.guna2ControlBox1);
             this.panelBar.Controls.Add(this.guna2PictureBox1);
@@ -75,6 +77,17 @@
             this.panelBar.Name = "panelBar";
             this.panelBar.Size = new System.Drawing.Size(990, 130);
             this.panelBar.TabIndex = 7;
+            // 
+            // labelStatusMenu
+            // 
+            this.labelStatusMenu.AutoSize = true;
+            this.labelStatusMenu.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.labelStatusMenu.Location = new System.Drawing.Point(48, 60);
+            this.labelStatusMenu.Name = "labelStatusMenu";
+            this.labelStatusMenu.Size = new System.Drawing.Size(21, 26);
+            this.labelStatusMenu.TabIndex = 14;
+            this.labelStatusMenu.Text = "-";
+            this.labelStatusMenu.Visible = false;
             // 
             // btnClose
             // 
@@ -155,7 +168,7 @@
             this.guna2PictureBox2.Location = new System.Drawing.Point(50, 42);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
             this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
-            this.guna2PictureBox2.Size = new System.Drawing.Size(190, 45);
+            this.guna2PictureBox2.Size = new System.Drawing.Size(180, 45);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox2.TabIndex = 4;
             this.guna2PictureBox2.TabStop = false;
@@ -208,23 +221,6 @@
             this.panelSubMenuPeminjaman.Size = new System.Drawing.Size(290, 102);
             this.panelSubMenuPeminjaman.TabIndex = 12;
             // 
-            // btnPeminjamanRuangan
-            // 
-            this.btnPeminjamanRuangan.CheckedState.Parent = this.btnPeminjamanRuangan;
-            this.btnPeminjamanRuangan.CustomImages.Parent = this.btnPeminjamanRuangan;
-            this.btnPeminjamanRuangan.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPeminjamanRuangan.FillColor = System.Drawing.Color.White;
-            this.btnPeminjamanRuangan.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPeminjamanRuangan.ForeColor = System.Drawing.Color.Black;
-            this.btnPeminjamanRuangan.HoverState.Parent = this.btnPeminjamanRuangan;
-            this.btnPeminjamanRuangan.Location = new System.Drawing.Point(0, 0);
-            this.btnPeminjamanRuangan.Name = "btnPeminjamanRuangan";
-            this.btnPeminjamanRuangan.ShadowDecoration.Parent = this.btnPeminjamanRuangan;
-            this.btnPeminjamanRuangan.Size = new System.Drawing.Size(290, 50);
-            this.btnPeminjamanRuangan.TabIndex = 1;
-            this.btnPeminjamanRuangan.Text = "Peminjaman Ruangan";
-            this.btnPeminjamanRuangan.Click += new System.EventHandler(this.btnPeminjamanRuangan_Click);
-            // 
             // btnPeminjamanBarang
             // 
             this.btnPeminjamanBarang.CheckedState.Parent = this.btnPeminjamanBarang;
@@ -241,6 +237,23 @@
             this.btnPeminjamanBarang.TabIndex = 2;
             this.btnPeminjamanBarang.Text = "Peminjaman Barang";
             this.btnPeminjamanBarang.Click += new System.EventHandler(this.btnPeminjamanBarang_Click);
+            // 
+            // btnPeminjamanRuangan
+            // 
+            this.btnPeminjamanRuangan.CheckedState.Parent = this.btnPeminjamanRuangan;
+            this.btnPeminjamanRuangan.CustomImages.Parent = this.btnPeminjamanRuangan;
+            this.btnPeminjamanRuangan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPeminjamanRuangan.FillColor = System.Drawing.Color.White;
+            this.btnPeminjamanRuangan.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPeminjamanRuangan.ForeColor = System.Drawing.Color.Black;
+            this.btnPeminjamanRuangan.HoverState.Parent = this.btnPeminjamanRuangan;
+            this.btnPeminjamanRuangan.Location = new System.Drawing.Point(0, 0);
+            this.btnPeminjamanRuangan.Name = "btnPeminjamanRuangan";
+            this.btnPeminjamanRuangan.ShadowDecoration.Parent = this.btnPeminjamanRuangan;
+            this.btnPeminjamanRuangan.Size = new System.Drawing.Size(290, 50);
+            this.btnPeminjamanRuangan.TabIndex = 1;
+            this.btnPeminjamanRuangan.Text = "Peminjaman Ruangan";
+            this.btnPeminjamanRuangan.Click += new System.EventHandler(this.btnPeminjamanRuangan_Click);
             // 
             // btnRiwayatPengembalian
             // 
@@ -272,23 +285,6 @@
             this.panelSubMenuRiwayatPeminjaman.Size = new System.Drawing.Size(290, 102);
             this.panelSubMenuRiwayatPeminjaman.TabIndex = 14;
             // 
-            // btnRiwayatPeminjamanRuangan
-            // 
-            this.btnRiwayatPeminjamanRuangan.CheckedState.Parent = this.btnRiwayatPeminjamanRuangan;
-            this.btnRiwayatPeminjamanRuangan.CustomImages.Parent = this.btnRiwayatPeminjamanRuangan;
-            this.btnRiwayatPeminjamanRuangan.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnRiwayatPeminjamanRuangan.FillColor = System.Drawing.Color.White;
-            this.btnRiwayatPeminjamanRuangan.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRiwayatPeminjamanRuangan.ForeColor = System.Drawing.Color.Black;
-            this.btnRiwayatPeminjamanRuangan.HoverState.Parent = this.btnRiwayatPeminjamanRuangan;
-            this.btnRiwayatPeminjamanRuangan.Location = new System.Drawing.Point(0, 0);
-            this.btnRiwayatPeminjamanRuangan.Name = "btnRiwayatPeminjamanRuangan";
-            this.btnRiwayatPeminjamanRuangan.ShadowDecoration.Parent = this.btnRiwayatPeminjamanRuangan;
-            this.btnRiwayatPeminjamanRuangan.Size = new System.Drawing.Size(290, 50);
-            this.btnRiwayatPeminjamanRuangan.TabIndex = 4;
-            this.btnRiwayatPeminjamanRuangan.Text = "Peminjaman Ruangan";
-            this.btnRiwayatPeminjamanRuangan.Click += new System.EventHandler(this.btnRiwayatPeminjamanRuangan_Click);
-            // 
             // btnRiwayatPeminajanBarang
             // 
             this.btnRiwayatPeminajanBarang.CheckedState.Parent = this.btnRiwayatPeminajanBarang;
@@ -305,6 +301,23 @@
             this.btnRiwayatPeminajanBarang.TabIndex = 5;
             this.btnRiwayatPeminajanBarang.Text = "Peminjaman Barang";
             this.btnRiwayatPeminajanBarang.Click += new System.EventHandler(this.btnRiwayatPeminajanBarang_Click);
+            // 
+            // btnRiwayatPeminjamanRuangan
+            // 
+            this.btnRiwayatPeminjamanRuangan.CheckedState.Parent = this.btnRiwayatPeminjamanRuangan;
+            this.btnRiwayatPeminjamanRuangan.CustomImages.Parent = this.btnRiwayatPeminjamanRuangan;
+            this.btnRiwayatPeminjamanRuangan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRiwayatPeminjamanRuangan.FillColor = System.Drawing.Color.White;
+            this.btnRiwayatPeminjamanRuangan.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRiwayatPeminjamanRuangan.ForeColor = System.Drawing.Color.Black;
+            this.btnRiwayatPeminjamanRuangan.HoverState.Parent = this.btnRiwayatPeminjamanRuangan;
+            this.btnRiwayatPeminjamanRuangan.Location = new System.Drawing.Point(0, 0);
+            this.btnRiwayatPeminjamanRuangan.Name = "btnRiwayatPeminjamanRuangan";
+            this.btnRiwayatPeminjamanRuangan.ShadowDecoration.Parent = this.btnRiwayatPeminjamanRuangan;
+            this.btnRiwayatPeminjamanRuangan.Size = new System.Drawing.Size(290, 50);
+            this.btnRiwayatPeminjamanRuangan.TabIndex = 4;
+            this.btnRiwayatPeminjamanRuangan.Text = "Peminjaman Ruangan";
+            this.btnRiwayatPeminjamanRuangan.Click += new System.EventHandler(this.btnRiwayatPeminjamanRuangan_Click);
             // 
             // guna2Panel1
             // 
@@ -370,5 +383,6 @@
         private System.Windows.Forms.Button btnPeminjaman;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        private System.Windows.Forms.Label labelStatusMenu;
     }
 }

@@ -29,6 +29,7 @@ namespace SpaceSolutions
                 lokasiRuangan = Convert.ToString(dgvTabelRuangan.Rows[e.RowIndex].Cells["lokasiRuanganColumn"].Value);
                 UpdateRuangan updateRg = new UpdateRuangan(idRuangan, namaRuangan, namaFasilitas, namaJenisRuangan, ketersediaanRuangan, lokasiRuangan);
                 updateRg.ShowDialog();
+                getDataTabelRuangan();
 
             }
             if (e.ColumnIndex == 1)
@@ -127,7 +128,9 @@ namespace SpaceSolutions
         private void btnTambah_Click(object sender, EventArgs e)
         {
             InputRuangan inputRuangan = new InputRuangan();
-            inputRuangan.Show();
+            inputRuangan.ShowDialog();
+
+            getDataTabelRuangan();
         }
 
         public CRUDRuangan()

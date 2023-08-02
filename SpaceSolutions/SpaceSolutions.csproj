@@ -76,6 +76,7 @@
     </Reference>
     <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -167,6 +168,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DSSpaceSolutions.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HalamanUtamaManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HalamanUtamaManager.Designer.cs">
+      <DependentUpon>HalamanUtamaManager.cs</DependentUpon>
     </Compile>
     <Compile Include="InputBarang.cs">
       <SubType>Form</SubType>
@@ -357,6 +364,9 @@
     <EmbeddedResource Include="DashBoardUser.resx">
       <DependentUpon>DashBoardUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HalamanUtamaManager.resx">
+      <DependentUpon>HalamanUtamaManager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InputBarang.resx">
       <DependentUpon>InputBarang.cs</DependentUpon>
     </EmbeddedResource>
@@ -379,6 +389,7 @@
       <DependentUpon>InputUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LaporanBarang.rdlc" />
+    <EmbeddedResource Include="LaporanDetailPeminjamanBarang.rdlc" />
     <EmbeddedResource Include="LaporanPeminjamanBarang.resx">
       <DependentUpon>LaporanPeminjamanBarang.cs</DependentUpon>
     </EmbeddedResource>
@@ -566,6 +577,11 @@
     <None Include="Assets\Icon\EDIT 2.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Icon\HomePageIcon.png" />
+    <None Include="Assets\Icon\Laporan.png" />
+    <None Include="Assets\Icon\User Besar.png" />
+    <None Include="Assets\Icon\BarangBesar.png" />
+    <None Include="Assets\Icon\Ruangan Besar.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

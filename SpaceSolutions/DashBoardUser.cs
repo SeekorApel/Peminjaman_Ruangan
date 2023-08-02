@@ -25,6 +25,7 @@ namespace SpaceSolutions
         private void DashBoardUser_Load(object sender, EventArgs e)
         {
             labelNama.Text = namaUser;
+            labelStatusMenu.Visible = false;
         }
 
         private void openChildForm(Form childForm, object btnSender)
@@ -77,11 +78,17 @@ namespace SpaceSolutions
         private void btnPeminjamanRuangan_Click(object sender, EventArgs e)
         {
             openChildForm(new PeminjamanRuanganUser(idUser), sender);
+            string statusMenu = "Menu Peminjaman Ruangan";
+            labelStatusMenu.Text = statusMenu;
+            labelStatusMenu.Visible = true;
         }
 
         private void btnPeminjamanBarang_Click(object sender, EventArgs e)
         {
             openChildForm(new PeminjamanBarangUser(idUser), sender);
+            string statusMenu = "Menu Peminjaman Barang";
+            labelStatusMenu.Text = statusMenu;
+            labelStatusMenu.Visible = true;
         }
 
         private void btnRiwayatPengembalian_Click(object sender, EventArgs e)
@@ -92,11 +99,17 @@ namespace SpaceSolutions
         private void btnRiwayatPeminjamanRuangan_Click(object sender, EventArgs e)
         {
             openChildForm(new RiwayatPeminjamanRuangan(idUser), sender);
+            string statusMenu = "Riwayat Peminjaman Ruangan";
+            labelStatusMenu.Text = statusMenu;
+            labelStatusMenu.Visible = true;
         }
 
         private void btnRiwayatPeminajanBarang_Click(object sender, EventArgs e)
         {
             openChildForm(new RiwayatPeminjamanBarang(idUser), sender);
+            string statusMenu = "Riwayat Peminjaman Barang";
+            labelStatusMenu.Text = statusMenu;
+            labelStatusMenu.Visible = true;
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)

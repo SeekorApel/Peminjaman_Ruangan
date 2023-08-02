@@ -104,6 +104,9 @@ namespace SpaceSolutions
         private void btnKelolaBarang_Click(object sender, EventArgs e)
         {
             openChildForm(new CRUDBarang(), sender);
+            string statusMenu = "Menu Kelola Barang";
+            labelStatusMenu.Text = statusMenu;
+            labelStatusMenu.Visible = true;
         }
 
         private void btnJenisRuangan_Click(object sender, EventArgs e)

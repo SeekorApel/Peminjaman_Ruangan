@@ -267,13 +267,13 @@ namespace SpaceSolutions
 
         private void dgvTabelBarang_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = dgvTabelBarang.Rows[e.RowIndex];
+                if (e.RowIndex >= 0)
+                {
+                    DataGridViewRow row = dgvTabelBarang.Rows[e.RowIndex];
 
-                txtIDBarang.Text = row.Cells["Kolom1"].Value.ToString();
+                    txtIDBarang.Text = row.Cells["Kolom1"].Value.ToString();
 
-            }
+                }
         }
 
         public string autogenerateID(string firstText, string query)

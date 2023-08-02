@@ -20,8 +20,8 @@ namespace SpaceSolutions
 
         private void LaporanPeminjamanBarang_Load(object sender, EventArgs e)
         {
-
-            this.reportViewer1.RefreshReport();
+            
+            
         }
 
         private void btnLihat_Click(object sender, EventArgs e)
@@ -54,9 +54,6 @@ namespace SpaceSolutions
                 }
 
                 this.laporanPeminjamanBarangTableAdapter.Fill(this.dSSpaceSolutions.LaporanPeminjamanBarang, statusPeminjaman, bulanAngka, tahun);
-
-
-
                 this.reportViewer1.RefreshReport();
             }
         }
@@ -74,6 +71,25 @@ namespace SpaceSolutions
             {
                 e.Handled = true; // Mencegah karakter ditambahkan jika batas maksimum telah tercapai
             }
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            cbFilterBulan.SelectedIndex = -1;
+            cbFilterStatus.SelectedIndex = -1;
+            txtTahun.Text = "";
+
+            DataTable dataTable = new DataTable();
+            /*dgvPeminjamanBarang.DataSource = dataTable;*/
+
+            // Setelah Anda mengambil data dari database dan mengisinya ke dalam DataTable, Anda bisa mengosongkannya dengan cara berikut:
+            dataTable.Clear();
+        }
+
+        private void btnCari_Click(object sender, EventArgs e)
+        {
+            this.laporanDetailPeminjamanBarangTableAdapter.Fill(this.dSSpaceSolutions.LaporanDetailPeminjamanBarang, (string)txtCariidPeminjamanBarang.Text);
+            this.reportViewer2.RefreshReport();
         }
     }
 }

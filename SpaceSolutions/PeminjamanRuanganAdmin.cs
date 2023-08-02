@@ -67,6 +67,7 @@ namespace SpaceSolutions
                 statusPeminjaman = Convert.ToString(dgvTabelPeminjaman.Rows[e.RowIndex].Cells["Kolom10"].Value);
                 AccPeminjamanRuangan accPeminjaman = new AccPeminjamanRuangan(idPeminjaman, idUser, idRuangan, jenisKegiatan, kapasitasOrang, tanggalPeminjamanTemp, lamaPeminjaman, statusPeminjaman);
                 accPeminjaman.ShowDialog();
+                getDataTabelPeminjamanRuangan();
             }
             if(e.ColumnIndex == 1)
             {

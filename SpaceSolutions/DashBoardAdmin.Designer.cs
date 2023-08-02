@@ -53,8 +53,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panelDesktopAdmin = new System.Windows.Forms.Panel();
             this.panelBar = new System.Windows.Forms.Panel();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.labelStatusMenu = new System.Windows.Forms.Label();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1.SuspendLayout();
             this.panelSubMenuPengembalian.SuspendLayout();
             this.panelSubMenuDenda.SuspendLayout();
@@ -160,7 +160,7 @@
             this.btnPengembalian.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPengembalian.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPengembalian.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnPengembalian.Image = global::SpaceSolutions.Properties.Resources.barang_btn;
+            this.btnPengembalian.Image = global::SpaceSolutions.Properties.Resources.Peminjaman_USER;
             this.btnPengembalian.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPengembalian.Location = new System.Drawing.Point(0, 566);
             this.btnPengembalian.Name = "btnPengembalian";
@@ -368,7 +368,7 @@
             this.guna2PictureBox2.Location = new System.Drawing.Point(50, 42);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
             this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
-            this.guna2PictureBox2.Size = new System.Drawing.Size(190, 45);
+            this.guna2PictureBox2.Size = new System.Drawing.Size(180, 45);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox2.TabIndex = 3;
             this.guna2PictureBox2.TabStop = false;
@@ -428,17 +428,6 @@
             this.panelBar.Size = new System.Drawing.Size(990, 114);
             this.panelBar.TabIndex = 6;
             // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Image = global::SpaceSolutions.Properties.Resources.user__Black_;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(762, 41);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(45, 45);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 2;
-            this.guna2PictureBox1.TabStop = false;
-            // 
             // labelStatusMenu
             // 
             this.labelStatusMenu.AutoSize = true;
@@ -449,6 +438,17 @@
             this.labelStatusMenu.TabIndex = 5;
             this.labelStatusMenu.Text = "-";
             this.labelStatusMenu.Visible = false;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = global::SpaceSolutions.Properties.Resources.user__Black_;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(762, 41);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
+            this.guna2PictureBox1.Size = new System.Drawing.Size(45, 45);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 2;
+            this.guna2PictureBox1.TabStop = false;
             // 
             // DashBoardAdmin
             // 

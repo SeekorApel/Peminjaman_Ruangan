@@ -39,6 +39,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dgvTabelRuangan = new System.Windows.Forms.DataGridView();
+            this.Kolom1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Kolom2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Kolom3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Kolom4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Kolom5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Kolom555 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label7 = new System.Windows.Forms.Label();
             this.txtNamaRuangan = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtIdRuangan = new Guna.UI2.WinForms.Guna2TextBox();
@@ -50,14 +58,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.Kolom1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Kolom2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Kolom3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Kolom4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Kolom5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Kolom555 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabelRuangan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCari)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRefresh)).BeginInit();
@@ -78,13 +78,15 @@
             this.txtJenisKegitan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtJenisKegitan.HoverState.Parent = this.txtJenisKegitan;
             this.txtJenisKegitan.Location = new System.Drawing.Point(60, 393);
+            this.txtJenisKegitan.Multiline = true;
             this.txtJenisKegitan.Name = "txtJenisKegitan";
             this.txtJenisKegitan.PasswordChar = '\0';
             this.txtJenisKegitan.PlaceholderText = "";
             this.txtJenisKegitan.SelectedText = "";
             this.txtJenisKegitan.ShadowDecoration.Parent = this.txtJenisKegitan;
-            this.txtJenisKegitan.Size = new System.Drawing.Size(220, 36);
+            this.txtJenisKegitan.Size = new System.Drawing.Size(220, 86);
             this.txtJenisKegitan.TabIndex = 3;
+            this.txtJenisKegitan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtJenisKegitan_KeyPress);
             // 
             // txtLamaPeminjaman
             // 
@@ -108,6 +110,7 @@
             this.txtLamaPeminjaman.ShadowDecoration.Parent = this.txtLamaPeminjaman;
             this.txtLamaPeminjaman.Size = new System.Drawing.Size(220, 36);
             this.txtLamaPeminjaman.TabIndex = 5;
+            this.txtLamaPeminjaman.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLamaPeminjaman_KeyPress);
             // 
             // txtKapasitasOrang
             // 
@@ -131,6 +134,7 @@
             this.txtKapasitasOrang.ShadowDecoration.Parent = this.txtKapasitasOrang;
             this.txtKapasitasOrang.Size = new System.Drawing.Size(220, 36);
             this.txtKapasitasOrang.TabIndex = 9;
+            this.txtKapasitasOrang.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtKapasitasOrang_KeyPress);
             // 
             // btnPinjam
             // 
@@ -239,6 +243,67 @@
             this.dgvTabelRuangan.Size = new System.Drawing.Size(585, 195);
             this.dgvTabelRuangan.TabIndex = 29;
             this.dgvTabelRuangan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTabelRuangan_CellClick);
+            // 
+            // Kolom1
+            // 
+            this.Kolom1.DataPropertyName = "idRuangan";
+            this.Kolom1.HeaderText = "ID Ruangan";
+            this.Kolom1.Name = "Kolom1";
+            this.Kolom1.ReadOnly = true;
+            this.Kolom1.Visible = false;
+            // 
+            // Kolom2
+            // 
+            this.Kolom2.DataPropertyName = "namaRuangan";
+            this.Kolom2.HeaderText = "Nama Ruangan";
+            this.Kolom2.Name = "Kolom2";
+            this.Kolom2.ReadOnly = true;
+            this.Kolom2.Width = 130;
+            // 
+            // Kolom3
+            // 
+            this.Kolom3.DataPropertyName = "namaJenisRuangan";
+            this.Kolom3.HeaderText = "Jenis Ruangan";
+            this.Kolom3.Name = "Kolom3";
+            this.Kolom3.ReadOnly = true;
+            // 
+            // Kolom4
+            // 
+            this.Kolom4.DataPropertyName = "namaFasilitas";
+            this.Kolom4.HeaderText = "Fasilitas";
+            this.Kolom4.Name = "Kolom4";
+            this.Kolom4.ReadOnly = true;
+            // 
+            // Kolom5
+            // 
+            this.Kolom5.DataPropertyName = "ketersediaanRuangan";
+            this.Kolom5.HeaderText = "Ketersediaan Ruangan";
+            this.Kolom5.Name = "Kolom5";
+            this.Kolom5.ReadOnly = true;
+            this.Kolom5.Width = 150;
+            // 
+            // Kolom555
+            // 
+            this.Kolom555.DataPropertyName = "lokasiRuangan";
+            this.Kolom555.HeaderText = "Lokasi Ruangan";
+            this.Kolom555.Name = "Kolom555";
+            this.Kolom555.ReadOnly = true;
+            this.Kolom555.Width = 120;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "status";
+            this.Column6.HeaderText = "Status";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Visible = false;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "KapasitasRuangan";
+            this.Column1.HeaderText = "Kapasitas Ruangan";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // label7
             // 
@@ -403,67 +468,6 @@
             this.label11.Size = new System.Drawing.Size(19, 26);
             this.label11.TabIndex = 44;
             this.label11.Text = "*";
-            // 
-            // Kolom1
-            // 
-            this.Kolom1.DataPropertyName = "idRuangan";
-            this.Kolom1.HeaderText = "ID Ruangan";
-            this.Kolom1.Name = "Kolom1";
-            this.Kolom1.ReadOnly = true;
-            this.Kolom1.Visible = false;
-            // 
-            // Kolom2
-            // 
-            this.Kolom2.DataPropertyName = "namaRuangan";
-            this.Kolom2.HeaderText = "Nama Ruangan";
-            this.Kolom2.Name = "Kolom2";
-            this.Kolom2.ReadOnly = true;
-            this.Kolom2.Width = 130;
-            // 
-            // Kolom3
-            // 
-            this.Kolom3.DataPropertyName = "namaJenisRuangan";
-            this.Kolom3.HeaderText = "Jenis Ruangan";
-            this.Kolom3.Name = "Kolom3";
-            this.Kolom3.ReadOnly = true;
-            // 
-            // Kolom4
-            // 
-            this.Kolom4.DataPropertyName = "namaFasilitas";
-            this.Kolom4.HeaderText = "Fasilitas";
-            this.Kolom4.Name = "Kolom4";
-            this.Kolom4.ReadOnly = true;
-            // 
-            // Kolom5
-            // 
-            this.Kolom5.DataPropertyName = "ketersediaanRuangan";
-            this.Kolom5.HeaderText = "Ketersediaan Ruangan";
-            this.Kolom5.Name = "Kolom5";
-            this.Kolom5.ReadOnly = true;
-            this.Kolom5.Width = 150;
-            // 
-            // Kolom555
-            // 
-            this.Kolom555.DataPropertyName = "lokasiRuangan";
-            this.Kolom555.HeaderText = "Lokasi Ruangan";
-            this.Kolom555.Name = "Kolom555";
-            this.Kolom555.ReadOnly = true;
-            this.Kolom555.Width = 120;
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "status";
-            this.Column6.HeaderText = "Status";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Visible = false;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "KapasitasRuangan";
-            this.Column1.HeaderText = "Kapasitas Ruangan";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
             // 
             // PeminjamanRuanganUser
             // 

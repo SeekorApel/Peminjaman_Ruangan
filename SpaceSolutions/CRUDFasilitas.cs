@@ -49,7 +49,8 @@ namespace SpaceSolutions
         private void btnTambah_Click(object sender, EventArgs e)
         {
             InputFasilitas inputFasil = new InputFasilitas();
-            inputFasil.Show();
+            inputFasil.ShowDialog();
+            getDataTabelFasilitas();
         }
 
         private void btnRefesh_Click(object sender, EventArgs e)
@@ -111,6 +112,7 @@ namespace SpaceSolutions
                 namaFasilitas = Convert.ToString(dgvTabelFasilitas.Rows[e.RowIndex].Cells["namaFasilitasColumn"].Value);
                 UpdateFasilitas updateFsl = new UpdateFasilitas(idFasilitas, namaFasilitas);
                 updateFsl.ShowDialog();
+                getDataTabelFasilitas();
             }
             if(e.ColumnIndex == 1)
             {

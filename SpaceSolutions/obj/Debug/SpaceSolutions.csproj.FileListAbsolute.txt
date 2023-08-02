@@ -148,3 +148,549 @@ D:\Project Semester 2\PRG2\SpaceSolutions\bin\Debug\zh-CHT\Microsoft.ReportViewe
 D:\Project Semester 2\PRG2\SpaceSolutions\obj\Debug\SpaceSolutions.LaporanPeminjamanRuangan.resources
 D:\Project Semester 2\PRG2\SpaceSolutions\obj\Debug\SpaceSolutions.LaporanPeminjamanBarang.resources
 D:\Project Semester 2\PRG2\SpaceSolutions\obj\Debug\SpaceSolutions.DashBoardManager.resources
+D:\Project Semester 2\PRG2\SpaceSolutions\obj\Debug\SpaceSolutions.HalamanUtamaManager.resources
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\SpaceSolutions.exe.config
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\SpaceSolutions.exe
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\SpaceSolutions.pdb
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\Microsoft.ReportViewer.Design.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\System.Configuration.ConfigurationManager.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\System.Security.AccessControl.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\System.Security.Permissions.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\System.Security.Principal.Windows.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\EnvDTE.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\stdole.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\System.Configuration.ConfigurationManager.xml
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\System.Security.AccessControl.xml
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\System.Security.Permissions.xml
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\System.Security.Principal.Windows.xml
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\obj\Debug\SpaceSolutions.csproj.AssemblyReference.cache
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\obj\Debug\SpaceSolutions.csproj.SuggestedBindingRedirects.cache
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\obj\Debug\SpaceSolutions.AccPeminjamanRuangan.resources
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\obj\Debug\SpaceSolutions.CobaKoneksiDB.resources
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\obj\Debug\SpaceSolutions.CRUDBarang.resources
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\obj\Debug\SpaceSolutions.CRUDDendaKerusakanBarang.resources
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\obj\Debug\SpaceSolutions.CRUDDendaKerusakanRuangan.resources
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\obj\Debug\SpaceSolutions.CRUDFasilitas.resources
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\obj\Debug\SpaceSolutions.CRUDJenisRuangan.resources
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\obj\Debug\SpaceSolutions.CRUDRuangan.resources
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\obj\Debug\SpaceSolutions.DashBoardAdmin.resources
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\obj\Debug\SpaceSolutions.Page.CRUDUser.resources
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\obj\Debug\SpaceSolutions.DashBoardManager.resources
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\obj\Debug\SpaceSolutions.DashBoardUser.resources
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\obj\Debug\SpaceSolutions.HalamanUtamaManager.resources
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\obj\Debug\SpaceSolutions.InputBarang.resources
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\obj\Debug\SpaceSolutions.InputDendaKerusakanBarang.resources
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\obj\Debug\SpaceSolutions.InputDendaKerusakanRuangan.resources
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\obj\Debug\SpaceSolutions.InputFasilitas.resources
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\obj\Debug\SpaceSolutions.InputJenisRuangan.resources
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\obj\Debug\SpaceSolutions.InputRuangan.resources
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\obj\Debug\SpaceSolutions.CRUD.InputUser.resources
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\obj\Debug\SpaceSolutions.LaporanPeminjamanBarang.resources
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\obj\Debug\SpaceSolutions.LaporanPeminjamanRuangan.resources
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\obj\Debug\SpaceSolutions.LoginForm.resources
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\obj\Debug\SpaceSolutions.PeminjamanBarangUser.resources
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\obj\Debug\SpaceSolutions.PeminjamanRuanganAdmin.resources
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\obj\Debug\SpaceSolutions.PeminjamanRuanganUser.resources
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\obj\Debug\SpaceSolutions.PengembalianBarangAdmin.resources
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\obj\Debug\SpaceSolutions.PengembalianRuanganAdmin.resources
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\obj\Debug\SpaceSolutions.Properties.Resources.resources
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\obj\Debug\SpaceSolutions.RiwayatPeminjamanBarang.resources
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\obj\Debug\SpaceSolutions.RiwayatPeminjamanRuangan.resources
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\obj\Debug\SpaceSolutions.SignUp.resources
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\obj\Debug\SpaceSolutions.UpdateBarang.resources
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\obj\Debug\SpaceSolutions.UpdateDendaKerusakanBarang.resources
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\obj\Debug\SpaceSolutions.UpdateDendaKerusakanRuangan.resources
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\obj\Debug\SpaceSolutions.UpdateFasilitas.resources
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\obj\Debug\SpaceSolutions.UpdateJenisRuangan.resources
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\obj\Debug\SpaceSolutions.UpdateRuangan.resources
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\obj\Debug\SpaceSolutions.UpdateUser.resources
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\obj\Debug\SpaceSolutions.csproj.GenerateResource.cache
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\obj\Debug\SpaceSolutions.csproj.CoreCompileInputs.cache
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\obj\Debug\SpaceSolutions.csproj.CopyComplete
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\obj\Debug\SpaceSolutions.exe
+D:\Project Semester 2\PRG2\V1.1.1\SpaceSolutions\obj\Debug\SpaceSolutions.pdb
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\SpaceSolutions.exe.config
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\SpaceSolutions.exe
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\SpaceSolutions.pdb
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\Microsoft.ReportViewer.Design.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\System.Configuration.ConfigurationManager.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\System.Security.AccessControl.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\System.Security.Permissions.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\System.Security.Principal.Windows.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\EnvDTE.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\stdole.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\System.Configuration.ConfigurationManager.xml
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\System.Security.AccessControl.xml
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\System.Security.Permissions.xml
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\System.Security.Principal.Windows.xml
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\obj\Debug\SpaceSolutions.csproj.AssemblyReference.cache
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\obj\Debug\SpaceSolutions.csproj.SuggestedBindingRedirects.cache
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\obj\Debug\SpaceSolutions.AccPeminjamanRuangan.resources
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\obj\Debug\SpaceSolutions.CobaKoneksiDB.resources
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\obj\Debug\SpaceSolutions.CRUDBarang.resources
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\obj\Debug\SpaceSolutions.CRUDDendaKerusakanBarang.resources
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\obj\Debug\SpaceSolutions.CRUDDendaKerusakanRuangan.resources
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\obj\Debug\SpaceSolutions.CRUDFasilitas.resources
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\obj\Debug\SpaceSolutions.CRUDJenisRuangan.resources
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\obj\Debug\SpaceSolutions.CRUDRuangan.resources
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\obj\Debug\SpaceSolutions.DashBoardAdmin.resources
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\obj\Debug\SpaceSolutions.Page.CRUDUser.resources
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\obj\Debug\SpaceSolutions.DashBoardManager.resources
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\obj\Debug\SpaceSolutions.DashBoardUser.resources
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\obj\Debug\SpaceSolutions.HalamanUtamaManager.resources
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\obj\Debug\SpaceSolutions.InputBarang.resources
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\obj\Debug\SpaceSolutions.InputDendaKerusakanBarang.resources
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\obj\Debug\SpaceSolutions.InputDendaKerusakanRuangan.resources
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\obj\Debug\SpaceSolutions.InputFasilitas.resources
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\obj\Debug\SpaceSolutions.InputJenisRuangan.resources
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\obj\Debug\SpaceSolutions.InputRuangan.resources
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\obj\Debug\SpaceSolutions.CRUD.InputUser.resources
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\obj\Debug\SpaceSolutions.LaporanPeminjamanBarang.resources
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\obj\Debug\SpaceSolutions.LaporanPeminjamanRuangan.resources
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\obj\Debug\SpaceSolutions.LoginForm.resources
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\obj\Debug\SpaceSolutions.PeminjamanBarangUser.resources
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\obj\Debug\SpaceSolutions.PeminjamanRuanganAdmin.resources
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\obj\Debug\SpaceSolutions.PeminjamanRuanganUser.resources
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\obj\Debug\SpaceSolutions.PengembalianBarangAdmin.resources
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\obj\Debug\SpaceSolutions.PengembalianRuanganAdmin.resources
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\obj\Debug\SpaceSolutions.Properties.Resources.resources
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\obj\Debug\SpaceSolutions.RiwayatPeminjamanBarang.resources
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\obj\Debug\SpaceSolutions.RiwayatPeminjamanRuangan.resources
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\obj\Debug\SpaceSolutions.SignUp.resources
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\obj\Debug\SpaceSolutions.UpdateBarang.resources
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\obj\Debug\SpaceSolutions.UpdateDendaKerusakanBarang.resources
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\obj\Debug\SpaceSolutions.UpdateDendaKerusakanRuangan.resources
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\obj\Debug\SpaceSolutions.UpdateFasilitas.resources
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\obj\Debug\SpaceSolutions.UpdateJenisRuangan.resources
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\obj\Debug\SpaceSolutions.UpdateRuangan.resources
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\obj\Debug\SpaceSolutions.UpdateUser.resources
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\obj\Debug\SpaceSolutions.csproj.GenerateResource.cache
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\obj\Debug\SpaceSolutions.csproj.CoreCompileInputs.cache
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\obj\Debug\SpaceSolutions.csproj.CopyComplete
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\obj\Debug\SpaceSolutions.exe
+D:\Project Semester 2\PRG2\V1.1.2\SpaceSolutions\obj\Debug\SpaceSolutions.pdb
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\SpaceSolutions.exe.config
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\SpaceSolutions.exe
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\SpaceSolutions.pdb
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\Microsoft.ReportViewer.Design.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\System.Configuration.ConfigurationManager.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\System.Security.AccessControl.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\System.Security.Permissions.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\System.Security.Principal.Windows.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\EnvDTE.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\stdole.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\System.Configuration.ConfigurationManager.xml
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\System.Security.AccessControl.xml
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\System.Security.Permissions.xml
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\System.Security.Principal.Windows.xml
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\obj\Debug\SpaceSolutions.csproj.AssemblyReference.cache
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\obj\Debug\SpaceSolutions.csproj.SuggestedBindingRedirects.cache
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\obj\Debug\SpaceSolutions.AccPeminjamanRuangan.resources
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\obj\Debug\SpaceSolutions.CobaKoneksiDB.resources
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\obj\Debug\SpaceSolutions.CRUDBarang.resources
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\obj\Debug\SpaceSolutions.CRUDDendaKerusakanBarang.resources
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\obj\Debug\SpaceSolutions.CRUDDendaKerusakanRuangan.resources
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\obj\Debug\SpaceSolutions.CRUDFasilitas.resources
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\obj\Debug\SpaceSolutions.CRUDJenisRuangan.resources
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\obj\Debug\SpaceSolutions.CRUDRuangan.resources
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\obj\Debug\SpaceSolutions.DashBoardAdmin.resources
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\obj\Debug\SpaceSolutions.Page.CRUDUser.resources
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\obj\Debug\SpaceSolutions.DashBoardManager.resources
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\obj\Debug\SpaceSolutions.DashBoardUser.resources
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\obj\Debug\SpaceSolutions.HalamanUtamaManager.resources
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\obj\Debug\SpaceSolutions.InputBarang.resources
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\obj\Debug\SpaceSolutions.InputDendaKerusakanBarang.resources
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\obj\Debug\SpaceSolutions.InputDendaKerusakanRuangan.resources
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\obj\Debug\SpaceSolutions.InputFasilitas.resources
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\obj\Debug\SpaceSolutions.InputJenisRuangan.resources
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\obj\Debug\SpaceSolutions.InputRuangan.resources
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\obj\Debug\SpaceSolutions.CRUD.InputUser.resources
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\obj\Debug\SpaceSolutions.LaporanPeminjamanBarang.resources
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\obj\Debug\SpaceSolutions.LaporanPeminjamanRuangan.resources
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\obj\Debug\SpaceSolutions.LoginForm.resources
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\obj\Debug\SpaceSolutions.PeminjamanBarangUser.resources
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\obj\Debug\SpaceSolutions.PeminjamanRuanganAdmin.resources
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\obj\Debug\SpaceSolutions.PeminjamanRuanganUser.resources
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\obj\Debug\SpaceSolutions.PengembalianBarangAdmin.resources
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\obj\Debug\SpaceSolutions.PengembalianRuanganAdmin.resources
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\obj\Debug\SpaceSolutions.Properties.Resources.resources
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\obj\Debug\SpaceSolutions.RiwayatPeminjamanBarang.resources
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\obj\Debug\SpaceSolutions.RiwayatPeminjamanRuangan.resources
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\obj\Debug\SpaceSolutions.SignUp.resources
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\obj\Debug\SpaceSolutions.UpdateBarang.resources
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\obj\Debug\SpaceSolutions.UpdateDendaKerusakanBarang.resources
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\obj\Debug\SpaceSolutions.UpdateDendaKerusakanRuangan.resources
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\obj\Debug\SpaceSolutions.UpdateFasilitas.resources
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\obj\Debug\SpaceSolutions.UpdateJenisRuangan.resources
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\obj\Debug\SpaceSolutions.UpdateRuangan.resources
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\obj\Debug\SpaceSolutions.UpdateUser.resources
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\obj\Debug\SpaceSolutions.csproj.GenerateResource.cache
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\obj\Debug\SpaceSolutions.csproj.CoreCompileInputs.cache
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\obj\Debug\SpaceSolutions.csproj.CopyComplete
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\obj\Debug\SpaceSolutions.exe
+D:\Project Semester 2\PRG2\V1.1.3\SpaceSolutions\obj\Debug\SpaceSolutions.pdb
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\SpaceSolutions.exe.config
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\SpaceSolutions.exe
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\SpaceSolutions.pdb
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\Microsoft.ReportViewer.Design.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\System.Configuration.ConfigurationManager.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\System.Security.AccessControl.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\System.Security.Permissions.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\System.Security.Principal.Windows.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\EnvDTE.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\stdole.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\System.Configuration.ConfigurationManager.xml
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\System.Security.AccessControl.xml
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\System.Security.Permissions.xml
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\System.Security.Principal.Windows.xml
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\obj\Debug\SpaceSolutions.csproj.AssemblyReference.cache
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\obj\Debug\SpaceSolutions.csproj.SuggestedBindingRedirects.cache
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\obj\Debug\SpaceSolutions.AccPeminjamanRuangan.resources
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\obj\Debug\SpaceSolutions.CobaKoneksiDB.resources
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\obj\Debug\SpaceSolutions.CRUDBarang.resources
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\obj\Debug\SpaceSolutions.CRUDDendaKerusakanBarang.resources
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\obj\Debug\SpaceSolutions.CRUDDendaKerusakanRuangan.resources
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\obj\Debug\SpaceSolutions.CRUDFasilitas.resources
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\obj\Debug\SpaceSolutions.CRUDJenisRuangan.resources
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\obj\Debug\SpaceSolutions.CRUDRuangan.resources
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\obj\Debug\SpaceSolutions.DashBoardAdmin.resources
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\obj\Debug\SpaceSolutions.Page.CRUDUser.resources
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\obj\Debug\SpaceSolutions.DashBoardManager.resources
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\obj\Debug\SpaceSolutions.DashBoardUser.resources
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\obj\Debug\SpaceSolutions.HalamanUtamaManager.resources
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\obj\Debug\SpaceSolutions.InputBarang.resources
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\obj\Debug\SpaceSolutions.InputDendaKerusakanBarang.resources
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\obj\Debug\SpaceSolutions.InputDendaKerusakanRuangan.resources
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\obj\Debug\SpaceSolutions.InputFasilitas.resources
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\obj\Debug\SpaceSolutions.InputJenisRuangan.resources
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\obj\Debug\SpaceSolutions.InputRuangan.resources
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\obj\Debug\SpaceSolutions.CRUD.InputUser.resources
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\obj\Debug\SpaceSolutions.LaporanPeminjamanBarang.resources
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\obj\Debug\SpaceSolutions.LaporanPeminjamanRuangan.resources
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\obj\Debug\SpaceSolutions.LoginForm.resources
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\obj\Debug\SpaceSolutions.PeminjamanBarangUser.resources
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\obj\Debug\SpaceSolutions.PeminjamanRuanganAdmin.resources
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\obj\Debug\SpaceSolutions.PeminjamanRuanganUser.resources
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\obj\Debug\SpaceSolutions.PengembalianBarangAdmin.resources
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\obj\Debug\SpaceSolutions.PengembalianRuanganAdmin.resources
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\obj\Debug\SpaceSolutions.Properties.Resources.resources
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\obj\Debug\SpaceSolutions.RiwayatPeminjamanBarang.resources
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\obj\Debug\SpaceSolutions.RiwayatPeminjamanRuangan.resources
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\obj\Debug\SpaceSolutions.SignUp.resources
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\obj\Debug\SpaceSolutions.UpdateBarang.resources
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\obj\Debug\SpaceSolutions.UpdateDendaKerusakanBarang.resources
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\obj\Debug\SpaceSolutions.UpdateDendaKerusakanRuangan.resources
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\obj\Debug\SpaceSolutions.UpdateFasilitas.resources
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\obj\Debug\SpaceSolutions.UpdateJenisRuangan.resources
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\obj\Debug\SpaceSolutions.UpdateRuangan.resources
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\obj\Debug\SpaceSolutions.UpdateUser.resources
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\obj\Debug\SpaceSolutions.csproj.GenerateResource.cache
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\obj\Debug\SpaceSolutions.csproj.CoreCompileInputs.cache
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\obj\Debug\SpaceSolutions.csproj.CopyComplete
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\obj\Debug\SpaceSolutions.exe
+D:\Project Semester 2\PRG2\Kumpulin V1.1.4\SpaceSolutions\obj\Debug\SpaceSolutions.pdb
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\SpaceSolutions.exe.config
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\SpaceSolutions.exe
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\SpaceSolutions.pdb
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\Microsoft.ReportViewer.Design.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\System.Configuration.ConfigurationManager.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\System.Security.AccessControl.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\System.Security.Permissions.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\System.Security.Principal.Windows.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\EnvDTE.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\stdole.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\System.Configuration.ConfigurationManager.xml
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\System.Security.AccessControl.xml
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\System.Security.Permissions.xml
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\System.Security.Principal.Windows.xml
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\obj\Debug\SpaceSolutions.csproj.AssemblyReference.cache
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\obj\Debug\SpaceSolutions.csproj.SuggestedBindingRedirects.cache
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\obj\Debug\SpaceSolutions.AccPeminjamanRuangan.resources
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\obj\Debug\SpaceSolutions.CobaKoneksiDB.resources
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\obj\Debug\SpaceSolutions.CRUDBarang.resources
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\obj\Debug\SpaceSolutions.CRUDDendaKerusakanBarang.resources
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\obj\Debug\SpaceSolutions.CRUDDendaKerusakanRuangan.resources
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\obj\Debug\SpaceSolutions.CRUDFasilitas.resources
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\obj\Debug\SpaceSolutions.CRUDJenisRuangan.resources
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\obj\Debug\SpaceSolutions.CRUDRuangan.resources
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\obj\Debug\SpaceSolutions.DashBoardAdmin.resources
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\obj\Debug\SpaceSolutions.Page.CRUDUser.resources
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\obj\Debug\SpaceSolutions.DashBoardManager.resources
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\obj\Debug\SpaceSolutions.DashBoardUser.resources
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\obj\Debug\SpaceSolutions.HalamanUtamaManager.resources
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\obj\Debug\SpaceSolutions.InputBarang.resources
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\obj\Debug\SpaceSolutions.InputDendaKerusakanBarang.resources
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\obj\Debug\SpaceSolutions.InputDendaKerusakanRuangan.resources
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\obj\Debug\SpaceSolutions.InputFasilitas.resources
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\obj\Debug\SpaceSolutions.InputJenisRuangan.resources
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\obj\Debug\SpaceSolutions.InputRuangan.resources
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\obj\Debug\SpaceSolutions.CRUD.InputUser.resources
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\obj\Debug\SpaceSolutions.LaporanPeminjamanBarang.resources
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\obj\Debug\SpaceSolutions.LaporanPeminjamanRuangan.resources
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\obj\Debug\SpaceSolutions.LoginForm.resources
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\obj\Debug\SpaceSolutions.PeminjamanBarangUser.resources
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\obj\Debug\SpaceSolutions.PeminjamanRuanganAdmin.resources
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\obj\Debug\SpaceSolutions.PeminjamanRuanganUser.resources
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\obj\Debug\SpaceSolutions.PengembalianBarangAdmin.resources
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\obj\Debug\SpaceSolutions.PengembalianRuanganAdmin.resources
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\obj\Debug\SpaceSolutions.Properties.Resources.resources
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\obj\Debug\SpaceSolutions.RiwayatPeminjamanBarang.resources
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\obj\Debug\SpaceSolutions.RiwayatPeminjamanRuangan.resources
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\obj\Debug\SpaceSolutions.SignUp.resources
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\obj\Debug\SpaceSolutions.UpdateBarang.resources
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\obj\Debug\SpaceSolutions.UpdateDendaKerusakanBarang.resources
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\obj\Debug\SpaceSolutions.UpdateDendaKerusakanRuangan.resources
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\obj\Debug\SpaceSolutions.UpdateFasilitas.resources
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\obj\Debug\SpaceSolutions.UpdateJenisRuangan.resources
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\obj\Debug\SpaceSolutions.UpdateRuangan.resources
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\obj\Debug\SpaceSolutions.UpdateUser.resources
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\obj\Debug\SpaceSolutions.csproj.GenerateResource.cache
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\obj\Debug\SpaceSolutions.csproj.CoreCompileInputs.cache
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\obj\Debug\SpaceSolutions.csproj.CopyComplete
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\obj\Debug\SpaceSolutions.exe
+D:\Project Semester 2\PRG2\Kumpulin V2.0\SpaceSolutions\obj\Debug\SpaceSolutions.pdb

@@ -76,6 +76,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.btnRefresh = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabelPeminjaman)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dendaKerusakanRuanganBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSSpaceSolutions)).BeginInit();
@@ -83,6 +85,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnHapusKeranjang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnTambahKeranjang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCari)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRefresh)).BeginInit();
             this.SuspendLayout();
             // 
             // dtTanggalPeminjaman
@@ -132,6 +135,7 @@
             this.txtTotalDenda.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtTotalDenda.DisabledState.Parent = this.txtTotalDenda;
             this.txtTotalDenda.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTotalDenda.Enabled = false;
             this.txtTotalDenda.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTotalDenda.FocusedState.Parent = this.txtTotalDenda;
             this.txtTotalDenda.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -254,22 +258,22 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(85, 290);
+            this.label2.Font = new System.Drawing.Font("Poppins", 10F);
+            this.label2.Location = new System.Drawing.Point(85, 288);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(188, 26);
+            this.label2.Size = new System.Drawing.Size(222, 25);
             this.label2.TabIndex = 35;
-            this.label2.Text = "Tanggal Pengembalian";
+            this.label2.Text = "Tanggal Aktual Pengembalian ";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(85, 215);
+            this.label4.Location = new System.Drawing.Point(84, 214);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(174, 26);
+            this.label4.Size = new System.Drawing.Size(188, 26);
             this.label4.TabIndex = 36;
-            this.label4.Text = "Tanggal Peminjaman";
+            this.label4.Text = "Tanggal Pengembalian";
             // 
             // label5
             // 
@@ -578,7 +582,7 @@
             // 
             this.btnCari.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCari.Image = global::SpaceSolutions.Properties.Resources.search_Use_1;
-            this.btnCari.Location = new System.Drawing.Point(619, 334);
+            this.btnCari.Location = new System.Drawing.Point(619, 335);
             this.btnCari.Name = "btnCari";
             this.btnCari.Size = new System.Drawing.Size(30, 30);
             this.btnCari.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -642,7 +646,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(219, 145);
+            this.label10.Location = new System.Drawing.Point(218, 145);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(16, 23);
             this.label10.TabIndex = 58;
@@ -654,7 +658,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(256, 216);
+            this.label3.Location = new System.Drawing.Point(274, 218);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(16, 23);
             this.label3.TabIndex = 59;
@@ -666,7 +670,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(268, 290);
+            this.label6.Location = new System.Drawing.Point(304, 291);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(16, 23);
             this.label6.TabIndex = 60;
@@ -684,12 +688,38 @@
             this.label7.TabIndex = 61;
             this.label7.Text = "*";
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRefresh.Image = global::SpaceSolutions.Properties.Resources.Refresh1;
+            this.btnRefresh.Location = new System.Drawing.Point(667, 334);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(30, 30);
+            this.btnRefresh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnRefresh.TabIndex = 76;
+            this.btnRefresh.TabStop = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.Location = new System.Drawing.Point(221, 375);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(16, 23);
+            this.label9.TabIndex = 77;
+            this.label9.Text = "*";
+            // 
             // PengembalianRuanganAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1004, 720);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
@@ -732,6 +762,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnHapusKeranjang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnTambahKeranjang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCari)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRefresh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -786,5 +817,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.PictureBox btnRefresh;
+        private System.Windows.Forms.Label label9;
     }
 }
